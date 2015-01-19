@@ -56,7 +56,11 @@ declare function local:param-values($name as string) as string*
                else "dummy",
         request:param-values("xbrl:Entity"))
      case $name eq "xbrl28:Archive" and $profile-name = ("sec", "japan") return (
-            let $prefix as string := ("sec"[$profile-name eq "sec"], "fsa"[$profile-name eq "japan"])
+            let $prefix as string :=
+                switch($profile-name)
+                case "sec" return "sec"
+                case "japan" return "fsa"
+                default return (: not reachable :) ()
             let $fiscalYears := ($fiscalYear, request:param-values( $prefix || ":FiscalYear"))
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod")
             let $entities := entities:entities(local:param-values("xbrl:Entity"))
