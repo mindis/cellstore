@@ -40,7 +40,7 @@ declare function japan:entities(
     case $tag = "ALL" return entities:entities()
     case exists(($eid, $tag)) return
        for $entity in (
-         for $tag in $tags
+         for $tag in $tag
          return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
          entities:entities($eid)
        )
