@@ -1,7 +1,7 @@
 jsoniq version "1.0";
 module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
 
-import module namespace mw = "http://28.io/modules/xbrl/profiles/japan/mongo-wrapper";
+import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
