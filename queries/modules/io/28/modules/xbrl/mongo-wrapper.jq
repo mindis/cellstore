@@ -22,16 +22,41 @@ declare %an:strictlydeterministic function mw:connection() as anyURI
     }
 };
 
+declare %private function mw:check-result(
+    $results as object()*,
+    $collection as string,
+    $hint as object) as object()*
+{
+    if(empty($results."$err"))
+    then $results
+    else error(QName("mw:INVALID-PARAMETER"),
+               string-join((
+                 $results."$err",
+                 "COLLECTION: " || $collection,
+                 "HINT: " || serialize($hint)
+               ), " "))
+};
+
 declare function mw:find($collection as string, $query as object) as object()*
 {
   let $conn := mw:connection()
-  return mongo:find($conn, $collection, mw:hint($collection, $query))
+  let $hint as object := mw:hint($collection, $query)
+  return
+    mw:check-result(
+        mongo:find($conn, $collection, $hint),
+        $collection,
+        $hint)
 };
 
 declare function mw:find($collection as string, $query as object, $projection as object) as object()*
 {
   let $conn := mw:connection()
-  return mongo:find($conn, $collection, mw:hint($collection, $query), $projection, {})
+  let $hint as object := mw:hint($collection, $query)
+  return
+    mw:check-result(
+      mongo:find($conn, $collection, $hint, $projection, {}),
+      $collection,
+      $hint)
 };
 
 declare function mw:run-cmd-deterministic($command as object) as object*
