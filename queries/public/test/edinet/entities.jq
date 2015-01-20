@@ -23,8 +23,7 @@ declare variable $local:expected as object :=
     "http://info.edinet-fsa.go.jp E02529-000",
     "http://info.edinet-fsa.go.jp E04147-000",
     "http://info.edinet-fsa.go.jp E04425-000",
-    "http://info.edinet-fsa.go.jp E04430-000",
-    "http://info.edinet-fsa.go.jp EDINET-000"
+    "http://info.edinet-fsa.go.jp E04430-000"
   ]
 };
 
