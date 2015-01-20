@@ -478,10 +478,10 @@ declare function layout:layout(
 {
     let $elimination as boolean := ($options.Eliminate, false)[1]
     let $threshold as double := ($options.EliminationThreshold, 0)[1]
-    let $original-hypercube := trace(
+    let $original-hypercube := 
         if($options.Hypercube instance of null)
         then ()
-        else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1], "original")
+        else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1]
     let $hypercube := layout:build-hypercube(
         $structural-model,
         $original-hypercube
