@@ -722,14 +722,26 @@ declare function components:standard-definition-models-for-components($component
     let $roots as string* := $presentation-network.Trees[].Name
     let $lineitems as string* := if(exists($lineitems)) then $lineitems else $roots
     let $y-breakdowns as object :=
-      if(exists($presentation-network))
-        then components:standard-concept-breakdown($lineitems, $component.Role)
-        else components:standard-explicit-dimension-breakdown(
-            $components,
-            "xbrl:Concept",
-            $table.Aspects."xbrl:Concept".Members[].Name,
-            $component.Role,
-            $options)
+      let $concept-label := (concepts:labels(
+        "xbrl:Concept",
+        $concepts:VERBOSE_LABEL_ROLE,
+        ($options.Language, "en")[1],
+        $components.Concepts[],
+        $options
+      ), concepts:labels(
+        "xbrl:Concept",
+        $concepts:STANDARD_LABEL_ROLE,
+        ($options.Language, "en")[1],
+        $components.Concepts[],
+        $options
+      ))[1]
+      return if(exists($presentation-network))
+              then components:standard-concept-breakdown($lineitems, $component.Role)
+              else components:standard-explicit-dimension-breakdown(
+                "xbrl:Concept",
+                $concept-label,
+                $table.Aspects."xbrl:Concept".Members[].Name,
+                $component.Role)
 
     return {
         ModelKind: "DefinitionModel",
