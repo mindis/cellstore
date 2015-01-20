@@ -487,7 +487,7 @@ declare function layout:layout(
         $original-hypercube
     )
     let $facts := facts:facts-for({|
-        {Hypercube: trace($hypercube, "hypercube")},
+        {Hypercube: $hypercube},
         trim($options, "Hypercube")
     |})
     let $actual-aspect-space :=
