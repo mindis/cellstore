@@ -107,7 +107,9 @@ declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
   let $actual as item* := $transform($request[2])
   let $expected := if($options.TrimIdField) then test:trim-ids($expected) else $expected
   let $actual := if($options.TrimIdField) then test:trim-ids($actual) else $actual
-  return test:assert-deep-equal($expected, $actual, $status, test:url($endpoint, $parameters))
+  return if($options.NoArrayOrder)
+          then test:assert-deep-equal-no-array-order($expected, $actual, $status, test:url($endpoint, $parameters))
+          else test:assert-deep-equal($expected, $actual, $status, test:url($endpoint, $parameters))
 };
 
 declare %an:sequential function test:check-all-success($o as object) as object
@@ -169,6 +171,57 @@ declare function test:assert-deep-equal(
         "expected": typeswitch($expected) case json-item return $expected default return serialize($expected),
         "actual": typeswitch($actual) case json-item return $actual default return serialize($actual)
     }
+};
+
+declare function test:assert-deep-equal-no-array-order(
+    $expected as item,
+    $actual as item?,
+    $status as integer,
+    $url as string) as item
+{
+    switch(true)
+    case $status ne 200 return { "url": $url, status: $status }
+    case test:deep-equal-no-array-order($expected, $actual) return true
+    default return
+    {
+        "url": $url,
+        "expected": typeswitch($expected) case json-item return $expected default return serialize($expected),
+        "actual": typeswitch($actual) case json-item return $actual default return serialize($actual)
+    }
+};
+
+declare function test:deep-equal-no-array-order(
+    $expected as item,
+    $actual as item?) as boolean
+{
+    typeswitch(($expected, $actual))
+    case object* return
+      switch(true)
+      case not (every $key in keys($expected) satisfies keys($actual) = $key)
+        return false
+      case not (every $key in keys($actual) satisfies keys($expected) = $key)
+        return false
+      default return
+        let $recursive-calls :=
+            for $key in keys($expected)
+            return test:deep-equal-no-array-order($expected.$key, $actual.$key)
+        return if (every $item in $recursive-calls satisfies $item)
+                then true
+                else false
+    case array* return
+      switch(true)
+      case not size($expected) eq size($actual)
+        return false
+      case not (every $expected-item in $expected[] satisfies (
+        some $actual-item in $actual[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
+      ))
+        return false
+      case not (every $actual-item in $actual[] satisfies (
+        some $expected-item in $expected[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
+      ))
+        return false
+      default return true
+    default return deep-equal($expected, $actual)
 };
 
 declare function test:assert-eq-array(
