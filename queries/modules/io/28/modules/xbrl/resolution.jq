@@ -161,12 +161,12 @@ declare %private function resolution:convert-rule-node(
     $parent-child-order as string?,
     $options as object?) as object*
 {
-    let $main-members := values(values($definition-node.AspectRulesSet))
+    let $main-string-members := values(values($definition-node.AspectRulesSet))[$$ instance of string]
 
     let $labels := (
         $definition-node.Labels[],
         resolution:labels(
-            $main-members[$$ instance of string],
+            $main-string-members,
             $components,
             $concepts:STANDARD_LABEL_ROLE,
             $options)
