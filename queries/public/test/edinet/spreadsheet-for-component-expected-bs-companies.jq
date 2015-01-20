@@ -14,7 +14,7 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Period breakdown" ], 
+        "GroupLabels" : [ "Period [Axis] breakdown" ], 
         "GroupCells" : [ [ {
           "CellLabels" : [ "Period [Axis]" ], 
           "CellConstraints" : {
@@ -59,9 +59,9 @@
           "RollUp" : false
         } ] ]
       }, {
-        "GroupLabels" : [ "Entity breakdown" ], 
+        "GroupLabels" : [ "Reporting Entity [Axis] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Entity [Axis]" ], 
+          "CellLabels" : [ "Reporting Entity [Axis]" ], 
           "CellConstraints" : {
 
           }, 
@@ -71,7 +71,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         }, {
-          "CellLabels" : [ "Entity [Axis]" ], 
+          "CellLabels" : [ "Reporting Entity [Axis]" ], 
           "CellConstraints" : {
 
           }, 

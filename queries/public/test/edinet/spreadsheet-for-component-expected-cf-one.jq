@@ -14,7 +14,7 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Period breakdown" ], 
+        "GroupLabels" : [ "Period [Axis] breakdown" ], 
         "GroupCells" : [ [ {
           "CellLabels" : [ "Period [Axis]" ], 
           "CellConstraints" : {
