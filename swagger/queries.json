@@ -466,6 +466,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of a particular component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -572,6 +573,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -765,6 +767,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1067,6 +1070,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1626,6 +1630,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1636,6 +1641,7 @@
             }, {
                 "name": "rules",
                 "description": "[Deprecated, use report] The rules that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1877,6 +1883,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
