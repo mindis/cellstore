@@ -1372,7 +1372,7 @@ declare %private function facts:facts-for-direct(
           return
             (: add default dimension members if they are omitted
                remove dimensions that are not in the hypercube :)
-            copy $populated := $fact
+            copy $populated := trace($fact, "fact")
             modify
               let $replacements := {|
                 for $dimension in $hypercube-dimensions

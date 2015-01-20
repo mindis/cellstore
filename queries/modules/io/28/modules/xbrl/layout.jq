@@ -158,7 +158,9 @@ declare function layout:build-hypercube(
     return hypercubes:user-defined-hypercube(
             {|
                 for $dimension in distinct-values((keys(($hypercube.Aspects, $table-domain)), $open-dimensions))
-                let $dimension-type as string? := $dimension.Type
+                let $dimension-object := $hypercube.Aspects.$dimension
+                let $dimension-is-typed as boolean := $dimension-object.Kind = "TypedDimension"
+                let $dimension-type as string? := $dimension-object.Type
                 let $hypercube-members as atomic* := (
                     descendant-objects($hypercube.Aspects.$dimension.Members).Name,
                     $hypercube.Aspects.$dimension.DomainRestriction.Enumeration[])
@@ -179,10 +181,7 @@ declare function layout:build-hypercube(
 
                 let $inferred-type as string? :=
                     typeswitch($actual-members[not ($$ instance of null)])
-                    case string* return
-                            if(contains(($actual-members)[not ($$ instance of null)][1], ":"))
-                            then ()
-                            else "string"
+                    case string* return "string"
                     case int* return "int"
                     case integer* return "integer"
                     case boolean* return "boolean"
@@ -191,7 +190,7 @@ declare function layout:build-hypercube(
 
                 return {
                     $dimension : {|
-                        { Type : $actual-type }[exists($actual-type) and exists($actual-members)],
+                        { Type : $actual-type }[$dimension-is-typed],
 
                         if(exists($actual-members))
                         then {
@@ -479,16 +478,16 @@ declare function layout:layout(
 {
     let $elimination as boolean := ($options.Eliminate, false)[1]
     let $threshold as double := ($options.EliminationThreshold, 0)[1]
-    let $original-hypercube :=
+    let $original-hypercube := trace(
         if($options.Hypercube instance of null)
         then ()
-        else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1]
+        else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1], "original")
     let $hypercube := layout:build-hypercube(
         $structural-model,
         $original-hypercube
     )
     let $facts := facts:facts-for({|
-        {Hypercube: $hypercube},
+        {Hypercube: trace($hypercube, "hypercube")},
         trim($options, "Hypercube")
     |})
     let $actual-aspect-space :=

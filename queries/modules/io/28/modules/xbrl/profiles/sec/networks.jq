@@ -441,30 +441,25 @@ declare function sec-networks:standard-definition-models-for-components($compone
         $user-slice-dimensions)]
 
     let $x-breakdowns as object* := (
-        components:standard-period-breakdown()[not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Period")],
+        components:standard-typed-dimension-breakdown($components, "xbrl:Period", $options)
+          [not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Period")],
         for $d as string in $column-dimensions
         let $metadata as object? := ($component.Concepts[])[$$.Name eq $d]
-        let $label as string? :=
-          concepts:labels(
-            $d,
-            $concepts:VERBOSE_LABEL_ROLE,
-            ($options.Language, "en")[1],
-            $components.Concepts[],
-            $options
-          )[1]
         let $dimension-object as object := $table.Aspects.$d
         return
             if($d = ("sec:Accepted", "sec:FiscalYear", "sec:FiscalPeriod", "sec:FiscalPeriodType"))
             then components:standard-typed-dimension-breakdown(
+                $components,
                 $d,
-                ($label, $metadata.Label)[1],
-                $values-by-dimension.$d[])
+                $options)
             else components:standard-explicit-dimension-breakdown(
+                $components,
                 $d,
-                $metadata.Label,
                 $dimension-object.Members[].Name,
-                $component.Role),
-        components:standard-entity-breakdown()[not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Entity")]
+                $component.Role,
+                $options),
+        components:standard-typed-dimension-breakdown($components, "xbrl:Entity", $options)
+          [not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Entity")]
     )
 
     let $lineitems as string* := sec-networks:line-items-report-elements($component).Name

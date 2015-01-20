@@ -512,71 +512,77 @@ declare function components:cid($component-or-id as item) as atomic
       || serialize($component-or-id))
 };
 
-(:~
- : <p>Returns the standard period breakdown.</p>
- :
- : @return the period breakdown.
- :)
-declare function components:standard-period-breakdown() as object
-{
-    {
-        BreakdownLabels: [ "Period breakdown" ],
-        BreakdownTrees: [
-            {
-                Kind: "Rule",
-                Abstract: true,
-                Labels: [ "Period [Axis]" ],
-                Children: [ {
-                    Kind: "Aspect",
-                    Aspect: "xbrl:Period"
-                } ]
-            }
-        ]
-    }
-};
-
 declare function components:standard-typed-dimension-breakdown(
+    $components as object*,
     $dimension-name as string,
-    $dimension-label as string?,
-    $dimension-values as atomic*) as object
+    $options as object?) as object
 {
-    let $dimension-label as string := ($dimension-label, $dimension-name)[1]
+    let $label as string := (
+      concepts:labels(
+        $dimension-name,
+        $concepts:VERBOSE_LABEL_ROLE,
+        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
+        $components.Concepts[],
+        $options
+      ),
+      concepts:labels(
+        $dimension-name,
+        $concepts:STANDARD_LABEL_ROLE,
+        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
+        $components.Concepts[],
+        $options
+      ),
+      $dimension-name)[1]
     return
     {
-        BreakdownLabels: [ $dimension-name || " breakdown" ],
-        BreakdownTrees: [
-            {
-                Kind: "Rule",
-                Abstract: true,
-                Labels: [ $dimension-label ],
-                Children: [
-                    for $value in $dimension-values
-                    return {
-                        Kind: "Rule",
-                        Labels: [ $value ],
-                        AspectRulesSet: { "" : { $dimension-name : $value } }
-                    }
-                ]
-            }
-        ]
+      BreakdownLabels: [ $label || " breakdown" ],
+      BreakdownTrees: [
+        {
+            Kind: "Rule",
+            Abstract: true,
+            Labels: [ $label ],
+            Children: [
+              {
+                Kind: "Aspect",
+                Aspect: $dimension-name
+              }
+            ]
+        }
+      ]
     }
 };
 
 declare function components:standard-explicit-dimension-breakdown(
+    $components as object*,
     $dimension-name as string,
-    $dimension-label as string?,
     $domain-names as string*,
-    $role as string) as object
+    $role as string,
+    $options as object?) as object
 {
-    let $dimension-label as string := ($dimension-label, $dimension-name)[1]
+    let $label as string := (
+      concepts:labels(
+        $dimension-name,
+        $concepts:VERBOSE_LABEL_ROLE,
+        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
+        $components.Concepts[],
+        $options
+      ),
+      concepts:labels(
+        $dimension-name,
+        $concepts:STANDARD_LABEL_ROLE,
+        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
+        $components.Concepts[],
+        $options
+      ),
+      $dimension-name)[1]
     return
     {
-        BreakdownLabels: [ $dimension-label || " breakdown" ],
+        BreakdownLabels: [ $label || " breakdown" ],
         BreakdownTrees: [
             {
                 Kind: "Rule",
                 Abstract: true,
-                Labels: [ $dimension-label ],
+                Labels: [ $label ],
                 Children: [
                     for $domain as string in $domain-names
                     return {
@@ -588,25 +594,6 @@ declare function components:standard-explicit-dimension-breakdown(
                         Generations: 0
                     }
                 ]
-            }
-        ]
-    }
-};
-
-declare function components:standard-entity-breakdown() as object
-{
-    {
-        BreakdownLabels: [ "Entity breakdown" ],
-        BreakdownTrees: [
-            {
-                Kind: "Rule",
-                Abstract: true,
-                Labels: [ "Entity [Axis]" ],
-                ConstraintSets: { "" : {} },
-                Children: [ {
-                    Kind: "Aspect",
-                    Aspect: "xbrl:Entity"
-                } ]
             }
         ]
     }
@@ -707,33 +694,27 @@ declare function components:standard-definition-models-for-components($component
         $user-slice-dimensions)]
 
     let $x-breakdowns as object* := (
-        components:standard-period-breakdown()[not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Period")],
+        components:standard-typed-dimension-breakdown($components, "xbrl:Period", $options)
+          [not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Period")],
         for $d as string in $column-dimensions
-        let $metadata as object? := ($component.Concepts[])[$$.Name eq $d]
-        let $label as string? :=
-          concepts:labels(
-            $d,
-            $concepts:VERBOSE_LABEL_ROLE,
-            ($options.Language, "en")[1],
-            $components.Concepts[],
-            $options
-          )[1]
         let $dimension-object as object := $table.Aspects.$d
         let $is-typed as boolean := boolean($dimension-object.Kind eq "TypedDimension")
         return
             if($is-typed)
             then
               components:standard-typed-dimension-breakdown(
+                $components,
                 $d,
-                ($label, $metadata.Label)[1],
-                $values-by-dimension.$d[])
+                $options)
             else
               components:standard-explicit-dimension-breakdown(
+                $components,
                 $d,
-                ($label, $metadata.Label)[1],
                 $dimension-object.Members[].Name,
-                $component.Role),
-        components:standard-entity-breakdown()[not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Entity")]
+                $component.Role,
+                $options),
+        components:standard-typed-dimension-breakdown($components, "xbrl:Entity", $options)
+          [not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Entity")]
     )
 
     let $lineitems as string* := components:line-items($component)
