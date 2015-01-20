@@ -1,6 +1,8 @@
 jsoniq version "1.0";
 module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
 
+import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
+
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 
@@ -36,7 +38,14 @@ declare function japan:entities(
   return
     switch(true)
     case $tag = "ALL" return entities:entities()
-    case exists($eid) return entities:entities($eid)
+    case exists(($eid, $tag)) return
+       for $entity in (
+         for $tag in $tag
+         return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
+         entities:entities($eid)
+       )
+       group by $entity._id
+       return $entity[1]
     default return ()
 };
 
