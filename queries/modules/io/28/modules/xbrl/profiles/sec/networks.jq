@@ -444,7 +444,6 @@ declare function sec-networks:standard-definition-models-for-components($compone
         components:standard-typed-dimension-breakdown($components, "xbrl:Period", $options)
           [not (($auto-slice-dimensions, $user-slice-dimensions) = "xbrl:Period")],
         for $d as string in $column-dimensions
-        let $metadata as object? := ($component.Concepts[])[$$.Name eq $d]
         let $dimension-object as object := $table.Aspects.$d
         return
             if($d = ("sec:Accepted", "sec:FiscalYear", "sec:FiscalPeriod", "sec:FiscalPeriodType"))
