@@ -40,7 +40,7 @@
                     <h3><a class="fa" ng-class="{ 'fa-caret-down': !isCollapsed, 'fa-caret-right': isCollapsed }" ng-click="isCollapsed = !isCollapsed"></a> Parameters</h3>
                     <div collapse="isCollapsed">
                         <table class="table">
-                            <tr ng-repeat="param in op.parameters">
+                            <tr ng-repeat="param in op.parameters track by $index">
                                 <td ng-if="!param.nameEditable" ng-bind="param.name"></td>
                                 <td ng-if="param.nameEditable"><input type="text" placeholder="{{param.placeholder}}" ng-model="param.name"></td>
                                 <td class="parameter">
