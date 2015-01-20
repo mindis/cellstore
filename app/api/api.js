@@ -143,7 +143,7 @@ angular.module('report-editor')
                     if(_.isObject(param)){
                         param.value = value;
                     } else {
-                        $log.error(name + ": Parameter does not exist for operation.");
+                        $log.error(name + ': Parameter does not exist for operation.');
                     }
                 });
             }
@@ -165,8 +165,8 @@ angular.module('report-editor')
                         $scope.loading = false;
                     });
             } else {
-                $scope.error = "Too few parameters.";
-                $scope.body = "Too few parameters.";
+                $scope.error = 'Too few parameters.';
+                $scope.body = 'Too few parameters.';
                 $scope.loading = false;
             }
         };
