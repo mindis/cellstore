@@ -158,7 +158,7 @@ let $result :=
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $components.Concepts[]
+                let $members as object* := $component.Concepts[]
                 let $archive as object := $archives[$$._id eq $archive]
                 let $entity as object := $entities[$$._id eq $archive.Entity]
                 let $metadata := {
@@ -202,7 +202,7 @@ let $result :=
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $components.Concepts[]
+                let $members as object* := $component.Concepts[]
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
@@ -223,7 +223,7 @@ let $result :=
                         }
                       ]
                     },
-                    trim($members[$$.Name eq $original-name][1], ("Name", "Labels")),
+                    trim($members[$$.Name eq $original-name], ("Name", "Labels")),
                     $metadata
                 |}
         ]
