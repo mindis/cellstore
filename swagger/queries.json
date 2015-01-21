@@ -750,6 +750,141 @@
                     "aid": "0000021344-13-000050",
                     "disclosure": "BalanceSheet"
                 }
+            }, {
+                "title": "Fact Table as CSV",
+                "description": "Retrieve the fact table for a particular component. Return the result as CSV.",
+                "profile": ["sec"],
+                "parameters": {
+                    "aid": "0000021344-14-000008",
+                    "networkIdentifier": "http://www.thecocacolacompany.com/role/ConsolidatedBalanceSheets",
+                    "format": "csv"
+                }
+            }, {
+                "title": "Fact Table of Coca Cola's Q3/2013 Balance Sheet",
+                "description": "Retrieve the fact table for the Balance Sheet of Coca Cola filing identified with accession number 0000021344-13-000050. Return the result as XML.",
+                "profile": ["sec"],
+                "parameters": {
+                    "format": "xml",
+                    "aid": "0000021344-13-000050",
+                    "disclosure": "BalanceSheet"
+                }
+            }, {
+                "title": "Get B/S report by company name/ID and period",
+                "description": "Get B/S report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report by company name/ID and period",
+                "description": "Get B/S report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/F report by company name/ID and period",
+                "description": "Get C/F report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod":"Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report for multiple FYs by company name/ID and range of period",
+                "description": "Get B/S report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report for multiple FYs by company name/ID and range of period",
+                "description": "Get P/L report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/S report for multiple FYs by company name/ID and range of period",
+                "description": "Get C/S report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report of different companies by list of company names/IDs and period",
+                "description": "Get B/S report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "ALL",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report of different companies by list of company names/IDs and period",
+                "description": "Get P/L report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "ALL",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/S report of different companies by list of company names/IDs and period",
+                "description": "Get C/S report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "ALL",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
             }
             ]
         }]
