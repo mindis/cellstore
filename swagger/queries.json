@@ -104,6 +104,14 @@
                     "format": "xml"
                 }
             }, {
+                "title": "Get list of all companies with the tag NIKKEI as XML",
+                "description": "Get list of all companies with the tag NIKKEI. Return the result as XML",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "NIKKEI",
+                    "format": "xml"
+                }
+            }, {
                 "title": "Retrieve information about all DOW30 entities",
                 "profile": ["sec"],
                 "description": "Retrieve information about all DOW30 entities. Return the result as CSV.",
@@ -361,14 +369,14 @@
                     }
                 },
                 {
-                "title": "Retrieve the periods of the filings filed by a specific entity",
-                "description": "Retrieve information about the periods of the filings filed by an entity identified by its CIK. Return the result as XML.",
-                "profile": ["sec"],
-                "parameters": {
-                    "cik": "66740",
-                    "format": "xml"
-                }
-            }]
+                    "title": "Retrieve the periods of the filings filed by a specific entity",
+                    "description": "Retrieve information about the periods of the filings filed by an entity identified by its CIK. Return the result as XML.",
+                    "profile": ["sec"],
+                    "parameters": {
+                        "cik": "66740",
+                        "format": "xml"
+                    }
+                }]
         }]
     }, {
         "path": "/components.jq",
@@ -466,6 +474,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of a particular component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -572,6 +581,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -765,6 +775,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1067,6 +1078,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1626,6 +1638,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1636,6 +1649,7 @@
             }, {
                 "name": "rules",
                 "description": "[Deprecated, use report] The rules that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1877,6 +1891,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
