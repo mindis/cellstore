@@ -92,6 +92,10 @@ declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
   test:invoke-and-assert-deep-equal($endpoint, $parameters, $transform, $expected, {})
 };
 
+(:
+  Note on NoArrayOrder option: it allows for false positives in case arrays have duplicate elements. The number
+  of occurrences of duplicate elements is not checked.
+:)
 declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
   $endpoint as string,
   $parameters as object,
