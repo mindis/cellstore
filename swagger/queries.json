@@ -23,7 +23,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -137,7 +138,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -262,7 +264,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -394,7 +397,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -575,7 +579,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1208,7 +1213,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1540,7 +1546,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1795,7 +1802,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1984,7 +1992,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
