@@ -76,7 +76,7 @@ declare function hypercubes:hypercubes-for-components(
  :
  : <p>Retrieves all facts in the supplied hypercube, across all archives.</p>
  : <p>Default values will be populated automatically.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  :
@@ -94,7 +94,7 @@ as object*
  :
  : <p>Retrieves all facts in the supplied hypercube, across all archives.</p>
  : <p>Default values will be populated automatically.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $options <a href="facts#standard_options">standard fact retrieving options</a>.
@@ -120,7 +120,7 @@ as object*
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -141,7 +141,7 @@ as object*
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -192,7 +192,7 @@ as item* (: object* :)
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -212,7 +212,7 @@ declare function hypercubes:fact-table-for-hypercube(
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs
@@ -236,7 +236,7 @@ declare function hypercubes:fact-table-for-hypercube(
  : <p>Utility function to convert a sequence of facts to a fact table
  : given a hypercube. It is not recommended to use this function directly.
  : Use hypercubes:fact-table-for-hypercube instead.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $facts a sequence of facts that were retrieved with the hypercube.
@@ -272,7 +272,7 @@ declare function hypercubes:fact-table-for-hypercube-and-facts(
  : that are relevant to the
  : supplied hypercube. Default dimension values are added to the facts
  : when missing.</p>
- : 
+ :
  : @param $networks networks.
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -294,7 +294,7 @@ declare function hypercubes:populate-networks-with-facts(
  : that are relevant to the
  : supplied hypercube. Default dimension values are added to the facts
  : when missing.</p>
- : 
+ :
  : @param $networks networks.
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs.
@@ -319,7 +319,7 @@ declare function hypercubes:populate-networks-with-facts(
  : <p>A utility function that populates networks with facts against concepts that belong
  : to them. It is not recommended to use this function directly.
  : Use hypercubes:populate-networks-with-retrieved-facts.</p>
- : 
+ :
  : @param $networks networks.
  : @param $facts a sequence of facts.
  :
@@ -396,7 +396,7 @@ declare function hypercubes:dimensionless-hypercube($options as object?) as obje
  :    by default, not limited, and only xbrl:Unit has a default value.</p>
  :
  : @return the hypercube instantiation.
- : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These 
+ : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These
  : dimension information subobjects
  : may have two (optional) fields: Default (a string) and Domain (an array of strings).
  :
@@ -415,7 +415,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?) as ob
  :    by default, not limited, and only xbrl:Unit has a default value.</p>
  :
  : @return the hypercube instantiation.
- : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These 
+ : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These
  : dimension information subobjects
  : may have two (optional) fields: Default (a string) and Domain (an array of strings).
  : @param $options: an object with two options: Name (default: xbrl:UserDefinedHypercube) and Label
@@ -427,7 +427,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?) as ob
 declare function hypercubes:user-defined-hypercube($dimensions as object?, $options as object?) as object
 {
   {
-    "Name" : ($options.Name, "xbrl:UserDefinedHypercube")[1], 
+    "Name" : ($options.Name, "xbrl:UserDefinedHypercube")[1],
     "Label" : ($options.Label, "User-defined Hypercube")[1],
     "Aspects" : {|
       for $dimension-name as string in distinct-values((
@@ -509,7 +509,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?, $opti
         |}
       }
     |}
-  } 
+  }
 };
 
 declare %private function hypercubes:check-type-and-return(
@@ -517,11 +517,13 @@ declare %private function hypercubes:check-type-and-return(
     $dimension-type as string) as atomic*
 {
   for $dimension-member as atomic in $dimension-members
+  let $member-type as string := local-name-from-QName(schema:schema-type($dimension-member))
+  let $expected-type as string := local-name-from-QName(xs:QName($dimension-type))
   return
   if (not $dimension-member instance of null
-      and
-      local-name-from-QName(schema:schema-type($dimension-member)) ne
-      local-name-from-QName(xs:QName($dimension-type)))
+      and $member-type ne $dimension-type
+      and ($member-type ne "int" or $expected-type ne "integer")
+      )
   then error(
         xs:QName("hypercubes:invalid-type"),
         schema:schema-type($dimension-member) ||
@@ -544,7 +546,7 @@ declare function hypercubes:modify-hypercube(
                 $new-metadata
             else {|
                 { Type : $hypercube.Aspects.$dimension.Type }[$hypercube-metadata.Kind eq "TypedDimension"],
-                let $hypercube-domain := 
+                let $hypercube-domain :=
                   (
                      descendant-objects($hypercube-metadata.Members).Name,
                      jn:flatten($hypercube-metadata.DomainRestriction.Enumeration)

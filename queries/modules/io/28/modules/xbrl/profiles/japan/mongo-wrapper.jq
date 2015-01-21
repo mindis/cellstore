@@ -22,7 +22,7 @@ declare variable $mw:ENTITIES-PROFILES_JAPAN_TICKERS as string := "Profiles.FSA.
 declare variable $mw:ENTITIES-PROFILES_JAPAN_SUBMITTERTYPE as string := "Profiles.FSA.SubmitterType_hashed";
 
 declare variable $mw:FACTS-ID as string := "_id_";
-declare variable $mw:FACTS-AXCONCEPT_AXENTITY_AJFY_AJFP as string := "Aspects.xbrl:Concept_1_Aspects.xbrl:Entity_1_Aspects.japan:FiscalYear_1_Aspects.japan:FiscalPeriod_1";
+declare variable $mw:FACTS-AXCONCEPT_AXENTITY_AJFY_AJFP as string := "Aspects.xbrl:Concept_1_Aspects.xbrl:Entity_1_Aspects.fsa:FiscalYear_1_Aspects.fsa:FiscalPeriod_1";
 declare variable $mw:FACTS-ASARCHIVE_AXCONCEPT as string := "Aspects.xbrl28:Archive_1_Aspects.xbrl:Concept_1";
 
 declare variable $mw:FOOTNOTES-ID as string := "_id_";
