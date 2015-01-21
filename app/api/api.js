@@ -51,7 +51,19 @@ angular.module('report-editor')
             token: Session.getToken()
         };
 
-        var getParams = function(){
+        var camelCase = function(id) {
+            var tokens = [];
+            _.each(id.split('-'), function(token, index){
+                if(index === 0) {
+                    tokens.push(token[0].toLowerCase() + token.substring(1));
+                } else {
+                    tokens.push(token[0].toUpperCase() + token.substring(1));
+                }
+            });
+            return tokens.join('');
+        };
+
+        var getParams = function(convertDashedParamsToCamelCase){
             var params = {
                 token: $scope.token
             };
@@ -59,14 +71,20 @@ angular.module('report-editor')
                 .filter(function(param){ return param.value !== undefined; })
                 .value();
             _.each(parameters, function(param){
-                params[param.name] = param.value;
+                var name = param.name;
+                if(convertDashedParamsToCamelCase && name.indexOf('-') !== -1){
+                    name = camelCase(name);
+                }
+                if(_.isString(name) && name !== '') {
+                    params[name] = param.value;
+                }
             });
             return params;
         };
 
         $scope.getUrl = function(inBrowser, inParam){
             var result = API_URL + '/_queries/public/api' + path;
-            var params = getParams();
+            var params = getParams(false /* no camel case params */);
             if(Object.keys(params).length > 0) {
                 result += '?';
                 params = _.clone(params);
@@ -151,7 +169,7 @@ angular.module('report-editor')
             $scope.loading = true;
             $scope.error = undefined;
             $scope.body = undefined;
-            var params = getParams();
+            var params = getParams(true /* use camel case params */);
             if(_.keys(params).length > 1) {
                 API.Queries[operation.nickname](params)
                     .then(function (body) {
