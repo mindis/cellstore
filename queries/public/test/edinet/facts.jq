@@ -1,4 +1,3 @@
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace test = "http://apps.28.io/test";
 
 declare %an:nondeterministic function local:test-non-existing-entity() as item

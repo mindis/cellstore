@@ -110,6 +110,11 @@ declare function japan:latest-filings(
     $entities as object*,
     $fiscal-periods as string*) as object*
 {
-    error(xs:QName("japan:NOT_IMPLEMENTED"),
-          "japan profile: Getting latest-filings for entities not implemented.")
+    (
+        error(xs:QName("japan:NOT_IMPLEMENTED"),
+            "japan profile: Getting latest-filings for entities not implemented."),
+
+        $entities,
+        $fiscal-periods
+    )
 };

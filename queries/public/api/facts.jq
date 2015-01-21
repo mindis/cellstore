@@ -4,7 +4,6 @@ import module namespace session = "http://apps.28.io/session";
 
 import module namespace conversion = "http://28.io/modules/xbrl/conversion";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
-import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
@@ -12,7 +11,6 @@ import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
-import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
 import module namespace request = "http://www.28msec.com/modules/http-request";
