@@ -16,16 +16,6 @@ import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 import module namespace seq = "http://zorba.io/modules/sequence";
 
-
-declare function local:to-csv($concepts as item*, $onlyNames as boolean) as string
-{
-};
-
-declare function local:to-xml($concepts as item*, $onlyNames as boolean) as element()*
-{
-
-};
-
 declare function local:concepts-for-archives(
     $aids as string*,
     $names as string*,
