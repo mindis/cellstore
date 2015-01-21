@@ -56,6 +56,26 @@ declare variable $components:ROLE as xs:string := "Role";
 declare variable $components:DEFAULT-LANGUAGE as xs:string := "Language";
 
 (:~
+ : Placeholder for all archive IDs..
+ :)
+declare variable $components:ALL-ARCHIVES as xs:string := "";
+
+(:~
+ : Placeholder for all component roles..
+ :)
+declare variable $components:ALL-ROLES as xs:string := "";
+
+(:~
+ : Placeholder for all conceptss..
+ :)
+declare variable $components:ALL-CONCEPTS as xs:string := "";
+
+(:~
+ : Placeholder for all labels..
+ :)
+declare variable $components:ALL-LABELS as xs:string := "";
+
+(:~
  : <p>Retrieves all components.</p>
  :
  : @return all components.
@@ -89,6 +109,33 @@ declare function components:components($component-or-ids as item*) as object*
       then mw:find($components:col,{ "_id" : { "$in" : [ $ids ! components:cid($$) ] } })
       else ()
     )
+};
+
+declare function components:components-for(
+  $archives-or-ids as item*,
+  $roles as string*,
+  $concepts as string*,
+  $exact-labels as string*,
+  $options as object*
+)
+{
+  let $aids := if(deep-equal($archives-or-ids, $components:ALL-ARCHIVES))
+               then $components:ALL-ARCHIVES
+               else archives:aid($archives-or-ids)
+  let $query := {|
+    { "Archive" : { "$in" : [ $aids ] } }[not $aids = $components:ALL-ARCHIVES],
+    { "Role" : { "$in" : [ $roles ] } }[not $roles = $components:ALL-ROLES],
+    { "Concepts.Name" : { "$in" : [ $concepts ] } }[not $concepts = $components:ALL-CONCEPTS],
+    { "Concepts.Labels.Value" : { "$in" : [ $exact-labels ] } }[not $exact-labels = $components:ALL-LABELS]
+  |}
+  return if($options.LabelsOnly)
+         then mw:find($components:col, $query, {
+           "Archive" : 1,
+           "Role" : 1,
+           "Concepts.Labels" : 1,
+           "Concepts.Name" : 1 }
+         )
+         else mw:find($components:col, $query)
 };
 
 (:~
