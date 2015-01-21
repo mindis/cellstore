@@ -23,6 +23,28 @@ import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/n
 import module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
 
 (:~
+ : <p>Return latest filings of entities and fiscal periods.</p>
+ :
+ : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
+ : @param $entities a sequence of entity objects.
+ : @param $fiscal-periods a set of fiscal periods such as "Q1", "Q2", "Q3", "Q4", "FY"
+ :
+ : @return the latest archives for given entities and fiscal periods.
+ :)
+declare function multiplexer:latest-filings(
+  $profile-name as string,
+  $entities as object*,
+  $fiscal-periods as string*) as object*
+{
+  switch($profile-name)
+  case "sec" return fiscal-core:latest-filings($entities, $fiscalPeriods)
+  case "japan" return
+    japan:latest-filings($entities, $fiscalPeriods)
+  default return
+    ()
+};
+
+(:~
  : <p>Retrieves entities depending on the profile.</p>
  :
  : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
