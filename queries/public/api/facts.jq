@@ -193,13 +193,13 @@ let $tag as string* := api:preprocess-tags($tag)
 
 (: Object resolution :)
 let $entities as object* :=
-    companies:companies(
-        $cik,
-        $tag,
-        $ticker,
-        $sic,
+    multiplexer:entities(
+        $profile-name,
         $eid,
-        $aid)
+        $cik,
+        api:preprocess-tags($tag),
+        $ticker,
+        $sic)
 let $report as object? := reports:reports($report)
 let $map as item* :=
     if(exists($report))
@@ -291,4 +291,4 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format)
+return api:check-and-return-results($token, $results, $format) 
