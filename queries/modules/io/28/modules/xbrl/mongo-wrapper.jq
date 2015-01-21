@@ -32,8 +32,7 @@ declare %private function mw:check-result(
     else error(QName("mw:INVALID-PARAMETER"),
                string-join((
                  $results."$err",
-                 "COLLECTION: " || $collection,
-                 "HINT: " || serialize($hint)
+                 "COLLECTION: " || $collection
                ), " "))
 };
 
