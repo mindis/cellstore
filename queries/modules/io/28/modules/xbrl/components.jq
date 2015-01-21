@@ -117,7 +117,7 @@ declare function components:components-for(
   $concepts as string*,
   $exact-labels as string*,
   $options as object*
-)
+) as object*
 {
   let $aids := if(deep-equal($archives-or-ids, $components:ALL-ARCHIVES))
                then $components:ALL-ARCHIVES
