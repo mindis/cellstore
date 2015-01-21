@@ -22,7 +22,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $cid                as 
 declare  %rest:case-insensitive %rest:distinct  variable $reportElement      as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $concept            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $label              as string* external;
+declare  %rest:case-insensitive %rest:distinct  %rest:encoding("UTF-8") variable $label as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $language           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $labelRole          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
