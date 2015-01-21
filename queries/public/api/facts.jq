@@ -43,7 +43,10 @@ declare function local:param-values(
          else request:param-values("sec:LegalEntityAxis::default")
 
      case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
-         return $entities._id
+         return
+            if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
+            then $entities._id
+            else "dummy"
      case $name eq "xbrl28:Archive" and $profile-name = ("sec", "japan") return (
             let $prefix as string :=
                 switch($profile-name)
@@ -190,7 +193,8 @@ let $entities as object* :=
         $cik,
         $tag,
         $ticker,
-        $sic)
+        $sic,
+        $aid)
 let $report as object? := reports:reports($report)
 let $map as item* :=
     if(exists($report))
