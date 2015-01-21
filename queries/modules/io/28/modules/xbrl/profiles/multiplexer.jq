@@ -37,9 +37,9 @@ declare function multiplexer:latest-filings(
   $fiscal-periods as string*) as object*
 {
   switch($profile-name)
-  case "sec" return fiscal-core:latest-filings($entities, $fiscalPeriods)
+  case "sec" return fiscal-core:latest-filings($entities, $fiscal-periods)
   case "japan" return
-    japan:latest-filings($entities, $fiscalPeriods)
+    japan:latest-filings($entities, $fiscal-periods)
   default return
     ()
 };
