@@ -30,7 +30,7 @@ declare %private function api:flatten-json-object($items as item*) as item*
   for $item in $items
   return typeswitch($item)
          case atomic return $item
-         case array return string-join(flatten($item)[$$ instance of atomic], "")
+         case array return string-join(flatten($item)[$$ instance of atomic], ", ")
          case object return {|
              for $key in keys($item)
              return typeswitch($item.$key)
