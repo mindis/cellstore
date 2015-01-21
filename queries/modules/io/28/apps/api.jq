@@ -10,8 +10,9 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare function api:json-to-csv($objects as object*) as string
 {
-  string-join(
-    csv:serialize(api:flatten-json-object($objects), { serialize-null-as : "" }),
+  let $flattened as object* := api:flatten-json-object($objects)
+  return string-join(
+    csv:serialize($flattened, { field-names: [ keys($flattened) ], serialize-null-as : "" }),
     "")
   };
 
@@ -29,7 +30,7 @@ declare %private function api:flatten-json-object($items as item*) as item*
   for $item in $items
   return typeswitch($item)
          case atomic return $item
-         case array return string-join(flatten($item)[$$ instance of atomic], "")
+         case array return string-join(flatten($item)[$$ instance of atomic], ", ")
          case object return {|
              for $key in keys($item)
              return typeswitch($item.$key)
