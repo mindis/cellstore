@@ -53,10 +53,10 @@ declare function local:param-values(
                 case "japan" return "fsa"
                 default return (: not reachable :) ()
             let $fiscalYears := ($fiscalYear, request:param-values( $prefix || ":FiscalYear"))
-            let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod")
+            let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod", $entities)
             return
                 if($fiscalYears = "LATEST")
-                then multiplexer:latest-filings($entities, $fiscalPeriods)._id
+                then multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods)._id
                 else (),
             $aid,
             request:param-values("xbrl28:Archive")
@@ -128,15 +128,17 @@ declare function local:hypercube($entities as object*) as object
             default
                 return $parameter
         let $all as boolean :=
-            (local:param-values($dimension-name) ! upper-case($$)) = "ALL"
+            (local:param-values($dimension-name, $entities) ! upper-case($$)) = "ALL"
         let $type as string? :=
-            (local:param-values($dimension-name || "::type"), local:param-values($dimension-name || ":type"))[1]
+            (local:param-values($dimension-name || "::type", $entities),
+             local:param-values($dimension-name || ":type", $entities))[1]
 
-        let $values := local:param-values($dimension-name)
+        let $values := local:param-values($dimension-name, $entities)
         let $typed-values := if (exists($type)) then local:cast-sequence($values[$$ ne "ALL"], $type) else $values
 
         let $has-default := ($parameter = $dimension-name || "::default") or ($parameter = $dimension-name || ":default")
-        let $default-value := (local:param-values($dimension-name || "::default"), local:param-values($dimension-name || ":default"))[1]
+        let $default-value := (local:param-values($dimension-name || "::default", $entities),
+                               local:param-values($dimension-name || ":default", $entities))[1]
         let $typed-default-value := if (exists($type)) then local:cast-sequence($default-value, $type) else $default-value
 
         return
