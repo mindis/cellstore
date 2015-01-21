@@ -13,12 +13,13 @@ import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
-import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
 import module namespace request = "http://www.28msec.com/modules/http-request";
 
-declare function local:param-values($name as string) as string*
+declare function local:param-values(
+    $name as string,
+    $entities as object*) as string*
 {
     switch(true)
      case $name eq "xbrl:Concept"
@@ -43,18 +44,8 @@ declare function local:param-values($name as string) as string*
          then "sec:DefaultLegalEntity"
          else request:param-values("sec:LegalEntityAxis::default")
 
-     case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan") return (
-         let $companies := multiplexer:entities(
-            $profile-name,
-            $eid,
-            $cik,
-            api:preprocess-tags($tag),
-            $ticker,
-            $sic)._id
-        return if(empty(($cik,$tag,$ticker,$sic)) or exists($companies))
-               then $companies
-               else "dummy",
-        request:param-values("xbrl:Entity"))
+     case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
+         return $entities._id
      case $name eq "xbrl28:Archive" and $profile-name = ("sec", "japan") return (
             let $prefix as string :=
                 switch($profile-name)
@@ -63,10 +54,9 @@ declare function local:param-values($name as string) as string*
                 default return (: not reachable :) ()
             let $fiscalYears := ($fiscalYear, request:param-values( $prefix || ":FiscalYear"))
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod")
-            let $entities := entities:entities(local:param-values("xbrl:Entity"))
             return
                 if($fiscalYears = "LATEST")
-                then fiscal-core:latest-filings($entities, $fiscalPeriods)._id
+                then multiplexer:latest-filings($entities, $fiscalPeriods)._id
                 else (),
             $aid,
             request:param-values("xbrl28:Archive")
@@ -122,7 +112,7 @@ declare function local:cast-sequence($values as atomic*, $type as string) as ato
       default return error(xs:QName("local:unsupported-type"), $type || ": unsupported type")
 };
 
-declare function local:hypercube() as object
+declare function local:hypercube($entities as object*) as object
 {
     let $hypercube-spec :=
     {|
@@ -190,16 +180,17 @@ session:audit-call($token);
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
+let $eid as string* := distinct-values(($eid, request:param-values("xbrl:Entity")))
 
 (: Object resolution :)
 let $entities as object* :=
-    companies:companies(
+    multiplexer:entities(
+        $profile-name,
+        $eid,
         $cik,
         $tag,
         $ticker,
-        $sic,
-        $eid,
-        $aid)
+        $sic)
 let $report as object? := reports:reports($report)
 let $map as item* :=
     if(exists($report))
@@ -215,7 +206,7 @@ let $rule as item* :=
         else ()
     )
 
-let $hypercube := local:hypercube()
+let $hypercube := local:hypercube($entities)
 
 let $facts :=
     let $options := {|
