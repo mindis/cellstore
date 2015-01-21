@@ -24,8 +24,7 @@ declare %an:strictlydeterministic function mw:connection() as anyURI
 
 declare %private function mw:check-result(
     $results as object()*,
-    $collection as string,
-    $hint as object) as object()*
+    $collection as string) as object()*
 {
     if(empty($results."$err"))
     then $results
@@ -43,8 +42,7 @@ declare function mw:find($collection as string, $query as object) as object()*
   return
     mw:check-result(
         mongo:find($conn, $collection, $hint),
-        $collection,
-        $hint)
+        $collection)
 };
 
 declare function mw:find($collection as string, $query as object, $projection as object) as object()*
@@ -54,8 +52,7 @@ declare function mw:find($collection as string, $query as object, $projection as
   return
     mw:check-result(
       mongo:find($conn, $collection, $hint, $projection, {}),
-      $collection,
-      $hint)
+      $collection)
 };
 
 declare function mw:run-cmd-deterministic($command as object) as object*
