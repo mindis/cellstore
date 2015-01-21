@@ -30,6 +30,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $reportElement      as 
 declare  %rest:case-insensitive %rest:distinct  variable $concept            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $label              as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $language           as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $labelRole          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
 
 session:audit-call($token);
@@ -74,7 +76,9 @@ let $res as object* :=
   for $concept in $component.Concepts[]
   where empty($reportElement) or $concept.Name = $reportElement
   for $found-label in $concept.Labels[]
-  where empty($label) or $found-label.Value = $label
+  where (empty($label) or $found-label.Value = $label) and
+        (empty($language) or $found-label.Language = $language) and
+        (empty($labelRole) or $found-label.Role = $labelRole)
   return {|
     { Archive: $component.Archive },
     { ComponentRole: $component.Role },
