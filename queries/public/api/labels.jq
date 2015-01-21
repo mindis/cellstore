@@ -1,15 +1,10 @@
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
-import module namespace backend = "http://apps.28.io/test";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 
-import module namespace sec-filings = "http://28.io/modules/xbrl/profiles/sec/filings";
-import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
-
-import module namespace csv = "http://zorba.io/modules/json-csv";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
@@ -59,7 +54,6 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $aid)
 
-let $entities as object*  := entities:entities($archives.Entity)
 let $components as object* :=
     multiplexer:components(
       $profile-name,
