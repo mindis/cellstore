@@ -42,7 +42,18 @@ declare function japan:entities(
        for $entity in (
          for $tag in $tag
          return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
-         entities:entities($eid)
+
+         let $entities := entities:entities($eid)
+         let $idsNotFound :=
+           for $id in $eid
+           let $entity := $entities[$$._id eq $id]
+           where empty($entity)
+           return $id
+         return
+           if(empty($idsNotFound))
+           then $entities
+           else error(xs:QName("japan:ENTITY_NOT_FOUND"),
+                      string-join($idsNotFound ! ("'" || $$ || "'"), ",") || ": Entities not found.")
        )
        group by $entity._id
        return $entity[1]
