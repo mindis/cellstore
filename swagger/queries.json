@@ -23,7 +23,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -104,6 +105,14 @@
                     "format": "xml"
                 }
             }, {
+                "title": "Get list of all companies with the tag NIKKEI as XML",
+                "description": "Get list of all companies with the tag NIKKEI. Return the result as XML",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "NIKKEI",
+                    "format": "xml"
+                }
+            }, {
                 "title": "Retrieve information about all DOW30 entities",
                 "profile": ["sec"],
                 "description": "Retrieve information about all DOW30 entities. Return the result as CSV.",
@@ -129,7 +138,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -254,7 +264,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -361,14 +372,32 @@
                     }
                 },
                 {
-                "title": "Retrieve the periods of the filings filed by a specific entity",
-                "description": "Retrieve information about the periods of the filings filed by an entity identified by its CIK. Return the result as XML.",
-                "profile": ["sec"],
-                "parameters": {
-                    "cik": "66740",
-                    "format": "xml"
-                }
-            }]
+                    "title": "Retrieve the periods of the filings filed by a specific entity",
+                    "description": "Retrieve information about the periods of the filings filed by an entity identified by its CIK. Return the result as XML.",
+                    "profile": ["sec"],
+                    "parameters": {
+                        "cik": "66740",
+                        "format": "xml"
+                    }
+                },
+                {
+                    "title": "Retrieve the periods of the filings filed for specific years for all entities",
+                    "description": "Retrieve the periods of the filings filed for specific years for all entities",
+                    "profile": ["japan"],
+                    "parameters": {
+                        "fiscalYear": [2013, 2014],
+                        "tag": "ALL"
+                    }
+                },
+                {
+                    "title": "Retrieve all Q1 and Q2 periods of the filings filed for all entities",
+                    "description": "Retrieve all Q1 and Q2 periods of the filings filed for all entities",
+                    "profile": ["japan"],
+                    "parameters": {
+                        "fiscalPeriod": ["Q1", "Q2"],
+                        "tag": "ALL"
+                    }
+                }]
         }]
     }, {
         "path": "/components.jq",
@@ -386,7 +415,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -466,6 +496,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of a particular component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -566,12 +597,14 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -670,6 +703,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "merge",
+                "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
                 "name": "token",
                 "description": "The token of the current session",
                 "required": true,
@@ -740,6 +779,141 @@
                     "aid": "0000021344-13-000050",
                     "disclosure": "BalanceSheet"
                 }
+            }, {
+                "title": "Fact Table as CSV",
+                "description": "Retrieve the fact table for a particular component. Return the result as CSV.",
+                "profile": ["sec"],
+                "parameters": {
+                    "aid": "0000021344-14-000008",
+                    "networkIdentifier": "http://www.thecocacolacompany.com/role/ConsolidatedBalanceSheets",
+                    "format": "csv"
+                }
+            }, {
+                "title": "Fact Table of Coca Cola's Q3/2013 Balance Sheet",
+                "description": "Retrieve the fact table for the Balance Sheet of Coca Cola filing identified with accession number 0000021344-13-000050. Return the result as XML.",
+                "profile": ["sec"],
+                "parameters": {
+                    "format": "xml",
+                    "aid": "0000021344-13-000050",
+                    "disclosure": "BalanceSheet"
+                }
+            }, {
+                "title": "Get B/S report by company name/ID and period",
+                "description": "Get B/S report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report by company name/ID and period",
+                "description": "Get B/S report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/F report by company name/ID and period",
+                "description": "Get C/F report by company name/ID and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod":"Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report for multiple FYs by company name/ID and range of period",
+                "description": "Get B/S report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": [ "Q1", "Q2" ],
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report for multiple FYs by company name/ID and range of period",
+                "description": "Get P/L report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": [ "Q1", "Q2" ],
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/S report for multiple FYs by company name/ID and range of period",
+                "description": "Get C/S report for multiple FYs by company name/ID and range of period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": [ "Q1", "Q2" ],
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report of different companies by list of company names/IDs and period",
+                "description": "Get B/S report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "NIKKEI",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get P/L report of different companies by list of company names/IDs and period",
+                "description": "Get P/L report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "NIKKEI",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get C/S report of different companies by list of company names/IDs and period",
+                "description": "Get C/S report of different companies by list of company names/IDs and period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag": "NIKKEI",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "format": "xml"
+                }
             }
             ]
         }]
@@ -765,6 +939,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -866,11 +1041,13 @@
                 "name": "eliminate",
                 "description": "Whether  to eliminate empty rows/columns",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "merge",
+                "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
+                "required": false,
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "token",
@@ -1067,6 +1244,7 @@
             }, {
                 "name": "cid",
                 "description": "[Deprecated] The id of the component",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1196,7 +1374,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1528,7 +1707,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1626,6 +1806,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1636,6 +1817,7 @@
             }, {
                 "name": "rules",
                 "description": "[Deprecated, use report] The rules that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1680,19 +1862,22 @@
                 "type": "string",
                 "enum": [
                     "SEC",
-                    "generic"
+                    "generic",
+                    "japan"
                 ],
                 "paramType": "query"
             }, {
                 "name": "prefix:dimension",
-                "pattern": "[^:]+:[^:]+",
+                "nameEditable": true,
+                "pattern": "^[^:]+:[^:]+$",
                 "description": "The name of a dimension used for filtering. Accepted format: prefix:dimension. As a value, the value of the dimension or ALL can be provided if all facts with this dimension should be retrieved",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "prefix:dimension::default",
-                "pattern": "[^:]+:[^:]+::default",
+                "nameEditable": true,
+                "pattern": "^[^:]+:[^:]+::default$",
                 "description": "The default value of the dimension [prefix:dimension] that should be returned if the dimension was not provided explicitly for a fact. Accepted format: prefix:dimension::default",
                 "required": false,
                 "type": "string",
@@ -1754,14 +1939,216 @@
                     "format": "csv"
                 }
             }, {
-                "title": "Get text by company name/ID, period and element name",
-                "description": "Get text by company name/ID, period and element name.",
+                "title": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014",
+                "description": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "xbrl:Period": "2012-06-26",
-                    "xbrl:Entity": "http://info.edinet-fsa.go.jp E01225-000",
-                    "japan:Submitted": "ALL",
-                    "xbrl:Concept": "jp-o-di:ContextIDBeginningOfPeriodSCNonconsolidatedSS"
+                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "fiscalPeriod": "Q1",
+                    "fiscalYear": 2014,
+                    "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
+                }
+            }, {
+                "title": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014",
+                "description": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014.",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "fiscalPeriod": "Q2",
+                    "fiscalYear": 2014,
+                    "concept": ["jpcrp-cor:NumberOfSharesHeld", "jpcrp-cor:ShareholdingRatio"],
+                    "jpcrp-cor:MajorShareholdersAxis": "ALL",
+                    "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
+                }
+            }]
+        }]
+    }, {
+        "path": "/labels.jq",
+        "description": "Labels",
+        "operations": [{
+            "method": "POST",
+            "summary": "Retrieve labels for the supplied components and report elements",
+            "nickname": "listLabels",
+            "parameters": [{
+                "name": "format",
+                "description": "The result format",
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "json",
+                    "csv",
+                    "xml",
+                    "excel",
+                    "html"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "eid",
+                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "ticker",
+                "description": "The ticker of the entity",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "tag",
+                "description": "The tag to filter entities",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "DOW30",
+                    "SP500",
+                    "RUSSEL1000",
+                    "FORTUNE100",
+                    "PJI",
+                    "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "sic",
+                "description": "The industry group",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "cik",
+                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "fiscalYear",
+                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum": [
+                    "year (e.g. 2011)",
+                    "LATEST",
+                    "ALL"
+                ]
+            }, {
+                "name": "fiscalPeriod",
+                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "Q1",
+                    "Q2",
+                    "Q3",
+                    "FY",
+                    "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "aid",
+                "description": "The id of the filings for which to retrieve components",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "cid",
+                "description": "[Deprecated] The id of a particular component",
+                "deprecated": true,
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "networkIdentifier",
+                "description": "The network identifier (=role) of a particular component",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "role",
+                "description": "The role of a particular component",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "disclosure",
+                "description": "The disclosure to search for (e.g. BalanceSheet)",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "reportElement",
+                "description": "The name of the report element to search for (e.g. us-gaap:Goodwill)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "label",
+                "description": "A search term to search in the labels of components (e.g. stock). Exact match, except for the SEC profile where it performs full text search in English.",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "labelRole",
+                "description": "A label role",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "profile-name",
+                "description": "Specifies which profile to use. The default depends on the underlying repository.",
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "SEC",
+                    "generic"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "token",
+                "description": "The token of the current session",
+                "required": true,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "_method",
+                "paramType": "query"
+            }],
+            "responseMessages": [{
+                "code": 401,
+                "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 500,
+                "message": "An internal error occurred during the processing of the request.",
+                "responseModel": "Error"
+            }],
+            "successMessages": [{
+                "code": 200,
+                "message": "Returns all components for the given filing"
+            }],
+            "examples": [{
+                "title": "Retrieve information about all Japanese labels of a filing",
+                "description": "Retrieves, in XML, all Japanese standard labels for a filing.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "S1003QRF",
+                    "language" : "ja",
+                    "labelRole" : "http://www.xbrl.org/2003/role/label",
+                    "format" : "xml"
                 }
             }]
         }]
@@ -1781,7 +2168,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1877,6 +2265,7 @@
             }, {
                 "name": "map",
                 "description": "[Deprecated, use report] The concept map that should be used to resolve the concept (default: none)",
+                "deprecated": true,
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -1942,12 +2331,12 @@
                     "format": "csv"
                 }
             }, {
-                "title": "Get element name of standard taxonomy by label",
+                "title": "Get element name of standard taxonomy by label, as XML.",
                 "description": "Get element name of standard taxonomy by label.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
-                    "format": "json",
+                    "format": "xml",
                     "profile-name": "japan",
                     "label": "Accounting policy for deferred assets"
                 }

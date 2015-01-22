@@ -158,9 +158,11 @@ declare function layout:build-hypercube(
     return hypercubes:user-defined-hypercube(
             {|
                 for $dimension in distinct-values((keys(($hypercube.Aspects, $table-domain)), $open-dimensions))
-                let $dimension-type as string? := $dimension.Type
+                let $dimension-object := $hypercube.Aspects.$dimension
+                let $dimension-is-typed as boolean := $dimension-object.Kind = "TypedDimension"
+                let $dimension-type as string? := $dimension-object.Type
                 let $hypercube-members as atomic* := (
-                    descendant-objects($hypercube.Aspects.$dimension.Domains).Name,
+                    descendant-objects($hypercube.Aspects.$dimension.Members).Name,
                     $hypercube.Aspects.$dimension.DomainRestriction.Enumeration[])
                 let $hypercube-default := ($hypercube.Aspects.$dimension.Default,
                                            $structural-model.DimensionDefaults.$dimension)[1]
@@ -175,14 +177,11 @@ declare function layout:build-hypercube(
                         return $hypercube-members
                     case exists($table-domain-members)
                         return $table-domain-members
-                    default return () 
-                    
+                    default return ()
+
                 let $inferred-type as string? :=
                     typeswitch($actual-members[not ($$ instance of null)])
-                    case string* return
-                            if(contains(($actual-members)[not ($$ instance of null)][1], ":"))
-                            then ()
-                            else "string"
+                    case string* return "string"
                     case int* return "int"
                     case integer* return "integer"
                     case boolean* return "boolean"
@@ -191,7 +190,7 @@ declare function layout:build-hypercube(
 
                 return {
                     $dimension : {|
-                        { Type : $actual-type }[exists($actual-type) and exists($actual-members)],
+                        { Type : $actual-type }[$dimension-is-typed],
 
                         if(exists($actual-members))
                         then {
@@ -239,29 +238,14 @@ declare function layout:matches-aspects(
     $participating-aspects as string*,
     $defaults as object?) as boolean
 {
-    (
-        every $aspect in $participating-aspects
-        satisfies
-            let $default-value := $defaults.$aspect
-            let $allowed-value := $aspect-constraints.$aspect
-            return (
-                exists($allowed-value)
-                or
-                $fact.Aspects.$aspect eq $default-value
-            )
-    )
-    and
-    (
-        every $aspect in keys($aspect-constraints)
-        satisfies
-            let $default-value := $defaults.$aspect
-            let $allowed-value := $aspect-constraints.$aspect
-            return (
-                $allowed-value eq $default-value
-                or
-                $fact.Aspects.$aspect eq $allowed-value
-            )
-    )
+  every $aspect in $participating-aspects
+  satisfies
+    let $default-value := $defaults.$aspect
+    let $allowed-value := $aspect-constraints.$aspect
+    return
+      $fact.Aspects.$aspect eq $allowed-value
+      or
+      (empty($allowed-value) and $fact.Aspects.$aspect eq $default-value)
 };
 
 (:
@@ -286,7 +270,7 @@ declare function layout:slices($table-headers as array, $tag-selectors as string
     return
     if(size($table-headers) le 1)
     then $first-slices
-    else 
+    else
         let $bottom-slices := layout:slices($bottom-rows-of-headers, $tag-selectors)
         for $i in 1 to count($first-slices)
         return
@@ -307,7 +291,7 @@ declare function layout:tag-selectors($table-headers as array) as array*
     return
     if(size($table-headers) le 1)
     then $first-tags
-    else 
+    else
         let $bottom-tags := layout:tag-selectors($bottom-rows-of-headers)
         for $i in 1 to count($first-tags)
         return [($first-tags[$i])[], ($bottom-tags[$i])[]]
@@ -401,7 +385,7 @@ declare function layout:empty-rows-and-columns($cells as array, $threshold as do
         Columns: [
             for $j in 1 to size($cells[[1]])
             let $column := $cells[][[$j]]
-            where count($column.Value) lt count($column) * $threshold
+            where count($column.Value) le count($column) * $threshold
             return $j
         ]
     }
@@ -494,7 +478,7 @@ declare function layout:layout(
 {
     let $elimination as boolean := ($options.Eliminate, false)[1]
     let $threshold as double := ($options.EliminationThreshold, 0)[1]
-    let $original-hypercube :=
+    let $original-hypercube := 
         if($options.Hypercube instance of null)
         then ()
         else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1]
@@ -511,7 +495,7 @@ declare function layout:layout(
         for $aspect in distinct-values(keys($facts.Aspects))
         return { $aspect : [ distinct-values($facts.Aspects.$aspect) ] }
     |}
-    let $defaults := 
+    let $defaults :=
     {|
         for $aspect in keys($hypercube.Aspects)
         let $default := $hypercube.Aspects.$aspect.Default

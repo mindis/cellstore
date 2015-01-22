@@ -76,7 +76,7 @@ declare function hypercubes:hypercubes-for-components(
  :
  : <p>Retrieves all facts in the supplied hypercube, across all archives.</p>
  : <p>Default values will be populated automatically.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  :
@@ -94,7 +94,7 @@ as object*
  :
  : <p>Retrieves all facts in the supplied hypercube, across all archives.</p>
  : <p>Default values will be populated automatically.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $options <a href="facts#standard_options">standard fact retrieving options</a>.
@@ -120,7 +120,7 @@ as object*
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -141,7 +141,7 @@ as object*
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -165,8 +165,8 @@ as item* (: object* :)
           true (: parameter has higher priority than option :)
         )
       let $facts-for-archives-and-concepts := $options.facts-for-archives-and-concepts
-      let $concepts :=
-          keys($hypercube.Aspects.$facts:CONCEPT.Domains."xbrl:ConceptDomain".Members)
+      let $concepts as string* :=
+          distinct-values(descendant-objects($hypercube.Aspects.$facts:CONCEPT.Members).Name)
       let $concepts := if (exists($concepts))
                    then $concepts
                    else $facts:ALL_OF_THEM
@@ -192,7 +192,7 @@ as item* (: object* :)
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -212,7 +212,7 @@ declare function hypercubes:fact-table-for-hypercube(
  : <p>Retrieves all facts from the supplied archives, that are relevant to the
  : supplied hypercube, and populates them with the default dimension values
  : when missing.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs
@@ -236,7 +236,7 @@ declare function hypercubes:fact-table-for-hypercube(
  : <p>Utility function to convert a sequence of facts to a fact table
  : given a hypercube. It is not recommended to use this function directly.
  : Use hypercubes:fact-table-for-hypercube instead.</p>
- : 
+ :
  :
  : @param $hypercube a hypercube.
  : @param $facts a sequence of facts that were retrieved with the hypercube.
@@ -272,7 +272,7 @@ declare function hypercubes:fact-table-for-hypercube-and-facts(
  : that are relevant to the
  : supplied hypercube. Default dimension values are added to the facts
  : when missing.</p>
- : 
+ :
  : @param $networks networks.
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs or $hypercubes:ALL_ARCHIVES for no filtering.
@@ -294,7 +294,7 @@ declare function hypercubes:populate-networks-with-facts(
  : that are relevant to the
  : supplied hypercube. Default dimension values are added to the facts
  : when missing.</p>
- : 
+ :
  : @param $networks networks.
  : @param $hypercube a hypercube.
  : @param $archives a sequence of archives or their AIDs.
@@ -319,7 +319,7 @@ declare function hypercubes:populate-networks-with-facts(
  : <p>A utility function that populates networks with facts against concepts that belong
  : to them. It is not recommended to use this function directly.
  : Use hypercubes:populate-networks-with-retrieved-facts.</p>
- : 
+ :
  : @param $networks networks.
  : @param $facts a sequence of facts.
  :
@@ -337,7 +337,7 @@ declare function hypercubes:populate-networks-with-retrieved-facts(
   return
     copy $result := $networks
     modify
-      for $concept in descendant-objects(values($result.Trees))[exists($$.Name)]
+      for $concept in descendant-objects($result.Trees)[exists($$.Name)]
       let $name := $concept.Name
       return insert json { "Facts" : $fact-table-by-concepts.$name } into $concept
     return $result
@@ -396,7 +396,7 @@ declare function hypercubes:dimensionless-hypercube($options as object?) as obje
  :    by default, not limited, and only xbrl:Unit has a default value.</p>
  :
  : @return the hypercube instantiation.
- : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These 
+ : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These
  : dimension information subobjects
  : may have two (optional) fields: Default (a string) and Domain (an array of strings).
  :
@@ -415,7 +415,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?) as ob
  :    by default, not limited, and only xbrl:Unit has a default value.</p>
  :
  : @return the hypercube instantiation.
- : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These 
+ : @param $dimensions: an object with pairs of (dimension name, object with dimension information). These
  : dimension information subobjects
  : may have two (optional) fields: Default (a string) and Domain (an array of strings).
  : @param $options: an object with two options: Name (default: xbrl:UserDefinedHypercube) and Label
@@ -427,7 +427,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?) as ob
 declare function hypercubes:user-defined-hypercube($dimensions as object?, $options as object?) as object
 {
   {
-    "Name" : ($options.Name, "xbrl:UserDefinedHypercube")[1], 
+    "Name" : ($options.Name, "xbrl:UserDefinedHypercube")[1],
     "Label" : ($options.Label, "User-defined Hypercube")[1],
     "Aspects" : {|
       for $dimension-name as string in distinct-values((
@@ -491,26 +491,12 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?, $opti
           if (empty($dimension-type))
           then
           {
-            "Domains" : {
-              $domain-name : {
-                "Name" : $domain-name,
-                "Label" :
-                  switch($dimension-name)
-                  case "xbrl:Concept" return "XBRL Concept Domain"
-                  case "xbrl:Entity" return "XBRL Entity Domain"
-                  case "xbrl:Period" return "XBRL Period Domain"
-                  case "xbrl:Unit" return "XBRL Unit Domain"
-                  default return $dimension-name || " Domain",
-                "Members" : {|
-                  for $dimension-member in distinct-values($dimension-domain[])
-                  return {
-                    $dimension-member: {
-                      Name: hypercubes:check-type-and-return($dimension-member, "string")
-                    }
-                  } 
-                |}
+            "Members" : [
+              for $dimension-member in distinct-values($dimension-domain[])
+              return {
+                  Name: hypercubes:check-type-and-return($dimension-member, "string")
               }
-            }
+            ]
           }[exists($dimension-domain)]
           else {
             "DomainRestriction" : {
@@ -523,7 +509,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?, $opti
         |}
       }
     |}
-  } 
+  }
 };
 
 declare %private function hypercubes:check-type-and-return(
@@ -531,11 +517,13 @@ declare %private function hypercubes:check-type-and-return(
     $dimension-type as string) as atomic*
 {
   for $dimension-member as atomic in $dimension-members
+  let $member-type as string := local-name-from-QName(schema:schema-type($dimension-member))
+  let $expected-type as string := local-name-from-QName(xs:QName($dimension-type))
   return
   if (not $dimension-member instance of null
-      and
-      local-name-from-QName(schema:schema-type($dimension-member)) ne
-      local-name-from-QName(xs:QName($dimension-type)))
+      and $member-type ne $dimension-type
+      and ($member-type ne "int" or $expected-type ne "integer")
+      )
   then error(
         xs:QName("hypercubes:invalid-type"),
         schema:schema-type($dimension-member) ||
@@ -558,9 +546,9 @@ declare function hypercubes:modify-hypercube(
                 $new-metadata
             else {|
                 { Type : $hypercube.Aspects.$dimension.Type }[$hypercube-metadata.Kind eq "TypedDimension"],
-                let $hypercube-domain := 
+                let $hypercube-domain :=
                   (
-                     descendant-objects(values($hypercube-metadata.Domains)).Name,
+                     descendant-objects($hypercube-metadata.Members).Name,
                      jn:flatten($hypercube-metadata.DomainRestriction.Enumeration)
                   )
                 where exists($hypercube-domain)
@@ -585,10 +573,16 @@ declare function hypercubes:merge($hypercubes as object*) as object
     hypercubes:user-defined-hypercube({|
         for $aspect in keys($hypercubes.Aspects)
         let $default := distinct-values($hypercubes.Aspects.$aspect.Default)
-        let $domain := distinct-values((descendant-objects($hypercubes.Aspects.$aspect.Domains).Name))
+        let $domain := distinct-values((
+            descendant-objects($hypercubes.Aspects.$aspect.Members).Name,
+            $hypercubes.Aspects.$aspect.DomainRestriction.Enumeration[]
+        ))
+        let $kind as string? := distinct-values($hypercubes.Aspects.$aspect.Kind)
+        let $type as string? := distinct-values($hypercubes.Aspects.$aspect.Type)
         return {
             $aspect : {|
                 { Default: $default}[exists($default)],
+                { Type : $type }[$kind eq "TypedDimension"],
                 { Domain: [ distinct-values(($domain, $default)) ]}[exists($domain)]
             |}
         }

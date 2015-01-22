@@ -14,7 +14,7 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Period breakdown" ], 
+        "GroupLabels" : [ "Period [Axis] breakdown" ], 
         "GroupCells" : [ [ {
           "CellLabels" : [ "Period [Axis]" ], 
           "CellConstraints" : {
@@ -46,53 +46,6 @@
       "y" : [ {
         "GroupLabels" : [ "Breakdown on concepts" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "四半期連結キャッシュ・フロー計算書関係", "jpcrp-cor:NotesQuarterlyConsolidatedStatementOfCashFlowsHeading" ], 
-          "CellConstraints" : {
-            "" : {
-              "xbrl:Concept" : "jpcrp-cor:NotesQuarterlyConsolidatedStatementOfCashFlowsHeading"
-            }
-          }, 
-          "TagSelectors" : [  ], 
-          "CellSpan" : 5, 
-          "RollUp" : false, 
-          "IsRollUp" : false, 
-          "IsNegated" : false
-        } ], [ {
-          "CellLabels" : [ "四半期連結キャッシュ・フロー計算書関係", "jpcrp-cor:NotesQuarterlyConsolidatedStatementOfCashFlowsTable" ], 
-          "CellConstraints" : {
-            "" : {
-              "xbrl:Concept" : "jpcrp-cor:NotesQuarterlyConsolidatedStatementOfCashFlowsTable"
-            }
-          }, 
-          "TagSelectors" : [  ], 
-          "IsRollUp" : false, 
-          "IsNegated" : false, 
-          "Depth" : 1, 
-          "IsAbstract" : true
-        }, {
-          "CellLabels" : [ "連結個別", "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" ], 
-          "CellConstraints" : {
-            "" : {
-              "xbrl:Concept" : "jppfs-cor:ConsolidatedOrNonConsolidatedAxis"
-            }
-          }, 
-          "TagSelectors" : [  ], 
-          "IsRollUp" : false, 
-          "IsNegated" : false, 
-          "Depth" : 2, 
-          "IsAbstract" : true
-        }, {
-          "CellLabels" : [ "連結", "jppfs-cor:ConsolidatedMember" ], 
-          "CellConstraints" : {
-            "" : {
-              "xbrl:Concept" : "jppfs-cor:ConsolidatedMember"
-            }
-          }, 
-          "TagSelectors" : [  ], 
-          "IsRollUp" : false, 
-          "IsNegated" : false, 
-          "Depth" : 3
-        }, {
           "CellLabels" : [ "四半期連結キャッシュ・フロー計算書関係", "jpcrp-cor:NotesQuarterlyConsolidatedStatementOfCashFlowsLineItems" ], 
           "CellConstraints" : {
             "" : {
@@ -100,11 +53,11 @@
             }
           }, 
           "TagSelectors" : [  ], 
+          "CellSpan" : 1, 
+          "RollUp" : false, 
           "IsRollUp" : false, 
-          "IsNegated" : false, 
-          "Depth" : 1, 
-          "IsAbstract" : true
-        }, {
+          "IsNegated" : false
+        } ], [ {
           "CellLabels" : [ "四半期キャッシュ・フロー計算書を作成しない場合の注記", "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" ], 
           "CellConstraints" : {
             "" : {
@@ -114,39 +67,25 @@
           "TagSelectors" : [  ], 
           "IsRollUp" : false, 
           "IsNegated" : false, 
-          "Depth" : 2, 
-          "IsAbstract" : false
+          "Depth" : 1
         } ] ]
       } ]
     }, 
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
-      "Facts" : [ [ null ], [ null ], [ {
-        "Aspects" : {
-          "xbrl:Period" : "2014-04-01/2014-06-30", 
-          "xbrl:Concept" : [ "jppfs-cor:ConsolidatedMember", "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" ], 
-          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Unit" : "xbrl:NonNumeric", 
-          "xbrl28:Archive" : "S1002Q54", 
-          "japan:Submitted" : "2014-08-07", 
-          "japan:FiscalYear" : 2014, 
-          "japan:FiscalPeriod" : "Q1", 
-          "japan:FiscalPeriodType" : "YTD", 
-          "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
-        }
-      } ], [ null ], [ {
-        "_id" : "89a85616-b7d8-4e9e-b969-b1e731d738e0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "japan:Submitted" ], 
+      "Facts" : [ [ {
+        "_id" : "5620fc2b-21b6-4a28-a127-a61e10780a12", 
+        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
           "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
           "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000", 
           "xbrl:Period" : "2014-04-01/2014-06-30", 
-          "japan:FiscalPeriod" : "Q1", 
-          "japan:FiscalPeriodType" : "YTD", 
-          "japan:FiscalYear" : 2014, 
-          "japan:Submitted" : "2014-08-07", 
-          "xbrl:Unit" : "xbrl:NonNumeric", 
+          "fsa:FiscalPeriod" : "Q1", 
+          "fsa:FiscalPeriodType" : "YTD", 
+          "fsa:FiscalYear" : 2014, 
+          "fsa:Submitted" : "2014-08-07", 
+          "xbrl:Unit" : "xbrl28:NoUnit", 
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }, 
         "Type" : "NonNumericValue", 
@@ -158,10 +97,10 @@
         "AuditTrails" : [ {
           "Type" : "xbrl28:dimension-default", 
           "Label" : "Default dimension value", 
-          "Message" : "xbrl:Unit.Default = \"xbrl:NonNumeric\"", 
+          "Message" : "xbrl:Unit.Default = \"xbrl28:NoUnit\"", 
           "Data" : {
             "Dimension" : "xbrl:Unit", 
-            "Member" : "xbrl:NonNumeric", 
+            "Member" : "xbrl28:NoUnit", 
             "OutputConcept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock"
           }
         }, {
@@ -182,24 +121,31 @@
   }, {
     "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000"
   }, {
-    "xbrl:Unit" : "xbrl:NonNumeric"
+    "xbrl:Unit" : "xbrl28:NoUnit"
+  }, {
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
   }, {
     "xbrl28:Archive" : "S1002Q54"
   }, {
-    "japan:Submitted" : "2014-08-07"
+    "fsa:Submitted" : "2014-08-07"
   }, {
-    "japan:FiscalYear" : 2014
+    "fsa:FiscalYear" : 2014
   }, {
-    "japan:FiscalPeriod" : "Q1"
+    "fsa:FiscalPeriod" : "Q1"
   }, {
-    "japan:FiscalPeriodType" : "YTD"
-  }, {
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
+    "fsa:FiscalPeriodType" : "YTD"
   } ], 
   "GlobalConstraintLabels" : {
-    "xbrl:Concept" : "Implicit XBRL Concept Dimension", 
-    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "四半期キャッシュ・フロー計算書を作成しない場合の注記", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "連結個別", 
-    "jppfs-cor:ConsolidatedMember" : "連結"
+    "xbrl:Concept" : "Concept [Axis]", 
+    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "Description of fact that quarterly statement of cash flows has not been prepared [text block]", 
+    "xbrl:Entity" : "Reporting Entity [Axis]", 
+    "xbrl:Unit" : "Unit [Axis]", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
+    "xbrl28:Archive" : "Archive [Axis]", 
+    "fsa:Submitted" : "FSA Submission Date [Axis]", 
+    "fsa:FiscalYear" : "Fiscal Year [Axis]", 
+    "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 
+    "fsa:FiscalPeriodType" : "Fiscal Period Type [Axis]"
   }
 }

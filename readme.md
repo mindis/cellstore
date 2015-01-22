@@ -63,6 +63,11 @@ Create a CellStore deployment called test using the encrypted configuration in `
 $ gulp 28:setup --build-id=test --config=sec
 ```
 
+To resync changes made on hq.28.io into your local branch:
+```bash
+$ gulp download --build-id=test --config=sec
+```
+
 To remove a deployment:
 Once you are done:
 ```bash
@@ -141,3 +146,25 @@ gulp test:unit --build-id=mydemo --config=sec
     }
 }
 ```
+
+## Git Commit Messages
+* Use a single sentence
+* Use the present tense ("Add feature" not "Added feature")
+* Use the imperative mood ("Move cursor to..." not "Moves cursor to...")
+* Limit the first line to 72 characters or less
+* Reference issues and pull requests liberally
+* Consider starting the commit message with an applicable emoji:
+    * :new: `:new:` when writing a new feature 
+    * :lipstick: `:lipstick:` when improving the format/structure of the code
+    * :racehorse: `:racehorse:` when improving performance
+    * :non-potable_water: `:non-potable_water:` when plugging memory leaks
+    * :books: `:books:` when writing docs / documentation
+    * :bug: `:bug:` when fixing a bug
+    * :fire: `:fire:` when removing code or files
+    * :green_heart: `:green_heart:` when fixing the CI build
+    * :white_check_mark: `:white_check_mark:` when adding tests
+    * :lock: `:lock:` when dealing with security
+    * :arrow_up: `:arrow_up:` when upgrading dependencies
+    * :arrow_down: `:arrow_down:` when downgrading dependencies
+    * :link: `:link:` when merging
+

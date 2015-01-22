@@ -35,7 +35,8 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic)
+  $sic,
+  ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -47,12 +48,12 @@ let $archives as object* := multiplexer:filings(
 let $summaries :=
     switch($profile-name)
     case "sec" return
-        for $f in filings:summaries($archives) 
+        for $f in filings:summaries($archives)
         order by $f.Accepted descending
         return $f
     case "japan" return
       for $a in $archives
-      order by $a.Profiles.JAPAN.SubmissionDate descending
+      order by $a.Profiles.FSA.SubmissionDate descending
       return project($a, ("_id", "Entity", "Profiles"))
     default return $archives
 
@@ -98,18 +99,13 @@ let $serializers := {
     to-xml : function($res as object) as node() {
         switch($profile-name)
         case "sec" return
-            <Filings>{
-                filings:summaries-to-xml($res.Archives[])   
-            }</Filings>
+          <Filings>{
+            filings:summaries-to-xml($res.Archives[])
+          }</Filings>
         default return
-            <Archives>{
-                for $a in $res.Archives[]
-                return <Archive>
-                    <AID>{$a._id}</AID>
-                    <Entity>{$a.Entity}</Entity>
-                </Archive>
-            }
-            </Archives>
+          <Archives>{
+            api:json-to-xml($res.Archives[], "Archive")
+          }</Archives>
     },
     to-csv : function($res as object) as string {
         switch($profile-name)

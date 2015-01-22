@@ -1,6 +1,8 @@
 jsoniq version "1.0";
 module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
 
+import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
+
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 
@@ -22,7 +24,7 @@ import module namespace entities = "http://28.io/modules/xbrl/entities";
  : @param $tag a sequence of tags (e.g., indices).
  :
  : @return the entities that match those identifiers.
- :) 
+ :)
 declare function japan:entities(
     $cik as string*,
     $eid as string*,
@@ -36,7 +38,15 @@ declare function japan:entities(
   return
     switch(true)
     case $tag = "ALL" return entities:entities()
-    case exists($eid) return entities:entities($eid)
+    case exists(($eid, $tag)) return
+       for $entity in (
+         for $tag in $tag
+         return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
+
+         entities:entities($eid)
+       )
+       group by $entity._id
+       return $entity[1]
     default return ()
 };
 
@@ -49,7 +59,7 @@ declare function japan:entities(
  : @param $aid a sequence of AIDs.
  :
  : @return the filings that match those criteria.
- :) 
+ :)
 declare function japan:filings(
     $entities as item*,
     $fiscalYear as integer*,
@@ -60,11 +70,11 @@ declare function japan:filings(
     if($fiscalYear = 1)
     then
         for $a as object in archives:archives-for-entities($entities)
-        where (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.JAPAN.DocumentFiscalPeriodFocus = $fiscalPeriod)
+        where (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
         group by $a.Entity
         return
             for $filing in $a
-            group by $fy := $filing.Profiles.JAPAN.DocumentFiscalYearFocus
+            group by $fy := $filing.Profiles.FSA.DocumentFiscalYearFocus
             order by $fy descending
             count $i where $i eq 1
             return $filing
@@ -72,7 +82,29 @@ declare function japan:filings(
         for $a as object in archives:archives-for-entities($entities)
         where (empty($fiscalYear) or
                $fiscalYear = 0 or
-               $fiscalYear = $a.Profiles.JAPAN.DocumentFiscalYearFocus)
-               and (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.JAPAN.DocumentFiscalPeriodFocus = $fiscalPeriod)
+               $fiscalYear = $a.Profiles.FSA.DocumentFiscalYearFocus)
+               and (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
         return $a
+};
+
+(:~
+ : <p>Return latest filings of entities and fiscal periods.</p>
+ :
+ : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
+ : @param $entities a sequence of entity objects.
+ : @param $fiscal-periods a set of fiscal periods such as "Q1", "Q2", "Q3", "Q4", "FY"
+ :
+ : @return the latest archives for given entities and fiscal periods.
+ :)
+declare function japan:latest-filings(
+    $entities as object*,
+    $fiscal-periods as string*) as object*
+{
+    (
+        error(xs:QName("japan:NOT_IMPLEMENTED"),
+            "japan profile: Getting latest-filings for entities not implemented."),
+
+        $entities,
+        $fiscal-periods
+    )
 };

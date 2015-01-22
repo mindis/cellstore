@@ -10,9 +10,19 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare function api:json-to-csv($objects as object*) as string
 {
-  string-join(
-    csv:serialize(api:flatten-json-object($objects), { serialize-null-as : "" }),
-  "")
+  let $flattened as object* := api:flatten-json-object($objects)
+  return string-join(
+    csv:serialize($flattened, { field-names: [ keys($flattened) ], serialize-null-as : "" }),
+    "")
+  };
+
+declare function api:json-to-xml($objects as object*, $root-name as string) as element()*
+{
+  for $flattened-object as object in api:flatten-json-object($objects)
+  return element { $root-name } {
+    for $key in keys($flattened-object)
+    return element { $key } { $flattened-object.$key }
+  }
 };
 
 declare %private function api:flatten-json-object($items as item*) as item*
@@ -20,7 +30,7 @@ declare %private function api:flatten-json-object($items as item*) as item*
   for $item in $items
   return typeswitch($item)
          case atomic return $item
-         case array return string-join(flatten($item)[$$ instance of atomic], "")
+         case array return string-join(flatten($item)[$$ instance of atomic], ", ")
          case object return {|
              for $key in keys($item)
              return typeswitch($item.$key)
@@ -34,27 +44,27 @@ declare function api:validate-regexp($name as string, $value as string?, $regexp
 as ()
 {
   if (exists($value))
-  then  
+  then
     if (matches($value, "^" || $regexp || "$"))
     then ();
     else fn:error(xs:QName("api:bad-parameter"), "Provided parameter " || $name || " with value " || $value || " does not match reg. expression " || $regexp || ".");
   else ();
 };
 
-declare function api:validate-enum($name as string, $value as string?, $enum as string*) 
+declare function api:validate-enum($name as string, $value as string?, $enum as string*)
 as ()
 {
   if (exists($value))
-  then 
+  then
     if ($value = $enum)
     then ();
     else fn:error(xs:QName("api:bad-parameter"), "Provided parameter " || $name || " with value " || $value || " is not one of these: " || string-join($enum,", ") || ".");
   else ();
 };
 
-declare %private function api:sgpl($count as integer, $singular as string, $plural as string) 
+declare %private function api:sgpl($count as integer, $singular as string, $plural as string)
 as string
-{ 
+{
     if ($count eq 1)
     then $count || " " || $singular
     else $count || " " || $plural
@@ -80,7 +90,7 @@ as string
             else if ($hours gt 0) then api:sgpl($hours, "hour ago", "hours ago")
             else if ($minutes gt 0) then api:sgpl($minutes, "minute ago", "minutes ago")
             else if ($difference div xs:dayTimeDuration("PT1S") lt 0) then "future"
-            else "Just Now"        
+            else "Just Now"
 };
 
 declare function api:success() as object
@@ -90,7 +100,7 @@ declare function api:success() as object
 
 declare function api:success($data as object()) as object
 {
-  {| 
+  {|
      {"success" : true },
      $data
   |}
@@ -269,7 +279,7 @@ as boolean
 {
   if ($value eq "")
   then true
-  else 
+  else
   {
       api:validate-enum($name, lower-case($value), ("true", "false"));
       boolean($value)

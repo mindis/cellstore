@@ -1,111 +1,145 @@
-import module namespace response = "http://www.28msec.com/modules/http-response";
-import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace test = "http://apps.28.io/test";
-import module namespace http-client = "http://zorba.io/modules/http-client";
 
-declare %an:nondeterministic function local:test-values($params as object, $expected-file as string) as item*
-{
-    let $endpoint := "spreadsheet-for-component"
-    let $request := test:invoke($endpoint, $params)
-    let $actual as object := $request[2]
-    let $expected := parse-json(
-        http-client:get("http://" || request:server-name() || ":" || request:server-port() ||
-                        "/test/edinet/" || $expected-file).body.content)
-    return if (deep-equal($actual, $expected))
-           then true
-           else { url: test:url($endpoint, $params) }
-};
-
-declare %an:sequential function local:check($o as object) as object
-{
-    if (not(every $k in (keys($o) ! $o.$$) satisfies ($k instance of boolean and $k)))
-    then {
-            response:status-code(500);
-            $o
-    } else
-            $o
-};
-
-local:check({
-    bs-one: local:test-values(
+test:check-all-success({
+    bs-one: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-bs-one.jq"),
-    pl-one: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-bs-one.jq"),
+      { TrimIdField: true }
+    ),
+    bs-one-en: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
+      {
+        eid: "http://info.edinet-fsa.go.jp E01225-000",
+        fiscalYear: "2014",
+        fiscalPeriod: "Q1",
+        role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+        language: "en",
+        merge: "true",
+        eliminate: "true"
+      },
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-bs-one-en.jq"),
+      { TrimIdField: true }
+    ),
+    pl-one: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-pl-one.jq"),
-    cf-one: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-pl-one.jq"),
+      { TrimIdField: true }
+    ),
+    cf-one: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-cf-one.jq"),
-    bs-companies: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-cf-one.jq"),
+      { TrimIdField: true }
+    ),
+    bs-companies: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         tag: "ALL",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-bs-companies.jq"),
-    pl-companies: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-bs-companies.jq"),
+      { TrimIdField: true }
+    ),
+    pl-companies: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         tag: "ALL",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-pl-companies.jq"),
-    cf-companies: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-pl-companies.jq"),
+      { TrimIdField: true }
+    ),
+    cf-companies: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         tag: "ALL",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-cf-companies.jq"),
-    bs-periods: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-cf-companies.jq"),
+      { TrimIdField: true }
+    ),
+    bs-periods: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedBalanceSheets",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-bs-periods.jq"),
-    pl-periods: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-bs-periods.jq"),
+      { TrimIdField: true }
+    ),
+    pl-periods: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedStatementsOfIncome",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-pl-periods.jq"),
-    cf-periods: local:test-values(
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-pl-periods.jq"),
+      { TrimIdField: true }
+    ),
+    cf-periods: test:invoke-and-assert-deep-equal(
+      "spreadsheet-for-component",
       {
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedStatementsOfCashFlowsIndirect",
-        merge: "true"
+        merge: "true",
+        eliminate: "true"
       },
-      "spreadsheet-for-component-expected-cf-periods.jq")
+      function($b as item*) as item* { $b },
+      test:get-expected-result("edinet/spreadsheet-for-component-expected-cf-periods.jq"),
+      { TrimIdField: true }
+    )
 })
