@@ -41,7 +41,7 @@ gulp.task('encrypt', ['env-check'], function(done){
 
 gulp.task('decrypt', ['env-check'], function(done){
     if(fs.existsSync(file)) {
-        fs.renameSync(file, file + '.' + (new Date()).getTime());
+        fs.renameSync(file, file + '.backup');
     }
     $.runSequence('decrypt-force', done);
 });
