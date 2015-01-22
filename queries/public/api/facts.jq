@@ -9,6 +9,7 @@ import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
+import module namespace entities = "http://28.io/modules/xbrl/entities";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
@@ -55,7 +56,9 @@ declare function local:param-values(
                 case "sec" return "sec"
                 case "japan" return "fsa"
                 default return (: not reachable :) ()
-            let $fiscalYears := ($fiscalYear, request:param-values( $prefix || ":FiscalYear"))
+            let $fiscalYears :=
+                let $years := request:param-values( $prefix || ":FiscalYear")
+                return if ($years) then $years else $fiscalYear
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod", $entities)
             return
                 if($fiscalYears = "LATEST")
@@ -240,7 +243,7 @@ let $facts :=
       )
     let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
     let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
-    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entites._id]
+    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entities._id]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
     let $entityName as string :=
