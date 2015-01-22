@@ -100,10 +100,15 @@ declare function multiplexer:filings(
   : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
   : @param $archives a sequence of archive objects.
   : @param $cid a sequence of CIDs.
-  : @param $reportElement a sequence of report element names.
+  : @param $concept a sequence of report element names.
   : @param $disclosure a sequence of disclosure names.
-  : @param $networkIdentifier a sequence of network identifiers.
-  : @parem $label a sequence of labels.
+  : @param $role a sequence of network identifiers.
+  : @param $label a sequence of labels.
+  : searched.
+  : @param $options additional options. among which <ul>
+  :   <li>LabelsOnly: to only get label information.</li>
+  :   <li>ExactLabelMatch: to only get exact label matches.</li>
+  : </lu>
   :
   : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
   :
@@ -111,29 +116,77 @@ declare function multiplexer:filings(
 :)
 declare function multiplexer:components(
   $profile-name as string,
-  $archives as object*,
+  $archive as object*,
   $cid as string*,
-  $reportElement as string*,
+  $concept as string*,
   $disclosure as string*,
-  $networkIdentifier as string*,
-  $label as string*) as object*
+  $role as string*,
+  $label as string*,
+  $options as object?) as object*
 {
   switch($profile-name)
   case "sec" return sec-networks:components(
-    $archives,
+    $archive,
     $cid,
-    $reportElement,
+    $concept,
     $disclosure,
-    $networkIdentifier,
+    $role,
     $label)
   default return
-    switch(true)
-    case (exists($networkIdentifier) and exists($archives))
-      return components:components-for-archives-and-roles(
-          $archives,
-          $networkIdentifier)
-    case exists($archives)
-      return components:components-for-archives($archives)
-    default
-    return components:components()
+    let $role as string* := if(empty($role))
+                            then $components:ALL-ROLES
+                            else $role
+    let $archive as item* := if(empty($archive))
+                             then $components:ALL-ARCHIVES
+                             else $archive
+    let $concept as item* := if(empty($concept))
+                             then $components:ALL-CONCEPTS
+                             else $concept
+    let $label as item* :=
+      switch(true)
+      case empty($label) return $components:ALL-LABELS
+      case not $options.ExactLabelMatches eq false return $label
+      default return ()
+    return components:components-for(
+      $archive,
+      $role,
+      $concept,
+      $label,
+      $options
+    )
+};
+
+(:~
+  : <p>Retrieves components depending on the profile.</p>
+  :
+  : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
+  : @param $archives a sequence of archive objects.
+  : @param $cid a sequence of CIDs.
+  : @param $concept a sequence of report element names.
+  : @param $disclosure a sequence of disclosure names.
+  : @param $role a sequence of network identifiers.
+  : @param $label a sequence of labels.
+  :
+  : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
+  :
+  : @return the components retrieved according to the profile specified.
+:)
+declare function multiplexer:components(
+  $profile-name as string,
+  $archive as object*,
+  $cid as string*,
+  $concept as string*,
+  $disclosure as string*,
+  $role as string*,
+  $label as string*) as object*
+{
+  multiplexer:components(
+    $profile-name,
+    $archive,
+    $cid,
+    $concept,
+    $disclosure,
+    $role,
+    $label,
+    ())
 };
