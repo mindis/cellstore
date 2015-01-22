@@ -148,7 +148,7 @@ declare function components:components-for(
          $exact-labels eq $components:ALL-LABELS
       return error(
         QName("components:TOO-MANY-COMPONENTS"),
-        "Two many components to be returned because no filtering is done."
+        "Too many components to be returned because no filtering is done."
       )
     case $options.LabelsOnly
       return mw:find($components:col, $query, {
