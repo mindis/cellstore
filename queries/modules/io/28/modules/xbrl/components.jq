@@ -119,7 +119,7 @@ declare function components:components-for(
   $options as object*
 ) as object*
 {
-  let $aids := if(deep-equal($archives-or-ids, $components:ALL-ARCHIVES))
+  let $aids as string* := if(deep-equal($archives-or-ids, $components:ALL-ARCHIVES))
                then $components:ALL-ARCHIVES
                else archives:aid($archives-or-ids)
   let $query := {|
@@ -128,14 +128,24 @@ declare function components:components-for(
     { "Concepts.Name" : { "$in" : [ $concepts ] } }[not $concepts = $components:ALL-CONCEPTS],
     { "Concepts.Labels.Value" : { "$in" : [ $exact-labels ] } }[not $exact-labels = $components:ALL-LABELS]
   |}
-  return if($options.LabelsOnly)
-         then mw:find($components:col, $query, {
-           "Archive" : 1,
-           "Role" : 1,
-           "Concepts.Labels" : 1,
-           "Concepts.Name" : 1 }
-         )
-         else mw:find($components:col, $query)
+  return
+    switch(true)
+    case $roles eq $components:ALL-ROLES and
+         $aids eq $components:ALL-ARCHIVES and
+         $concepts eq $components:ALL-CONCEPTS and
+         $exact-labels eq $components:ALL-LABELS
+      return error(
+        QName("components:TWO-MANY-COMPONENTS"),
+        "Two many components to be returned because no filtering is done."
+      )
+    case $options.LabelsOnly
+      return mw:find($components:col, $query, {
+         "Archive" : 1,
+         "Role" : 1,
+         "Concepts.Labels" : 1,
+         "Concepts.Name" : 1 }
+      )
+    default return mw:find($components:col, $query)
 };
 
 (:~
