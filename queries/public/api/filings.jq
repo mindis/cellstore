@@ -35,7 +35,8 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic)
+  $sic,
+  $aid)
 
 let $archives as object* := multiplexer:filings(
   $profile-name,

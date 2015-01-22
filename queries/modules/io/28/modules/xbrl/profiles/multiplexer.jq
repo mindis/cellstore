@@ -53,29 +53,6 @@ declare function multiplexer:latest-filings(
  : @param $tag a sequence of tags (e.g., indices, ALL, ...).
  : @param $ticker a sequence of stock exchange tickers.
  : @param $sic a sequence of industry group SIC codes.
- :
- : @return the entities retrieved according to the profile specified.
- :)
-declare function multiplexer:entities(
-  $profile-name as string,
-  $eid as string*,
-  $cik as string*,
-  $tag as string*,
-  $ticker as string*,
-  $sic as string*) as object*
-{
-    multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic, ())
-};
-
-(:~
- : <p>Retrieves entities depending on the profile.</p>
- :
- : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
- : @param $eid a sequence of EIDs.
- : @param $cik a sequence of profile-specific CIKs.
- : @param $tag a sequence of tags (e.g., indices, ALL, ...).
- : @param $ticker a sequence of stock exchange tickers.
- : @param $sic a sequence of industry group SIC codes.
  : @param $aid a sequence of archive IDs.
   :
  : @return the entities retrieved according to the profile specified.
