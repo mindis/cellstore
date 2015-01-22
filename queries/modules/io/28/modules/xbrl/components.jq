@@ -111,6 +111,18 @@ declare function components:components($component-or-ids as item*) as object*
     )
 };
 
+(:~
+ : <p>Retrieves the components with the given archives, roles, concepts, exact labels.</p>
+ :
+ : @param $archives-or-ids a sequence of archives or AIDs.
+ : @param $roles a sequence of component roles.
+ : @param $concepts a sequence of concept names.
+ : @param $exact-labels a sequence of exact labels to match.
+ :
+ : @error components:TOO-MANY-COMPONENTS if all parameters are set to ALL-*.
+ :
+ : @return the components whose _id field matches one of these CIDs.
+ :)
 declare function components:components-for(
   $archives-or-ids as item*,
   $roles as string*,
@@ -135,7 +147,7 @@ declare function components:components-for(
          $concepts eq $components:ALL-CONCEPTS and
          $exact-labels eq $components:ALL-LABELS
       return error(
-        QName("components:TWO-MANY-COMPONENTS"),
+        QName("components:TOO-MANY-COMPONENTS"),
         "Two many components to be returned because no filtering is done."
       )
     case $options.LabelsOnly
