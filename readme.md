@@ -158,7 +158,7 @@ gulp test:unit --build-id=mydemo --config=sec
     * :lipstick: `:lipstick:` when improving the format/structure of the code
     * :racehorse: `:racehorse:` when improving performance
     * :non-potable_water: `:non-potable_water:` when plugging memory leaks
-    * :books: `:memo:` when writing docs / documentation
+    * :books: `:books:` when writing docs / documentation
     * :bug: `:bug:` when fixing a bug
     * :fire: `:fire:` when removing code or files
     * :green_heart: `:green_heart:` when fixing the CI build
