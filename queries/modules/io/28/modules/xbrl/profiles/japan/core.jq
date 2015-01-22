@@ -42,6 +42,7 @@ declare function japan:entities(
        for $entity in (
          for $tag in $tag
          return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
+
          entities:entities($eid)
        )
        group by $entity._id
@@ -84,4 +85,26 @@ declare function japan:filings(
                $fiscalYear = $a.Profiles.FSA.DocumentFiscalYearFocus)
                and (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
         return $a
+};
+
+(:~
+ : <p>Return latest filings of entities and fiscal periods.</p>
+ :
+ : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
+ : @param $entities a sequence of entity objects.
+ : @param $fiscal-periods a set of fiscal periods such as "Q1", "Q2", "Q3", "Q4", "FY"
+ :
+ : @return the latest archives for given entities and fiscal periods.
+ :)
+declare function japan:latest-filings(
+    $entities as object*,
+    $fiscal-periods as string*) as object*
+{
+    (
+        error(xs:QName("japan:NOT_IMPLEMENTED"),
+            "japan profile: Getting latest-filings for entities not implemented."),
+
+        $entities,
+        $fiscal-periods
+    )
 };

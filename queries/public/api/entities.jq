@@ -26,7 +26,7 @@ let $tag := if (exists(($cik, $tag, $ticker, $sic, $eid)))
              else "ALL"
 
 (: Entity resolution :)
-let $entities := multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic)
+let $entities := multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic, ())
 let $entities :=
   for $entity in $entities
   return {|
