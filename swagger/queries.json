@@ -23,7 +23,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -137,7 +138,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -262,7 +264,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -394,7 +397,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -575,7 +579,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1208,7 +1213,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1540,7 +1546,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
@@ -1780,6 +1787,196 @@
             }]
         }]
     }, {
+        "path": "/labels.jq",
+        "description": "Labels",
+        "operations": [{
+            "method": "POST",
+            "summary": "Retrieve labels for the supplied components and report elements",
+            "nickname": "listLabels",
+            "parameters": [{
+                "name": "format",
+                "description": "The result format",
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "json",
+                    "csv",
+                    "xml",
+                    "excel",
+                    "html"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "eid",
+                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "ticker",
+                "description": "The ticker of the entity",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "tag",
+                "description": "The tag to filter entities",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "DOW30",
+                    "SP500",
+                    "RUSSEL1000",
+                    "FORTUNE100",
+                    "PJI",
+                    "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "sic",
+                "description": "The industry group",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "cik",
+                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "fiscalYear",
+                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum": [
+                    "year (e.g. 2011)",
+                    "LATEST",
+                    "ALL"
+                ]
+            }, {
+                "name": "fiscalPeriod",
+                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "Q1",
+                    "Q2",
+                    "Q3",
+                    "FY",
+                    "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "aid",
+                "description": "The id of the filings for which to retrieve components",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "cid",
+                "description": "[Deprecated] The id of a particular component",
+                "deprecated": true,
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "networkIdentifier",
+                "description": "The network identifier (=role) of a particular component",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "role",
+                "description": "The role of a particular component",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "disclosure",
+                "description": "The disclosure to search for (e.g. BalanceSheet)",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "reportElement",
+                "description": "The name of the report element to search for (e.g. us-gaap:Goodwill)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "label",
+                "description": "A search term to search in the labels of components (e.g. stock). Exact match, except for the SEC profile where it performs full text search in English.",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "labelRole",
+                "description": "A label role",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "profile-name",
+                "description": "Specifies which profile to use. The default depends on the underlying repository.",
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "SEC",
+                    "generic"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "token",
+                "description": "The token of the current session",
+                "required": true,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "_method",
+                "paramType": "query"
+            }],
+            "responseMessages": [{
+                "code": 401,
+                "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 500,
+                "message": "An internal error occurred during the processing of the request.",
+                "responseModel": "Error"
+            }],
+            "successMessages": [{
+                "code": 200,
+                "message": "Returns all components for the given filing"
+            }],
+            "examples": [{
+                "title": "Retrieve information about all Japanese labels of a filing",
+                "description": "Retrieves, in XML, all Japanese standard labels for a filing.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "S1003QRF",
+                    "language" : "ja",
+                    "labelRole" : "http://www.xbrl.org/2003/role/label",
+                    "format" : "xml"
+                }
+            }]
+        }]
+    }, {
         "path": "/report-elements.jq",
         "description": "Report Elements",
         "operations": [{
@@ -1795,7 +1992,8 @@
                     "json",
                     "csv",
                     "xml",
-                    "excel"
+                    "excel",
+                    "html"
                 ],
                 "paramType": "query"
             }, {
