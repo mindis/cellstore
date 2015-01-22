@@ -72,7 +72,7 @@ angular.module('report-editor')
                 .value();
             _.each(parameters, function(param){
                 var name = param.name;
-                if(convertDashedParamsToCamelCase && name.indexOf('-') !== -1){
+                if(convertDashedParamsToCamelCase && name.indexOf('-') !== -1 && !_.isString(param.pattern)){
                     name = camelCase(name);
                 }
                 if(_.isString(name) && name !== '') {
