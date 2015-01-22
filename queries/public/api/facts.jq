@@ -195,7 +195,7 @@ let $entities as object* :=
         $profile-name,
         $eid,
         $cik,
-        $tag,
+        api:preprocess-tags($tag),
         $ticker,
         $sic,
         $aid)
@@ -298,4 +298,4 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format)
+return api:check-and-return-results($token, $results, $format) 
