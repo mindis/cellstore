@@ -680,6 +680,16 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "merge",
+                "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
+                "required": false,
+                "type": "boolean",
+                "enum": [
+                    "true",
+                    "false"
+                ],
+                "paramType": "query"
+            }, {
                 "name": "token",
                 "description": "The token of the current session",
                 "required": true,
@@ -1013,6 +1023,16 @@
                 "description": "Whether  to eliminate empty rows/columns",
                 "required": false,
                 "type": "string",
+                "enum": [
+                    "true",
+                    "false"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "merge",
+                "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
+                "required": false,
+                "type": "boolean",
                 "enum": [
                     "true",
                     "false"
