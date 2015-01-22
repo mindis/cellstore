@@ -121,7 +121,8 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic)
+  $sic,
+  ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
