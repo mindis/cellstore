@@ -43,10 +43,12 @@ declare function local:param-values(
          else request:param-values("sec:LegalEntityAxis::default")
 
      case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
-         return
-            if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
-            then $entities._id
-            else "dummy"
+         return (
+                if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
+                then $entities._id
+                else "dummy",
+                request:param-values("xbrl:Entity")
+            )
      case $name eq "xbrl28:Archive" and $profile-name = ("sec", "japan") return (
             let $prefix as string :=
                 switch($profile-name)
@@ -183,7 +185,6 @@ session:audit-call($token);
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
-let $eid as string* := distinct-values(($eid, request:param-values("xbrl:Entity")))
 
 (: Object resolution :)
 let $entities as object* :=
@@ -239,8 +240,16 @@ let $facts :=
       )
     let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
     let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
+    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entites._id]
+    let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
-    let $entityName as string := $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
+    let $entityName as string :=
+        switch(true)
+        case $profile-name eq "sec" return
+            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
+        case $profile-name eq "japan" return
+            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
+        default return $fact.Aspects."xbrl:Entity"
     return
     {|
       $fact,
