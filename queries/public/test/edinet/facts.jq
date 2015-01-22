@@ -6,15 +6,14 @@ declare %an:nondeterministic function local:test-non-existing-entity() as item
     let $params := {
         concept: [ "tse-ed-t:DividendPerShare" ],
         eid: "http://www.example.or.jp/doesntexist 666",
+        format:"csv",
         fiscalYear: 2013
     }
-    let $res as item* := test:invoke($endpoint, $params)
-    let $status as integer := $res[1]
-    let $errorCode as string? := $res[2].code
-    return if($status eq 500 and $errorCode eq "ENTITY_NOT_FOUND") then true else {
+    let $res as item* := test:invoke-raw($endpoint, $params)
+    return if($res.status eq 200 and ($res.headers."Content-Length" eq "0" or empty($res.body.content))) then true else {
         url: test:url($endpoint, $params),
-        unexpectedResponse: $res[2],
-        expected: "Error code: 500 - ENTITY_NOT_FOUND"
+        unexpectedResponse: $res,
+        expected: ""
     }
 };
 
