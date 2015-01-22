@@ -165,7 +165,6 @@ angular.module('report-editor')
                     }
                 });
             }
-            // $log.log(JSON.stringify($scope.op.parameters, null, '\t'));
             $scope.loading = true;
             $scope.error = undefined;
             $scope.body = undefined;
