@@ -684,10 +684,6 @@
                 "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
                 "required": false,
                 "type": "boolean",
-                "enum": [
-                    "true",
-                    "false"
-                ],
                 "paramType": "query"
             }, {
                 "name": "token",
@@ -1022,21 +1018,13 @@
                 "name": "eliminate",
                 "description": "Whether  to eliminate empty rows/columns",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "merge",
                 "description": "Whether to merge components if multiple are retrieved. By default, it is false and a random component is selected if multiple are retrieved.",
                 "required": false,
                 "type": "boolean",
-                "enum": [
-                    "true",
-                    "false"
-                ],
                 "paramType": "query"
             }, {
                 "name": "token",
