@@ -379,6 +379,24 @@
                         "cik": "66740",
                         "format": "xml"
                     }
+                },
+                {
+                    "title": "Retrieve the periods of the filings filed for specific years for all entities",
+                    "description": "Retrieve the periods of the filings filed for specific years for all entities",
+                    "profile": ["japan"],
+                    "parameters": {
+                        "fiscalYear": [2013, 2014],
+                        "tag": "ALL"
+                    }
+                },
+                {
+                    "title": "Retrieve all Q1 and Q2 periods of the filings filed for all entities",
+                    "description": "Retrieve all Q1 and Q2 periods of the filings filed for all entities",
+                    "profile": ["japan"],
+                    "parameters": {
+                        "fiscalPeriod": ["Q1", "Q2"],
+                        "tag": "ALL"
+                    }
                 }]
         }]
     }, {
@@ -1782,7 +1800,7 @@
                 "description": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "eid": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
                     "fiscalPeriod": "Q1",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
@@ -1792,12 +1810,12 @@
                 "description": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "eid": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
                     "fiscalPeriod": "Q2",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:NumberOfSharesHeld", "jpcrp-cor:ShareholdingRatio"],
                     "jpcrp-cor:MajorShareholdersAxis": "ALL",
-                    "jpcrp-cor:MajorShareholdersAxis::default": "jpcrp-cor:MajorShareholdersMember"
+                    "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
             }]
         }]
