@@ -58,22 +58,22 @@ declare variable $components:DEFAULT-LANGUAGE as xs:string := "Language";
 (:~
  : Placeholder for all archive IDs..
  :)
-declare variable $components:ALL-ARCHIVES as xs:string := "";
+declare variable $components:ALL-ARCHIVES as xs:string := ":ALL:";
 
 (:~
  : Placeholder for all component roles..
  :)
-declare variable $components:ALL-ROLES as xs:string := "";
+declare variable $components:ALL-ROLES as xs:string := ":ALL:";
 
 (:~
  : Placeholder for all conceptss..
  :)
-declare variable $components:ALL-CONCEPTS as xs:string := "";
+declare variable $components:ALL-CONCEPTS as xs:string := ":ALL:";
 
 (:~
  : Placeholder for all labels..
  :)
-declare variable $components:ALL-LABELS as xs:string := "";
+declare variable $components:ALL-LABELS as xs:string := ":ALL:";
 
 (:~
  : <p>Retrieves all components.</p>
