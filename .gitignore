@@ -22,3 +22,4 @@ config.json
 .c9
 coverage
 config/*.json
+queries/public/test/*/swagger-queries.jq

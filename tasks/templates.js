@@ -37,7 +37,65 @@ gulp.task('config-template', [ 'decrypt' ], function(done){
     done();
 });
 
-gulp.task('templates', ['load-config'], function(done){
+var camelCase = function(sentence) {
+    var tokens = [];
+    _.each(sentence.split(/[.,:#_\/ -]/), function(token, index){
+        if(index === 0) {
+            tokens.push(token[0].toLowerCase() + token.substring(1));
+        } else {
+            tokens.push(token[0].toUpperCase() + token.substring(1));
+        }
+    });
+    return tokens.join('');
+};
+
+gulp.task('swagger-tests', [ 'load-config' ], function(done){
+    var configId = Config.configId;
+    var profile = Config.credentials.cellstore.profile;
+    var templates = [
+        {
+            src: 'tasks/templates/swagger-examples-tests.template',
+            swaggerFile: 'swagger/queries.json',
+            dest: 'queries/public/test/' + configId + '/swagger-queries.jq'
+        }
+    ];
+    _.each(templates, function(tpl){
+        var src = fs.readFileSync(tpl.src, 'utf-8');
+        var template = _.template(src);
+        var swaggerFile = JSON.parse(fs.readFileSync(tpl.swaggerFile, 'utf-8'));
+        var data = {
+            template: tpl.src,
+            swaggerFile: tpl.swaggerFile,
+            tests: []
+        };
+        _.each(swaggerFile.apis, function(api){
+            var path = api.path;
+            var endpoint = path.substring(1, path.length - 3);
+            _.each(api.operations, function(operation){
+                _.each(operation.examples, function(example){
+                    var parameters = example.parameters;
+                    var tests = _.isObject(example.test) ? example.test[profile] : undefined;
+                    if(_.isArray(tests)){
+                        _.each(tests, function(test, index){
+                            test.name = camelCase(example.title) + (index + 1);
+                            test.endpoint = endpoint;
+                            test.parameters = parameters;
+                            data.tests.push(test);
+                        });
+                    }
+                });
+            });
+        });
+        if(data.tests.length > 0) {
+            var result = template(data);
+            fs.writeFileSync(tpl.dest, result, 'utf-8');
+            $.util.log('created template: ' + tpl.dest);
+        }
+    });
+    done();
+});
+
+gulp.task('templates', ['swagger-tests', 'load-config'], function(done){
 
     var Mustache = require('mustache');
     var expand = require('glob-expand');

@@ -369,6 +369,14 @@
                     "description": "Get list of all periods.",
                     "parameters": {
                         "tag": "ALL"
+                    },
+                    "test": {
+                        "japan": [
+                            {
+                                "transform": "($response.Statistics.NumPeriods)",
+                                "expectedResult": 27
+                            }
+                        ]
                     }
                 },
                 {
