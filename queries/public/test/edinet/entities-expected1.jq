@@ -8,12 +8,12 @@ import module namespace config = "http://apps.28.io/config";
   "Profiles" : {
     "FSA" : {
       "Name" : "FSA",
-      "EDINETCode" : "E01225-000",
+      "EDINETCode" : "E01225",
       "SubmitterName" : "新日鐵住金株式会社",
       "SubmitterNameAlphabetic" : "NIPPON STEEL & SUMITOMO METAL CORPORATION",
       "SubmitterNamePhonetic" : "シンニッテツスミキンカブシキガイシャ",
       "SubmitterType" : "内国法人・組合",
-      "SIC" : "5401",
+      "SecuritiesCode" : "5401",
       "Province" : "千代田区丸の内二丁目６番１号",
       "Industry" : "Iron & Steel",
       "CapitalStock" : 419524,
