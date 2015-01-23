@@ -1955,6 +1955,14 @@
                     "fiscalPeriod": "Q1",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
+                },
+                "test": {
+                    "japan": [
+                        {
+                            "transform": "count($response.FactTable[])",
+                            "expectedResult": 2
+                        }
+                    ]
                 }
             }, {
                 "title": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014",
@@ -1967,6 +1975,14 @@
                     "concept": ["jpcrp-cor:NumberOfSharesHeld", "jpcrp-cor:ShareholdingRatio"],
                     "jpcrp-cor:MajorShareholdersAxis": "ALL",
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
+                },
+                "test": {
+                    "japan": [
+                        {
+                            "transform": "count($response.FactTable[])",
+                            "expectedResult": 22
+                        }
+                    ]
                 }
             }]
         }]
