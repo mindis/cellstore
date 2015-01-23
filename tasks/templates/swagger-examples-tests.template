@@ -15,6 +15,5 @@ test:check-all-success({<% _.forEach(tests, function(test, index) { %><%  if(ind
           <%= JSON.stringify(test.parameters) %>,
           <%  if(_.isString(test.transform)){ %>function($response as item*) as item* { <%= test.transform %> },<%  } else { %>function($response as item*) as item* { ($response) },<%  } %>
           <%= test.expectedResult %>
-        )
-<% }); %>
+        )<% }); %>
 })

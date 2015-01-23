@@ -77,7 +77,7 @@ gulp.task('swagger-tests', [ 'load-config' ], function(done){
                     var tests = _.isObject(example.test) ? example.test[profile] : undefined;
                     if(_.isArray(tests)){
                         _.each(tests, function(test, index){
-                            test.name = camelCase(example.title) + (index + 1);
+                            test.name = camelCase(example.title) + '-' + (index + 1);
                             test.endpoint = endpoint;
                             test.parameters = parameters;
                             data.tests.push(test);
