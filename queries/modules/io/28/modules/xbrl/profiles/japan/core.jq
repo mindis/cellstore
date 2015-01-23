@@ -33,6 +33,7 @@ declare function japan:entities(
 {
   let $eid := distinct-values((
     $cik ! ("http://info.edinet-fsa.go.jp " || $$ || "-000"),
+    $cik ! ("http://disclosure.edinet-fsa.go.jp " || $$ || "-000"),
     $eid
   ))
   return
