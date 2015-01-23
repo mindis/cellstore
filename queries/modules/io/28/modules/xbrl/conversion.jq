@@ -15,7 +15,11 @@ declare %private variable $conversion:STANDARD_LABELS :=
         "sec:FiscalPeriodType" : "Fiscal Period Type",
         "sec:Accepted" : "Accepted",
         "xbrl:Unit": "Unit",
-        "dei:LegalEntityAxis": "Legal Entity"
+        "dei:LegalEntityAxis": "Legal Entity",
+        "fsa:FiscalYear": "Fiscal Year [Axis]",
+        "fsa:FiscalPeriod": "Fiscal Period [Axis]",
+        "fsa:FiscalPeriodType": "Fiscal Period Type [Axis]",
+        "fsa:Submitted": "FSA Submission Date [Axis]"
     };
 
 declare %private function conversion:aspect-label(
