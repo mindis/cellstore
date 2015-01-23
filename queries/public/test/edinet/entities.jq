@@ -77,7 +77,7 @@ test:check-all-success({
     example-json: test:invoke-and-assert-deep-equal(
       "entities",
       {cik:"E01225"},
-      function($b as item*) as item* { $b.Entities[] },
+      function($b as item*) as item* { $b.Entities },
       test:get-expected-result("edinet/entities-expected1.jq")
     ),
     example-xml: test:invoke-and-assert-deep-equal(
