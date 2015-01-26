@@ -88,23 +88,24 @@ declare function local:concepts-for-archives-and-labels($aids as string*, $label
 };
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token         as string?  external;
-declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-declare  %rest:env                              variable $request-uri   as string   external;
-declare  %rest:case-insensitive                 variable $format        as string?  external;
-declare  %rest:case-insensitive %rest:distinct  variable $cik           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $tag           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $sic           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string*  external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string*  external := "FY";
-declare  %rest:case-insensitive %rest:distinct  variable $aid           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $eid           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $label         as string*  external;
-declare  %rest:case-insensitive                 variable $map           as string?  external;
-declare  %rest:case-insensitive                 variable $report        as string?  external;
-declare  %rest:case-insensitive %rest:distinct  variable $name          as string*  external;
-declare  %rest:case-insensitive                 variable $onlyNames     as boolean? external := false;
+declare  %rest:case-insensitive                 variable $token          as string?  external;
+declare  %rest:case-insensitive                 variable $profile-name   as string  external := $config:profile-name;
+declare  %rest:env                              variable $request-uri    as string   external;
+declare  %rest:case-insensitive                 variable $format         as string?  external;
+declare  %rest:case-insensitive %rest:distinct  variable $cik            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $tag            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $ticker         as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $sic            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear     as string*  external := "LATEST";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod   as string*  external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $aid            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $eid            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $label          as string*  external;
+declare  %rest:case-insensitive                 variable $map            as string?  external;
+declare  %rest:case-insensitive                 variable $report         as string?  external;
+declare  %rest:case-insensitive %rest:distinct  variable $name           as string*  external;
+declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
+declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := false;
 
 session:audit-call($token);
 
@@ -144,7 +145,14 @@ let $concepts as object* :=
     if (exists($label))
         then local:concepts-for-archives-and-labels($archives._id, $label[1])
         else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
-
+let $concepts as object* := if($onlyTextBlocks) then
+                              for $concept in $concepts
+                              return if($concept.IsTextBlock) then
+                                $concept
+                              else
+                                ()
+                            else
+                              $concepts
 let $result :=
     if($profile-name eq "sec")
     then {
