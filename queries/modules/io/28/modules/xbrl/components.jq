@@ -20,6 +20,8 @@ jsoniq version "1.0";
  :)
 module namespace components = "http://28.io/modules/xbrl/components";
 
+import module namespace functx = "http://www.functx.com";
+
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
@@ -131,7 +133,7 @@ declare function components:components-for(
   $options as object*
 ) as object*
 {
-  let $aids as string* := if(deep-equal($archives-or-ids, $components:ALL-ARCHIVES))
+  let $aids as string* := if(functx:is-value-in-sequence($components:ALL-ARCHIVES, $archives-or-ids[$$ instance of atomic]))
                then $components:ALL-ARCHIVES
                else archives:aid($archives-or-ids)
   let $query := {|
@@ -142,10 +144,10 @@ declare function components:components-for(
   |}
   return
     switch(true)
-    case $roles eq $components:ALL-ROLES and
-         $aids eq $components:ALL-ARCHIVES and
-         $concepts eq $components:ALL-CONCEPTS and
-         $exact-labels eq $components:ALL-LABELS
+    case $roles = $components:ALL-ROLES and
+         $aids = $components:ALL-ARCHIVES and
+         $concepts = $components:ALL-CONCEPTS and
+         $exact-labels = $components:ALL-LABELS
       return error(
         QName("components:TOO-MANY-COMPONENTS"),
         "Too many components to be returned because no filtering is done."

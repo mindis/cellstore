@@ -5,6 +5,7 @@ import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace config = "http://apps.28.io/config";
 import module namespace credentials = "http://www.28msec.com/modules/credentials";
+import module namespace functx = "http://www.functx.com";
 
 declare function test:is-dow30() as boolean{
   contains(credentials:credentials("MongoDB", "xbrl").db, "dow30")
@@ -109,8 +110,8 @@ declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
                   default return test:invoke($endpoint, $parameters)
   let $status as integer := $request[1]
   let $actual as item* := $transform($request[2])
-  let $expected := if($options.TrimIdField) then test:trim-ids($expected) else $expected
-  let $actual := if($options.TrimIdField) then test:trim-ids($actual) else $actual
+  let $expected as item* := if($options.TrimIdField) then test:trim-ids($expected) else $expected
+  let $actual as item* := if($options.TrimIdField) then test:trim-ids($actual) else $actual
   return if($options.NoArrayOrder)
           then test:assert-deep-equal-no-array-order($expected, $actual, $status, test:url($endpoint, $parameters))
           else test:assert-deep-equal($expected, $actual, $status, test:url($endpoint, $parameters))
@@ -161,14 +162,14 @@ declare function test:assert-eq(
 };
 
 declare function test:assert-deep-equal(
-    $expected as item,
-    $actual as item?,
+    $expected as item*,
+    $actual as item*,
     $status as integer,
     $url as string) as item
 {
     switch(true)
     case $status ne 200 return { "url": $url, status: $status }
-    case deep-equal($expected, $actual) return true
+    case functx:sequence-deep-equal($expected, $actual) return true
     default return
     {
         "url": $url,
@@ -178,8 +179,8 @@ declare function test:assert-deep-equal(
 };
 
 declare function test:assert-deep-equal-no-array-order(
-    $expected as item,
-    $actual as item?,
+    $expected as item*,
+    $actual as item*,
     $status as integer,
     $url as string) as item
 {
@@ -195,37 +196,45 @@ declare function test:assert-deep-equal-no-array-order(
 };
 
 declare function test:deep-equal-no-array-order(
-    $expected as item,
-    $actual as item?) as boolean
+    $expected as item*,
+    $actual as item*) as boolean
 {
-    typeswitch(($expected, $actual))
-    case object* return
-      switch(true)
-      case not (every $key in keys($expected) satisfies keys($actual) = $key)
-        return false
-      case not (every $key in keys($actual) satisfies keys($expected) = $key)
-        return false
-      default return
-        let $recursive-calls :=
-            for $key in keys($expected)
-            return test:deep-equal-no-array-order($expected.$key, $actual.$key)
-        return if (every $item in $recursive-calls satisfies $item)
-                then true
-                else false
-    case array* return
-      switch(true)
-      case not size($expected) eq size($actual)
-        return false
-      case not (every $expected-item in $expected[] satisfies (
-        some $actual-item in $actual[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
-      ))
-        return false
-      case not (every $actual-item in $actual[] satisfies (
-        some $expected-item in $expected[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
-      ))
-        return false
-      default return true
-    default return deep-equal($expected, $actual)
+    if(count($expected) ne count($actual))
+    then false
+    else
+      every $i in count($expected)
+      satisfies
+        let $expected := $expected[$i]
+        let $actual := $actual[$i]
+        return
+        typeswitch(($expected, $actual))
+        case object* return
+          switch(true)
+          case not (every $key in keys($expected) satisfies keys($actual) = $key)
+            return false
+          case not (every $key in keys($actual) satisfies keys($expected) = $key)
+            return false
+          default return
+            let $recursive-calls :=
+                for $key in keys($expected)
+                return test:deep-equal-no-array-order($expected.$key, $actual.$key)
+            return if (every $item in $recursive-calls satisfies $item)
+                    then true
+                    else false
+        case array* return
+          switch(true)
+          case not size($expected) eq size($actual)
+            return false
+          case not (every $expected-item in $expected[] satisfies (
+            some $actual-item in $actual[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
+          ))
+            return false
+          case not (every $actual-item in $actual[] satisfies (
+            some $expected-item in $expected[] satisfies test:deep-equal-no-array-order($expected-item, $actual-item)
+          ))
+            return false
+          default return true
+        default return deep-equal($expected, $actual)
 };
 
 declare function test:assert-eq-array(
