@@ -4,7 +4,7 @@ test:check-all-success({
     bs-one: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        eid: "http://info.edinet-fsa.go.jp E01225-000",
+        eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
@@ -18,7 +18,7 @@ test:check-all-success({
     bs-one-en: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        eid: "http://info.edinet-fsa.go.jp E01225-000",
+        eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
@@ -33,7 +33,7 @@ test:check-all-success({
     pl-one: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        eid: "http://info.edinet-fsa.go.jp E01225-000",
+        eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
@@ -47,7 +47,7 @@ test:check-all-success({
     cf-one: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        eid: "http://info.edinet-fsa.go.jp E01225-000",
+        eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
@@ -61,7 +61,7 @@ test:check-all-success({
     bs-companies: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        tag: "ALL",
+        tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
@@ -75,7 +75,7 @@ test:check-all-success({
     pl-companies: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        tag: "ALL",
+        tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
@@ -89,7 +89,7 @@ test:check-all-success({
     cf-companies: test:invoke-and-assert-deep-equal(
       "spreadsheet-for-component",
       {
-        tag: "ALL",
+        tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",

@@ -73,9 +73,12 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-    $label)
+      $label)
 
-let $component as object? := if($merge) then components:merge($components) else $components[1]
+let $component as object? := switch(true)
+                              case empty($components) return ()
+                              case $merge return components:merge($components)
+                              default return $components[1]
 let $rules as object* := if(exists($additional-rules)) then rules:rules($additional-rules) else ()
 
 return if(empty($component)) then {
