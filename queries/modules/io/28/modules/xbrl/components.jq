@@ -906,6 +906,21 @@ declare %private function components:line-items-recursive($components as object*
           default return $concept-name
 };
 
+declare function components:hypercubes($components as object*) as string*
+{
+  $components.Concepts[][$$.SubstitutionGroup = "xbrldt:hypercubeItem"].Name
+};
+
+declare function components:dimensions($components as object*) as string*
+{
+  $components.Concepts[][$$.SubstitutionGroup = "xbrldt:dimensionItem"].Name
+};
+
+declare function components:concrete-concepts($components as object*) as string*
+{
+  $components.Concepts[][not $$.IsAbstract].Name
+};
+
 (:~
  : <p>Checks whether the component has a presentation network.</p>
  :

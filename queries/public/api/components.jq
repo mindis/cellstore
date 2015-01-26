@@ -171,8 +171,10 @@ let $res as object* :=
                         }, true),
             NumRules: size($r.Rules),
             NumNetworks: size($r.Networks),
+            NumReportElements: size($r.Concepts),
             NumHypercubes: count(keys($r.Hypercubes)),
-            NumConcepts: size($r.Concepts),
+            NumDimensions: count(components:dimensions($r)),
+            NumConcepts: count(components:concrete-concepts($r)),
             Hypercubes: [ keys($r.Hypercubes) ],
             ValidationErrors: [ components:validation-errors($r) ]
         }
