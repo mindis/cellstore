@@ -1980,7 +1980,8 @@
                     "japan": [
                         {
                             "transform": "count($response.FactTable[])",
-                            "expectedResult": 22
+                            "expectedResult": 22,
+                            "expectedResponseMatch": "\"NumFacts\": 22,"
                         }
                     ]
                 }

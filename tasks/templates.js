@@ -54,42 +54,62 @@ gulp.task('swagger-tests', [ 'load-config' ], function(done){
     var profile = Config.credentials.cellstore.profile;
     var templates = [
         {
-            src: 'tasks/templates/swagger-examples-tests.template',
+            srcUnitTests: 'tasks/templates/swagger-examples-tests.template',
+            srcE2eTests: 'tasks/templates/swagger-examples-e2e-tests.template',
             swaggerFile: 'swagger/queries.json',
-            dest: 'queries/public/test/' + configId + '/swagger-queries.jq'
+            destUnitTests: 'queries/public/test/' + configId + '/swagger-queries.jq',
+            destE2eTests: 'tests/e2e/' + configId + '/swagger-queries-scenario.js'
         }
     ];
     _.each(templates, function(tpl){
-        var src = fs.readFileSync(tpl.src, 'utf-8');
-        var template = _.template(src);
+        var srcUnitTests = fs.readFileSync(tpl.srcUnitTests, 'utf-8');
+        var srcE2eTests = fs.readFileSync(tpl.srcE2eTests, 'utf-8');
+        var unitTestTemplate = _.template(srcUnitTests);
+        var e2eTestTemplate = _.template(srcE2eTests);
         var swaggerFile = JSON.parse(fs.readFileSync(tpl.swaggerFile, 'utf-8'));
         var data = {
             template: tpl.src,
             swaggerFile: tpl.swaggerFile,
-            tests: []
+            unitTests: [],
+            e2eTests: []
         };
         _.each(swaggerFile.apis, function(api){
             var path = api.path;
             var endpoint = path.substring(1, path.length - 3);
             _.each(api.operations, function(operation){
+                var method = operation.method;
                 _.each(operation.examples, function(example){
                     var parameters = example.parameters;
                     var tests = _.isObject(example.test) ? example.test[profile] : undefined;
                     if(_.isArray(tests)){
                         _.each(tests, function(test, index){
-                            test.name = camelCase(example.title) + '-' + (index + 1);
+                            test.name = camelCase(example.title);
+                            test.id = test.name + '-' + (index + 1);
+                            $.util.log(test.name);
                             test.endpoint = endpoint;
+                            test.method = method;
+                            test.path = path;
                             test.parameters = parameters;
-                            data.tests.push(test);
+                            if(!_.isUndefined(test.expectedResult)){
+                                data.unitTests.push(test);
+                            }
+                            if(!_.isUndefined(test.expectedResponseMatch)){
+                                data.e2eTests.push(test);
+                            }
                         });
                     }
                 });
             });
         });
-        if(data.tests.length > 0) {
-            var result = template(data);
-            fs.writeFileSync(tpl.dest, result, 'utf-8');
-            $.util.log('created template: ' + tpl.dest);
+        if(data.unitTests.length > 0) {
+            var resultUnitTest = unitTestTemplate(data);
+            fs.writeFileSync(tpl.destUnitTests, resultUnitTest, 'utf-8');
+            $.util.log('created Unit test template: ' + tpl.destUnitTests);
+        }
+        if(data.e2eTests.length > 0) {
+            var resultE2eTest = e2eTestTemplate(data);
+            fs.writeFileSync(tpl.destE2eTests, resultE2eTest, 'utf-8');
+            $.util.log('created E2e test template: ' + tpl.destE2eTests);
         }
     });
     done();

@@ -23,3 +23,4 @@ config.json
 coverage
 config/*.json
 queries/public/test/*/swagger-queries.jq
+tests/e2e/*/swagger-queries-scenario.js
