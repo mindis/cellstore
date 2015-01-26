@@ -44,22 +44,6 @@ declare function local:to-csv($res as object*) as string*
     { serialize-null-as : "" })
 };
 
-declare function local:to-csv-generic($res as object*) as string*
-{
-    csv:serialize(
-        for $a in $res
-        return {
-            Archive: $a.Archive,
-            Role: $a.Role,
-            FactTable: $a.FactTable,
-            SpreadSheet: $a.SpreadSheet,
-            NumRules: $a.NumRules,
-            NumNetworks: $a.NumNetworks,
-            NumHypercubes: size($a.Hypercubes)
-        },
-    { serialize-null-as : "" })
-};
-
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
