@@ -905,3 +905,49 @@ declare %private function components:line-items-recursive($components as object*
           case $substitution-group eq "xbrldt:hypercubeItem" return ()
           default return $concept-name
 };
+
+(:~
+ : <p>Checks whether the component has a presentation network.</p>
+ :
+ : @param $component a component.
+ :
+ : @return whether it has a presentation network.
+ :)
+declare %private function components:has-presentation-network(
+    $component as object
+) as boolean
+{
+  exists(networks:networks-for-components-and-short-names($component, $networks:PRESENTATION_NETWORK))
+};
+
+(:~
+ : <p>Checks whether the component has a non-implied table.</p>
+ :
+ : @param $component a component.
+ :
+ : @return whether it has a non-implied table.
+ :)
+declare %private function components:has-table(
+    $component as object
+) as boolean
+{
+  exists(hypercubes:hypercubes-for-components($component)[not $$.Name eq "xbrl28:ImpliedTable"])
+};
+
+(:~
+ : <p>Checks components for semantic validation errors.</p>
+ :
+ : @param $components a sequence of components.
+ :
+ : @return a sequence of error strings, empty if valid.
+ :)
+declare function components:validation-errors(
+    $components as object*
+) as string*
+{
+  for $component in $components
+  return (
+    "Presentation network is missing"[not components:has-presentation-network($component)],
+    "Hypercube is missing (implied table)"[not components:has-table($component)]
+  )
+};
