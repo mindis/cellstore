@@ -248,23 +248,23 @@ var createDatasource = function(projectName, datasource){
     return defered.promise;
 };
 
-gulp.task('28:login', function(){
+gulp.task('28:login', [ 'load-config' ], function(){
     return login(Config.credentials['28'].email, Config.credentials['28'].password).catch(throwError);
 });
 
-gulp.task('28:create-project', function(){
+gulp.task('28:create-project', [ 'load-config' ], function(){
     return createProject(Config.projectName, true).catch(throwError);
 });
 
-gulp.task('28:remove-project', function(){
+gulp.task('28:remove-project', [ 'load-config' ], function(){
     return removeProject(Config.projectName, true).catch(throwError);
 });
 
-gulp.task('28:upload', function(){
+gulp.task('28:upload', [ 'load-config' ], function(){
     return upload(Config.projectName).catch(throwError);
 });
 
-gulp.task('28:setup-datasource', function(){
+gulp.task('28:setup-datasource', [ 'load-config' ], function(){
     var promises = [];
     Config.credentials['28'].datasources.forEach(function(datasource){
         promises.push(createDatasource(Config.projectName, datasource).catch(throwError));
@@ -272,11 +272,11 @@ gulp.task('28:setup-datasource', function(){
     return Q.all(promises);
 });
 
-gulp.task('28:init', function(){
+gulp.task('28:init', [ 'load-config' ], function(){
     return runQueries(Config.projectName, Config.paths.initQueries).catch(throwError);
 });
 
-gulp.task('28:test', function(){
+gulp.task('28:test', [ 'load-config' ], function(){
     return runQueries(Config.projectName, Config.paths.apiTestQueries).catch(throwError);
 });
 
