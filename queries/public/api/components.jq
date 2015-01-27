@@ -144,14 +144,16 @@ let $res as object* :=
                             aid: $archive._id,
                             format: $format,
                             role: $component.NetworkIdentifier,
-                            profile-name: $profile-name
+                            profile-name: $profile-name,
+                            token: $token
                             }, true),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
                             aid: $archive._id,
                             format: $format,
                             role: $component.NetworkIdentifier,
-                            profile-name: $profile-name
+                            profile-name: $profile-name,
+                            token: $token
                             }, true)
                         )
                     } into $c
@@ -170,14 +172,16 @@ let $res as object* :=
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
-                            profile-name: $profile-name
+                            profile-name: $profile-name,
+                            token: $token
                             }, true),
             SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                         backend:url("spreadsheet-for-component", {
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
-                            profile-name: $profile-name
+                            profile-name: $profile-name,
+                            token: $token
                         }, true))
         }
 let $result := switch($profile-name) case "sec" return { Archives: [ $res ] } default return { Components : [ $res ] }

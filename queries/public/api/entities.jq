@@ -38,7 +38,8 @@ let $entities :=
           {
             eid: $entity._id,
             format: $format,
-            profile-name: $profile-name
+            profile-name: $profile-name,
+            token: $token
           },
           {
             fiscalYear: "ALL",

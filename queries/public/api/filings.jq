@@ -68,7 +68,8 @@ let $summaries :=
           {
               aid: encode-for-uri($archive.AccessionNumber),
               format: $format,
-              profile-name: $profile-name
+              profile-name: $profile-name,
+              token: $token
           }, true)
       },
       trim($archive, "AccessionNumber")
@@ -82,7 +83,8 @@ let $summaries :=
           {
               aid: encode-for-uri($archive._id),
               format: $format,
-              profile-name: $profile-name
+              profile-name: $profile-name,
+              token: $token
           }, true)
       },
       trim($archive, "_id")

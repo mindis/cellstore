@@ -223,7 +223,8 @@ let $result :=
                           fiscalPeriod: "ALL",
                           fiscalPeriodType: "ALL",
                           format: $format,
-                          profile-name: $profile-name
+                          profile-name: $profile-name,
+                          token: $token
                           }, true)
                     },
                     trim($concept-in-component, ("Name", "Labels")),
