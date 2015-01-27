@@ -19,7 +19,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "繰延資産の処理方法"
     } ],
-    "Fact" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3AAccountingPolicyForDeferredAssetsTextBlock&aid=STANDARD-TAXONOMY-2014&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3AAccountingPolicyForDeferredAssetsTextBlock&aid=STANDARD-TAXONOMY-2014&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
     "ComponentRole" : "http://www.xbrl.org/2003/role/link",
     "ComponentLabel" : "Default Component",
     "Archive" : "STANDARD-TAXONOMY-2014"
@@ -42,7 +42,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "保険業法第113条繰延資産の処理方法、保険業 [テキストブロック]"
     } ],
-    "Fact" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3AAccountingPolicyForDeferredAssetsUnderArticle113OfInsuranceBusinessActINSTextBlock&aid=STANDARD-TAXONOMY-2014&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3AAccountingPolicyForDeferredAssetsUnderArticle113OfInsuranceBusinessActINSTextBlock&aid=STANDARD-TAXONOMY-2014&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
     "ComponentRole" : "http://www.xbrl.org/2003/role/link",
     "ComponentLabel" : "Default Component",
     "Archive" : "STANDARD-TAXONOMY-2014"
