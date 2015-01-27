@@ -1,7 +1,6 @@
 jsoniq version "1.0";
 module namespace backend = "http://apps.28.io/backend";
 import module namespace request = "http://www.28msec.com/modules/http-request";
-import module namespace config = "http://apps.28.io/config";
 
 (:~
  : <p>Builds the URL for a backend call on the specified endpoint and parameters.</p>
