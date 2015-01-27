@@ -1,6 +1,13 @@
+import module namespace request = "http://www.28msec.com/modules/http-request";
+import module namespace config = "http://apps.28.io/config";
+
 <ReportElements>
   <ReportElement>
     <Name>jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading</Name>
+    <Fact>{
+      "http://" || request:server-name() || ":" || request:server-port() ||
+       "/v1/_queries/public/api/facts.jq?_method=POST&token=" || $config:test-token || "&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=xml&profile-name=japan"
+    }</Fact>
     <Label>連結キャッシュ・フロー計算書関係</Label>
     <IsNillable>true</IsNillable>
     <IsAbstract>true</IsAbstract>
@@ -16,6 +23,10 @@
   </ReportElement>
   <ReportElement>
     <Name>jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading</Name>
+    <Fact>{
+      "http://" || request:server-name() || ":" || request:server-port() ||
+       "/v1/_queries/public/api/facts.jq?_method=POST&token=" || $config:test-token || "&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=xml&profile-name=japan"
+    }</Fact>
     <Label>連結キャッシュ・フロー計算書関係</Label>
     <IsNillable>true</IsNillable>
     <IsAbstract>true</IsAbstract>
