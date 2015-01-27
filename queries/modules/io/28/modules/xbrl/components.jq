@@ -906,16 +906,37 @@ declare %private function components:line-items-recursive($components as object*
           default return $concept-name
 };
 
+(:~
+ : <p>Returns the hypercube names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of hypercube names.
+ :)
 declare function components:hypercubes($components as object*) as string*
 {
   $components.Concepts[][$$.SubstitutionGroup = "xbrldt:hypercubeItem"].Name
 };
 
+(:~
+ : <p>Returns the dimension names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of dimension names.
+ :)
 declare function components:dimensions($components as object*) as string*
 {
   $components.Concepts[][$$.SubstitutionGroup = "xbrldt:dimensionItem"].Name
 };
 
+(:~
+ : <p>Returns the concrete concept names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of concrete concept names.
+ :)
 declare function components:concrete-concepts($components as object*) as string*
 {
   $components.Concepts[][not $$.IsAbstract].Name
