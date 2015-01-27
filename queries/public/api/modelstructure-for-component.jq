@@ -22,7 +22,7 @@ declare function local:to-xml-rec($o as object*, $level as integer) as element()
             attribute { "label" } { $o.Label },
             if (exists($o.Balance)) then attribute { "balance" } { $o.Balance } else (),
             if (exists($o.DataType)) then attribute { "dataType" } { $o.DataType } else (),
-            if (exists($o.BaseType)) then attribute { "baseDataType" } { $o.BaseType } else (), 
+            if (exists($o.BaseType)) then attribute { "baseDataType" } { $o.BaseType } else (),
             if (exists($o.IsAbstract)) then attribute { "abstract" } { $o.IsAbstract } else (),
             if (exists($o.PeriodType)) then attribute { "periodType" } { $o.PeriodType } else (),
             attribute { "level" } { $level },
@@ -41,7 +41,7 @@ declare function local:to-xml($model as object) as node()*
                  networkIdentifier="{$model.NetworkIdentifier}"
                  formType="{$model.FormType}"
                  fiscalPeriod="{$model.FiscalPeriod}"
-                 fiscalYear="{$model.FiscalYear}" 
+                 fiscalYear="{$model.FiscalYear}"
                  acceptanceDatetime="{$model.AcceptanceDatetime}"
                  disclosure="{$model.Disclosure}"
                  >{
@@ -73,7 +73,7 @@ declare function local:to-csv-rec($objects as object*, $level as integer) as obj
 
 declare function local:to-csv($model as object) as string
 {
-    let $lines := local:to-csv-rec($model.ModelStructure, 0) 
+    let $lines := local:to-csv-rec($model.ModelStructure, 0)
     return
         if (exists($lines))
         then string-join(csv:serialize($lines, { serialize-null-as : "" }))
@@ -90,7 +90,7 @@ declare function local:enrich-json-rec($objects as object*, $level as integer) a
             if (exists($o.Children)) then delete json $o("Children") else (),
             insert json { Level : $level } into $o,
             if ($o.Kind eq "Domain") then replace value of json $o("Kind") with "Member" else ()
-        ) 
+        )
         return {|
             $o,
             let $children := local:enrich-json-rec($object.Children[], $level + 1)
@@ -108,7 +108,7 @@ declare function local:enrich-json($component as object) as object
         Label : $component.Label,
         AccessionNumber : $component.AccessionNumber,
         TableName : $component.TableName,
-        FormType : $component.FormType, 
+        FormType : $component.FormType,
         FiscalPeriod : $component.FiscalPeriod,
         FiscalYear : $component.FiscalYear,
         AcceptanceDatetime : $component.AcceptanceDatetime,
@@ -122,6 +122,8 @@ declare  %rest:case-insensitive                 variable $token              as 
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $securitiescode as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
@@ -146,15 +148,25 @@ let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 
-(: Object resolution :)
+let $cik1 as string* := switch($profile-name)
+            case "sec" return $cik
+            case "japan" return $edinetcode
+            default return ()
+
+let $cik2 as string* := switch($profile-name)
+            case "japan" return $securitiescode
+            default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
-  $cik,
+  $cik1,
+  $cik2,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
+
 
 let $archives as object* := multiplexer:filings(
   $profile-name,

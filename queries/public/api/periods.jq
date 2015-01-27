@@ -11,6 +11,8 @@ declare  %rest:env                              variable $request-uri   as strin
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $eid           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik           as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $securitiescode as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic           as string* external;
@@ -27,15 +29,24 @@ let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
 let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
 
-(: Object resolution :)
+let $cik1 as string* := switch($profile-name)
+            case "sec" return $cik
+            case "japan" return $edinetcode
+            default return ()
+
+let $cik2 as string* := switch($profile-name)
+            case "japan" return $securitiescode
+            default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
-  $cik,
+  $cik1,
+  $cik2,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
