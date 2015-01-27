@@ -209,16 +209,12 @@ declare function components:components-for-archives-and-concepts(
     $concepts as string*) as object*
 {
     let $aids as string* := archives:aid($archives-or-ids)
-    let $concepts := mw:find($concepts:col,
-        {|
-            (
-                { "Name" : { "$in" : [ $concepts ] } },
-                { "Archive" : { "$in" : [ $aids ] } }
-            )
-        |})
+    let $concepts := concepts:concepts($concepts, $aids, $concepts:ANY_COMPONENT_LINK_ROLE)
     let $roles := $concepts.Role
     for $component in components:components-for-archives-and-roles($aids, $roles)
-    where (some $concept in $concepts satisfies $concept.Archive eq $component.Archive and $concept.Role eq $component.Role)
+    where (some $concept in $concepts satisfies
+        $concept.Archive eq $component.Archive and
+        $concept.Role eq $component.Role)
     return $component
 };
 

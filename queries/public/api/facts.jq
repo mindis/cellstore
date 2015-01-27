@@ -256,7 +256,7 @@ let $facts :=
     return
     {|
       $fact,
-      let $concept-labels as object? := facts:labels($fact, $roles, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
+      let $concept-labels as object? := facts:labels($fact, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
       let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
       return { Labels : {| $concept-labels, $standard-labels |} }
     |}
@@ -298,4 +298,4 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format) 
+return api:check-and-return-results($token, $results, $format)
