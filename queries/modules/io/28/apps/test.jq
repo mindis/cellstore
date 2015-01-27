@@ -1,5 +1,6 @@
 jsoniq version "1.0";
 module namespace test = "http://apps.28.io/test";
+import module namespace backend = "http://apps.28.io/backend";
 import module namespace http-client = "http://zorba.io/modules/http-client";
 import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace response = "http://www.28msec.com/modules/http-response";
@@ -11,32 +12,16 @@ declare function test:is-dow30() as boolean{
   contains(credentials:credentials("MongoDB", "xbrl").db, "dow30")
 };
 
-declare function test:url($endpoint as string, $parameters as object) as string
-{
-    test:url($endpoint, $parameters, false)
-};
-
-declare function test:url($endpoint as string, $parameters as object, $includeToken as boolean) as string
-{
-    "http://" || request:server-name() || ":" || request:server-port() ||
-    "/v1/_queries/public/api/"||$endpoint||".jq?_method=POST&token=" || (if($includeToken) then $config:test-token else "{{token}}") || "&"||
-    string-join(
-        for $key in keys($parameters)
-        for $value as string in (flatten($parameters.$key) ! string($$))
-        return ($key||"="||encode-for-uri($value)),
-        "&")
-};
-
 declare %an:nondeterministic function test:invoke($endpoint as string, $parameters as object) as item*
 {
-  let $url as string:= test:url($endpoint, $parameters, true)
+  let $url as string:= backend:url($endpoint, $parameters, true)
   let $response as object := http-client:get($url)
   return ($response.status, parse-json($response.body.content))
 };
 
 declare %an:nondeterministic function test:invoke-xml($endpoint as string, $parameters as object) as item*
 {
-  let $url as string:= test:url($endpoint, $parameters, true)
+  let $url as string:= backend:url($endpoint, $parameters, true)
   let $response as object := http-client:get($url)
   return ($response.status, parse-xml($response.body.content))
 };
@@ -44,7 +29,7 @@ declare %an:nondeterministic function test:invoke-xml($endpoint as string, $para
 
 declare %an:sequential function test:invoke-body($endpoint as string, $parameters as object, $body as string) as item*
 {
-  let $url as string:= test:url($endpoint, $parameters, true)
+  let $url as string:= backend:url($endpoint, $parameters, true)
   let $response as object := http-client:post($url, $body, "application/x-www-form-urlencoded")
   return ($response.status, parse-json($response.body.content))
 };
@@ -52,14 +37,14 @@ declare %an:sequential function test:invoke-body($endpoint as string, $parameter
 
 declare %an:nondeterministic function test:invoke-raw($endpoint as string, $parameters as object) as object
 {
-  let $url as string:= test:url($endpoint, $parameters, true)
+  let $url as string:= backend:url($endpoint, $parameters, true)
   return http-client:get($url)
 };
 
 
 declare %an:nondeterministic function test:invoke-public($endpoint as string, $parameters as object) as item*
 {
-  let $url as string:= test:url($endpoint, $parameters, true)
+  let $url as string:= backend:url($endpoint, $parameters, true)
   let $response as object := http-client:get($url)
   return ($response.status, parse-json($response.body.content))
 };
@@ -113,8 +98,8 @@ declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
   let $expected as item* := if($options.TrimIdField) then test:trim-ids($expected) else $expected
   let $actual as item* := if($options.TrimIdField) then test:trim-ids($actual) else $actual
   return if($options.NoArrayOrder)
-          then test:assert-deep-equal-no-array-order($expected, $actual, $status, test:url($endpoint, $parameters))
-          else test:assert-deep-equal($expected, $actual, $status, test:url($endpoint, $parameters))
+          then test:assert-deep-equal-no-array-order($expected, $actual, $status, backend:url($endpoint, $parameters))
+          else test:assert-deep-equal($expected, $actual, $status, backend:url($endpoint, $parameters))
 };
 
 declare %an:sequential function test:check-all-success($o as object) as object
