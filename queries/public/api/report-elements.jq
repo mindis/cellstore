@@ -216,7 +216,7 @@ let $result :=
                           Value: $concept.Labels.$labelRole.$language
                         }
                       ],
-                      Fact: backend:url("facts", {|
+                      Facts: backend:url("facts", {|
                         {
                           "xbrl:Concept": $original-name,
                           aid: $archive,
@@ -226,7 +226,7 @@ let $result :=
                         {
                           fiscalYear: "ALL",
                           fiscalPeriod: "ALL",
-                          fiscalPeriodType: "ALL",
+                          fiscalPeriodType: "ALL"
                         }[$profile-name eq "japan"]
                       |}, true)
                     },
