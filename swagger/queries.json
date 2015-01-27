@@ -817,6 +817,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
