@@ -147,16 +147,16 @@ let $concepts as object* :=
         then local:concepts-for-archives-and-labels($archives._id, $label[1])
         else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
 let $result :=
-    if($profile-name eq "sec")
-    then {
-        ReportElements : [
-            if ($onlyNames)
-            then distinct-values($concepts.Name)
-            else
-                let $all-aids := $concepts.Archive
-                let $roles := $concepts.Role
-                let $components := components:components-for-archives-and-roles($all-aids, $roles)
-                return
+  let $all-aids := $concepts.Archive
+  let $roles := $concepts.Role
+  let $components := components:components-for-archives-and-roles($all-aids, $roles)
+  return {
+    ReportElements : [
+      if ($onlyNames)
+      then distinct-values($concepts.Name)
+      else
+        if($profile-name eq "sec")
+        then
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
@@ -190,17 +190,7 @@ let $result :=
                     trim($members[$$.Name eq $original-name], ("Name", "Labels")),
                     $metadata
                 |}
-        ]
-    }
-    else {
-        ReportElements : [
-            if ($onlyNames)
-            then distinct-values($concepts.Name)
-            else
-                let $all-aids := $concepts.Archive
-                let $roles := $concepts.Role
-                let $components := components:components-for-archives-and-roles($all-aids, $roles)
-                return
+       else
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
