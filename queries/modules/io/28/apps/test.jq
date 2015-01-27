@@ -4,7 +4,6 @@ import module namespace backend = "http://apps.28.io/backend";
 import module namespace http-client = "http://zorba.io/modules/http-client";
 import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace response = "http://www.28msec.com/modules/http-response";
-import module namespace config = "http://apps.28.io/config";
 import module namespace credentials = "http://www.28msec.com/modules/credentials";
 import module namespace functx = "http://www.functx.com";
 
