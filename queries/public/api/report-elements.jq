@@ -1,6 +1,7 @@
 import module namespace api = "http://apps.28.io/api";
 
 import module namespace session = "http://apps.28.io/session";
+import module namespace backend = "http://apps.28.io/test";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
@@ -145,14 +146,6 @@ let $concepts as object* :=
     if (exists($label))
         then local:concepts-for-archives-and-labels($archives._id, $label[1])
         else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
-let $concepts as object* := if($onlyTextBlocks) then
-                              for $concept in $concepts
-                              return if($concept.IsTextBlock) then
-                                $concept
-                              else
-                                ()
-                            else
-                              $concepts
 let $result :=
     if($profile-name eq "sec")
     then {
@@ -219,6 +212,8 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
+                let $concept-in-component := $members[$$.Name eq $original-name]
+                where not $onlyTextBlocks or $concept-in-component.IsTextBlock
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -230,9 +225,18 @@ let $result :=
                           Language: $language,
                           Value: $concept.Labels.$labelRole.$language
                         }
-                      ]
+                      ],
+                      Fact: backend:url("facts", {
+                          "xbrl:Concept": $original-name,
+                          aid: $archive,
+                          fiscalYear: "ALL",
+                          fiscalPeriod: "ALL",
+                          fiscalPeriodType: "ALL",
+                          format: $format,
+                          profile-name: $profile-name
+                          }, true)
                     },
-                    trim($members[$$.Name eq $original-name], ("Name", "Labels")),
+                    trim($concept-in-component, ("Name", "Labels")),
                     $metadata
                 |}
         ]

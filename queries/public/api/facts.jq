@@ -31,8 +31,12 @@ declare function local:param-values(
         return "integer"
      case $name eq "sec:FiscalPeriod" and $profile-name eq "sec"
         return ($fiscalPeriod, request:param-values("sec:FiscalPeriod"))
+     case $name eq "sec:FiscalPeriod::type" and $profile-name eq "sec"
+        return "string"
      case $name eq "sec:FiscalPeriodType" and $profile-name eq "sec"
         return ($fiscalPeriodType, request:param-values("sec:FiscalPeriodType"))
+     case $name eq "sec:FiscalPeriodType::type" and $profile-name eq "sec"
+        return "string"
      case $name eq "dei:LegalEntityAxis" and $profile-name eq "sec"
         return
          if(empty((request:param-values("sec:LegalEntityAxis"), request:param-values("sec:LegalEntityAxis::default"))))
@@ -75,8 +79,12 @@ declare function local:param-values(
      return "integer"
      case $name eq "fsa:FiscalPeriod" and $profile-name eq "japan"
      return ($fiscalPeriod, request:param-values("fsa:FiscalPeriod"))
+     case $name eq "fsa:FiscalPeriod::type" and $profile-name eq "japan"
+     return "string"
      case $name eq "fsa:FiscalPeriodType" and $profile-name eq "japan"
      return ($fiscalPeriodType, request:param-values("fsa:FiscalPeriodType"))
+     case $name eq "fsa:FiscalPeriodType::type" and $profile-name eq "japan"
+     return "string"
 
      default return request:param-values($name)
 };
@@ -154,7 +162,8 @@ declare function local:hypercube($entities as object*) as object
                 if(not($all))
                 then { "Domain" : [ $typed-values ] }[exists($typed-values)]
                 else (),
-                { "Default" : $typed-default-value }[$has-default]
+                { "Default" : $typed-default-value }[$has-default],
+                { "Default" : null }[(not $has-default) and $all and exists($type)]
             |}
         }
     |}
@@ -298,4 +307,4 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format) 
+return api:check-and-return-results($token, $results, $format)
