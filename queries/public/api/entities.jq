@@ -2,6 +2,7 @@ import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/test";
+import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 
@@ -11,6 +12,8 @@ declare  %rest:env                              variable $request-uri  as string
 declare  %rest:case-insensitive                 variable $format       as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $eid          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik          as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $securitiescode as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker       as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic          as string* external;
@@ -21,12 +24,34 @@ session:audit-call($token);
 (: HTTP parameter post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
-let $tag := if (exists(($cik, $tag, $ticker, $sic, $eid)))
+let $tag := if (exists(($cik[$profile-name eq "sec"],
+                        $edinetcode[$profile-name eq "japan"],
+                        $securitiescode[$profile-name eq "japan"],
+                        $tag,
+                        $ticker,
+                        $sic,
+                        $eid)))
              then $tag
              else "ALL"
 
+let $cik1 as string* := switch($profile-name)
+            case "sec" return $cik
+            case "japan" return $edinetcode
+            default return ()
+
+let $cik2 as string* := switch($profile-name)
+            case "japan" return $securitiescode
+            default return ()
+
 (: Entity resolution :)
-let $entities := multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic, ())
+let $entities := multiplexer:entities(
+  $profile-name,
+  $eid,
+  $cik1,
+  $cik2,
+  $tag,
+  $ticker,
+  $sic, ())
 let $entities :=
   for $entity in $entities
   return {|
@@ -36,7 +61,7 @@ let $entities :=
         "filings",
         {|
           {
-            eid: $entity._id,
+            eid: [ entities:eid($entity) ],
             format: $format,
             profile-name: $profile-name
           },
