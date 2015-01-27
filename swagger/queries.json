@@ -51,7 +51,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -165,7 +179,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -290,7 +318,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -456,8 +498,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -622,8 +678,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -957,8 +1027,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1262,7 +1346,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1380,8 +1479,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1548,8 +1661,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1719,8 +1846,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2019,8 +2160,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2196,7 +2351,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "securitiescode",
+                "description": "A Securities Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2345,7 +2514,7 @@
                 "description": "Get element name of specified company's taxonomy by label and company ID.",
                 "profile": ["japan"],
                 "parameters": {
-                    "cik": "E01225",
+                    "edinetcode": "E01225",
                     "format": "json",
                     "profile-name": "japan",
                     "label": "Loss of inactive facilities"
@@ -2365,7 +2534,7 @@
                 "description": "Get label of specified company's taxonomy by element name and company ID.",
                 "profile": ["japan"],
                 "parameters": {
-                    "cik": "E01225",
+                    "edinetcode": "E01225",
                     "name": "jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading"
                 }
             }]
