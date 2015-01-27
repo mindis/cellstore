@@ -13,7 +13,7 @@ import module namespace config = "http://apps.28.io/config";
  :)
 declare function backend:url($endpoint as string, $parameters as object) as string
 {
-    test:url($endpoint, $parameters, false)
+    backend:url($endpoint, $parameters, false)
 };
 
 (:~
