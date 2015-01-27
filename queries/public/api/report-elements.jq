@@ -216,16 +216,20 @@ let $result :=
                           Value: $concept.Labels.$labelRole.$language
                         }
                       ],
-                      Fact: backend:url("facts", {
+                      Facts: backend:url("facts", {|
+                        {
                           "xbrl:Concept": $original-name,
                           aid: $archive,
-                          fiscalYear: "ALL",
-                          fiscalPeriod: "ALL",
-                          fiscalPeriodType: "ALL",
                           format: $format,
                           profile-name: $profile-name,
                           token: $token
-                          }, true)
+                        },
+                        {
+                          fiscalYear: "ALL",
+                          fiscalPeriod: "ALL",
+                          fiscalPeriodType: "ALL"
+                        }[$profile-name eq "japan"]
+                      |}, true)
                     },
                     trim($concept-in-component, ("Name", "Labels")),
                     $metadata
