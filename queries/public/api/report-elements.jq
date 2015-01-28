@@ -140,8 +140,8 @@ let $archives as object* := multiplexer:filings(
   $aid)
 
 let $entities as object* :=
-    ($entities[$$._id = $archives.Entity],
-    let $not-found := $archives.Entity[not $entities._id = $$]
+    ($entities[entities:eid($$) = $archives.Entity],
+    let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
 let $map as object? :=
@@ -150,8 +150,8 @@ let $map as object? :=
     else concept-maps:concept-maps($map)
 let $concepts as object* :=
     if (exists($label))
-        then local:concepts-for-archives-and-labels($archives._id, $label[1])
-        else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
+        then local:concepts-for-archives-and-labels(archives:aid($archives), $label[1])
+        else local:concepts-for-archives(archives:aid($archives), $name, $map, { OnlyNames: $onlyNames })
 let $result :=
   let $all-aids := $concepts.Archive
   let $roles := $concepts.Role
@@ -167,13 +167,13 @@ let $result :=
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
                 let $members as object* := $component.Concepts[]
-                let $archive as object := $archives[$$._id eq $archive]
-                let $entity as object := $entities[$$._id eq $archive.Entity]
+                let $archive as object := $archives[archives:aid($$) eq $archive]
+                let $entity as object := $entities[entities:eid($$) eq $archive.Entity]
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
-                    AccessionNumber : $archive._id,
-                    CIK : $entity._id,
+                    AccessionNumber : archives:aid($archive),
+                    CIK : entities:eid($entity),
                     EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
                     FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
                     FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus

@@ -86,7 +86,7 @@ let $summaries :=
       {
         Components: backend:url("components",
           {
-              aid: encode-for-uri($archive._id),
+              aid: encode-for-uri(archives:aid($archive)),
               format: $format,
               profile-name: $profile-name
           }, true)

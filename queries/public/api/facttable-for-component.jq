@@ -152,7 +152,7 @@ let $facts := api:normalize-facts($facts)
 let $result :=
         {|
             {
-                CIK : $entity._id,
+                CIK : entities:eid($entity),
                 EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
                 TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name,
                 Label : $component.Label,

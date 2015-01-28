@@ -66,7 +66,7 @@ declare function local:param-values(
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod", $entities)
             return
                 if($fiscalYears = "LATEST")
-                then multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods)._id
+                then archives:aid(multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods))
                 else (),
             $aid,
             request:param-values("xbrl28:Archive")
@@ -265,9 +265,9 @@ let $facts :=
     let $entityName as string :=
         switch(true)
         case $profile-name eq "sec" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
+            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
         case $profile-name eq "japan" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
+            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
         default return $fact.Aspects."xbrl:Entity"
     return
     {|

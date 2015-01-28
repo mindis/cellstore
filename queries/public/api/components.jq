@@ -117,13 +117,13 @@ let $res as object* :=
         where $disclosure ne "DefaultComponent"
         order by $r.Label
         group by $archive := $r.Archive
-        let $archive := $archives[$$._id eq $archive]
-        let $e := $entities[$$._id eq $archive.Entity]
+        let $archive := $archives[archives:aid($$) eq $archive]
+        let $e := $entities[entities:eid($$) eq $archive.Entity]
         return
             {
-               AccessionNumber : $archive._id,
+               AccessionNumber : archives:aid($archive),
                EntityRegistrantName : $e.Profiles.SEC.CompanyName,
-               CIK : $e._id,
+               CIK : entities:eid($e),
                FiscalYear :$archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
                FiscalPeriod :$archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
                AcceptanceDatetime : sec-filings:acceptance-dateTimes($archive),
@@ -133,14 +133,14 @@ let $res as object* :=
                     return copy $c := $component
                     modify insert json {
                         FactTable: backend:url("facttable-for-component", {
-                            aid: $archive._id,
+                            aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
                             }, true),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
-                            aid: $archive._id,
+                            aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
