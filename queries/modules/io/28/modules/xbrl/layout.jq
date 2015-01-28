@@ -379,13 +379,13 @@ declare function layout:empty-rows-and-columns($cells as array, $threshold as do
         Rows: [
             for $i in 1 to size($cells)
             let $row := ($cells[[$i]])[]
-            where count($row.Value) le count($row) * $threshold
+            where count(flatten($row).Value) le count($row) * $threshold
             return $i
         ],
         Columns: [
             for $j in 1 to size($cells[[1]])
             let $column := $cells[][[$j]]
-            where count($column.Value) le count($column) * $threshold
+            where count(flatten($column).Value) le count($column) * $threshold
             return $j
         ]
     }
@@ -478,7 +478,7 @@ declare function layout:layout(
 {
     let $elimination as boolean := ($options.Eliminate, false)[1]
     let $threshold as double := ($options.EliminationThreshold, 0)[1]
-    let $original-hypercube := 
+    let $original-hypercube :=
         if($options.Hypercube instance of null)
         then ()
         else ($options.Hypercube, hypercubes:dimensionless-hypercube())[1]
