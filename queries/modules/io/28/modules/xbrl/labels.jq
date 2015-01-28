@@ -101,7 +101,7 @@ declare function labels:labels(
       },
 
       for $concept in $concept-names
-      where not ($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept
+      where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept)
       return {
         $concept:
           switch(true)
