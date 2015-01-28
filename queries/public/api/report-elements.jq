@@ -1,6 +1,7 @@
 import module namespace api = "http://apps.28.io/api";
 
 import module namespace session = "http://apps.28.io/session";
+import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
@@ -88,23 +89,24 @@ declare function local:concepts-for-archives-and-labels($aids as string*, $label
 };
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token         as string?  external;
-declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-declare  %rest:env                              variable $request-uri   as string   external;
-declare  %rest:case-insensitive                 variable $format        as string?  external;
-declare  %rest:case-insensitive %rest:distinct  variable $cik           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $tag           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $sic           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string*  external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string*  external := "FY";
-declare  %rest:case-insensitive %rest:distinct  variable $aid           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $eid           as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $label         as string*  external;
-declare  %rest:case-insensitive                 variable $map           as string?  external;
-declare  %rest:case-insensitive                 variable $report        as string?  external;
-declare  %rest:case-insensitive %rest:distinct  variable $name          as string*  external;
-declare  %rest:case-insensitive                 variable $onlyNames     as boolean? external := false;
+declare  %rest:case-insensitive                 variable $token          as string?  external;
+declare  %rest:case-insensitive                 variable $profile-name   as string  external := $config:profile-name;
+declare  %rest:env                              variable $request-uri    as string   external;
+declare  %rest:case-insensitive                 variable $format         as string?  external;
+declare  %rest:case-insensitive %rest:distinct  variable $cik            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $tag            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $ticker         as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $sic            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear     as string*  external := "LATEST";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod   as string*  external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $aid            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $eid            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $label          as string*  external;
+declare  %rest:case-insensitive                 variable $map            as string?  external;
+declare  %rest:case-insensitive                 variable $report         as string?  external;
+declare  %rest:case-insensitive %rest:distinct  variable $name           as string*  external;
+declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
+declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := false;
 
 session:audit-call($token);
 
@@ -144,18 +146,17 @@ let $concepts as object* :=
     if (exists($label))
         then local:concepts-for-archives-and-labels($archives._id, $label[1])
         else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
-
 let $result :=
-    if($profile-name eq "sec")
-    then {
-        ReportElements : [
-            if ($onlyNames)
-            then distinct-values($concepts.Name)
-            else
-                let $all-aids := $concepts.Archive
-                let $roles := $concepts.Role
-                let $components := components:components-for-archives-and-roles($all-aids, $roles)
-                return
+  let $all-aids := $concepts.Archive
+  let $roles := $concepts.Role
+  let $components := components:components-for-archives-and-roles($all-aids, $roles)
+  return {
+    ReportElements : [
+      if ($onlyNames)
+      then distinct-values($concepts.Name)
+      else
+        if($profile-name eq "sec")
+        then
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
@@ -189,17 +190,7 @@ let $result :=
                     trim($members[$$.Name eq $original-name], ("Name", "Labels")),
                     $metadata
                 |}
-        ]
-    }
-    else {
-        ReportElements : [
-            if ($onlyNames)
-            then distinct-values($concepts.Name)
-            else
-                let $all-aids := $concepts.Archive
-                let $roles := $concepts.Role
-                let $components := components:components-for-archives-and-roles($all-aids, $roles)
-                return
+       else
                 for $concept in $concepts
                 group by $archive := $concept.Archive,  $role := $concept.Role
                 let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
@@ -211,6 +202,8 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
+                let $concept-in-component := $members[$$.Name eq $original-name]
+                where not $onlyTextBlocks or $concept-in-component.IsTextBlock
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -222,9 +215,22 @@ let $result :=
                           Language: $language,
                           Value: $concept.Labels.$labelRole.$language
                         }
-                      ]
+                      ],
+                      Facts: backend:url("facts", {|
+                        {
+                          "xbrl:Concept": $original-name,
+                          aid: $archive,
+                          format: $format,
+                          profile-name: $profile-name
+                        },
+                        {
+                          fiscalYear: "ALL",
+                          fiscalPeriod: "ALL",
+                          fiscalPeriodType: "ALL"
+                        }[$profile-name eq "japan"]
+                      |}, true)
                     },
-                    trim($members[$$.Name eq $original-name], ("Name", "Labels")),
+                    trim($concept-in-component, ("Name", "Labels")),
                     $metadata
                 |}
         ]
