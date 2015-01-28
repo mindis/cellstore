@@ -4,6 +4,7 @@ import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
@@ -150,8 +151,8 @@ let $map as object? :=
     else concept-maps:concept-maps($map)
 let $concepts as object* :=
     if (exists($label))
-        then local:concepts-for-archives-and-labels($archives._id, $label[1])
-        else local:concepts-for-archives($archives._id, $name, $map, { OnlyNames: $onlyNames })
+        then local:concepts-for-archives-and-labels(archives:aid($archives), $label[1])
+        else local:concepts-for-archives(archives:aid($archives), $name, $map, { OnlyNames: $onlyNames })
 let $result :=
   let $all-aids := $concepts.Archive
   let $roles := $concepts.Role
@@ -174,7 +175,7 @@ let $result :=
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
                     AccessionNumber : $archive,
-                    CIK : $entity._id,
+                    CIK : entities:eid($entity),
                     EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
                     FiscalYear : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
                     FiscalPeriod : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus

@@ -3,6 +3,7 @@ import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/backend";
 
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
@@ -88,7 +89,7 @@ let $summaries :=
         Components: backend:url("components",
           {
               token: $token,
-              aid: encode-for-uri($archive._id),
+              aid: encode-for-uri(archives:aid($archive)),
               format: $format,
               profile-name: $profile-name
           })

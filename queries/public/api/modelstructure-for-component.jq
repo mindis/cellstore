@@ -182,7 +182,7 @@ let $archive   := archives:archives($component.Archive)
 let $entity    := entities:entities($archive.Entity)
 
 let $result := {|
-    { CIK : $entity._id },
+    { CIK : entities:eid($entity) },
     { EntityRegistrantName : $entity.Profiles.SEC.CompanyName },
     { ModelStructure : [ sec-networks:model-structures($component) ] },
     { TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name },
