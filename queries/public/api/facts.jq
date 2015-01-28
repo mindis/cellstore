@@ -281,7 +281,7 @@ let $facts :=
         $language,
         $concepts,
         $entities,
-        { Language: $language },
+        { Language: $language }
       )
       let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
       return { Labels : {| $concept-labels, $standard-labels |} }
