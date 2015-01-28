@@ -45,7 +45,7 @@ let $entities :=
             fiscalYear: "ALL",
             fiscalPeriod: "ALL"
           }[$profile-name = ("sec", "japan")]
-        |}, true)
+        |})
     },
     trim($entity, "_id")
   |}

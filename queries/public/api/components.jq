@@ -131,7 +131,7 @@ let $res as object* :=
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name,
                             token: $token
-                            }, true),
+                            }),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
                             aid: $archive._id,
@@ -139,7 +139,7 @@ let $res as object* :=
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name,
                             token: $token
-                            }, true)
+                            })
                         )
                     } into $c
                     return $c
@@ -157,7 +157,7 @@ let $res as object* :=
                             role: $r.Role,
                             profile-name: $profile-name,
                             token: $token
-                            }, true),
+                            }),
             SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                         backend:url("spreadsheet-for-component", {
                             aid: $r.Archive,
@@ -166,14 +166,14 @@ let $res as object* :=
                             profile-name: $profile-name,
                             token: $token,
                             eliminate: "true"
-                        }, true)),
+                        })),
             ReportElements: backend:url("report-elements", {
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name,
                             token: $token
-                        }, true),
+                        }),
             NumRules: size($r.Rules),
             NumNetworks: size($r.Networks),
             NumReportElements: size($r.Concepts),

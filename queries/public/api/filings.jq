@@ -70,7 +70,7 @@ let $summaries :=
               format: $format,
               profile-name: $profile-name,
               token: $token
-          }, true)
+          })
       },
       trim($archive, "AccessionNumber")
     |}
@@ -85,7 +85,7 @@ let $summaries :=
               format: $format,
               profile-name: $profile-name,
               token: $token
-          }, true)
+          })
       },
       trim($archive, "_id")
     |}
