@@ -226,7 +226,7 @@ let $result :=
                           fiscalPeriod: "ALL",
                           fiscalPeriodType: "ALL"
                         }[$profile-name eq "japan"]
-                      |}, true)
+                      |})
                     },
                     trim($concept-in-component, ("Name", "Labels")),
                     $metadata
