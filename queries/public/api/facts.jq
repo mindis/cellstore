@@ -10,6 +10,7 @@ import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
@@ -50,7 +51,7 @@ declare function local:param-values(
      case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
          return (
                 if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
-                then $entities._id
+                then entities:eid($entities)
                 else "dummy",
                 request:param-values("xbrl:Entity")
             )
@@ -66,7 +67,7 @@ declare function local:param-values(
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod", $entities)
             return
                 if($fiscalYears = "LATEST")
-                then multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods)._id
+                then archives:aid(multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods))
                 else (),
             $aid,
             request:param-values("xbrl28:Archive")
@@ -259,15 +260,15 @@ let $facts :=
       )
     let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
     let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
-    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entities._id]
+    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
     let $entityName as string :=
         switch(true)
         case $profile-name eq "sec" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
+            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
         case $profile-name eq "japan" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
+            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
         default return $fact.Aspects."xbrl:Entity"
     return
     {|
