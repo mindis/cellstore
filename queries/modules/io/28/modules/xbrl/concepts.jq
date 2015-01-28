@@ -128,13 +128,7 @@ declare function concepts:concepts(
 
 (:~
  : <p>Retrieves all the labels with the given label role and language in the
- : matching concepts.</p>
- :
- : <p>Matching concepts are those which:
- :  - concept name and archive number match a given one;
- :  - component role matches a given one or is the default
- :    component role.
- : </p>
+ : specified archives.</p>
  :
  : <p>Language matching can either be exact, if no options are given,
  : or approximated, if at least one of the following options is given:</p>
@@ -149,24 +143,25 @@ declare function concepts:concepts(
  : </ul>
  :
  : @param $concept-names the concepts names.
- : @param $archives the archive numbers.
- : @param $component-roles the component roles.
  : @param $label-role the label role.
  : @param $language the label language.
+ : @param $archives the archive numbers.
  : @param $options optional parameters to control language matching.
  :
  : @return the matching labels.
  :)
-declare function concepts:labels(
+declare function concepts:labels-in-archives(
     $concept-names as string*,
-    $archives as string*,
-    $component-roles as string*,
     $label-role as string,
     $language as string,
+    $archives as string*,
     $options as object?
   ) as string*
 {
-  let $concepts := concepts:concepts($concept-names, $archives, $component-roles)
+  let $concepts := concepts:concepts(
+      $concept-names,
+      $archives,
+      $concepts:ANY_COMPONENT_LINK_ROLE)
   return concepts:labels(
       $concept-names,
       $label-role,
@@ -190,7 +185,7 @@ declare function concepts:normalize-language($language as string) as string
 
 (:~
  : <p>Retrieves all the labels with the given label role and language in the
- : matching concepts.</p>
+ : matching concepts, one label for each concept.</p>
  :
  : <p>Matching concepts are those which:
  :  - concept name and archive number match a given one;
@@ -219,7 +214,8 @@ declare function concepts:normalize-language($language as string) as string
  :                  searched (in the version-7 format).
  : @param $options Optional parameters to control language matching.
  :
- : @return the matching labels (one associated with each input concept).
+ : @return the matching labels (one associated with each input concept, as
+ : an object).
  :)
 declare function concepts:labels(
     $concept-names as string*,

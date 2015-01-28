@@ -621,20 +621,24 @@ declare function facts:labels(
     $facts as object*,
     $label-role as string,
     $language as string,
-    $concepts as object*,
     $options as object?
   ) as object?
 {
+    for $facts in $facts
+    group by $archive := $facts."Aspects"."xbrl28:Archive"
     let $concept-names as string* :=
-        distinct-values((values($facts.Aspects), keys($facts.Aspects))[string($$) = $concepts.Name])
+        distinct-values((
+          values($facts.Aspects),
+          keys($facts.Aspects)
+    )[$$ instance of string])
     return
         {|
-            concepts:labels(
+            concepts:labels-in-archives(
                     $concept-names,
                     $label-role,
                     $language,
-                    $concepts,
-                    $options)[1],
+                    $archive,
+                    $options),
             for $key in distinct-values(keys($facts.Aspects))
             where not string($facts.Aspects.$key) = $concept-names
             return
