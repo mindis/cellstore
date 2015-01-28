@@ -39,9 +39,9 @@ declare variable $entities:col as string := "entities";
 
 (:~
  : <p>Return all entities.</p>
- : 
+ :
  : @return all entities.
- :) 
+ :)
 declare function entities:entities() as object*
 {
   mw:find($entities:col, {})
@@ -49,19 +49,19 @@ declare function entities:entities() as object*
 
 (:~
  : <p>Return the entities with the given EIDs.</p>
- : 
+ :
  : @param $entities-or-ids the ids of the entities (EIDs) or the entities themselves.
  :
  : @return the entities with the given EIDs
  :         the empty sequence if no entity was found or if the input is an
  : empty sequence.
- :) 
+ :)
 declare function entities:entities($entities-or-ids as item*) as object*
 {
   let $ids as string* :=
     for $s in $entities-or-ids
     where $s instance of string
-    return $s
+    return entities:eid($s)
   let $entities as object* :=
     for $s in $entities-or-ids
     where $s instance of object
@@ -70,7 +70,12 @@ declare function entities:entities($entities-or-ids as item*) as object*
     (
       $entities,
       if (exists($ids))
-      then mw:find($entities:col, { "_id" : { "$in" : [ $ids ! entities:eid($$) ] } })
+      then mw:find($entities:col, {
+        "$or" : [
+          { "_id" : { "$in" : [ $ids ] } },
+          { "EIDs" : { "$in" : [ $ids ] } }
+        ]
+      })[1]
       else ()
     )
 };
@@ -88,18 +93,20 @@ declare function entities:entities($entities-or-ids as item*) as object*
  :)
 declare function entities:eid($entities-or-ids as item*) as atomic*
 {
-  for $entity-or-id in $entities-or-ids
-  return
-  typeswitch ($entity-or-id)
-  case object return
-    let $id := $entity-or-id._id
-    return if(exists($id))
-           then $id
-           else error(QName("entities:INVALID_PARAMETER"), 
-                      "Invalid entity provided (no _id field)")
-  case $id as atomic return $id
-  default return error(
-      QName("entities:INVALID_PARAMETER"),
-      "Invalid entity or id (must be an object or an atomic): "
-      || serialize($entity-or-id))
+  distinct-values(
+    for $entity-or-id in $entities-or-ids
+    return
+    typeswitch ($entity-or-id)
+    case $entity as object return
+      let $id := ($entity._id, $entity.EIDs[])
+      return if(exists($id))
+             then $id
+             else error(QName("entities:INVALID_PARAMETER"),
+                        "Invalid entity provided (no _id or EIDs field)")
+    case $id as atomic return $id
+    default return error(
+        QName("entities:INVALID_PARAMETER"),
+        "Invalid entity or id (must be an object or an atomic): "
+        || serialize($entity-or-id))
+  )
 };

@@ -1,8 +1,9 @@
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
-import module namespace backend = "http://apps.28.io/test";
+import module namespace backend = "http://apps.28.io/backend";
 
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
@@ -12,6 +13,7 @@ declare  %rest:env                              variable $request-uri   as strin
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $eid           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik           as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode    as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic           as string* external;
@@ -28,15 +30,20 @@ let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
 let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
 
-(: Object resolution :)
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
   $cik,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -66,10 +73,11 @@ let $summaries :=
       {
         Components: backend:url("components",
           {
+              token: $token,
               aid: encode-for-uri($archive.AccessionNumber),
               format: $format,
               profile-name: $profile-name
-          }, true)
+          })
       },
       trim($archive, "AccessionNumber")
     |}
@@ -80,10 +88,11 @@ let $summaries :=
       {
         Components: backend:url("components",
           {
-              aid: encode-for-uri($archive._id),
+              token: $token,
+              aid: encode-for-uri(archives:aid($archive)),
               format: $format,
               profile-name: $profile-name
-          }, true)
+          })
       },
       trim($archive, "_id")
     |}

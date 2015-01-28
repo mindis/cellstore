@@ -24,6 +24,7 @@ declare  %rest:case-insensitive                 variable $token              as 
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
@@ -56,15 +57,20 @@ let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 let $networkIdentifier := distinct-values(($networkIdentifier, $role))
 
-(: Object resolution :)
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
   $cik,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -146,7 +152,7 @@ let $facts := api:normalize-facts($facts)
 let $result :=
         {|
             {
-                CIK : $entity._id,
+                CIK : entities:eid($entity),
                 EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
                 TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name,
                 Label : $component.Label,
