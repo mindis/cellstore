@@ -10,7 +10,7 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare function api:json-to-csv($objects as object*) as string
 {
-  let $flattened as object* := api:flatten-json-object($objects)
+  let $flattened as object* := api:flatten-json-object($objects, ())
   return string-join(
     csv:serialize($flattened, { field-names: [ keys($flattened) ], serialize-null-as : "" }),
     "")
@@ -18,24 +18,39 @@ declare function api:json-to-csv($objects as object*) as string
 
 declare function api:json-to-xml($objects as object*, $root-name as string) as element()*
 {
-  for $flattened-object as object in api:flatten-json-object($objects)
+  for $flattened-object as object in api:flatten-json-object($objects, { KeepArray: true })
   return element { $root-name } {
     for $key in keys($flattened-object)
-    return element { $key } { $flattened-object.$key }
+    let $value := $flattened-object.$key
+    return typeswitch($value)
+           case array return
+             let $key-with-s := if(substring($key, string-length($key), 1) eq "s")
+                                then $key
+                                else $key || "s"
+             let $key-no-s := if(substring($key, string-length($key), 1) eq "s")
+                                then substring($key, 1, string-length($key) - 1)
+                                else $key
+             return element {$key-with-s} { for $v in $value[] return element { $key-no-s } { $v } }
+           default return element { $key } { $value }
   }
 };
 
-declare %private function api:flatten-json-object($items as item*) as item*
+declare %private function api:flatten-json-object(
+  $items as item*,
+  $options as object?) as item*
 {
   for $item in $items
   return typeswitch($item)
          case atomic return $item
-         case array return string-join(flatten($item)[$$ instance of atomic], ", ")
+         case array return let $atomic-items := flatten($item)[$$ instance of atomic]
+                           return if ($options.KeepArray)
+                                 then [ $atomic-items ]
+                                  else string-join($atomic-items, ", ")
          case object return {|
              for $key in keys($item)
              return typeswitch($item.$key)
-                    case object return api:flatten-json-object($item.$key)
-                    default return { $key: api:flatten-json-object($item.$key) }
+                    case object return api:flatten-json-object($item.$key, $options)
+                    default return { $key: api:flatten-json-object($item.$key, $options) }
          |}
          default return ()
 };
