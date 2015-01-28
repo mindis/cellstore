@@ -27,7 +27,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "設備休止関連損失"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
     "IsAbstract" : false,
@@ -68,7 +68,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "設備休止関連損失"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
     "IsAbstract" : false,
@@ -109,7 +109,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "設備休止関連損失"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
     "IsAbstract" : false,
@@ -142,7 +142,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "設備休止関連損失に関する注記"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ANotesRegardingTheLossOfInactiveFacilitiesTextBlock&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ANotesRegardingTheLossOfInactiveFacilitiesTextBlock&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失に関する注記",
     "IsNillable" : true,
     "IsAbstract" : false,
@@ -182,7 +182,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "ja",
       "Value" : "設備休止関連損失"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
     "IsAbstract" : false,
