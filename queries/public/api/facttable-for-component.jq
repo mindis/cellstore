@@ -11,6 +11,7 @@ import module namespace concept-maps = "http://28.io/modules/xbrl/concept-maps";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
