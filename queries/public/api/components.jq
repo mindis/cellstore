@@ -4,6 +4,7 @@ import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec-filings = "http://28.io/modules/xbrl/profiles/sec/filings";
