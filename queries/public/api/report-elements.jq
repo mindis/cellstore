@@ -158,14 +158,14 @@ let $result :=
   let $components := components:components-for-archives-and-roles($all-aids, $roles)
   return {
     ReportElements : [
-      for $concept in $concepts
-      group by $archive := $concept.Archive,  $role := $concept.Role
-      let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-      let $members as object* := $component.Concepts[]
-      return
-        if ($onlyNames)
-        then distinct-values($concepts.Name)
-        else
+      if ($onlyNames)
+      then distinct-values($concepts.Name)
+      else
+        for $concept in $concepts
+        group by $archive := $concept.Archive,  $role := $concept.Role
+        let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
+        let $members as object* := $component.Concepts[]
+        return
           if($profile-name eq "sec")
           then
                 let $archive-object as object := $archives[$$._id eq $archive]
