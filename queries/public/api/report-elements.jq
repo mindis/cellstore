@@ -140,8 +140,8 @@ let $archives as object* := multiplexer:filings(
   $aid)
 
 let $entities as object* :=
-    ($entities[$$._id = $archives.Entity],
-    let $not-found := $archives.Entity[not $entities._id = $$]
+    ($entities[entities:eid($$) = $archives.Entity],
+    let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
 let $map as object? :=
@@ -162,22 +162,22 @@ let $result :=
       group by $archive := $concept.Archive,  $role := $concept.Role
       let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
       let $members as object* := $component.Concepts[]
-      let $archive as object := $archives[$$._id eq $archive]
-      let $entity as object := $entities[$$._id eq $archive.Entity]
       return
         if ($onlyNames)
         then distinct-values($concepts.Name)
         else
           if($profile-name eq "sec")
           then
+                let $archive-object as object := $archives[$$._id eq $archive]
+                let $entity as object := $entities[entities:eid($$) = $archive.Entity]
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
                     AccessionNumber : $archive._id,
                     CIK : $entity._id,
                     EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
-                    FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
-                    FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus
+                    FiscalYear : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
+                    FiscalPeriod : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
