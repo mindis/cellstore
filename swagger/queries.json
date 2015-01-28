@@ -63,13 +63,6 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "sic",
                 "description": "The industry group",
                 "profile": ["sec"],
@@ -79,7 +72,7 @@
             }, {
                 "name": "ticker",
                 "description": "A ticker symbols",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -191,16 +184,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "A ticker symbol",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -330,16 +316,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "A ticker symbol",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -470,7 +449,7 @@
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -506,13 +485,6 @@
             }, {
                 "name": "edinetcode",
                 "description": "An EDINET Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
                 "profile": ["japan"],
                 "required": false,
                 "type": "string",
@@ -691,16 +663,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1040,16 +1005,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1359,15 +1317,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1492,16 +1444,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1674,16 +1619,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1859,16 +1797,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2132,7 +2063,7 @@
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2168,13 +2099,6 @@
             }, {
                 "name": "edinetcode",
                 "description": "An EDINET Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
                 "profile": ["japan"],
                 "required": false,
                 "type": "string",
@@ -2363,16 +2287,9 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "securitiescode",
-                "description": "A Securities Code",
-                "profile": ["japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "ticker",
                 "description": "A ticker symbols",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
