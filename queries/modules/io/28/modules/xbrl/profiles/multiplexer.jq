@@ -78,8 +78,8 @@ declare function multiplexer:entities(
     order by $entity.Profiles.SEC.CompanyName
     return $entity
   case "japan" return
-    for $entity in japan:entities($cik, $eid, $tag)
-    order by $entity._id
+    for $entity in japan:entities($cik, $ticker, $eid, $tag)
+    order by $entity.SubmitterNameAlphabetic
     return $entity
   default return
     entities:entities($eid)

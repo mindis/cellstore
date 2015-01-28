@@ -17,21 +17,21 @@ test:check-all-success({
     ),
     company-label: test:invoke-and-assert-deep-equal(
       "report-elements",
-      {cik:"E01225", label:"\"Loss of inactive facilities\""},
+      {edinetcode:"E01225", label:"\"Loss of inactive facilities\""},
       function($b as item*) as item* { $b.ReportElements },
       test:get-expected-result("edinet/report-elements-expected3.jq"),
       { NoArrayOrder: true }
     ),
     company-name: test:invoke-and-assert-deep-equal(
       "report-elements",
-      {cik:"E01225", name:"jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading"},
+      {edinetcode:"E01225", name:"jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading"},
       function($b as item*) as item* { $b.ReportElements },
       test:get-expected-result("edinet/report-elements-expected4.jq"),
       { NoArrayOrder: true }
     ),
     company-name-xml : test:invoke-and-assert-deep-equal(
       "report-elements",
-      {cik:"E01225", name:"jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading", format: "xml"},
+      {edinetcode:"E01225", name:"jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading", format: "xml"},
       function($b as item*) as item* { document { $b/ReportElements } },
       test:get-expected-result-xml("edinet/report-elements-expected4-xml.jq"),
       { Format : "xml" }

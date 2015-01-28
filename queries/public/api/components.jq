@@ -1,9 +1,11 @@
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
-import module namespace backend = "http://apps.28.io/test";
+import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
+import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec-filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
@@ -43,27 +45,12 @@ declare function local:to-csv($res as object*) as string*
     { serialize-null-as : "" })
 };
 
-declare function local:to-csv-generic($res as object*) as string*
-{
-    csv:serialize(
-        for $a in $res
-        return {
-            Archive: $a.Archive,
-            Role: $a.Role,
-            FactTable: $a.FactTable,
-            SpreadSheet: $a.SpreadSheet,
-            NumRules: $a.NumRules,
-            NumNetworks: $a.NumNetworks,
-            NumHypercubes: size($a.Hypercubes)
-        },
-    { serialize-null-as : "" })
-};
-
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
@@ -90,15 +77,21 @@ let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 let $networkIdentifier := distinct-values(($networkIdentifier, $role))
 
-(: Object resolution :)
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
   $cik,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -125,13 +118,13 @@ let $res as object* :=
         where $disclosure ne "DefaultComponent"
         order by $r.Label
         group by $archive := $r.Archive
-        let $archive := $archives[$$._id eq $archive]
-        let $e := $entities[$$._id eq $archive.Entity]
+        let $archive := $archives[archives:aid($$) eq $archive]
+        let $e := $entities[entities:eid($$) eq $archive.Entity]
         return
             {
-               AccessionNumber : $archive._id,
+               AccessionNumber : archives:aid($archive),
                EntityRegistrantName : $e.Profiles.SEC.CompanyName,
-               CIK : $e._id,
+               CIK : entities:eid($e),
                FiscalYear :$archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
                FiscalPeriod :$archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
                AcceptanceDatetime : sec-filings:acceptance-dateTimes($archive),
@@ -141,18 +134,20 @@ let $res as object* :=
                     return copy $c := $component
                     modify insert json {
                         FactTable: backend:url("facttable-for-component", {
-                            aid: $archive._id,
+                            token: $token,
+                            aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
-                            }, true),
+                            }),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
-                            aid: $archive._id,
+                            token: $token,
+                            aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
-                            }, true)
+                            })
                         )
                     } into $c
                     return $c
@@ -163,24 +158,43 @@ let $res as object* :=
         return {
             Archive: $r.Archive,
             Role: $r.Role,
-            NumRules: size($r.Rules),
-            NumNetworks: size($r.Networks),
-            Hypercubes: [ keys($r.Hypercubes) ],
+            Label: $r.Label,
             FactTable: backend:url("facttable-for-component", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name
-                            }, true),
+                            }),
             SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                         backend:url("spreadsheet-for-component", {
+                            token: $token,
+                            aid: $r.Archive,
+                            format: $format,
+                            role: $r.Role,
+                            profile-name: $profile-name,
+                            eliminate: "true"
+                        })),
+            ReportElements: backend:url("report-elements", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name
-                        }, true))
+                        }),
+            NumRules: size($r.Rules),
+            NumNetworks: size($r.Networks),
+            NumReportElements: size($r.Concepts),
+            NumHypercubes: count(keys($r.Hypercubes)),
+            NumDimensions: count(components:dimensions($r)),
+            NumConcepts: count(components:concrete-concepts($r)),
+            Hypercubes: [ keys($r.Hypercubes) ],
+            ValidationErrors: [ components:validation-errors($r) ]
         }
-let $result := switch($profile-name) case "sec" return { Archives: [ $res ] } default return { Components : [ $res ] }
+let $result := switch($profile-name)
+               case "sec"
+               return { Archives: [ $res ] }
+               default return { Components : [ $res ] }
 let $comment :=
  {
     NumComponents : count($components),
@@ -215,7 +229,7 @@ let $serializers := {
     to-csv : function($res as object) as string {
         switch($profile-name)
         case "sec" return string-join(local:to-csv($res.Archives[]), "")
-        default return string-join(local:to-csv-generic($res.Components[]), "")
+        default return api:json-to-csv($res.Components[])
     }
 }
 

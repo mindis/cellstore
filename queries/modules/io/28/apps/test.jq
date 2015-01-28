@@ -6,6 +6,7 @@ import module namespace response = "http://www.28msec.com/modules/http-response"
 import module namespace config = "http://apps.28.io/config";
 import module namespace credentials = "http://www.28msec.com/modules/credentials";
 import module namespace functx = "http://www.functx.com";
+import module namespace backend = "http://apps.28.io/backend";
 
 declare function test:is-dow30() as boolean{
   contains(credentials:credentials("MongoDB", "xbrl").db, "dow30")
@@ -18,13 +19,13 @@ declare function test:url($endpoint as string, $parameters as object) as string
 
 declare function test:url($endpoint as string, $parameters as object, $includeToken as boolean) as string
 {
-    "http://" || request:server-name() || ":" || request:server-port() ||
-    "/v1/_queries/public/api/"||$endpoint||".jq?_method=POST&token=" || (if($includeToken) then $config:test-token else "{{token}}") || "&"||
-    string-join(
-        for $key in keys($parameters)
-        for $value as string in (flatten($parameters.$key) ! string($$))
-        return ($key||"="||encode-for-uri($value)),
-        "&")
+  backend:url(
+    $endpoint,
+    {|
+      { token: if($includeToken) then $config:test-token else "{{token}}" },
+      $parameters
+    |}
+  )
 };
 
 declare %an:nondeterministic function test:invoke($endpoint as string, $parameters as object) as item*
