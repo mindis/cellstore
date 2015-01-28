@@ -1,6 +1,5 @@
 import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace config = "http://apps.28.io/config";
-
 [ {
     "Name" : "jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading",
     "Labels" : [ {
@@ -20,7 +19,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "en",
       "Value" : "Notes - Consolidated statement of cash flows"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "連結キャッシュ・フロー計算書関係",
     "IsNillable" : true,
     "IsAbstract" : true,
@@ -52,7 +51,7 @@ import module namespace config = "http://apps.28.io/config";
       "Language" : "en",
       "Value" : "Notes - Consolidated statement of cash flows"
     } ],
-    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL&format=&profile-name=japan",
+    "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "連結キャッシュ・フロー計算書関係",
     "IsNillable" : true,
     "IsAbstract" : true,
