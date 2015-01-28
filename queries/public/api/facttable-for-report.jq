@@ -98,7 +98,7 @@ then
                 )
 
     let $concepts as object* := $report.Concepts[]
-    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
+    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
     let $role as string := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )[1]
     let $facts :=
       if($profile-name eq "sec")
