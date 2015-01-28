@@ -126,7 +126,7 @@ then
           $language,
           $concepts,
           $entities,
-          (),
+          ()
         )
         return
         {|
