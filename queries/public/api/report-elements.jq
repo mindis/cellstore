@@ -152,17 +152,18 @@ let $result :=
   let $components := components:components-for-archives-and-roles($all-aids, $roles)
   return {
     ReportElements : [
-      if ($onlyNames)
-      then distinct-values($concepts.Name)
-      else
-        if($profile-name eq "sec")
-        then
-                for $concept in $concepts
-                group by $archive := $concept.Archive,  $role := $concept.Role
-                let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $component.Concepts[]
-                let $archive as object := $archives[$$._id eq $archive]
-                let $entity as object := $entities[$$._id eq $archive.Entity]
+      for $concept in $concepts
+      group by $archive := $concept.Archive,  $role := $concept.Role
+      let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
+      let $members as object* := $component.Concepts[]
+      let $archive as object := $archives[$$._id eq $archive]
+      let $entity as object := $entities[$$._id eq $archive.Entity]
+      return
+        if ($onlyNames)
+        then distinct-values($concepts.Name)
+        else
+          if($profile-name eq "sec")
+          then
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
@@ -190,11 +191,7 @@ let $result :=
                     trim($members[$$.Name eq $original-name], ("Name", "Labels")),
                     $metadata
                 |}
-       else
-                for $concept in $concepts
-                group by $archive := $concept.Archive,  $role := $concept.Role
-                let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $component.Concepts[]
+         else
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
