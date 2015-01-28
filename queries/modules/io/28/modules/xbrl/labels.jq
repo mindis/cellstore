@@ -79,7 +79,7 @@ declare function labels:labels(
 {
   {|
     let $label-role-translated := replace($label-role, "\\.", "\uff0e")
-    let $normalized-language as string := concepts:normalize-language($language)
+    let $normalized-language as string := labels:normalize-language($language)
     return (
       for $concept as object in $concepts
       where ($concepts:ALL_CONCEPT_NAMES, $concept.$concepts:NAME) = $concept-names
@@ -89,7 +89,7 @@ declare function labels:labels(
           let $role := $concept-labels.Role
           where $role = ($label-role, $label-role-translated)
           let $perfect-match as object? := $concept-labels[$$.Language eq $normalized-language]
-          let $approximate-languages as string* := concepts:approximate-languages(
+          let $approximate-languages as string* := labels:approximate-languages(
             distinct-values($concept-labels.Language),
             $normalized-language,
             $options
@@ -101,7 +101,7 @@ declare function labels:labels(
       },
 
       for $concept in $concept-names
-      where not ($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept
+      where not ($concepts:ALL_CONCEPT_NAMES, $concepts.$NAME) = $concept
       return {
         $concept:
           switch(true)
