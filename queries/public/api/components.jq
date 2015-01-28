@@ -134,18 +134,20 @@ let $res as object* :=
                     return copy $c := $component
                     modify insert json {
                         FactTable: backend:url("facttable-for-component", {
+                            token: $token,
                             aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
-                            }, true),
+                            }),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
+                            token: $token,
                             aid: archives:aid($archive),
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
-                            }, true)
+                            })
                         )
                     } into $c
                     return $c
@@ -158,25 +160,28 @@ let $res as object* :=
             Role: $r.Role,
             Label: $r.Label,
             FactTable: backend:url("facttable-for-component", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name
-                            }, true),
+                            }),
             SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                         backend:url("spreadsheet-for-component", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name,
                             eliminate: "true"
-                        }, true)),
+                        })),
             ReportElements: backend:url("report-elements", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name
-                        }, true),
+                        }),
             NumRules: size($r.Rules),
             NumNetworks: size($r.Networks),
             NumReportElements: size($r.Concepts),

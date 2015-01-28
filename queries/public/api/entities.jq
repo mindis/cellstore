@@ -55,6 +55,7 @@ let $entities :=
         "filings",
         {|
           {
+            token: $token,
             eid: [ entities:eid($entity) ],
             format: $format,
             profile-name: $profile-name
@@ -63,7 +64,7 @@ let $entities :=
             fiscalYear: "ALL",
             fiscalPeriod: "ALL"
           }[$profile-name = ("sec", "japan")]
-        |}, true)
+        |})
     },
     trim($entity, "_id")
   |}

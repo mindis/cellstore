@@ -162,22 +162,23 @@ let $result :=
       if ($onlyNames)
       then distinct-values($concepts.Name)
       else
-        if($profile-name eq "sec")
-        then
-                for $concept in $concepts
-                group by $archive := $concept.Archive,  $role := $concept.Role
-                let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $component.Concepts[]
-                let $archive as object := $archives[archives:aid($$) eq $archive]
-                let $entity as object := $entities[entities:eid($$) eq $archive.Entity]
+        for $concept in $concepts
+        group by $archive := $concept.Archive,  $role := $concept.Role
+        let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
+        let $members as object* := $component.Concepts[]
+        return
+          if($profile-name eq "sec")
+          then
+                let $archive-object as object := $archives[$$._id eq $archive]
+                let $entity as object := $entities[entities:eid($$) = $archive-object.Entity]
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
-                    AccessionNumber : archives:aid($archive),
+                    AccessionNumber : $archive,
                     CIK : entities:eid($entity),
                     EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
-                    FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
-                    FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus
+                    FiscalYear : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
+                    FiscalPeriod : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
@@ -197,11 +198,7 @@ let $result :=
                     trim($members[$$.Name eq $original-name], ("Name", "Labels")),
                     $metadata
                 |}
-       else
-                for $concept in $concepts
-                group by $archive := $concept.Archive,  $role := $concept.Role
-                let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-                let $members as object* := $component.Concepts[]
+         else
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
@@ -225,6 +222,7 @@ let $result :=
                       ],
                       Facts: backend:url("facts", {|
                         {
+                          token: $token,
                           "xbrl:Concept": $original-name,
                           aid: $archive,
                           format: $format,
@@ -235,7 +233,7 @@ let $result :=
                           fiscalPeriod: "ALL",
                           fiscalPeriodType: "ALL"
                         }[$profile-name eq "japan"]
-                      |}, true)
+                      |})
                     },
                     trim($concept-in-component, ("Name", "Labels")),
                     $metadata

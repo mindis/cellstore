@@ -73,10 +73,11 @@ let $summaries :=
       {
         Components: backend:url("components",
           {
+              token: $token,
               aid: encode-for-uri($archive.AccessionNumber),
               format: $format,
               profile-name: $profile-name
-          }, true)
+          })
       },
       trim($archive, "AccessionNumber")
     |}
@@ -87,10 +88,11 @@ let $summaries :=
       {
         Components: backend:url("components",
           {
+              token: $token,
               aid: encode-for-uri(archives:aid($archive)),
               format: $format,
               profile-name: $profile-name
-          }, true)
+          })
       },
       trim($archive, "_id")
     |}
