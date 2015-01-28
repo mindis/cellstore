@@ -7,6 +7,7 @@ import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
@@ -182,6 +183,7 @@ declare  %rest:case-insensitive                 variable $validate          as b
 declare  %rest:case-insensitive                 variable $labels            as boolean external := false;
 declare  %rest:case-insensitive                 variable $additional-rules  as string? external;
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
+declare  %rest:case-insensitive                 variable $language          as string  external := "en-US";
 
 session:audit-call($token);
 
@@ -256,7 +258,14 @@ let $facts :=
     return
     {|
       $fact,
-      let $concept-labels as object? := facts:labels($fact, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
+      let $concept-labels as object? := labels:labels(
+        $fact,
+        $concepts:STANDARD_LABEL_ROLE,
+        $language,
+        $concepts,
+        $entities,
+        { Language: $language },
+      )
       let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
       return { Labels : {| $concept-labels, $standard-labels |} }
     |}

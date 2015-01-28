@@ -4,6 +4,7 @@ module namespace resolution = "http://28.io/modules/xbrl/resolution";
 
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace networks = "http://28.io/modules/xbrl/networks";
@@ -130,13 +131,14 @@ declare %private function resolution:labels(
     $concept-names as string*,
     $components as object*,
     $label-role as string,
-    $options as object?) as string*
+    $options as object?) as object
 {
-  concepts:labels(
+  labels:labels(
     $concept-names,
     $label-role,
     ($options.Language, "en")[1],
     $components.Concepts[],
+    (),
     $options
   )
 };
@@ -165,11 +167,11 @@ declare %private function resolution:convert-rule-node(
 
     let $labels := (
         $definition-node.Labels[],
-        resolution:labels(
+        values(resolution:labels(
             $main-string-members,
             $components,
             $concepts:STANDARD_LABEL_ROLE,
-            $options)
+            $options))
     )
 
     let $children := resolution:convert-definition-nodes(
@@ -346,7 +348,7 @@ declare %private function resolution:expand-concept-network(
             $concept,
             $components,
             ($network.PreferredLabelRole, $concepts:STANDARD_LABEL_ROLE)[1],
-            $options)
+            $options).$concept
     return
     {|
         {
@@ -457,7 +459,7 @@ declare function resolution:expand-dimension-network(
             $value,
             $components,
             ($network.PreferredLabelRole, $concepts:STANDARD_LABEL_ROLE)[1],
-            $options)
+            $options).$value
           else $network.Label
     return
     {|
@@ -643,19 +645,19 @@ declare function resolution:resolve(
             for $dimension in keys($definition-model.TableFilters)
             let $dimension-labels as string* := (
                 resolution:labels(
-                  $dimension, $components, $concepts:STANDARD_LABEL_ROLE, $options),
+                  $dimension, $components, $concepts:STANDARD_LABEL_ROLE, $options).$dimension,
                 resolution:labels(
                   $dimension, $components, $concepts:VERBOSE_LABEL_ROLE, $options
-                )
+                ).$dimension
             )
             let $value := $definition-model.TableFilters.$dimension
             let $value-labels as string* :=
               if($value instance of string)
               then (
                 resolution:labels(
-                  $value, $components, $concepts:VERBOSE_LABEL_ROLE, $options),
+                  $value, $components, $concepts:VERBOSE_LABEL_ROLE, $options).$value,
                 resolution:labels(
-                  $value, $components, $concepts:STANDARD_LABEL_ROLE, $options)
+                  $value, $components, $concepts:STANDARD_LABEL_ROLE, $options).$value
               )
               else ()
             return ({ $dimension: $dimension-labels[1] }[exists($dimension-labels)],
