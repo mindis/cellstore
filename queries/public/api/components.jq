@@ -133,19 +133,19 @@ let $res as object* :=
                     return copy $c := $component
                     modify insert json {
                         FactTable: backend:url("facttable-for-component", {
+                            token: $token,
                             aid: $archive._id,
                             format: $format,
                             role: $component.NetworkIdentifier,
-                            profile-name: $profile-name,
-                            token: $token
+                            profile-name: $profile-name
                             }),
                         SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                             backend:url("spreadsheet-for-component", {
+                            token: $token,
                             aid: $archive._id,
                             format: $format,
                             role: $component.NetworkIdentifier,
-                            profile-name: $profile-name,
-                            token: $token
+                            profile-name: $profile-name
                             })
                         )
                     } into $c
@@ -159,27 +159,27 @@ let $res as object* :=
             Role: $r.Role,
             Label: $r.Label,
             FactTable: backend:url("facttable-for-component", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
-                            profile-name: $profile-name,
-                            token: $token
+                            profile-name: $profile-name
                             }),
             SpreadSheet: "http://rendering.secxbrl.info/#?url=" || encode-for-uri(
                         backend:url("spreadsheet-for-component", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
                             profile-name: $profile-name,
-                            token: $token,
                             eliminate: "true"
                         })),
             ReportElements: backend:url("report-elements", {
+                            token: $token,
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
-                            profile-name: $profile-name,
-                            token: $token
+                            profile-name: $profile-name
                         }),
             NumRules: size($r.Rules),
             NumNetworks: size($r.Networks),

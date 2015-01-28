@@ -221,11 +221,11 @@ let $result :=
                       ],
                       Facts: backend:url("facts", {|
                         {
+                          token: $token,
                           "xbrl:Concept": $original-name,
                           aid: $archive,
                           format: $format,
-                          profile-name: $profile-name,
-                          token: $token
+                          profile-name: $profile-name
                         },
                         {
                           fiscalYear: "ALL",

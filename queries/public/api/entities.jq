@@ -55,10 +55,10 @@ let $entities :=
         "filings",
         {|
           {
+            token: $token,
             eid: [ entities:eid($entity) ],
             format: $format,
-            profile-name: $profile-name,
-            token: $token
+            profile-name: $profile-name
           },
           {
             fiscalYear: "ALL",
