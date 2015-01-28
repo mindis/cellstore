@@ -169,11 +169,11 @@ let $result :=
           if($profile-name eq "sec")
           then
                 let $archive-object as object := $archives[$$._id eq $archive]
-                let $entity as object := $entities[entities:eid($$) = $archive.Entity]
+                let $entity as object := $entities[entities:eid($$) = $archive-object.Entity]
                 let $metadata := {
                     ComponentRole : $component.Role,
                     ComponentLabel : $component.Label,
-                    AccessionNumber : $archive._id,
+                    AccessionNumber : $archive,
                     CIK : $entity._id,
                     EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
                     FiscalYear : $archive-object.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
