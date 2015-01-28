@@ -114,7 +114,14 @@ then
             { "EntityRegistrantName" : $entity.Profiles.SEC.CompanyName },
             if($labels)
             then
-                let $labels as object? := facts:labels($fact, $labels:STANDARD_LABEL_ROLE, $language, $concepts, ())
+                let $labels as object? := labels:labels-for-facts(
+                  $fact,
+                  $labels:STANDARD_LABEL_ROLE,
+                  $language,
+                  $concepts,
+                  $entities,
+                  ()
+                )
                 return
                     { Labels : $labels }
             else ()
