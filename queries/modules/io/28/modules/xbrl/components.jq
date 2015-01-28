@@ -31,6 +31,7 @@ import module namespace networks = "http://28.io/modules/xbrl/networks";
 import module namespace resolution = "http://28.io/modules/xbrl/resolution";
 import module namespace layout = "http://28.io/modules/xbrl/layout";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace accountant = "http://28.io/modules/xbrl/profiles/accountant/converter";
 
@@ -585,18 +586,20 @@ declare function components:standard-typed-dimension-breakdown(
     $options as object?) as object
 {
     let $label as string := (
-      concepts:labels(
+      labels:labels(
         $dimension-name,
-        $concepts:VERBOSE_LABEL_ROLE,
+        $labels:VERBOSE_LABEL_ROLE,
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
       ),
-      concepts:labels(
+      labels:labels(
         $dimension-name,
-        $concepts:STANDARD_LABEL_ROLE,
+        $labels:STANDARD_LABEL_ROLE,
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
       ),
       $dimension-name)[1]
@@ -627,18 +630,20 @@ declare function components:standard-explicit-dimension-breakdown(
     $options as object?) as object
 {
     let $label as string := (
-      concepts:labels(
+      labels:labels(
         $dimension-name,
-        $concepts:VERBOSE_LABEL_ROLE,
+        $labels:VERBOSE_LABEL_ROLE,
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
       ),
-      concepts:labels(
+      labels:labels(
         $dimension-name,
-        $concepts:STANDARD_LABEL_ROLE,
+        $labels:STANDARD_LABEL_ROLE,
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
       ),
       $dimension-name)[1]

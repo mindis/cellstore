@@ -120,7 +120,14 @@ then
         |}
       else
         for $fact in $facts
-        let $labels-object as object? := facts:labels($fact, $role, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
+        let $labels := labels:labels-for-facts(
+          $fact,
+          $labels:STANDARD_LABEL_ROLE,
+          $language,
+          $concepts,
+          $entities,
+          (),
+        )
         return
         {|
             trim($fact, "Labels"),

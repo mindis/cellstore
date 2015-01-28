@@ -146,13 +146,13 @@ let $facts :=
         (: if labels are requested by the labels=true parameter then also add labels for concepts :)
         let $concepts as object* := $component.Concepts[]
         for $fact in $facts
-        let $labels := labels:labels(
+        let $labels := labels:labels-for-facts(
           $fact,
-          $concepts:STANDARD_LABEL_ROLE,
+          $labels:STANDARD_LABEL_ROLE,
           $language,
           $concepts,
           $entities,
-          { Language: $language },
+          (),
         )
         return
             {|

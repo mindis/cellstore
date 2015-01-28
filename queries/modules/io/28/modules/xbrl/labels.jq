@@ -158,6 +158,7 @@ declare function labels:labels-for-facts(
     $label-role as string,
     $language as string,
     $concepts as object*,
+    $entities as object*,
     $options as object?
   ) as object?
 {
@@ -175,6 +176,7 @@ declare function labels:labels-for-facts(
                     $label-role,
                     $language,
                     $concepts,
+                    $entities,
                     $options),
             for $key in distinct-values(keys($facts.Aspects))
             where not string($facts.Aspects.$key) = $concept-names

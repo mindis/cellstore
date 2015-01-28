@@ -170,7 +170,7 @@ declare %private function resolution:convert-rule-node(
         values(resolution:labels(
             $main-string-members,
             $components,
-            $concepts:STANDARD_LABEL_ROLE,
+            $labels:STANDARD_LABEL_ROLE,
             $options))
     )
 
@@ -347,7 +347,7 @@ declare %private function resolution:expand-concept-network(
         resolution:labels(
             $concept,
             $components,
-            ($network.PreferredLabelRole, $concepts:STANDARD_LABEL_ROLE)[1],
+            ($network.PreferredLabelRole, $labels:STANDARD_LABEL_ROLE)[1],
             $options).$concept
     return
     {|
@@ -458,7 +458,7 @@ declare function resolution:expand-dimension-network(
           then resolution:labels(
             $value,
             $components,
-            ($network.PreferredLabelRole, $concepts:STANDARD_LABEL_ROLE)[1],
+            ($network.PreferredLabelRole, $labels:STANDARD_LABEL_ROLE)[1],
             $options).$value
           else $network.Label
     return
@@ -645,9 +645,9 @@ declare function resolution:resolve(
             for $dimension in keys($definition-model.TableFilters)
             let $dimension-labels as string* := (
                 resolution:labels(
-                  $dimension, $components, $concepts:STANDARD_LABEL_ROLE, $options).$dimension,
+                  $dimension, $components, $labels:STANDARD_LABEL_ROLE, $options).$dimension,
                 resolution:labels(
-                  $dimension, $components, $concepts:VERBOSE_LABEL_ROLE, $options
+                  $dimension, $components, $labels:VERBOSE_LABEL_ROLE, $options
                 ).$dimension
             )
             let $value := $definition-model.TableFilters.$dimension
@@ -655,9 +655,9 @@ declare function resolution:resolve(
               if($value instance of string)
               then (
                 resolution:labels(
-                  $value, $components, $concepts:VERBOSE_LABEL_ROLE, $options).$value,
+                  $value, $components, $labels:VERBOSE_LABEL_ROLE, $options).$value,
                 resolution:labels(
-                  $value, $components, $concepts:STANDARD_LABEL_ROLE, $options).$value
+                  $value, $components, $labels:STANDARD_LABEL_ROLE, $options).$value
               )
               else ()
             return ({ $dimension: $dimension-labels[1] }[exists($dimension-labels)],

@@ -6,7 +6,7 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare %private variable $conversion:STANDARD_LABELS :=
     {
-        "dei:LegalEntityAxis": "Legal Entity",
+        "dei:LegalEntityAxis": "Legal Entity"
     };
 
 declare %private function conversion:aspect-label(

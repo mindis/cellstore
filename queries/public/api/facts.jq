@@ -260,7 +260,7 @@ let $facts :=
           concepts:concepts($concept-names, $archives, $concepts:ANY_COMPONENT_LINK_ROLE),
           (reports:concepts(($report,$map)))[$$.Name = $concept-names]
       )
-    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
+    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
     let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
     let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
@@ -275,13 +275,13 @@ let $facts :=
     return
     {|
       $fact,
-      let $concept-labels as object? := labels:labels(
+      let $concept-labels as object? := labels:labels-for-facts(
         $fact,
-        $concepts:STANDARD_LABEL_ROLE,
+        $labels:STANDARD_LABEL_ROLE,
         $language,
         $concepts,
         $entities,
-        { Language: $language }
+        ()
       )
       let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
       return { Labels : {| $concept-labels, $standard-labels |} }
