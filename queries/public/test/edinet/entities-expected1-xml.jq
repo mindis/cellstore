@@ -6,7 +6,7 @@ import module namespace config = "http://apps.28.io/config";
     <_id>http://disclosure.edinet-fsa.go.jp E01225-000</_id>
     <Archives>{
       "http://" || request:server-name() || ":" || request:server-port() ||
-       "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&format=xml&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL"
+       "/v1/_queries/public/api/filings.jq?_method=POST&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&format=xml&profile-name=japan&token=" || $config:test-token || "&fiscalYear=ALL&fiscalPeriod=ALL"
     }</Archives>
     <Name>FSA</Name>
     <EDINETCode>E01225</EDINETCode>
@@ -27,7 +27,7 @@ import module namespace config = "http://apps.28.io/config";
     <_id>http://info.edinet-fsa.go.jp E01225-000</_id>
     <Archives>{
       "http://" || request:server-name() || ":" || request:server-port() ||
-       "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&format=xml&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL"
+       "/v1/_queries/public/api/filings.jq?_method=POST&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&format=xml&profile-name=japan&token=" || $config:test-token || "&fiscalYear=ALL&fiscalPeriod=ALL"
     }</Archives>
     <Name>FSA</Name>
     <EDINETCode>E01225</EDINETCode>
