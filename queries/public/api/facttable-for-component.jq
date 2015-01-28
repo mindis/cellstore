@@ -152,7 +152,7 @@ let $facts :=
           $language,
           $concepts,
           $entities,
-          (),
+          ()
         )
         return
             {|
