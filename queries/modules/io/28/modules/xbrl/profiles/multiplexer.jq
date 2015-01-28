@@ -49,10 +49,7 @@ declare function multiplexer:latest-filings(
  :
  : @param $profile-name the name of the profile (e.g., SEC, Japan, Generic).
  : @param $eid a sequence of EIDs.
- : @param $cik1 a sequence of profile-specific CIKs according to one
- : profile-specific scheme.
- : @param $cik2 a sequence of profile-specific CIKs according to another
- : profile-specific scheme.
+ : @param $cik a sequence of profile-specific CIKs.
  : @param $tag a sequence of tags (e.g., indices, ALL, ...).
  : @param $ticker a sequence of stock exchange tickers.
  : @param $sic a sequence of industry group SIC codes.
@@ -63,8 +60,7 @@ declare function multiplexer:latest-filings(
 declare function multiplexer:entities(
   $profile-name as string,
   $eid as string*,
-  $cik1 as string*,
-  $cik2 as string*,
+  $cik as string*,
   $tag as string*,
   $ticker as string*,
   $sic as string*,
@@ -73,7 +69,7 @@ declare function multiplexer:entities(
   switch($profile-name)
   case "sec" return
     for $entity in companies:companies(
-      $cik1,
+      $cik,
       $tag,
       $ticker,
       $sic,
@@ -82,7 +78,7 @@ declare function multiplexer:entities(
     order by $entity.Profiles.SEC.CompanyName
     return $entity
   case "japan" return
-    for $entity in japan:entities($cik1, $cik2, $eid, $tag)
+    for $entity in japan:entities($cik, $ticker, $eid, $tag)
     order by $entity.SubmitterNameAlphabetic
     return $entity
   default return

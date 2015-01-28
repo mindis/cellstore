@@ -13,7 +13,6 @@ declare  %rest:case-insensitive                 variable $format       as string
 declare  %rest:case-insensitive %rest:distinct  variable $eid          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $securitiescode as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker       as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic          as string* external;
@@ -26,7 +25,6 @@ let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
 let $tag := if (exists(($cik[$profile-name eq "sec"],
                         $edinetcode[$profile-name eq "japan"],
-                        $securitiescode[$profile-name eq "japan"],
                         $tag,
                         $ticker,
                         $sic,
@@ -34,21 +32,17 @@ let $tag := if (exists(($cik[$profile-name eq "sec"],
              then $tag
              else "ALL"
 
-let $cik1 as string* := switch($profile-name)
-            case "sec" return $cik
-            case "japan" return $edinetcode
-            default return ()
-
-let $cik2 as string* := switch($profile-name)
-            case "japan" return $securitiescode
-            default return ()
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
 
 (: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
-  $cik1,
-  $cik2,
+  $cik,
   $tag,
   $ticker,
   $sic, ())
