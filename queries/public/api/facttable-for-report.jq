@@ -6,6 +6,7 @@ import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
