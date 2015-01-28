@@ -10,6 +10,7 @@ import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
