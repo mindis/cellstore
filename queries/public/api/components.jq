@@ -4,6 +4,7 @@ import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec-filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
@@ -39,22 +40,6 @@ declare function local:to-csv($res as object*) as string*
             LineItems : $c.LineItems,
             Concepts : $c.Concepts,
             Abstracts : $c.Abstracts
-        },
-    { serialize-null-as : "" })
-};
-
-declare function local:to-csv-generic($res as object*) as string*
-{
-    csv:serialize(
-        for $a in $res
-        return {
-            Archive: $a.Archive,
-            Role: $a.Role,
-            FactTable: $a.FactTable,
-            SpreadSheet: $a.SpreadSheet,
-            NumRules: $a.NumRules,
-            NumNetworks: $a.NumNetworks,
-            NumHypercubes: size($a.Hypercubes)
         },
     { serialize-null-as : "" })
 };
@@ -163,9 +148,7 @@ let $res as object* :=
         return {
             Archive: $r.Archive,
             Role: $r.Role,
-            NumRules: size($r.Rules),
-            NumNetworks: size($r.Networks),
-            Hypercubes: [ keys($r.Hypercubes) ],
+            Label: $r.Label,
             FactTable: backend:url("facttable-for-component", {
                             aid: $r.Archive,
                             format: $format,
@@ -177,10 +160,28 @@ let $res as object* :=
                             aid: $r.Archive,
                             format: $format,
                             role: $r.Role,
+                            profile-name: $profile-name,
+                            eliminate: "true"
+                        }, true)),
+            ReportElements: backend:url("report-elements", {
+                            aid: $r.Archive,
+                            format: $format,
+                            role: $r.Role,
                             profile-name: $profile-name
-                        }, true))
+                        }, true),
+            NumRules: size($r.Rules),
+            NumNetworks: size($r.Networks),
+            NumReportElements: size($r.Concepts),
+            NumHypercubes: count(keys($r.Hypercubes)),
+            NumDimensions: count(components:dimensions($r)),
+            NumConcepts: count(components:concrete-concepts($r)),
+            Hypercubes: [ keys($r.Hypercubes) ],
+            ValidationErrors: [ components:validation-errors($r) ]
         }
-let $result := switch($profile-name) case "sec" return { Archives: [ $res ] } default return { Components : [ $res ] }
+let $result := switch($profile-name)
+               case "sec"
+               return { Archives: [ $res ] }
+               default return { Components : [ $res ] }
 let $comment :=
  {
     NumComponents : count($components),
@@ -215,7 +216,7 @@ let $serializers := {
     to-csv : function($res as object) as string {
         switch($profile-name)
         case "sec" return string-join(local:to-csv($res.Archives[]), "")
-        default return string-join(local:to-csv-generic($res.Components[]), "")
+        default return api:json-to-csv($res.Components[])
     }
 }
 
