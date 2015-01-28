@@ -50,7 +50,7 @@ declare function local:param-values(
      case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
          return (
                 if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
-                then $entities._id
+                then entities:eid($entities)
                 else "dummy",
                 request:param-values("xbrl:Entity")
             )
@@ -259,7 +259,7 @@ let $facts :=
       )
     let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
     let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
-    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entities._id]
+    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
     let $entityName as string :=
