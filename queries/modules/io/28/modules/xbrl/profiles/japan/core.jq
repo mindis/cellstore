@@ -19,30 +19,29 @@ import module namespace entities = "http://28.io/modules/xbrl/entities";
 (:~
  : <p>Retrieves the entities with the given identifiers.</p>
  :
- : @param $cik a sequence of shortcut codes, like E01225.
+ : @param $edinetcode a sequence of edinet codes like E01225.
+ : @param $securitiescode a sequence of securities codes, like 9432.
  : @param $eid a sequence of raw EIDs.
  : @param $tag a sequence of tags (e.g., indices).
  :
  : @return the entities that match those identifiers.
  :)
 declare function japan:entities(
-    $cik as string*,
+    $edinetcode as string*,
+    $securitiescode as string*,
     $eid as string*,
     $tag as string*
 ) as object*
 {
-  let $eid := distinct-values((
-    $cik ! ("http://info.edinet-fsa.go.jp " || $$ || "-000"),
-    $cik ! ("http://disclosure.edinet-fsa.go.jp " || $$ || "-000"),
-    $eid
-  ))
-  return
     switch(true)
     case $tag = "ALL" return entities:entities()
-    case exists(($eid, $tag)) return
+    case exists(($eid, $edinetcode, $securitiescode, $tag)) return
        for $entity in (
-         for $tag in $tag
-         return mw:find($entities:col, { "Profiles.FSA.Tags" : $tag }),
+         mw:find($entities:col, { "Profiles.FSA.Tags" : { "$in" : [ $tag ] } }),
+
+         mw:find($entities:col, { "Profiles.FSA.EntityCode" : { "$in" : [ $edinetcode ] } }),
+
+         mw:find($entities:col, { "Profiles.FSA.SecuritiesCode" : { "$in" : [ $securitiescode ] } }),
 
          entities:entities($eid)
        )
