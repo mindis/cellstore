@@ -779,6 +779,12 @@
                 ],
                 "paramType": "query"
             }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -1547,6 +1553,12 @@
                     "true",
                     "false"
                 ],
+                "paramType": "query"
+            }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
