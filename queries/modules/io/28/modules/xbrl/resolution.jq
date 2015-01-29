@@ -3,7 +3,6 @@ jsoniq version "1.0";
 module namespace resolution = "http://28.io/modules/xbrl/resolution";
 
 import module namespace components = "http://28.io/modules/xbrl/components";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
