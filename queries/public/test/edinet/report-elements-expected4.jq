@@ -2,23 +2,7 @@ import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace config = "http://apps.28.io/config";
 [ {
     "Name" : "jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Notes - Consolidated statement of cash flows [heading]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "連結キャッシュ・フロー計算書関係 [目次項目]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "連結キャッシュ・フロー計算書関係"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Notes - Consolidated statement of cash flows"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&role=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%2Frole%2Fjpcrp%2Frol_NotesConsolidatedStatementOfCashFlows&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "連結キャッシュ・フロー計算書関係",
     "IsNillable" : true,
@@ -34,23 +18,7 @@ import module namespace config = "http://apps.28.io/config";
     "Archive" : "S10028XL"
   }, {
     "Name" : "jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Notes - Consolidated statement of cash flows [heading]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "連結キャッシュ・フロー計算書関係 [目次項目]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "連結キャッシュ・フロー計算書関係"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Notes - Consolidated statement of cash flows"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&role=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%2Frole%2Fjpcrp%2Frol_CabinetOfficeOrdinanceOnDisclosureOfCorporateInformationEtcFormNo3AnnualSecuritiesReport&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp-cor%3ANotesConsolidatedStatementOfCashFlowsHeading&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "連結キャッシュ・フロー計算書関係",
     "IsNillable" : true,
