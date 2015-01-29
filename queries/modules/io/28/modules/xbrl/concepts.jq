@@ -13,8 +13,6 @@ module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
-import module namespace components = "http://28.io/modules/xbrl/components";
-
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
 
