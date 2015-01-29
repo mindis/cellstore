@@ -2,31 +2,7 @@ import module namespace request = "http://www.28msec.com/modules/http-request";
 import module namespace config = "http://apps.28.io/config";
 [ {
     "Name" : "jpcrp030000-asr_e01225-000:LossOfInactiveFacilitiesEL",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&role=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%2Frole%2Fjppfs%2Frol_ConsolidatedStatementOfIncome&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
@@ -43,31 +19,7 @@ import module namespace config = "http://apps.28.io/config";
     "Archive" : "S10028XL"
   }, {
     "Name" : "jpfr-asr-e01225-000:LossOfInactiveFacilitiesEL",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&role=http%3A%2F%2Finfo.edinet-fsa.go.jp%2Fjp%2Ffr%2Fgaap%2Frole%2FNonConsolidatedStatementsOfIncome&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
@@ -84,31 +36,7 @@ import module namespace config = "http://apps.28.io/config";
     "Archive" : "S000DR20"
   }, {
     "Name" : "jpfr-asr-e01225-000:LossOfInactiveFacilitiesEL",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&role=http%3A%2F%2Finfo.edinet-fsa.go.jp%2Fjp%2Ffr%2Fgaap%2Frole%2FConsolidatedStatementsOfIncome&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpfr-asr-e01225-000%3ALossOfInactiveFacilitiesEL&aid=S000DR20&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,
@@ -125,23 +53,7 @@ import module namespace config = "http://apps.28.io/config";
     "Archive" : "S000DR20"
   }, {
     "Name" : "jpcrp030000-asr_e01225-000:NotesRegardingTheLossOfInactiveFacilitiesTextBlock",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Notes regarding the loss of inactive facilities[text block]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失に関する注記[テキストブロック]"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Notes regarding the loss of inactive facilities"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失に関する注記"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpcrp030000-asr_e01225-000%3ANotesRegardingTheLossOfInactiveFacilitiesTextBlock&aid=S10028XL&role=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%2Frole%2Fjpcrp%2Frol_NotesConsolidatedStatementOfIncome&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ANotesRegardingTheLossOfInactiveFacilitiesTextBlock&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失に関する注記",
     "IsNillable" : true,
@@ -157,31 +69,7 @@ import module namespace config = "http://apps.28.io/config";
     "Archive" : "S10028XL"
   }, {
     "Name" : "jpcrp030000-asr_e01225-000:LossOfInactiveFacilitiesEL",
-    "Labels" : [ {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/documentation",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities-EL"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/verboseLabel",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失、特別損失"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "en",
-      "Value" : "Loss of inactive facilities"
-    }, {
-      "Role" : "http://www．xbrl．org/2003/role/label",
-      "Language" : "ja",
-      "Value" : "設備休止関連損失"
-    } ],
+    "Labels" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/labels.jq?_method=POST&token="||$config:test-token||"&concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&role=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%2Frole%2Fjppfs%2Frol_StatementOfIncome&format=&profile-name=japan",
     "Facts" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facts.jq?_method=POST&token="||$config:test-token||"&xbrl:Concept=jpcrp030000-asr_e01225-000%3ALossOfInactiveFacilitiesEL&aid=S10028XL&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL&fiscalPeriodType=ALL",
     "Label" : "設備休止関連損失",
     "IsNillable" : true,

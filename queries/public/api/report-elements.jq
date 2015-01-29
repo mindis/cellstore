@@ -213,15 +213,16 @@ let $result :=
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
-                      Labels: [
-                        for $labelRole in keys($concept.Labels)
-                        for $language in keys($concept.Labels.$labelRole)
-                        return {
-                          Role: $labelRole,
-                          Language: $language,
-                          Value: $concept.Labels.$labelRole.$language
+                      Labels: backend:url("labels", {|
+                        {
+                          token: $token,
+                          concept: $original-name,
+                          aid: $archive,
+                          role: $role,
+                          format: $format,
+                          profile-name: $profile-name
                         }
-                      ],
+                      |}),
                       Facts: backend:url("facts", {|
                         {
                           token: $token,
@@ -255,7 +256,7 @@ let $serializers := {
               for $c in $res.ReportElements[]
               return <Name>{$c}</Name>
             }</ReportElement>
-          else api:json-to-xml(trim($res.ReportElements[], "Labels"), "ReportElement")
+          else api:json-to-xml($res.ReportElements[], "ReportElement")
         }</ReportElements>
     },
     to-csv : function($res as object) as string {
@@ -264,7 +265,7 @@ let $serializers := {
           string-join(("Name", $res.ReportElements[]), "
 ")
       else
-          string-join(csv:serialize(trim($res.ReportElements[], "Labels"), { serialize-null-as : "" }))
+          string-join(csv:serialize($res.ReportElements[], { serialize-null-as : "" }))
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "report-elements")
