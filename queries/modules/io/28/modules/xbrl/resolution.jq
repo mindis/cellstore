@@ -116,33 +116,6 @@ declare %private function resolution:convert-definition-nodes(
 };
 
 (:~
- : Retrieves the labels from the components' cache (default language)
- : or from the remove collection cache.
- :
- : @param $concept-names a sequence of concept names.
- : @param $components a sequence of components
- : @param $label-role the desired label role
- : @param $options the options object
- :
- : @return the labels
- :)
-declare %private function resolution:labels(
-    $concept-names as string*,
-    $components as object*,
-    $label-role as string,
-    $options as object?) as object
-{
-  labels:labels(
-    $concept-names,
-    $label-role,
-    ($options.Language, "en")[1],
-    $components.Concepts[],
-    (),
-    $options
-  )
-};
-
-(:~
  : Converts a rule definition node to one or more structural nodes.
  : A rule node restricts a dimension to a value.
  :
@@ -166,11 +139,16 @@ declare %private function resolution:convert-rule-node(
 
     let $labels := (
         $definition-node.Labels[],
-        values(resolution:labels(
+        values(
+          labels:labels(
             $main-string-members,
-            $components,
             $labels:STANDARD_LABEL_ROLE,
-            $options))
+            ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
+            $components.Concepts[],
+            (),
+            $options
+          )
+       )
     )
 
     let $children := resolution:convert-definition-nodes(
@@ -343,11 +321,14 @@ declare %private function resolution:expand-concept-network(
         if(every $language in $default-languages satisfies $language eq $options.Language)
         then $network.Label
         else
-        resolution:labels(
+          labels:labels(
             $concept,
-            $components,
             ($network.PreferredLabelRole, $labels:STANDARD_LABEL_ROLE)[1],
-            $options).$concept
+            ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
+            $components.Concepts[],
+            (),
+            $options
+          ).$concept
     return
     {|
         {
@@ -454,11 +435,14 @@ declare function resolution:expand-dimension-network(
     let $value as string := $network.Name
     let $labels as string* :=
           if($options.Language != $components.$components:DEFAULT-LANGUAGE)
-          then resolution:labels(
+          then labels:labels(
             $value,
-            $components,
             ($network.PreferredLabelRole, $labels:STANDARD_LABEL_ROLE)[1],
-            $options).$value
+            ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
+            $components.Concepts[],
+            (),
+            $options
+          ).$value
           else $network.Label
     return
     {|
@@ -642,22 +626,27 @@ declare function resolution:resolve(
         GlobalConstraintSet: $definition-model.TableFilters,
         GlobalConstraintLabels: {|
             for $dimension in keys($definition-model.TableFilters)
-            let $dimension-labels as string* := (
-                resolution:labels(
-                  $dimension, $components, $labels:STANDARD_LABEL_ROLE, $options).$dimension,
-                resolution:labels(
-                  $dimension, $components, $labels:VERBOSE_LABEL_ROLE, $options
+            let $dimension-labels as string* :=
+                labels:labels(
+                  $dimension,
+                  ($labels:STANDARD_LABEL_ROLE, $labels:VERBOSE_LABEL_ROLE),
+                  ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
+                  $components.Concepts[],
+                  (),
+                  $options
                 ).$dimension
-            )
             let $value := $definition-model.TableFilters.$dimension
             let $value-labels as string* :=
               if($value instance of string)
-              then (
-                resolution:labels(
-                  $value, $components, $labels:VERBOSE_LABEL_ROLE, $options).$value,
-                resolution:labels(
-                  $value, $components, $labels:STANDARD_LABEL_ROLE, $options).$value
-              )
+              then
+                labels:labels(
+                  $value,
+                  ($labels:STANDARD_LABEL_ROLE, $labels:VERBOSE_LABEL_ROLE),
+                  ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
+                  $components.Concepts[],
+                  (),
+                  $options
+                ).$value
               else ()
             return ({ $dimension: $dimension-labels[1] }[exists($dimension-labels)],
                     { $value: $value-labels[1] }[exists($value-labels)]
