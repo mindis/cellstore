@@ -182,6 +182,8 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
+                let $concept-in-component := $members[$$.Name eq $original-name]
+                where not $onlyTextBlocks or $concept-in-component.IsTextBlock
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -195,7 +197,7 @@ let $result :=
                         }
                       ]
                     },
-                    trim($members[$$.Name eq $original-name], ("Name", "Labels")),
+                    trim($concept-in-component, ("Name", "Labels")),
                     $metadata
                 |}
          else
