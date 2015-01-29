@@ -852,6 +852,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -865,6 +866,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -878,6 +880,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -891,6 +894,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -904,6 +908,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -917,6 +922,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -930,6 +936,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -943,6 +950,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -956,6 +964,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }
