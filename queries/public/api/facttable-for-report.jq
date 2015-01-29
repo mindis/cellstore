@@ -33,6 +33,7 @@ declare  %rest:case-insensitive                 variable $validate      as boole
 declare  %rest:case-insensitive                 variable $labels        as boolean external := false;
 declare  %rest:case-insensitive                 variable $report        as string? external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
+declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 
 session:audit-call($token);
 
@@ -96,7 +97,7 @@ then
                 )
 
     let $concepts as object* := $report.Concepts[]
-    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
+    let $language as string := ( $language, $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
     let $facts :=
       if($profile-name eq "sec")
       then
