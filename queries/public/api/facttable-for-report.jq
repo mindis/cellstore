@@ -4,7 +4,6 @@ import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace conversion = "http://28.io/modules/xbrl/conversion";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace components = "http://28.io/modules/xbrl/components";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
