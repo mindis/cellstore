@@ -108,7 +108,6 @@ import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace footnotes = "http://28.io/modules/xbrl/footnotes";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 import module namespace string = "http://zorba.io/modules/string";
 import module namespace seq = "http://zorba.io/modules/sequence";
