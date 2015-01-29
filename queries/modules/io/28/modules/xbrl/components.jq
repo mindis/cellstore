@@ -585,24 +585,16 @@ declare function components:standard-typed-dimension-breakdown(
     $dimension-name as string,
     $options as object?) as object
 {
-    let $label as string := (
+    let $label as string? :=
       labels:labels(
         $dimension-name,
-        $labels:VERBOSE_LABEL_ROLE,
+        ($labels:VERBOSE_LABEL_ROLE, $labels:STANDARD_LABEL_ROLE),
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
         (),
         $options
-      ),
-      labels:labels(
-        $dimension-name,
-        $labels:STANDARD_LABEL_ROLE,
-        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
-        $components.Concepts[],
-        (),
-        $options
-      ),
-      $dimension-name)[1]
+      ).$dimension-name
+    let $label as string := ($label, $dimension-name)[1]
     return
     {
       BreakdownLabels: [ $label || " breakdown" ],
@@ -629,24 +621,16 @@ declare function components:standard-explicit-dimension-breakdown(
     $role as string,
     $options as object?) as object
 {
-    let $label as string := (
+    let $label as string? :=
       labels:labels(
         $dimension-name,
-        $labels:VERBOSE_LABEL_ROLE,
+        ($labels:VERBOSE_LABEL_ROLE, $labels:STANDARD_LABEL_ROLE),
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
         (),
         $options
-      ),
-      labels:labels(
-        $dimension-name,
-        $labels:STANDARD_LABEL_ROLE,
-        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
-        $components.Concepts[],
-        (),
-        $options
-      ),
-      $dimension-name)[1]
+      ).$dimension-name
+    let $label as string := ($label, $dimension-name)[1]
     return
     {
         BreakdownLabels: [ $label || " breakdown" ],

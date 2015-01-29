@@ -69,48 +69,54 @@ declare variable $labels:VERBOSE_LABEL_ROLE as xs:string :=
  :)
 declare function labels:labels(
     $concept-names as string*,
-    $label-role as string,
-    $language as string,
+    $label-roles as string*,
+    $languages as string*,
     $concepts as object*,
     $entities as object*,
     $options as object?
-  ) as object*
+  ) as object
 {
   {|
-    let $label-role-translated := replace($label-role, "\\.", "\uff0e")
-    let $normalized-language as string := labels:normalize-language($language)
+    let $normalized-languages as string* := $languages ! labels:normalize-language($$)
     return (
       for $concept as object in $concepts
       where ($concepts:ALL_CONCEPT_NAMES, $concept.$concepts:NAME) = $concept-names
+      let $concept-labels as object* :=
+        $concept.$concepts:LABELS[][$$.Role = $label-roles]
+      let $available-languages as string* :=
+        distinct-values($concept-labels.Language)
+      let $approximate-languages as string* := labels:approximate-languages(
+        $available-languages,
+        $normalized-languages,
+        $options
+      )
+      let $perfect-matches as object* :=
+        $concept-labels[$$.Language = $normalized-languages]
+      let $approximate-matches as object* :=
+        $concept-labels[$$.Language = $approximate-languages]
+      let $label as string? :=
+        ($perfect-matches.Value,
+         $approximate-matches.Value,
+         $concept-labels.Value)[1]
+      where exists($label)
       return {
-        $concept.Name : (
-          for $concept-labels as object* in $concept.$concepts:LABELS[]
-          let $role := $concept-labels.Role
-          where $role = ($label-role, $label-role-translated)
-          let $perfect-match as object? := $concept-labels[$$.Language eq $normalized-language]
-          let $approximate-languages as string* := labels:approximate-languages(
-            distinct-values($concept-labels.Language),
-            $normalized-language,
-            $options
-          )
-          let $approximate-matches as object* :=
-            $concept-labels[$$.Language = $approximate-languages]
-          return ($perfect-match, $approximate-matches)
-        )[1].Value
+        $concept.Name : $label
       },
 
       for $concept in $concept-names
       where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept)
-      return {
-        $concept:
+      let $label as string* :=
           switch(true)
-          case $concept = $entities.Name and $normalized-language = ("en", "en-US")
+          case $concept = $entities.Name and $normalized-languages = ("en", "en-US")
           return ($entities[$$.Name eq $concept].Profiles.SEC.EntityRegistrantName,
                    $entities[$$.Name eq $concept].Profiles.FSA.SubmitterNameAlphabetic)[1]
-          case $concept = $entities.Name and $normalized-language = ("ja")
+          case $concept = $entities.Name and $normalized-languages = ("ja")
           return ($entities[$$.Name eq $concept].Profiles.SEC.EntityRegistrantName,
                    $entities[$$.Name eq $concept].Profiles.FSA.SubmitterName)[1]
-          default return $concept
+          default return ()
+      where exists($label)
+      return {
+        $concept : $label
       }
     )
   |}
