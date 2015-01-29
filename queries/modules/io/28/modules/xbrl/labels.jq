@@ -10,7 +10,6 @@ jsoniq version "1.0";
  :)
 module namespace labels = "http://28.io/modules/xbrl/labels";
 
-import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 declare namespace ver = "http://zorba.io/options/versioning";
