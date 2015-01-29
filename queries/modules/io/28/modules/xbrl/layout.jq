@@ -4,6 +4,8 @@ module namespace layout = "http://28.io/modules/xbrl/layout";
 
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
+import module namespace entities = "http://28.io/modules/xbrl/entities";
 
 (:
     TODO: roll-up layout nodes for open structural nodes if desired
@@ -53,11 +55,19 @@ declare %private function layout:structural-node-to-header-rows(
             case "xbrl:Period" return
                 for $actual-value in $actual-aspect-space.($constrained-aspect)[]
                 let $tokens := tokenize($actual-value, "/")
+                let $label as string? := labels:labels(
+                    $actual-value,
+                    (),
+                    (),
+                    (),
+                    (),
+                    ()
+                  ).$actual-value
                 order by $actual-value descending
                 return [
                     [ {|
                         {
-                            CellLabels: [ $structural-node.Labels[], $actual-value ],
+                            CellLabels: [ $structural-node.Labels[], $label, $actual-value ],
                             CellConstraints: {
                                 "": {$constrained-aspect : $actual-value},
                                 "table.periodStart" : {
@@ -82,12 +92,25 @@ declare %private function layout:structural-node-to-header-rows(
                     $bottom-rows[]
                 ]
             default return
-                for $actual-value in $actual-aspect-space.($constrained-aspect)[]
+                let $actual-values := $actual-aspect-space.($constrained-aspect)[]
+                let $entities as object* :=
+                  if($constrained-aspect eq "xbrl:Entity")
+                  then $actual-values!entities:entities($$)
+                  else ()
+                for $actual-value in $actual-values
+                let $label as string? := labels:labels(
+                    $actual-value,
+                    (),
+                    (),
+                    (),
+                    $entities,
+                    ()
+                  ).$actual-value
                 order by $actual-value
                 return [
                     [ {|
                         {
-                            CellLabels: [ $structural-node.Labels[], $actual-value ],
+                            CellLabels: [ $label, $structural-node.Labels[], $actual-value ],
                             CellConstraints: {
                                 "": {$constrained-aspect : $actual-value}
                             },

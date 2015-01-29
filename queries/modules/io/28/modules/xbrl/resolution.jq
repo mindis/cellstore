@@ -7,6 +7,7 @@ import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace networks = "http://28.io/modules/xbrl/networks";
+import module namespace entities = "http://28.io/modules/xbrl/entities";
 
 (: TODOs
 - Options for relationship networks (formulaAxis, depth)
@@ -600,6 +601,8 @@ declare function resolution:resolve(
         if(exists($options.Hypercube))
         then $options.Hypercube
         else values($components.Hypercubes)
+    let $entities as object* :=
+      entities:entities($definition-model.TableFilters."xbrl:Entity")
     return {
         ModelKind: "StructuralModel",
         TableSetLabels: $definition-model.Labels,
@@ -644,7 +647,7 @@ declare function resolution:resolve(
                   ($labels:STANDARD_LABEL_ROLE, $labels:VERBOSE_LABEL_ROLE),
                   ($options.Language, $components.$components:DEFAULT-LANGUAGE, "en")[1],
                   $components.Concepts[],
-                  (),
+                  $entities,
                   $options
                 ).$value
               else ()

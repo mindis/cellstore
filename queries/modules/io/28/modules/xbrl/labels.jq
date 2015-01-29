@@ -11,6 +11,7 @@ jsoniq version "1.0";
 module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
+import module namespace entities = "http://28.io/modules/xbrl/entities";
 
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
@@ -104,16 +105,24 @@ declare function labels:labels(
       },
 
       for $concept in $concept-names
-      where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept)
+      where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = trace($concept, "concept"))
       let $label as string* :=
           switch(true)
-          case $concept = $entities.Name and $normalized-languages = ("en", "en-US")
-          return ($entities[$$.Name eq $concept].Profiles.SEC.EntityRegistrantName,
-                   $entities[$$.Name eq $concept].Profiles.FSA.SubmitterNameAlphabetic)[1]
-          case $concept = $entities.Name and $normalized-languages = ("ja")
-          return ($entities[$$.Name eq $concept].Profiles.SEC.EntityRegistrantName,
-                   $entities[$$.Name eq $concept].Profiles.FSA.SubmitterName)[1]
-          default return ()
+            case starts-with($concept, "iso4217:")
+            return substring($concept, 9)
+            case $concept castable as date
+            return format-date(date($concept), "[MNn] [D], [Y]", "en", (), ())
+            case contains($concept, " ")
+            return
+              switch(true)
+              case $concept = entities:eid($entities) and $normalized-languages = ("ja")
+              return ($entities[entities:eid($$) = $concept].Profiles.SEC.EntityRegistrantName,
+                       $entities[entities:eid($$) = $concept].Profiles.FSA.SubmitterName)[1]
+              case $concept = trace(entities:eid($entities), "entities")
+              return ($entities[entities:eid($$) = $concept].Profiles.SEC.EntityRegistrantName,
+                       $entities[entities:eid($$) = $concept].Profiles.FSA.SubmitterNameAlphabetic)[1]
+              default return ()
+           default return ()
       where exists($label)
       return {
         $concept : $label
