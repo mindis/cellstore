@@ -302,10 +302,9 @@ gulp.task('trace', ['28:login'], function(done){
         method: 'POST'
     }, function(error, response, body){
         if(error) {
-            console.error(error);
-            return;
+            throw new $.util.PluginError(__filename, error);
         }
-        console.log(body.grey);
+        $.util.log($.util.colors.gray(body));
         var traceFile = response.headers['x-28msec-trace'];
         setTimeout(function(){
             request({
@@ -313,9 +312,9 @@ gulp.task('trace', ['28:login'], function(done){
                 method: 'GET'
             }, function(error, response, body){
                 if(body) {
-                    console.log(body.green);
+                    $.util.log($.util.colors.green(body));
                 } else {
-                    console.log('No trace.'.green);
+                    $.util.log($.util.colors.green('No trace.'));
                 }
                 done();
             });
