@@ -105,7 +105,7 @@ declare function labels:labels(
       },
 
       for $concept in $concept-names
-      where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = trace($concept, "concept"))
+      where not (($concepts:ALL_CONCEPT_NAMES, $concepts.$concepts:NAME) = $concept)
       let $label as string* :=
           switch(true)
             case starts-with($concept, "iso4217:")
@@ -118,8 +118,8 @@ declare function labels:labels(
               case $concept = entities:eid($entities) and $normalized-languages = ("ja")
               return ($entities[entities:eid($$) = $concept].Profiles.SEC.EntityRegistrantName,
                        $entities[entities:eid($$) = $concept].Profiles.FSA.SubmitterName)[1]
-              case $concept = trace(entities:eid($entities), "entities")
-              return ($entities[entities:eid($$) = $concept].Profiles.SEC.EntityRegistrantName,
+              case $concept = entities:eid($entities)
+              return ($entities[entities:eid($$) = $concept].Profiles.SEC.CompanyName,
                        $entities[entities:eid($$) = $concept].Profiles.FSA.SubmitterNameAlphabetic)[1]
               default return ()
            default return ()

@@ -99,7 +99,7 @@ declare %private function layout:structural-node-to-header-rows(
                   else ()
                 for $actual-value in $actual-values
                 let $label as string? := labels:labels(
-                    $actual-value,
+                    $actual-value[$$ instance of string],
                     (),
                     (),
                     (),
