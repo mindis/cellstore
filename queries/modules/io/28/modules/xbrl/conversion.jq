@@ -6,20 +6,7 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare %private variable $conversion:STANDARD_LABELS :=
     {
-        "xbrl28:Archive" : "Accession Number",
-        "xbrl:Concept" : "Concept",
-        "xbrl:Entity" : "Entity",
-        "xbrl:Period" : "Period",
-        "sec:FiscalPeriod" : "Fiscal Period",
-        "sec:FiscalYear" : "Fiscal Year",
-        "sec:FiscalPeriodType" : "Fiscal Period Type",
-        "sec:Accepted" : "Accepted",
-        "xbrl:Unit": "Unit",
-        "dei:LegalEntityAxis": "Legal Entity",
-        "fsa:FiscalYear": "Fiscal Year [Axis]",
-        "fsa:FiscalPeriod": "Fiscal Period [Axis]",
-        "fsa:FiscalPeriodType": "Fiscal Period Type [Axis]",
-        "fsa:Submitted": "FSA Submission Date [Axis]"
+        "dei:LegalEntityAxis": "Legal Entity"
     };
 
 declare %private function conversion:aspect-label(
