@@ -113,7 +113,8 @@ declare function local:param-names() as string*
         "fsa:Submitted"[$profile-name eq "japan"],
         "fsa:FiscalPeriod"[$profile-name eq "japan"],
         "fsa:FiscalPeriodType"[$profile-name eq "japan"],
-        "fsa:FiscalYear"[$profile-name eq "japan"]
+        "fsa:FiscalYear"[$profile-name eq "japan"],
+        "xbrl:Entity"[$profile-name eq "japan" and $names = ("edinetcode", "tag", "ticker")]
     ))
 };
 
