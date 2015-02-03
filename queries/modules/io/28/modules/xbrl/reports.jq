@@ -32,9 +32,6 @@ jsoniq version "1.0";
 module namespace reports = "http://28.io/modules/xbrl/reports";
 
 import module namespace networks = "http://28.io/modules/xbrl/networks";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
-import module namespace components = "http://28.io/modules/xbrl/components";
-import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
