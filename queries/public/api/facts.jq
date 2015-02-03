@@ -18,6 +18,25 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace request = "http://www.28msec.com/modules/http-request";
 
+declare variable $local:additional-concepts as object* := (
+  {
+    Name: "sec:DefaultLegalEntity",
+    Labels : [ {
+        Role : "http://www.xbrl.org/2003/role/label",
+        Language : "en-us",
+        Value : "Default Legal Entity [Member]"
+    } ]
+  },
+  {
+    Name: "xbrl:NonNumeric",
+    Labels : [ {
+        Role : "http://www.xbrl.org/2003/role/label",
+        Language : "en-us",
+        Value : "Non Numeric"
+    } ]
+  }
+);
+
 declare function local:param-values(
     $name as string,
     $entities as object*) as string*
@@ -260,7 +279,8 @@ let $facts :=
     let $concepts as object* :=
       (
           concepts:concepts($concept-names, $archives, $concepts:ANY_COMPONENT_LINK_ROLE),
-          (reports:concepts(($report,$map)))[$$.Name = $concept-names]
+          $report.Concepts[][$$.Name = $concept-names],
+          if($profile-name eq "sec") then $local:additional-concepts else ()
       )
     let $language as string := ( $language, $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
     let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]

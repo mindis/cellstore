@@ -99,7 +99,8 @@ declare function labels:labels(
       let $label as string? :=
         ($perfect-matches.Value,
          $approximate-matches.Value,
-         $concept-labels.Value)[1]
+         $concept-labels.Value,
+         $concept.Label)[1]
       where exists($label)
       return {
         $concept.Name : $label

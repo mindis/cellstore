@@ -56,10 +56,7 @@ declare function conversion:facts-to-csv(
                             else
                                 $fact.Aspects,
                             {
-                                "Unit":
-                                    if(starts-with($fact.Unit, "iso4217:"))
-                                    then substring-after($fact.Unit, "iso4217:")
-                                    else $fact.Unit
+                                "Unit": $fact.Labels.($fact.Unit)
                             }[exists($fact.Unit)],
                             project($fact, $projection)
                         |},
