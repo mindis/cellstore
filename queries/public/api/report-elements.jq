@@ -187,15 +187,16 @@ let $result :=
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
-                      Labels: [
-                        for $labelRole in keys($concept.Labels)
-                        for $language in keys($concept.Labels.$labelRole)
-                        return {
-                          Role: $labelRole,
-                          Language: $language,
-                          Value: $concept.Labels.$labelRole.$language
+                      Labels: backend:url("labels", {|
+                        {
+                          token: $token,
+                          concept: $original-name,
+                          aid: $archive,
+                          role: $role,
+                          format: $format,
+                          profile-name: $profile-name
                         }
-                      ]
+                      |})
                     },
                     trim($concept-in-component, ("Name", "Labels")),
                     $metadata
