@@ -49,7 +49,7 @@ let $entities := multiplexer:entities(
 let $entities :=
   for $entity in $entities
   return {|
-    project($entity, "_id"),
+    project($entity, "_id")[not $profile-name eq "japan"],
     {
       Archives: backend:url(
         "filings",

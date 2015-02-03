@@ -772,11 +772,7 @@
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "language",
@@ -858,6 +854,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -871,6 +868,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -884,6 +882,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -897,6 +896,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -910,6 +910,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -923,6 +924,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -936,6 +938,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -949,6 +952,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -962,6 +966,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }
@@ -1539,20 +1544,12 @@
                 "name": "validate",
                 "description": "Validate and stamp facts accordingly",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ]
+                "type": "boolean"
             }, {
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "language",
@@ -1720,21 +1717,13 @@
                 "name": "eliminate",
                 "description": "Wwether to eliminate empty rows/colummns",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "validate",
                 "description": "Validate and stamp facts accordingly",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -1942,11 +1931,7 @@
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -2357,11 +2342,7 @@
                 "name": "onlyNames",
                 "description": "Whether only the names of the report elements should be returned. If so, the values don't contain duplicates. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "name",
@@ -2395,6 +2376,12 @@
                 "description": "A search term to search in the labels of report elements (e.g. stock)",
                 "required": false,
                 "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "onlyTextBlocks",
+                "description": "Whether only text block report elements should be returned (default: false).",
+                "required": false,
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "token",
