@@ -85,36 +85,6 @@ declare function reports:reports($reports-or-ids as item*) as object*
 };
 
 (:~
- : <p>Return the concepts contained in reports.</p>
- :
- : @param $reports-or-ids the report ids (RIDs) or the
- : reports themselves.
- :
- : @return the concepts from the reports in the same layout
- : as the concepts module would provide
- :)
-declare function reports:concepts($reports-or-ids as item*) as object*
-{
-  let $reports as object* := reports:reports($reports-or-ids)
-  for $report in $reports
-  let $language as string := labels:normalize-language(( $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1])
-  let $role as string := ( $report.Role, $concepts:DEFAULT_COMPONENT_LINK_ROLE )[1]
-  let $report-concepts as object* := $report.Concepts[]
-  for $report-concept in $report-concepts
-  return
-    {
-      Role: $role,
-      Name: $report-concept.Name,
-      Labels: {
-        $labels:STANDARD_LABEL_ROLE: {
-          $language: $report-concept.Label
-        }
-      }
-    }
-};
-
-
-(:~
  : <p>Adds the given report to the database.</p>
  :
  : @param $report the report schema to add.
