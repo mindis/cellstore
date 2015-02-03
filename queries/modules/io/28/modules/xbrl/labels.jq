@@ -82,6 +82,7 @@ declare function labels:labels(
     return (
       for $concept as object in $concepts
       where ($concepts:ALL_CONCEPT_NAMES, $concept.$concepts:NAME) = $concept-names
+      group by $concept.$concepts:NAME
       let $concept-labels as object* :=
         $concept.$concepts:LABELS[][$$.Role = $label-roles]
       let $available-languages as string* :=
@@ -191,13 +192,7 @@ declare function labels:labels-for-facts(
                     $language,
                     $concepts,
                     $entities,
-                    $options),
-            for $key in distinct-values(keys($facts.Aspects))
-            where not string($facts.Aspects.$key) = $concept-names
-            return
-                { $facts.Aspects.$key : "Default Legal Entity" }[
-                    $key eq "dei:LegalEntityAxis" and
-                    $facts.Aspects.$key eq "sec:DefaultLegalEntity"]
+                    $options)
         |}
 };
 

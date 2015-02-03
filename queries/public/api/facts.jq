@@ -254,7 +254,9 @@ let $facts :=
   then $facts
   else
     let $archives as string* := distinct-values($facts.Aspects."xbrl28:Archive")
-    let $concept-names as string* := distinct-values($facts.Aspects."xbrl:Concept")
+    let $concept-names as string* := (
+      distinct-values((keys($facts.Aspects), values($facts.Aspects)[$$ instance of string]))
+    )
     let $concepts as object* :=
       (
           concepts:concepts($concept-names, $archives, $concepts:ANY_COMPONENT_LINK_ROLE),
@@ -282,8 +284,7 @@ let $facts :=
         $entities,
         ()
       )
-      let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
-      return { Labels : {| $concept-labels, $standard-labels |} }
+      return { Labels : $concept-labels }
     |}
 
 let $facts :=
