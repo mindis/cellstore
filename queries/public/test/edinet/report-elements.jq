@@ -35,11 +35,5 @@ test:check-all-success({
       function($b as item*) as item* { document { $b/ReportElements } },
       test:get-expected-result-xml("edinet/report-elements-expected4-xml.jq"),
       { Format : "xml" }
-    ),
-    taxonomy-name-2: test:invoke-and-assert-deep-equal(
-      "report-elements",
-      {aid:"STANDARD-TAXONOMY-2014", name: ["fsa:FiscalYear", "fsa:FiscalPeriod", "fsa:FiscalPeriodType", "fsa:Submitted"] },
-      function($b as item*) as item* { count($b.ReportElements[].Labels[]) },
-      4
     )
 })

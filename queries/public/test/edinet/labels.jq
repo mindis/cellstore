@@ -21,5 +21,11 @@ test:check-all-success({
       function($b as item*) as item* { $b.Labels },
       test:get-expected-result("edinet/labels-expected4.jq"),
       { NoArrayOrder: true }
+    ),
+    taxonomy-label: test:invoke-and-assert-deep-equal(
+      "labels",
+      {aid:"STANDARD-TAXONOMY-2014", reportElement: ["fsa:FiscalYear", "fsa:FiscalPeriod", "fsa:FiscalPeriodType", "fsa:Submitted"] },
+      function($b as item*) as item* { count($b.Labels[]) },
+      4
     )
 })
