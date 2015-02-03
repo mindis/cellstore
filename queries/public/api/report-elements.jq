@@ -182,8 +182,7 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                let $concept-in-component := $members[$$.Name eq $original-name]
-                where not $onlyTextBlocks or $concept-in-component.IsTextBlock
+                where not $onlyTextBlocks or $concept.IsTextBlock
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -198,7 +197,7 @@ let $result :=
                         }
                       |})
                     },
-                    trim($concept-in-component, ("Name", "Labels")),
+                    trim($concept, ("Archive", "Role", "Name", "Labels")),
                     $metadata
                 |}
          else
@@ -209,8 +208,7 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                let $concept-in-component := $members[$$.Name eq $original-name]
-                where not $onlyTextBlocks or $concept-in-component.IsTextBlock
+                where not $onlyTextBlocks or $concept.IsTextBlock
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -239,7 +237,7 @@ let $result :=
                         }[$profile-name eq "japan"]
                       |})
                     },
-                    trim($concept-in-component, ("Name", "Labels")),
+                    trim($concept, ("Archive", "Role", "Name", "Labels")),
                     $metadata
                 |}
         ]

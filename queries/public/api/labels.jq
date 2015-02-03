@@ -3,6 +3,7 @@ import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
+import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
@@ -70,6 +71,21 @@ let $components as object* :=
       $networkIdentifier,
       $label,
       { LabelsOnly: true, ExactLabelMatches: true})
+
+let $components := (
+  $components[count($$.Concepts[]) le 1],
+  for $component-with-outsourced-concepts in
+      $components[count($$.Concepts[]) eq 0]
+  let $concepts := concepts:concepts(
+    $concepts:ALL_CONCEPT_NAMES,
+    $component-with-outsourced-concepts.Archive,
+    $component-with-outsourced-concepts.Role)
+  return {
+    Archive: $component-with-outsourced-concepts.Archive,
+    Role: $component-with-outsourced-concepts.Role,
+    Concepts: [ $concepts ]
+  }
+)
 
 let $res as object* :=
   for $component in $components
