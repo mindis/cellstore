@@ -2009,7 +2009,7 @@
                 "description": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "edinetcode": "E02529",
                     "fiscalPeriod": "Q1",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
