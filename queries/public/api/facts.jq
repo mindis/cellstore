@@ -286,13 +286,6 @@ let $facts :=
     let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
-    let $entityName as string :=
-        switch(true)
-        case $profile-name eq "sec" return
-            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
-        case $profile-name eq "japan" return
-            $entities[entities:eid($$) = $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
-        default return $fact.Aspects."xbrl:Entity"
     return
     {|
       $fact,
