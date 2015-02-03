@@ -197,7 +197,7 @@ let $result :=
                         }
                       |})
                     },
-                    trim($concept, ("Archive", "Role", "Name", "Labels")),
+                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels")),
                     $metadata
                 |}
          else
@@ -237,7 +237,7 @@ let $result :=
                         }[$profile-name eq "japan"]
                       |})
                     },
-                    trim($concept, ("Archive", "Role", "Name", "Labels")),
+                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels")),
                     $metadata
                 |}
         ]
