@@ -14,9 +14,9 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Période [Axe] breakdown" ], 
+        "GroupLabels" : [ "Period [Axis] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Période [Axe]" ], 
+          "CellLabels" : [ "Period [Axis]" ], 
           "CellConstraints" : {
 
           }, 
@@ -43,9 +43,9 @@
           "RollUp" : false
         } ] ]
       }, {
-        "GroupLabels" : [ "Entität [Achse] breakdown" ], 
+        "GroupLabels" : [ "Reporting Entity [Axis] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Entität [Achse]" ], 
+          "CellLabels" : [ "Reporting Entity [Axis]" ], 
           "CellConstraints" : {
 
           }, 
@@ -138,7 +138,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "d8d493c4-14d2-4183-b3c4-2474b6f1be7b", 
+        "_id" : "df6a9fb1-a91b-439a-b001-cc01461372ba", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -178,7 +178,7 @@
           }
         } ]
       }, {
-        "_id" : "707c1074-6231-4020-837f-53998eda99c6", 
+        "_id" : "ce7246ec-0802-4c6c-8819-1db13395c261", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -218,7 +218,7 @@
           }
         } ]
       }, {
-        "_id" : "c4d282a0-c3da-4d23-bddc-14a88fecef63", 
+        "_id" : "27cd6eed-ce05-4889-83db-d9e4df728e9c", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -302,7 +302,7 @@
           "fsa:FiscalPeriodType" : "YTD"
         }
       }, {
-        "_id" : "917e096e-ac97-4278-838a-852ef2bf7d10", 
+        "_id" : "f57c9cf0-abdc-4f50-bcc9-0d0c7918c2e3", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -356,11 +356,11 @@
     "fsa:FiscalPeriodType" : "YTD"
   } ], 
   "GlobalConstraintLabels" : {
-    "xbrl:Unit" : "Unité [Axe]", 
+    "xbrl:Unit" : "Unit [Axis]", 
     "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
     "fsa:FiscalYear" : "Fiscal Year [Axis]", 
-    "fsa:FiscalPeriod" : "会計期間", 
-    "fsa:FiscalPeriodType" : "会計期間タイプ"
+    "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 
+    "fsa:FiscalPeriodType" : "Fiscal Period Type [Axis]"
   }
 }
