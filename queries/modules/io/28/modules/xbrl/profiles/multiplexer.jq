@@ -228,7 +228,8 @@ declare function multiplexer:concepts(
   $role as string*,
   $exact-label as string*,
   $full-text-label as string*,
-  $report as object?) as object*
+  $report as object?,
+  $onlyNames as boolean) as object*
 {
   switch(true)
   case exists($report)
@@ -256,7 +257,8 @@ declare function multiplexer:concepts(
             $role,
             $exact-label,
             $full-text-label,
-            ()
+            (),
+            $onlyNames
           )
         else ()
     let $results-computed-by-maps as object* :=
@@ -268,7 +270,8 @@ declare function multiplexer:concepts(
           $role,
           $exact-label,
           $full-text-label,
-          ()
+          (),
+          $onlyNames
         )
         for $c as object in $concepts-computable-by-maps
         for $result as object in
@@ -304,7 +307,8 @@ declare function multiplexer:concepts(
       $concept,
       $archive,
       $role,
-      $exact-label
+      $exact-label,
+      { OnlyNames: $onlyNames}
     )
   default return
     let $components as object* :=
@@ -321,5 +325,6 @@ declare function multiplexer:concepts(
     return concepts:concepts-for-components(
       $concept,
       $components,
-      $exact-label)
+      $exact-label,
+      { OnlyNames: $onlyNames})
 };

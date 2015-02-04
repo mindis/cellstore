@@ -96,6 +96,33 @@ declare function concepts:concepts(
     $labels as string*
   ) as object*
 {
+  concepts:concepts($concept-names, $archive-or-ids, $component-roles, $labels, ())
+};
+
+(:~
+ : <p>Retrieves the concepts which:
+ :  - concept name and archive number match a given one;
+ :  - component role matches a given one or is the default
+ :    component role.
+ : </p>
+ :
+ : @param $concept-names the concepts names.
+ : @param $archives the archive numbers.
+ : @param $component-roles the component roles.
+ : @param $labels labels for exact matches.
+ : @param $options one option OnlyNames to only output concepts with the Name field.
+ :
+ : @return the matching concepts.
+ :)
+declare function concepts:concepts(
+    $concept-names as string*,
+    $archive-or-ids as item*,
+    $component-roles as string*,
+    $labels as string*,
+    $options as object?
+  ) as object*
+{
+  let $projection as object := if($options.OnlyNames eq true) then { Name: 1 } else {}
   let $archives := archives:aid($archive-or-ids)
   return
   if (exists($archives))
@@ -115,7 +142,8 @@ declare function concepts:concepts(
       {
         "Labels.Value" : { "$in" : [ $labels ] }
       }[not $labels = $concepts:ALL_CONCEPT_LABELS]
-    |}
+    |},
+    $projection
   )
   else ()
 };
@@ -164,11 +192,13 @@ declare function concepts:concepts(
 declare function concepts:concepts-for-components(
     $concept-names as string*,
     $labels as string*,
-    $component-or-ids as item*) as object*
+    $component-or-ids as item*,
+    $options as object?) as object*
 {
   for $component in components:components($component-or-ids)
   return concepts:concepts($concept-names,
                            $component.Archive[not $$ instance of null],
                            $component.Role,
-                           $labels)
+                           $labels,
+                           $options)
 };

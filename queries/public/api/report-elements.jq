@@ -16,64 +16,6 @@ import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 import module namespace seq = "http://zorba.io/modules/sequence";
 
-declare function local:concepts-for-archives(
-    $aids as string*,
-    $names as string*,
-    $map as object?,
-    $options as object?) as object*
-{
-    let $projection as object := if($options.OnlyNames eq true) then { Name: 1 } else {}
-    let $concepts-computable-by-maps as object* :=
-        switch(true)
-            case not exists($map) return ()
-            case not exists($names) return $map.Trees[]
-            default return
-                let $keys as string* := $map.Trees[].Name
-                for $concept as string in $names[$$ = $keys]
-                return ($map.Trees[])[$$.Name eq $concept]
-    let $mapped-names as string* := $concepts-computable-by-maps.To[].Name
-    let $concepts-not-computable-by-maps as string* := seq:value-except($names, $mapped-names)
-
-    let $all-results as object* := mw:find($concepts:col,
-        {
-            "Archive": { "$in" : [ $aids ] }
-        },
-        $projection)
-    let $results-not-computed-by-maps as object* := mw:find($concepts:col,
-        {
-            "Name" : { "$in" : [ $concepts-not-computable-by-maps ] },
-            "Archive": { "$in" : [ $aids ] }
-        },
-        $projection)
-    let $results-computed-by-maps as object* :=
-        let $all-results as object* := mw:find($concepts:col,
-            {
-                "Name" : { "$in" : [ $mapped-names ] },
-                "Archive": { "$in" : [ $aids ] }
-            },
-            $projection)
-        for $concept as object in $concepts-computable-by-maps
-        for $result as object in
-            for $candidate-concept in $concept.To[].Name
-            let $facts := $all-results[$$.Name = $candidate-concept]
-            where exists($facts)
-            count $c
-            where $c eq 1
-            return $facts
-        let $map-concept := (for $candidate in $concepts-computable-by-maps
-                            where $result.Name = (keys($candidate.To), $candidate.To[].Name)
-                            return $candidate)[1]
-        return
-            copy $n := $result
-            modify (
-                replace value of json $n.Name with $map-concept.Name,
-                insert json  { Origin : $result.Name } into $n)
-            return $n
-    return if(empty($map) and empty($names))
-           then $all-results
-           else ($results-not-computed-by-maps, $results-computed-by-maps)
-};
-
 declare function local:concepts-for-archives-and-labels($aids as string*, $labels as string) as object*
 {
    mw:run-cmd-deterministic(
@@ -156,7 +98,8 @@ let $concepts as object* :=
       $role,
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
-      $report)
+      $report,
+      $onlyNames)
 
 let $result :=
   let $all-aids := $concepts.Archive
