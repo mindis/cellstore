@@ -65,11 +65,11 @@ let $concepts as object* :=
     multiplexer:concepts(
       $profile-name,
       $archives,
-      $cid,
       $reportElement,
       $disclosure,
-      $networkIdentifier,
-      $label,
+      $role,
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"],
       ())
 
 let $res as object* :=
