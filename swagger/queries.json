@@ -2009,10 +2009,22 @@
                 "description": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "edinetcode": "E02529",
                     "fiscalPeriod": "Q1",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
+                }
+            }, {
+                "title": "Get value of current assets for each fiscal year for E02513.",
+                "description": "Get value of current assets for each fiscal year for E02513.",
+                "profile": ["japan"],
+                "parameters": {
+                    "edinetcode": "E02513",
+                    "fiscalPeriod": "FY",
+                    "fiscalYear": [ 2010, 2011, 2012, 2013, 2014 ],
+                    "concept": ["jppfs-cor:Assets", "jp-t-cte:Assets"],
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default" : "jppfs-cor:NonConsolidatedMember"
                 }
             }, {
                 "title": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014",

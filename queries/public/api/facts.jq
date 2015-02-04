@@ -105,7 +105,8 @@ declare function local:param-names() as string*
         "sec:FiscalPeriod"[$profile-name eq "sec"],
         "sec:FiscalPeriodType"[$profile-name eq "sec"],
         "sec:FiscalYear"[$profile-name eq "sec"],
-        "xbrl:Entity"[$profile-name eq "sec" and $names = ("cik", "tag", "ticker", "sic")],
+        "xbrl:Entity"[$profile-name eq "sec" and
+                      $names = ("cik", "tag", "ticker", "sic")],
         "dei:LegalEntityAxis"[$profile-name eq "sec"],
         "dei:LegalEntityAxis::default"[$profile-name eq "sec"],
 
@@ -113,7 +114,9 @@ declare function local:param-names() as string*
         "fsa:Submitted"[$profile-name eq "japan"],
         "fsa:FiscalPeriod"[$profile-name eq "japan"],
         "fsa:FiscalPeriodType"[$profile-name eq "japan"],
-        "fsa:FiscalYear"[$profile-name eq "japan"]
+        "fsa:FiscalYear"[$profile-name eq "japan"],
+        "xbrl:Entity"[$profile-name eq "japan" and
+                      $names = ("edinetcode", "tag", "ticker")]
     ))
 };
 
