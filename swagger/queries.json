@@ -12,7 +12,7 @@
         "description": "Entities",
         "operations": [{
             "method": "POST",
-            "summary": "Retrieve information about all or a selection of entities",
+            "summary": "Retrieve metadata about the entities that submit filings. These entities are also referred to by facts with the xbrl:Entity aspect, of which the values are called Entity IDs (EIDs). One entity might have several EIDs.",
             "nickname": "listEntities",
             "parameters": [{
                 "name": "format",
@@ -29,7 +29,7 @@
                 "paramType": "query"
             }, {
                 "name": "tag",
-                "description": "A tag to filter",
+                "description": "Includes in the results entities that have the supplied tags. A tag is often a stock index.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -44,34 +44,34 @@
                 "paramType": "query"
             }, {
                 "name": "eid",
-                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "description": "Includes in the results the entity with the supplied Entity ID (scheme + local name)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "A CIK number",
+                "description": "Includes in the results the entity with the supplied CIK number.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "edinetcode",
-                "description": "An EDINET Code",
+                "description": "Includes in the results the entity with the supplied EDINET Code",
                 "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "sic",
-                "description": "The industry group",
+                "description": "Includes in the results the entity with the supplied industry group",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
-                "description": "A ticker symbols",
+                "description": "Includes in the results the entity with the supplied ticker symbol",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
