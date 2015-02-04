@@ -100,7 +100,7 @@ declare function concepts:concepts(
   return
   if (exists($archives))
   then mw:find($concepts:col,
-    trace({|
+    {|
       {
         $concepts:ARCHIVE : { "$in" : [ $archives ] }
       },
@@ -115,7 +115,7 @@ declare function concepts:concepts(
       {
         "Labels.Value" : { "$in" : [ $labels ] }
       }[not $labels = $concepts:ALL_CONCEPT_LABELS]
-    |}, "query")
+    |}
   )
   else ()
 };
