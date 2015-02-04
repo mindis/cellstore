@@ -14,9 +14,9 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Period [Axis] breakdown" ], 
+        "GroupLabels" : [ "Période [Axe] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Period [Axis]" ], 
+          "CellLabels" : [ "Période [Axe]" ], 
           "CellConstraints" : {
 
           }, 
@@ -43,9 +43,9 @@
           "RollUp" : false
         } ] ]
       }, {
-        "GroupLabels" : [ "Reporting Entity [Axis] breakdown" ], 
+        "GroupLabels" : [ "Entität [Achse] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Reporting Entity [Axis]" ], 
+          "CellLabels" : [ "Entität [Achse]" ], 
           "CellConstraints" : {
 
           }, 
@@ -55,7 +55,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E01225-000" ], 
+          "CellLabels" : [ "NIPPON STEEL & SUMITOMO METAL CORPORATION", "http://disclosure.edinet-fsa.go.jp E01225-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000"
@@ -65,7 +65,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E01264-000" ], 
+          "CellLabels" : [ "JFE Holdings,Inc.", "http://disclosure.edinet-fsa.go.jp E01264-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01264-000"
@@ -75,7 +75,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E04147-000" ], 
+          "CellLabels" : [ "East Japan Railway Company", "http://disclosure.edinet-fsa.go.jp E04147-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04147-000"
@@ -85,7 +85,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E04425-000" ], 
+          "CellLabels" : [ "KDDI CORPORATION", "http://disclosure.edinet-fsa.go.jp E04425-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04425-000"
@@ -138,7 +138,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "5620fc2b-21b6-4a28-a127-a61e10780a12", 
+        "_id" : "d8d493c4-14d2-4183-b3c4-2474b6f1be7b", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -178,7 +178,7 @@
           }
         } ]
       }, {
-        "_id" : "24d5421b-c76d-4ca8-96aa-eaf59a2fc836", 
+        "_id" : "707c1074-6231-4020-837f-53998eda99c6", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -218,7 +218,7 @@
           }
         } ]
       }, {
-        "_id" : "2717c301-52e4-4194-85da-f7ccf31c7cdc", 
+        "_id" : "c4d282a0-c3da-4d23-bddc-14a88fecef63", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -302,7 +302,7 @@
           "fsa:FiscalPeriodType" : "YTD"
         }
       }, {
-        "_id" : "fff777cd-d0f9-4d27-94da-2467c5bbaa50", 
+        "_id" : "917e096e-ac97-4278-838a-852ef2bf7d10", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -356,11 +356,11 @@
     "fsa:FiscalPeriodType" : "YTD"
   } ], 
   "GlobalConstraintLabels" : {
-    "xbrl:Unit" : "Unit [Axis]", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "xbrl:Unit" : "Unité [Axe]", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
     "fsa:FiscalYear" : "Fiscal Year [Axis]", 
-    "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 
-    "fsa:FiscalPeriodType" : "Fiscal Period Type [Axis]"
+    "fsa:FiscalPeriod" : "会計期間", 
+    "fsa:FiscalPeriodType" : "会計期間タイプ"
   }
 }

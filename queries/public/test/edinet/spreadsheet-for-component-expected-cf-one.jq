@@ -14,9 +14,9 @@
   "TableSet" : [ {
     "TableHeaders" : {
       "x" : [ {
-        "GroupLabels" : [ "Period [Axis] breakdown" ], 
+        "GroupLabels" : [ "Période [Axe] breakdown" ], 
         "GroupCells" : [ [ {
-          "CellLabels" : [ "Period [Axis]" ], 
+          "CellLabels" : [ "Période [Axe]" ], 
           "CellConstraints" : {
 
           }, 
@@ -74,7 +74,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "5620fc2b-21b6-4a28-a127-a61e10780a12", 
+        "_id" : "d8d493c4-14d2-4183-b3c4-2474b6f1be7b", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -136,16 +136,18 @@
     "fsa:FiscalPeriodType" : "YTD"
   } ], 
   "GlobalConstraintLabels" : {
-    "xbrl:Concept" : "Concept [Axis]", 
-    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "Description of fact that quarterly statement of cash flows has not been prepared [text block]", 
-    "xbrl:Entity" : "Reporting Entity [Axis]", 
-    "xbrl:Unit" : "Unit [Axis]", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "xbrl:Concept" : "Concept [Axe]", 
+    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "Description of fact that quarterly statement of cash flows has not been prepared", 
+    "xbrl:Entity" : "Entität [Achse]", 
+    "http://disclosure.edinet-fsa.go.jp E01225-000" : "NIPPON STEEL & SUMITOMO METAL CORPORATION", 
+    "xbrl:Unit" : "Unité [Axe]", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
-    "xbrl28:Archive" : "Archive [Axis]", 
+    "xbrl28:Archive" : "Archive [Axe]", 
     "fsa:Submitted" : "FSA Submission Date [Axis]", 
+    "2014-08-07" : "August 7, 2014", 
     "fsa:FiscalYear" : "Fiscal Year [Axis]", 
-    "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 
-    "fsa:FiscalPeriodType" : "Fiscal Period Type [Axis]"
+    "fsa:FiscalPeriod" : "会計期間", 
+    "fsa:FiscalPeriodType" : "会計期間タイプ"
   }
 }
