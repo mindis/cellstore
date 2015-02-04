@@ -26,6 +26,6 @@ test:check-all-success({
       "labels",
       {aid:"STANDARD-TAXONOMY-2014", reportElement: ["fsa:FiscalYear", "fsa:FiscalPeriod", "fsa:FiscalPeriodType", "fsa:Submitted"] },
       function($b as item*) as item* { count($b.Labels[]) },
-      4
+      8
     )
 })
