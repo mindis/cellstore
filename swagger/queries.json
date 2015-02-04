@@ -2405,7 +2405,13 @@
                 "paramType": "query"
             }, {
                 "name": "onlyTextBlocks",
-                "description": "Whether only text block report elements should be returned (default: false).",
+                "description": "Filters by text block/not text block (default: no filtering).",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "abstract",
+                "description": "Filters by abstract/not abstract (default: no filtering).",
                 "required": false,
                 "type": "boolean",
                 "paramType": "query"
