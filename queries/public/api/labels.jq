@@ -61,8 +61,8 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $aid)
 
-let $components as object* :=
-    multiplexer:components(
+let $concepts as object* :=
+    multiplexer:concepts(
       $profile-name,
       $archives,
       $cid,
@@ -70,34 +70,18 @@ let $components as object* :=
       $disclosure,
       $networkIdentifier,
       $label,
-      { LabelsOnly: true, ExactLabelMatches: true})
-
-let $components := (
-  $components[count($$.Concepts[]) le 1],
-  for $component-with-outsourced-concepts in
-      $components[count($$.Concepts[]) eq 0]
-  let $concepts := concepts:concepts(
-    $concepts:ALL_CONCEPT_NAMES,
-    $component-with-outsourced-concepts.Archive,
-    $component-with-outsourced-concepts.Role)
-  return {
-    Archive: $component-with-outsourced-concepts.Archive,
-    Role: $component-with-outsourced-concepts.Role,
-    Concepts: [ $concepts ]
-  }
-)
+      ())
 
 let $res as object* :=
-  for $component in $components
-  for $concept in $component.Concepts[]
+  for $concept in $concepts
   where empty($reportElement) or $concept.Name = $reportElement
   for $found-label in $concept.Labels[]
   where (empty($label) or $found-label.Value = $label) and
         (empty($language) or $found-label.Language = $language) and
         (empty($labelRole) or $found-label.Role = $labelRole)
   return {|
-    { Archive: $component.Archive },
-    { ComponentRole: $component.Role },
+    { Archive: $concept.Archive },
+    { ComponentRole: $concept.Role },
     { Concept: $concept.Name },
     $found-label
   |}

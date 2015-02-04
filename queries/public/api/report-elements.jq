@@ -102,6 +102,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $sic            as stri
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear     as string*  external := "LATEST";
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod   as string*  external := "FY";
 declare  %rest:case-insensitive %rest:distinct  variable $aid            as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $disclosure     as string*  external;
+declare  %rest:case-insensitive %rest:distinct  variable $role           as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $eid            as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $label          as string*  external;
 declare  %rest:case-insensitive                 variable $map            as string?  external;
@@ -149,10 +151,18 @@ let $map as object? :=
     if(exists($report))
     then reports:concept-map($report)
     else concept-maps:concept-maps($map)
+
 let $concepts as object* :=
-    if (exists($label))
-        then local:concepts-for-archives-and-labels(archives:aid($archives), $label[1])
-        else local:concepts-for-archives(archives:aid($archives), $name, $map, { OnlyNames: $onlyNames })
+    multiplexer:concepts(
+      $profile-name,
+      $archives,
+      $name,
+      $disclosure,
+      $role,
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"],
+      ())
+
 let $result :=
   let $all-aids := $concepts.Archive
   let $roles := $concepts.Role

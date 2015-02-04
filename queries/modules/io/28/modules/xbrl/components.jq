@@ -153,12 +153,11 @@ declare function components:components-for(
         QName("components:TOO-MANY-COMPONENTS"),
         "Too many components to be returned because no filtering is done."
       )
-    case $options.LabelsOnly
+    case $options.MetadataOnly
       return mw:find($components:col, $query, {
          "Archive" : 1,
-         "Role" : 1,
-         "Concepts.Labels" : 1,
-         "Concepts.Name" : 1 }
+         "Role" : 1
+        }
       )
     default return mw:find($components:col, $query)
 };

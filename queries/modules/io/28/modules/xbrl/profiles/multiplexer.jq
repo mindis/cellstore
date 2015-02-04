@@ -15,6 +15,7 @@ module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
+import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
@@ -146,7 +147,8 @@ declare function multiplexer:components(
   $concept as string*,
   $disclosure as string*,
   $role as string*,
-  $label as string*,
+  $exact-label as string*,
+  $full-text-label as string*,
   $options as object?) as object*
 {
   switch($profile-name)
@@ -156,7 +158,7 @@ declare function multiplexer:components(
     $concept,
     $disclosure,
     $role,
-    $label)
+    $full-text-label)
   default return
     let $role as string* := if(empty($role))
                             then $components:ALL-ROLES
@@ -167,16 +169,14 @@ declare function multiplexer:components(
     let $concept as item* := if(empty($concept))
                              then $components:ALL-CONCEPTS
                              else $concept
-    let $label as item* :=
-      switch(true)
-      case empty($label) return $components:ALL-LABELS
-      case not $options.ExactLabelMatches eq false return $label
-      default return ()
+    let $exact-label as item* := if(empty($exact-label))
+                            then $components:ALL-LABELS
+                            else $exact-label
     return components:components-for(
       $archive,
       $role,
       $concept,
-      $label,
+      $exact-label,
       $options
     )
 };
@@ -203,7 +203,8 @@ declare function multiplexer:components(
   $concept as string*,
   $disclosure as string*,
   $role as string*,
-  $label as string*) as object*
+  $exact-label as string*,
+  $full-text-label as string*) as object*
 {
   multiplexer:components(
     $profile-name,
@@ -212,6 +213,53 @@ declare function multiplexer:components(
     $concept,
     $disclosure,
     $role,
-    $label,
+    $exact-label,
+    $full-text-label,
     ())
+};
+
+declare function multiplexer:concepts(
+  $profile-name as string,
+  $archive as object*,
+  $concept as string*,
+  $disclosure as string*,
+  $role as string*,
+  $exact-label as string*,
+  $full-text-label as string*,
+  $reports as object*) as object*
+{
+  switch(true)
+  case empty($disclosure) and empty($reports) and empty($full-text-label)
+    return
+    let $role as string* := if(empty($role))
+                            then $concepts:ANY_COMPONENT_LINK_ROLE
+                            else $role
+    let $concept as item* := if(empty($concept))
+                             then $concepts:ALL_CONCEPT_NAMES
+                             else $concept
+    let $exact-label as item* := if(empty($exact-label))
+                            then $concepts:ALL_CONCEPT_LABELS
+                            else $exact-label
+    return concepts:concepts(
+      $concept,
+      $archive,
+      $role,
+      $exact-label
+    )
+  default return
+    let $components as object* :=
+      multiplexer:components(
+        $profile-name,
+        $archive,
+        (),
+        $concept,
+        $disclosure,
+        $role,
+        $exact-label,
+        $full-text-label,
+        { MetadataOnly: true })
+    return concepts:concepts-for-components(
+      $concept,
+      $components,
+      $exact-label)
 };
