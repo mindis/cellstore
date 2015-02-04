@@ -16,12 +16,14 @@ import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
+import module namespace reports = "http://28.io/modules/xbrl/reports";
 
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
-
 import module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
+
+import module namespace seq = "http://zorba.io/modules/sequence";
 
 (:~
  : <p>Return latest filings of entities and fiscal periods.</p>
@@ -226,10 +228,68 @@ declare function multiplexer:concepts(
   $role as string*,
   $exact-label as string*,
   $full-text-label as string*,
-  $reports as object*) as object*
+  $report as object?) as object*
 {
   switch(true)
-  case empty($disclosure) and empty($reports) and empty($full-text-label)
+  case exists($report)
+    return
+    let $map as object? := reports:concept-map($report)
+    let $concepts-computable-by-maps as object* :=
+        switch(true)
+            case not exists($map) return ()
+            case not exists($concept) return $map.Trees[]
+            default return
+                let $keys as string* := $map.Trees[].Name
+                for $c as string in $concept[$$ = $keys]
+                return ($map.Trees[])[$$.Name eq $c]
+    let $mapped-names as string* := $concepts-computable-by-maps.To[].Name
+    let $concepts-not-computable-by-maps as string* :=
+        seq:value-except($concept, $mapped-names)
+    let $results-not-computed-by-maps as object* :=
+        if(exists($concepts-not-computable-by-maps))
+        then
+          multiplexer:concepts(
+            $profile-name,
+            $archive,
+            $concepts-not-computable-by-maps,
+            $disclosure,
+            $role,
+            $exact-label,
+            $full-text-label,
+            ()
+          )
+        else ()
+    let $results-computed-by-maps as object* :=
+        let $all-results as object* := multiplexer:concepts(
+          $profile-name,
+          $archive,
+          $mapped-names,
+          $disclosure,
+          $role,
+          $exact-label,
+          $full-text-label,
+          ()
+        )
+        for $c as object in $concepts-computable-by-maps
+        for $result as object in
+            for $candidate-concept in $c.To[].Name
+            let $facts := $all-results[$$.Name = $candidate-concept]
+            where exists($facts)
+            count $n
+            where $n eq 1
+            return $facts
+        let $map-concept := (for $candidate in $concepts-computable-by-maps
+                            where $result.Name = (keys($candidate.To), $candidate.To[].Name)
+                            return $candidate)[1]
+        return
+            copy $n := $result
+            modify (
+                replace value of json $n.Name with $map-concept.Name,
+                insert json  { Origin : $result.Name } into $n)
+            return $n
+    return ($results-not-computed-by-maps, $results-computed-by-maps)
+
+  case empty($disclosure) and empty($report) and empty($full-text-label)
     return
     let $role as string* := if(empty($role))
                             then $concepts:ANY_COMPONENT_LINK_ROLE

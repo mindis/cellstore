@@ -6,8 +6,7 @@ import module namespace backend = "http://apps.28.io/backend";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
-(:import module namespace reports = "http://28.io/modules/xbrl/reports";
-import module namespace concept-maps = "http://28.io/modules/xbrl/concept-maps";:)
+import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace config = "http://apps.28.io/config";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
@@ -105,8 +104,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $disclosure     as stri
 declare  %rest:case-insensitive %rest:distinct  variable $role           as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $eid            as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $label          as string*  external;
-(:declare  %rest:case-insensitive                 variable $map            as string?  external;:)
-(:declare  %rest:case-insensitive                 variable $report         as string?  external;:)
+declare  %rest:case-insensitive                 variable $report         as string?  external;
 declare  %rest:case-insensitive %rest:distinct  variable $name           as string*  external;
 declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
 declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := false;
@@ -146,10 +144,8 @@ let $entities as object* :=
     let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
-(:let $map as object? :=
-    if(exists($report))
-    then reports:concept-map($report)
-    else concept-maps:concept-maps($map):)
+
+let $report as object? := reports:reports($report)
 
 let $concepts as object* :=
     multiplexer:concepts(
@@ -160,7 +156,7 @@ let $concepts as object* :=
       $role,
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
-      ())
+      $report)
 
 let $result :=
   let $all-aids := $concepts.Archive
@@ -205,7 +201,7 @@ let $result :=
                         }
                       |})
                     },
-                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels")),
+                    trim($concept, ("Origin", "_id", "Archive", "Role", "Name", "Labels")),
                     $metadata
                 |}
          else
