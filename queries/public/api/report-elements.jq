@@ -47,7 +47,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $label          as stri
 declare  %rest:case-insensitive                 variable $report         as string?  external;
 declare  %rest:case-insensitive %rest:distinct  variable $name           as string*  external;
 declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
-declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := false;
+declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := ();
+declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
 
 session:audit-call($token);
 
@@ -127,7 +128,8 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                where not $onlyTextBlocks or $concept.IsTextBlock
+                where (empty($onlyTextBlocks) or $concept.IsTextBlock eq $onlyTextBlocks) and
+                      (empty($abstract) or $concept.IsAbstract eq $abstract) and
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -153,7 +155,8 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                where not $onlyTextBlocks or $concept.IsTextBlock
+                where (empty($onlyTextBlocks) or $concept.IsTextBlock eq $onlyTextBlocks) and
+                      (empty($abstract) or $concept.IsAbstract eq $abstract) and
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
