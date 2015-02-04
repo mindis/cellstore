@@ -79,7 +79,9 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-      $label)
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
 
 let $component as object? := switch(true)
                               case empty($components) return ()

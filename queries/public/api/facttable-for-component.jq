@@ -93,7 +93,9 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-    $label)
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
 
 let $component as object? := if($merge) then components:merge($components) else $components[1]
 let $cid as string? := string-join($components ! components:cid($$), "--")
