@@ -2332,6 +2332,19 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "role",
+                "description": "The role of a particular component",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "disclosure",
+                "description": "The disclosure to search for (e.g. BalanceSheet)",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "onlyNames",
                 "description": "Whether only the names of the report elements should be returned. If so, the values don't contain duplicates. (default: false)",
                 "required": false,
