@@ -4,7 +4,6 @@ import module namespace session = "http://apps.28.io/session";
 import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
-import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
@@ -147,10 +146,10 @@ let $entities as object* :=
     let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
-let $map as object? :=
+(:let $map as object? :=
     if(exists($report))
     then reports:concept-map($report)
-    else concept-maps:concept-maps($map)
+    else concept-maps:concept-maps($map):)
 
 let $concepts as object* :=
     multiplexer:concepts(
@@ -175,7 +174,6 @@ let $result :=
         for $concept in $concepts
         group by $archive := $concept.Archive,  $role := $concept.Role
         let $component as object := $components[$$.Archive eq $archive and $$.Role eq $role]
-        let $members as object* := $component.Concepts[]
         return
           if($profile-name eq "sec")
           then

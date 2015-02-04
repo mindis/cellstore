@@ -2142,13 +2142,6 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "cid",
-                "description": "[Deprecated] The id of a particular component",
-                "deprecated": true,
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "networkIdentifier",
                 "description": "The network identifier (=role) of a particular component",
                 "profile": ["sec"],

@@ -3,7 +3,6 @@ import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
@@ -20,7 +19,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $eid                as 
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $networkIdentifier  as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $role               as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $cid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $reportElement      as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $concept            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
@@ -67,7 +65,7 @@ let $concepts as object* :=
       $archives,
       $reportElement,
       $disclosure,
-      $role,
+      $networkIdentifier,
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
       ())
