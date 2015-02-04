@@ -5,7 +5,6 @@ import module namespace backend = "http://apps.28.io/backend";
 
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace config = "http://apps.28.io/config";
 
@@ -14,7 +13,6 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
 import module namespace csv = "http://zorba.io/modules/json-csv";
-import module namespace seq = "http://zorba.io/modules/sequence";
 
 declare function local:concepts-for-archives-and-labels($aids as string*, $labels as string) as object*
 {

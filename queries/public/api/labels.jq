@@ -68,7 +68,8 @@ let $concepts as object* :=
       $networkIdentifier,
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
-      ())
+      (),
+      false)
 
 let $res as object* :=
   for $concept in $concepts
