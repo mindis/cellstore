@@ -2228,6 +2228,26 @@
                     "labelRole" : "http://www.xbrl.org/2003/role/label",
                     "format" : "xml"
                 }
+            }, {
+                "title": "Get label of standard taxonomy by element name",
+                "description": "Get label of standard taxonomy by element name.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "json",
+                    "profile-name": "japan",
+                    "reportElement": "jppfs-cor:CurrentAssets"
+                }
+            }, {
+                "title": "Get element name of standard taxonomy by label, as XML.",
+                "description": "Get element name of standard taxonomy by label.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "label": "Accounting policy for deferred assets"
+                }
             }]
         }]
     }, {
