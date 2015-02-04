@@ -44,7 +44,7 @@
                 "paramType": "query"
             }, {
                 "name": "eid",
-                "description": "Includes in the results the entity with the supplied Entity ID (scheme + local name)",
+                "description": "Includes in the results the entity with the supplied Entity ID (scheme + local name).",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -57,28 +57,28 @@
                 "paramType": "query"
             }, {
                 "name": "edinetcode",
-                "description": "Includes in the results the entity with the supplied EDINET Code",
+                "description": "Includes in the results the entity with the supplied EDINET Code.",
                 "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "sic",
-                "description": "Includes in the results the entity with the supplied industry group",
+                "description": "Includes in the results the entity with the supplied industry group.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
-                "description": "Includes in the results the entity with the supplied ticker symbol",
+                "description": "Includes in the results the entity with the supplied ticker symbol.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "token",
-                "description": "The token of the current session",
+                "description": "The token that allows you to use this API.",
                 "required": true,
                 "type": "string",
                 "paramType": "query"
@@ -100,29 +100,29 @@
                 "message": "Returns query listing."
             }],
             "examples": [{
-                "title": "Get list of all companies/IDs as JSON",
+                "title": "Gets all companies as JSON.",
                 "description": "Retrieve information about all entities. Return the result as JSON.",
                 "parameters": {
                     "format": "json"
                 }
             }, {
-                "title": "Get list of all companies/IDs as XML",
+                "title": "Gets all companies as XML.",
                 "description": "Retrieve information about all entities. Return the result as XML.",
                 "parameters": {
                     "format": "xml"
                 }
             }, {
-                "title": "Get list of all companies with the tag NIKKEI as XML",
-                "description": "Get list of all companies with the tag NIKKEI. Return the result as XML",
+                "title": "Gets all NIKKEI companies as XML.",
+                "description": "Retrieve information about all NIKKEI companies. Return the result as XML",
                 "profile": ["japan"],
                 "parameters": {
                     "tag": "NIKKEI",
                     "format": "xml"
                 }
             }, {
-                "title": "Retrieve information about all DOW30 entities",
+                "title": "Get all DOW30 companies as CSV.",
                 "profile": ["sec"],
-                "description": "Retrieve information about all DOW30 entities. Return the result as CSV.",
+                "description": "Retrieve information about all DOW30 companies. Return the result as CSV.",
                 "parameters": {
                     "tag": "DOW30",
                     "format": "csv"
