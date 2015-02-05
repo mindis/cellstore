@@ -34,7 +34,7 @@ var init = function() {
 
 var checkWebsiteAvailable = function(){
     var defered = Q.defer();
-    var url = 'http://' + bucketName + '.s3-website-' + region + '.amazonaws.com/index.html';
+    var url = 'http://' + bucketName + '.s3-website-' + region + '.amazonaws.com';
     var request = require('request');
     request({
         uri: url,
