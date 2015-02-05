@@ -156,7 +156,7 @@ let $result :=
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
                 where (empty($onlyTextBlocks) or $concept.IsTextBlock eq $onlyTextBlocks) and
-                      (empty($abstract) or $concept.IsAbstract eq $abstract) and
+                      (empty($abstract) or $concept.IsAbstract eq $abstract)
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
