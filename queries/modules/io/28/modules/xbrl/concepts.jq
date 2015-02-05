@@ -53,17 +53,17 @@ declare variable $concepts:DEFAULT_COMPONENT_LINK_ROLE as xs:string :=
  : Allow any component link role
  :)
 declare variable $concepts:ANY_COMPONENT_LINK_ROLE as xs:string :=
-    "*";
+    ":any component:";
 
 (:~
  : A joker to ask for all concept names.
  :)
-declare variable $concepts:ALL_CONCEPT_NAMES as xs:string := "";
+declare variable $concepts:ALL_CONCEPT_NAMES as xs:string := ":any concept:";
 
 (:~
  : A joker to ask for all concept labels.
  :)
-declare variable $concepts:ALL_CONCEPT_LABELS as xs:string := "";
+declare variable $concepts:ALL_CONCEPT_LABELS as xs:string := ":any concept label:";
 
 (:~
  : <p>Retrieves all concepts.</p>
