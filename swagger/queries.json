@@ -2033,7 +2033,7 @@
                 "parameters": {
                     "edinetcode": "E02513",
                     "fiscalPeriod": "FY",
-                    "fiscalYear": [ 2010, 2011, 2012, 2013, 2014 ],
+                    "fiscalYear": "ALL",
                     "concept": ["jppfs-cor:Assets", "jp-t-cte:Assets"],
                     "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "ALL",
                     "jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default" : "jppfs-cor:NonConsolidatedMember"
