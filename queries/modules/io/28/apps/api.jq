@@ -226,12 +226,12 @@ declare %an:sequential function api:csv-to-html(
       <body>
         <table>
           <thead>
-	          <tr>{$display-cell($header)}</tr>
+	          <tr>{$display-cell($header, "th")}</tr>
           </thead>
           <tbody>
           {
             for $row as string in $body
-            return <tr>{$display-cell($row)}</tr>
+            return <tr>{$display-cell($row, "td")}</tr>
           }
           </tbody>
         </table>
