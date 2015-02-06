@@ -2432,7 +2432,13 @@
                 "paramType": "query"
             }, {
                 "name": "onlyTextBlocks",
-                "description": "Whether only text block report elements should be returned (default: false).",
+                "description": "Filters by text block/not text block (default: no filtering).",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "abstract",
+                "description": "Filters by abstract/not abstract (default: no filtering).",
                 "required": false,
                 "type": "boolean",
                 "paramType": "query"
@@ -2486,6 +2492,16 @@
                     "format": "xml",
                     "profile-name": "japan",
                     "label": "Accounting policy for deferred assets"
+                }
+            }, {
+                "title": "Get all non-abstract standard report elements.",
+                "description": "Get all non-abstract standard report elements.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "abstract": "false"
                 }
             }, {
                 "title": "Get element name of specified company's taxonomy by label and company ID",
