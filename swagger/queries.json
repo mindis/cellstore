@@ -775,6 +775,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -838,8 +844,8 @@
                     "disclosure": "BalanceSheet"
                 }
             }, {
-                "title": "Get B/S report by company name/ID and period",
-                "description": "Get B/S report by company name/ID and period.",
+                "title": "Get B/S report by company name/ID and period (by default in English).",
+                "description": "Get B/S report by company name/ID and period (by default in English).",
                 "profile": ["japan"],
                 "parameters": {
                     "eid": "http://info.edinet-fsa.go.jp E01225-000",
@@ -849,6 +855,21 @@
                     "profile-name": "japan",
                     "merge": "true",
                     "labels": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report by company name/ID and period, in Japanese.",
+                "description": "Get B/S report by company name/ID and period, in Japanese.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "labels": "true",
+                    "language" : "ja",
                     "format": "xml"
                 }
             }, {
@@ -1546,6 +1567,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -2142,13 +2169,6 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "cid",
-                "description": "[Deprecated] The id of a particular component",
-                "deprecated": true,
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "networkIdentifier",
                 "description": "The network identifier (=role) of a particular component",
                 "profile": ["sec"],
@@ -2234,6 +2254,26 @@
                     "language" : "ja",
                     "labelRole" : "http://www.xbrl.org/2003/role/label",
                     "format" : "xml"
+                }
+            }, {
+                "title": "Get label of standard taxonomy by element name, as XML.",
+                "description": "Get label of standard taxonomy by element name.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "reportElement": "jppfs-cor:CurrentAssets"
+                }
+            }, {
+                "title": "Get element name of standard taxonomy by label, as XML.",
+                "description": "Get element name of standard taxonomy by label.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "label": "Accounting policy for deferred assets"
                 }
             }]
         }]
@@ -2339,6 +2379,19 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "role",
+                "description": "The role of a particular component",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "disclosure",
+                "description": "The disclosure to search for (e.g. BalanceSheet)",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "onlyNames",
                 "description": "Whether only the names of the report elements should be returned. If so, the values don't contain duplicates. (default: false)",
                 "required": false,
@@ -2425,7 +2478,7 @@
                     "format": "csv"
                 }
             }, {
-                "title": "Get element name of standard taxonomy by label, as XML.",
+                "title": "Get report element of standard taxonomy by label, as XML.",
                 "description": "Get element name of standard taxonomy by label.",
                 "profile": ["japan"],
                 "parameters": {
@@ -2445,14 +2498,15 @@
                     "label": "Loss of inactive facilities"
                 }
             }, {
-                "title": "Get label of standard taxonomy by element name",
-                "description": "Get label of standard taxonomy by element name.",
+                "title": "Get metadata of a report element of standard taxonomy by name, as XML.",
+                "description": "Get metadata of standard taxonomy by element name.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
                     "format": "json",
                     "profile-name": "japan",
-                    "name": "jppfs-cor:CurrentAssets"
+                    "name": "jppfs-cor:CurrentAssets",
+                    "format": "xml"
                 }
             }, {
                 "title": "Get label of specified company's taxonomy by element name and company ID",
