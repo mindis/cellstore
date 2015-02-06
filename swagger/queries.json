@@ -2065,6 +2065,62 @@
                     "jpcrp-cor:MajorShareholdersAxis": "ALL",
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
+            },
+            {
+                "title": "Get all dividend forecasts for 2014 by company name/ID",
+                "description": "Get all dividend forecasts for 2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 54010",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "ALL",
+                    "fiscalPeriodType": "QTD",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
+            },
+            {
+                "title": "Get all dividend forecasts for 2014 by company name/ID reported in Q1/2014",
+                "description": "Get all dividend forecasts for 2014 by company name/ID reported in Q1/2014",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 54010",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "ALL",
+                    "fiscalPeriodType": "QTD",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE",
+                    "fsa:ArchiveFiscalPeriod": "Q1",
+                    "fsa:ArchiveFiscalYear": 2014
+                }
+            },
+            {
+                "title": "Get all Profit forecasts for FY/2014 by company name/ID",
+                "description": "Get all Profit forecasts for FY/2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 80580",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:ProfitAttributableToOwnersOfParentIFRS",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
             }]
         }]
     }, {
