@@ -191,7 +191,7 @@ let $result :=
         ]
     }
 let $comment := {
-    NumConcepts: count($concepts),
+    NumConcepts: count($result.ReportElements[]),
     TotalNumConcepts: session:num-concepts()
 }
 let $serializers := {

@@ -2494,6 +2494,16 @@
                     "label": "Accounting policy for deferred assets"
                 }
             }, {
+                "title": "Get all non-abstract standard report elements.",
+                "description": "Get all non-abstract standard report elements.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "abstract": "false"
+                }
+            }, {
                 "title": "Get element name of specified company's taxonomy by label and company ID",
                 "description": "Get element name of specified company's taxonomy by label and company ID.",
                 "profile": ["japan"],
