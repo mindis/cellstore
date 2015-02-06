@@ -53,17 +53,17 @@ declare variable $concepts:DEFAULT_COMPONENT_LINK_ROLE as xs:string :=
  : Allow any component link role
  :)
 declare variable $concepts:ANY_COMPONENT_LINK_ROLE as xs:string :=
-    "*";
+    ":any component:";
 
 (:~
  : A joker to ask for all concept names.
  :)
-declare variable $concepts:ALL_CONCEPT_NAMES as xs:string := "";
+declare variable $concepts:ALL_CONCEPT_NAMES as xs:string := ":any concept:";
 
 (:~
  : A joker to ask for all concept labels.
  :)
-declare variable $concepts:ALL_CONCEPT_LABELS as xs:string := "";
+declare variable $concepts:ALL_CONCEPT_LABELS as xs:string := ":any concept label:";
 
 (:~
  : <p>Retrieves all concepts.</p>
@@ -83,7 +83,7 @@ declare function concepts:concepts() as object*
  : </p>
  :
  : @param $concept-names the concepts names.
- : @param $archives the archive numbers.
+ : @param $archives-or-ids the archives or their IDs.
  : @param $component-roles the component roles.
  : @param $labels labels for exact matches.
  :
@@ -91,12 +91,12 @@ declare function concepts:concepts() as object*
  :)
 declare function concepts:concepts(
     $concept-names as string*,
-    $archive-or-ids as item*,
+    $archives-or-ids as item*,
     $component-roles as string*,
     $labels as string*
   ) as object*
 {
-  concepts:concepts($concept-names, $archive-or-ids, $component-roles, $labels, ())
+  concepts:concepts($concept-names, $archives-or-ids, $component-roles, $labels, ())
 };
 
 (:~
@@ -107,7 +107,7 @@ declare function concepts:concepts(
  : </p>
  :
  : @param $concept-names the concepts names.
- : @param $archives the archive numbers.
+ : @param $archives-or-ids the archives or their IDs.
  : @param $component-roles the component roles.
  : @param $labels labels for exact matches.
  : @param $options one option OnlyNames to only output concepts with the Name field.
@@ -116,14 +116,14 @@ declare function concepts:concepts(
  :)
 declare function concepts:concepts(
     $concept-names as string*,
-    $archive-or-ids as item*,
+    $archives-or-ids as item*,
     $component-roles as string*,
     $labels as string*,
     $options as object?
   ) as object*
 {
   let $projection as object := if($options.OnlyNames eq true) then { Name: 1 } else {}
-  let $archives := archives:aid($archive-or-ids)
+  let $archives := archives:aid($archives-or-ids)
   return
   if (exists($archives))
   then mw:find($concepts:col,
@@ -156,20 +156,20 @@ declare function concepts:concepts(
  : </p>
  :
  : @param $concept-names the concepts names.
- : @param $archives the archive numbers.
+ : @param $archives-or-ids the archives or their IDs.
  : @param $component-roles the component roles.
  :
  : @return the matching concepts.
  :)
 declare function concepts:concepts(
     $concept-names as string*,
-    $archives as string*,
+    $archives-or-ids as item*,
     $component-roles as string*
   ) as object*
 {
   concepts:concepts(
     $concept-names,
-    $archives,
+    $archives-or-ids,
     $component-roles,
     $concepts:ALL_CONCEPT_LABELS
   )

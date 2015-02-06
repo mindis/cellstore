@@ -131,11 +131,11 @@ declare function multiplexer:filings(
   : @param $concept a sequence of report element names.
   : @param $disclosure a sequence of disclosure names.
   : @param $role a sequence of network identifiers.
-  : @param $label a sequence of labels.
+  : @param $exact-label a sequence of labels for exact matches.
+  : @param $full-text-label a sequence of labels for full-text search.
   : searched.
   : @param $options additional options. among which <ul>
-  :   <li>LabelsOnly: to only get label information.</li>
-  :   <li>ExactLabelMatch: to only get exact label matches.</li>
+  :   <li>MetadataOnly: to only get Archive and Role information.</li>
   : </lu>
   :
   : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
@@ -192,7 +192,8 @@ declare function multiplexer:components(
   : @param $concept a sequence of report element names.
   : @param $disclosure a sequence of disclosure names.
   : @param $role a sequence of network identifiers.
-  : @param $label a sequence of labels.
+  : @param $exact-label a sequence of labels for exact matches.
+  : @param $full-text-label a sequence of labels for full-text search.
   :
   : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
   :
