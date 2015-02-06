@@ -208,8 +208,8 @@ declare %an:sequential function api:csv-to-html(
       only end $end at $j when not contains(replace($start, "\"\"", ""), "\"") or ($j gt $i and contains(replace($end, "\"\"", ""), "\""))
       let $cell := replace(string-join($cells, ","), "\"", "")
       return if(contains($cell, "http://") and (contains($cell, "28.io") or contains($cell, "rendering.secxbrl.info")))
-      then element $cell-tag-name { <a href="{$cell}">Link</a> }
-      else element $cell-tag-name {$cell}
+      then element { $cell-tag-name } { <a href="{$cell}">Link</a> }
+      else element { $cell-tag-name } {$cell}
     }
     return <html>
       <head>
