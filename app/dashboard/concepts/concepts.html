@@ -1,0 +1,21 @@
+<div class="row" ng-if="labels.length > 0">
+    <flexy-layout orientation="horizontal">
+        <block-container init="250">
+            <ul class="list-group concepts">
+                <li class="list-group-item">
+                    <input type="text" placeholder="Filter Concepts..." class="form-control" ng-model="searchText">
+                </li>
+                <li class="list-group-item" ng-repeat="label in labels | filter: {label: searchText}">
+                    <a ng-bind="label.label" ui-sref="dashboard.concepts.concept({ concepts: label.concepts, label: label.label })"></a>
+                </li>
+            </ul>
+        </block-container>
+        <block-splitter></block-splitter>
+        <block-container>
+            <div ui-view></div>
+        </block-container>
+    </flexy-layout>
+</div>
+<div ng-if="labels.length === 0">
+    <h2>No Labels Found.</h2>
+</div>
