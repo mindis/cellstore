@@ -108,7 +108,9 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-    $label)
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
 
 let $res as object* :=
     switch($profile-name)

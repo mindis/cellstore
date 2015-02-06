@@ -31,6 +31,7 @@ import module namespace networks = "http://28.io/modules/xbrl/networks";
 import module namespace resolution = "http://28.io/modules/xbrl/resolution";
 import module namespace layout = "http://28.io/modules/xbrl/layout";
 import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace accountant = "http://28.io/modules/xbrl/profiles/accountant/converter";
 
@@ -152,12 +153,11 @@ declare function components:components-for(
         QName("components:TOO-MANY-COMPONENTS"),
         "Too many components to be returned because no filtering is done."
       )
-    case $options.LabelsOnly
+    case $options.MetadataOnly
       return mw:find($components:col, $query, {
          "Archive" : 1,
-         "Role" : 1,
-         "Concepts.Labels" : 1,
-         "Concepts.Name" : 1 }
+         "Role" : 1
+        }
       )
     default return mw:find($components:col, $query)
 };
@@ -209,16 +209,12 @@ declare function components:components-for-archives-and-concepts(
     $concepts as string*) as object*
 {
     let $aids as string* := archives:aid($archives-or-ids)
-    let $concepts := mw:find($concepts:col,
-        {|
-            (
-                { "Name" : { "$in" : [ $concepts ] } },
-                { "Archive" : { "$in" : [ $aids ] } }
-            )
-        |})
+    let $concepts := concepts:concepts($concepts, $aids, $concepts:ANY_COMPONENT_LINK_ROLE)
     let $roles := $concepts.Role
     for $component in components:components-for-archives-and-roles($aids, $roles)
-    where (some $concept in $concepts satisfies $concept.Archive eq $component.Archive and $concept.Role eq $component.Role)
+    where (some $concept in $concepts satisfies
+        $concept.Archive eq $component.Archive and
+        $concept.Role eq $component.Role)
     return $component
 };
 
@@ -588,22 +584,16 @@ declare function components:standard-typed-dimension-breakdown(
     $dimension-name as string,
     $options as object?) as object
 {
-    let $label as string := (
-      concepts:labels(
+    let $label as string? :=
+      labels:labels(
         $dimension-name,
-        $concepts:VERBOSE_LABEL_ROLE,
+        ($labels:VERBOSE_LABEL_ROLE, $labels:STANDARD_LABEL_ROLE),
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
-      ),
-      concepts:labels(
-        $dimension-name,
-        $concepts:STANDARD_LABEL_ROLE,
-        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
-        $components.Concepts[],
-        $options
-      ),
-      $dimension-name)[1]
+      ).$dimension-name
+    let $label as string := ($label, $dimension-name)[1]
     return
     {
       BreakdownLabels: [ $label || " breakdown" ],
@@ -630,22 +620,16 @@ declare function components:standard-explicit-dimension-breakdown(
     $role as string,
     $options as object?) as object
 {
-    let $label as string := (
-      concepts:labels(
+    let $label as string? :=
+      labels:labels(
         $dimension-name,
-        $concepts:VERBOSE_LABEL_ROLE,
+        ($labels:VERBOSE_LABEL_ROLE, $labels:STANDARD_LABEL_ROLE),
         ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
         $components.Concepts[],
+        (),
         $options
-      ),
-      concepts:labels(
-        $dimension-name,
-        $concepts:STANDARD_LABEL_ROLE,
-        ($options.Language, $components.$components:DEFAULT-LANGUAGE)[1],
-        $components.Concepts[],
-        $options
-      ),
-      $dimension-name)[1]
+      ).$dimension-name
+    let $label as string := ($label, $dimension-name)[1]
     return
     {
         BreakdownLabels: [ $label || " breakdown" ],
