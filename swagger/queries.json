@@ -844,8 +844,8 @@
                     "disclosure": "BalanceSheet"
                 }
             }, {
-                "title": "Get B/S report by company name/ID and period",
-                "description": "Get B/S report by company name/ID and period.",
+                "title": "Get B/S report by company name/ID and period (by default in English).",
+                "description": "Get B/S report by company name/ID and period (by default in English).",
                 "profile": ["japan"],
                 "parameters": {
                     "eid": "http://info.edinet-fsa.go.jp E01225-000",
@@ -855,6 +855,21 @@
                     "profile-name": "japan",
                     "merge": "true",
                     "labels": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report by company name/ID and period, in Japanese.",
+                "description": "Get B/S report by company name/ID and period, in Japanese.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "labels": "true",
+                    "language" : "ja",
                     "format": "xml"
                 }
             }, {
@@ -2463,7 +2478,7 @@
                     "format": "csv"
                 }
             }, {
-                "title": "Get element name of standard taxonomy by label, as XML.",
+                "title": "Get report element of standard taxonomy by label, as XML.",
                 "description": "Get element name of standard taxonomy by label.",
                 "profile": ["japan"],
                 "parameters": {
@@ -2483,8 +2498,8 @@
                     "label": "Loss of inactive facilities"
                 }
             }, {
-                "title": "Get label of standard taxonomy by element name",
-                "description": "Get label of standard taxonomy by element name.",
+                "title": "Get metadata of a report element of standard taxonomy by name",
+                "description": "Get metadata of standard taxonomy by element name.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
