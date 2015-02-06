@@ -58,8 +58,8 @@ declare variable $labels:VERBOSE_LABEL_ROLE as xs:string :=
  : </ul>
  :
  : @param $concept-names the concepts names.
- : @param $label-role the label role.
- : @param $language the label language.
+ : @param $label-roles the label role.
+ : @param $languages the label language.
  : @param $concepts the concepts in which the labels will be
  :                  searched.
  : @param $entities the entities in which entity labels will be searched.
