@@ -202,14 +202,14 @@ declare %an:sequential function api:csv-to-html(
     let $rows := tokenize($csv, "\n")
     let $header := $rows[1]
     let $body := subsequence($rows, 2)
-    let $display-cell := function($row as string) {
+    let $display-cell := function($row as string, $cell-tag-name as string) {
       for tumbling window $cells as string* in tokenize($row, ",")
       start $start at $i when true
       only end $end at $j when not contains(replace($start, "\"\"", ""), "\"") or ($j gt $i and contains(replace($end, "\"\"", ""), "\""))
       let $cell := replace(string-join($cells, ","), "\"", "")
       return if(contains($cell, "http://") and (contains($cell, "28.io") or contains($cell, "rendering.secxbrl.info")))
-      then <td><a href="{$cell}">Link</a></td>
-      else <td>{$cell}</td>
+      then element $cell-tag-name { <a href="{$cell}">Link</a> }
+      else element $cell-tag-name {$cell}
     }
     return <html>
       <head>
@@ -226,7 +226,7 @@ declare %an:sequential function api:csv-to-html(
       <body>
         <table>
           <thead>
-	          <th>{$display-cell($header)}</th>
+	          <tr>{$display-cell($header)}</tr>
           </thead>
           <tbody>
           {
