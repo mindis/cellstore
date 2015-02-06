@@ -2256,12 +2256,12 @@
                     "format" : "xml"
                 }
             }, {
-                "title": "Get label of standard taxonomy by element name",
+                "title": "Get label of standard taxonomy by element name, as XML.",
                 "description": "Get label of standard taxonomy by element name.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
-                    "format": "json",
+                    "format": "xml",
                     "profile-name": "japan",
                     "reportElement": "jppfs-cor:CurrentAssets"
                 }
@@ -2498,14 +2498,15 @@
                     "label": "Loss of inactive facilities"
                 }
             }, {
-                "title": "Get metadata of a report element of standard taxonomy by name",
+                "title": "Get metadata of a report element of standard taxonomy by name, as XML.",
                 "description": "Get metadata of standard taxonomy by element name.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
                     "format": "json",
                     "profile-name": "japan",
-                    "name": "jppfs-cor:CurrentAssets"
+                    "name": "jppfs-cor:CurrentAssets",
+                    "format": "xml"
                 }
             }, {
                 "title": "Get label of specified company's taxonomy by element name and company ID",
