@@ -9,7 +9,7 @@ angular
                 templateUrl: '/dashboard/concepts/concepts.html',
                 controller: 'DashboardConceptsCtrl',
                 resolve: {
-                    labels: ['$stateParams', 'API', 'Session', function($stateParams, API, Session){
+                    labels: ['_', '$stateParams', 'API', 'Session', function(_, $stateParams, API, Session){
                         var roles = {
                             BalanceSheet: [
                                 'http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet',
@@ -58,30 +58,47 @@ angular
                                 'http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedStatementsOfIncome'
                             ]
                         };
-                        return API.Queries.listLabels({
+                        return API.Queries.listReportElements({
                             token: Session.getToken(),
-                            language: 'en',
-                            labelRole: 'http://www.xbrl.org/2003/role/label',
-                            role: roles[$stateParams.disclosure],
                             edinetcode: $stateParams.edinetcode,
+                            role: roles[$stateParams.disclosure],
+                            //aid: 'STANDARD-TAXONOMY-2014',
+                            onlyNames: true,
+                            abstract: false,
                             fiscalYear: 'ALL',
                             fiscalPeriod: 'FY'
-                        })
-                        .then(function(response){
-                            var labels = {};
-                            response.Labels.forEach(function(label){
-                                var concept = label.Concept;
-                                var localName = concept.substring(concept.indexOf(':') + 1);
-                                if(!labels[localName]) {
-                                    labels[localName] = {
-                                        label: label.Value,
-                                        concepts: [concept]
-                                    };
-                                } else if(labels[localName].concepts.indexOf(concept) === -1) {
-                                    labels[localName].concepts.push(concept);
-                                }
+                        }).then(function(response){
+                            var elements = response.ReportElements;
+                            return API.Queries.listLabels({
+                                token: Session.getToken(),
+                                language: 'en',
+                                reportElement: elements,
+                                aid: 'STANDARD-TAXONOMY-2014',
+                                edinetcode: $stateParams.edinetcode,
+                                role: roles[$stateParams.disclosure],
+                                labelRole: 'http://www.xbrl.org/2003/role/label',
+                                fiscalYear: 'LATEST',
+                                fiscalPeriod: 'FY'
+                            }).then(function(response){
+                                var result = {};
+                                elements.forEach(function(element){
+                                    var localName = element.substring(element.indexOf(':') + 1);
+                                    var label = _.find(response.Labels, { Concept: element });
+                                    if(label === undefined) {
+                                        console.log('Label not found for: ' + element);
+                                        return;
+                                    }
+                                    if(!result[localName]) {
+                                        result[localName] = {
+                                            Value: label.Value,
+                                            Concepts: [element]
+                                        };
+                                    } else if(result[localName].Concepts.indexOf(element) === -1) {
+                                        result[localName].Concepts.push(element);
+                                    }
+                                });
+                                return _.values(result);
                             });
-                            return labels;
                         });
                     }]
                 }
