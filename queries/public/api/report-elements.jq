@@ -98,7 +98,10 @@ let $concepts as object* :=
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
       $report,
-      $onlyNames)
+      $onlyNames)[
+    (empty($onlyTextBlocks) or $$.IsTextBlock eq $onlyTextBlocks) and
+    (empty($abstract) or $$.IsAbstract eq $abstract)
+  ]
 
 let $result :=
   let $all-aids := $concepts.Archive
@@ -107,7 +110,8 @@ let $result :=
   return {
     ReportElements : [
       if ($onlyNames)
-      then distinct-values($concepts.Name)
+      then
+        distinct-values($concepts.Name)
       else
         for $concept in $concepts
         group by $archive := $concept.Archive,  $role := $concept.Role
@@ -128,8 +132,6 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                where (empty($onlyTextBlocks) or $concept.IsTextBlock eq $onlyTextBlocks) and
-                      (empty($abstract) or $concept.IsAbstract eq $abstract)
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
@@ -155,8 +157,6 @@ let $result :=
                 }
                 for $concept in $concept
                 let $original-name := ($concept.Origin, $concept.Name)[1]
-                where (empty($onlyTextBlocks) or $concept.IsTextBlock eq $onlyTextBlocks) and
-                      (empty($abstract) or $concept.IsAbstract eq $abstract)
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
