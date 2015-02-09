@@ -73,26 +73,26 @@ angular
                                 token: Session.getToken(),
                                 language: 'en',
                                 reportElement: elements,
-                                aid: 'STANDARD-TAXONOMY-2014',
-                                edinetcode: $stateParams.edinetcode,
-                                role: roles[$stateParams.disclosure],
-                                labelRole: 'http://www.xbrl.org/2003/role/label',
-                                fiscalYear: 'LATEST',
-                                fiscalPeriod: 'FY'
+                                aid: ['STANDARD-TAXONOMY-2008', 'STANDARD-TAXONOMY-2009', 'STANDARD-TAXONOMY-2010', 'STANDARD-TAXONOMY-2011', 'STANDARD-TAXONOMY-2012', 'STANDARD-TAXONOMY-2013', 'STANDARD-TAXONOMY-2014'],
+                                labelRole: 'http://www.xbrl.org/2003/role/label'
                             }).then(function(response){
                                 var result = {};
-                                elements.forEach(function(element){
-                                    var localName = element.substring(element.indexOf(':') + 1);
-                                    var label = _.find(response.Labels, { Concept: element });
-                                    if(label === undefined) {
-                                        console.log('Label not found for: ' + element);
+                                response.Labels.forEach(function(label){
+                                    var localName = label.Concept.substring(label.Concept.indexOf(':') + 1);
+                                    var fiscalYear = parseInt(label.Archive.substring('STANDARD-TAXONOMY-'.length), 10);
+                                    if(result[localName] && fiscalYear <= result[localName].FiscalYear) {
                                         return;
                                     }
+                                    result[localName] = {
+                                       Value: label.Value,
+                                       Concepts: [],
+                                       FiscalYear: fiscalYear
+                                    };
+                                });
+                                elements.forEach(function(element){
+                                    var localName = element.substring(element.indexOf(':') + 1);
                                     if(!result[localName]) {
-                                        result[localName] = {
-                                            Value: label.Value,
-                                            Concepts: [element]
-                                        };
+                                      console.log('Label not found for ' + element);
                                     } else if(result[localName].Concepts.indexOf(element) === -1) {
                                         result[localName].Concepts.push(element);
                                     }

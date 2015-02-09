@@ -1,7 +1,8 @@
+/* global accounting : false */
 'use strict';
 
 angular.module('report-editor')
-    .controller('DashboardConceptCtrl', function(accounting, $state, $scope, $stateParams, facts){
+    .controller('DashboardConceptCtrl', function($state, $scope, $stateParams, facts){
         $scope.options = {
             scaleLabel: function(label){
                 return accounting.formatMoney(label.value, { symbol: 'JPY',  format: '%v %s' });
