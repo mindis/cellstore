@@ -16,7 +16,7 @@
             "nickname": "listEntities",
             "parameters": [{
                 "name": "format",
-                "description": "The result format",
+                "description": "Returns the results in the supplied format.",
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -100,19 +100,19 @@
                 "message": "Returns query listing."
             }],
             "examples": [{
-                "title": "Gets all companies as JSON.",
+                "title": "Get all companies as JSON.",
                 "description": "Retrieve information about all entities. Return the result as JSON.",
                 "parameters": {
                     "format": "json"
                 }
             }, {
-                "title": "Gets all companies as XML.",
+                "title": "Get all companies as XML.",
                 "description": "Retrieve information about all entities. Return the result as XML.",
                 "parameters": {
                     "format": "xml"
                 }
             }, {
-                "title": "Gets all NIKKEI companies as XML.",
+                "title": "Get all NIKKEI companies as XML.",
                 "description": "Retrieve information about all NIKKEI companies. Return the result as XML",
                 "profile": ["japan"],
                 "parameters": {
@@ -134,11 +134,11 @@
         "description": "Filings",
         "operations": [{
             "method": "POST",
-            "summary": "Retrieve the filings of a particular entity",
+            "summary": "Retrieve metadata about the filings, also called archives. The filings are identified with Archive IDs (AIDs). Facts can be bound with filings with the xbrl28:Archive aspect, whose values are AIDs.",
             "nickname": "listFilings",
             "parameters": [{
                 "name": "format",
-                "description": "The result format",
+                "description": "Returns the results in the supplied format.",
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -151,7 +151,7 @@
                 "paramType": "query"
             }, {
                 "name": "tag",
-                "description": "A tag to filter",
+                "description": "Filters the results for filings submitted by the entity identified by this tag, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -165,47 +165,47 @@
                 "paramType": "query"
             }, {
                 "name": "eid",
-                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "description": "Filters the results for filings submitted by the entity identified by this EID, with the same semantics as the entities.jq endpoint.",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "A CIK number",
+                "description": "Filters the results for filings submitted by the entity identified by this CIK, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "edinetcode",
-                "description": "An EDINET Code",
+                "description": "Filters the results for filings submitted by the entity identified by this EDINET code, with the same semantics as the entities.jq endpoint.",
                 "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
-                "description": "A ticker symbol",
+                "description": "Filters the results for filings submitted by the entity identified by this ticker symbol, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "sic",
-                "description": "The industry group",
+                "description": "Filters the results for filings submitted by the entity identified by this industry group, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "aid",
-                "description": "An Archive ID (a value of the xbrl28:Archive aspect)",
+                "description": "Includes in the results the filings with the supplied Archive ID. This parameter is unaffected by the other filters.",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the filings to retrieve (default: LATEST)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: LATEST)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -217,7 +217,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the filings to retrieve (default: FY)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -231,7 +231,7 @@
                 "paramType": "query"
             }, {
                 "name": "token",
-                "description": "The token of the current session",
+                "description": "The token that allows you to use this API.",
                 "required": true,
                 "type": "string",
                 "paramType": "query"
@@ -253,8 +253,8 @@
                 "message": "Returns all filings for the given entity."
             }],
             "examples": [{
-                "title": "Retrieve the filings of a specific entity",
-                "description": "Retrieve information about the filings of an entity identified by its CIK. Return the result as XML.",
+                "title": "Get all filings from a specific entity.",
+                "description": "Retrieve information about the filings of an entity. Return the result as XML.",
                 "profile": ["sec"],
                 "parameters": {
                     "cik": "66740",
