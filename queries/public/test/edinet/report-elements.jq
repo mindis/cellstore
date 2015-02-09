@@ -35,5 +35,19 @@ test:check-all-success({
       function($b as item*) as item* { document { $b/ReportElements } },
       test:get-expected-result-xml("edinet/report-elements-expected4-xml.jq"),
       { Format : "xml" }
+    ),
+    abstract-true : test:invoke-and-assert-deep-equal(
+      "report-elements",
+      {aid:"STANDARD-TAXONOMY-2014", abstract: "true", onlyNames: "true" },
+      function($b as item*) as item* { count($b.ReportElements[]) },
+      1027,
+      ()
+    ),
+    abstract-false : test:invoke-and-assert-deep-equal(
+      "report-elements",
+      {aid:"STANDARD-TAXONOMY-2014", abstract: "false", onlyNames: "true" },
+      function($b as item*) as item* { count($b.ReportElements[]) },
+      4771,
+      ()
     )
 })

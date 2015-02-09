@@ -122,7 +122,12 @@ declare function concepts:concepts(
     $options as object?
   ) as object*
 {
-  let $projection as object := if($options.OnlyNames eq true) then { Name: 1 } else {}
+  let $projection as object := if($options.OnlyNames eq true) then
+  {
+    Name: 1,
+    IsAbstract: 1,
+    IsTextBlock: 1
+  } else {}
   let $archives := archives:aid($archives-or-ids)
   return
   if (exists($archives))
