@@ -202,7 +202,7 @@ declare %an:sequential function api:csv-to-html(
     let $rows := tokenize($csv, "\n")
     let $header := $rows[1]
     let $body := subsequence($rows, 2)
-    let $display-cell := function($row as string, $cell-tag-name as string) {
+    let $display-cell := function($row as string?, $cell-tag-name as string) {
       for tumbling window $cells as string* in tokenize($row, ",")
       start $start at $i when true
       only end $end at $j when not contains(replace($start, "\"\"", ""), "\"") or ($j gt $i and contains(replace($end, "\"\"", ""), "\""))
