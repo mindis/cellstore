@@ -735,6 +735,12 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "label",
                 "description": "A search term to search in the labels of components (e.g. stock)",
                 "required": false,
@@ -1103,6 +1109,12 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "label",
                 "description": "A search term to search in the labels of components (e.g. stock)",
                 "required": false,
@@ -1398,6 +1410,18 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "label",
+                "description": "A search term to search in the labels of components (e.g. stock)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2193,7 +2217,7 @@
                 "description": "The name of the report element to search for (e.g. us-gaap:Goodwill)",
                 "required": false,
                 "type": "string",
-                "paramType": "query"
+                "paramType": "form"
             }, {
                 "name": "label",
                 "description": "A search term to search in the labels of components (e.g. stock). Exact match, except for the SEC profile where it performs full text search in English.",
