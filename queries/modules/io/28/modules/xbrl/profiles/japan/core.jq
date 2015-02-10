@@ -39,7 +39,7 @@ declare function japan:entities(
        for $entity in (
          mw:find($entities:col, { "Profiles.FSA.Tags" : { "$in" : [ $tag ] } }),
 
-         mw:find($entities:col, { "Profiles.FSA.EntityCode" : { "$in" : [ $edinetcode ] } }),
+         mw:find($entities:col, { "Profiles.FSA.EDINETCode" : { "$in" : [ $edinetcode ] } }),
 
          mw:find($entities:col, { "Profiles.FSA.SecuritiesCode" : { "$in" : [ $securitiescode ] } }),
 
