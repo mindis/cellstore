@@ -2121,6 +2121,25 @@
                     "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
                     "tse-ed-t:PreviousCurrentAxis::default": "NONE"
                 }
+            },
+            {
+                "title": "Get all Profit forecasts and actual values for FY/2014 by company name/ID",
+                "description": "Get all Profit forecasts and actual values for FY/2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 80580",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:ProfitAttributableToOwnersOfParentIFRS",
+                    "tse-ed-t:ResultForecastAxis": ["tse-ed-t:ForecastMember", "xbrl28:EDINETReportedValue"],
+                    "tse-ed-t:ResultForecastAxis::default": "xbrl28:EDINETReportedValue",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE",
+                    "fsa:ArchiveFiscalPeriod": "ALL",
+                    "fsa:ArchiveFiscalYear": "ALL"
+                }
             }]
         }]
     }, {
