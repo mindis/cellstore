@@ -4,13 +4,14 @@ import module namespace config = "http://apps.28.io/config";
 
 [ {
       "Archives" : "http://" || request:server-name() || ":" || request:server-port() ||
-        "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=a2de5a9e-c896-4e71-b604-fbfcd921c70c&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Fwww.tse.or.jp%2Fsicc%2054010&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL",
+        "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=017b96ba-b834-41b1-aa4a-143a43e3f5e9&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Fwww.tse.or.jp%2Fsicc%2054010&format=&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL",
       "EIDs" : [ "http://disclosure.edinet-fsa.go.jp E01225-000", "http://info.edinet-fsa.go.jp E01225-000", "http://www.tse.or.jp/sicc 54010" ],
       "Profiles" : {
         "FSA" : {
           "Name" : "FSA",
-          "EntityCode" : "E01225",
+          "TDNETCode" : "54010",
           "EDINETCode" : "E01225",
+          "EntityKind" : "Company",
           "SubmitterName" : "新日鐵住金株式会社",
           "SubmitterNameAlphabetic" : "NIPPON STEEL & SUMITOMO METAL CORPORATION",
           "SubmitterNamePhonetic" : "シンニッテツスミキンカブシキガイシャ",
