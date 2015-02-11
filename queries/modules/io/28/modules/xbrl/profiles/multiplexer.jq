@@ -95,6 +95,7 @@ declare function multiplexer:entities(
  : @param $entities a sequence of entities or EIDs.
  : @param $fiscalPeriod a sequence of fiscal periods (Q1, Q2, Q3, FY).
  : @param $fiscalYear a sequence of fiscal years.
+ : @param $filingKind a sequence of filing kinds to filter for.
  : @param $aid a sequence of AIDs.
  :
  : @return the archives retrieved according to the profile specified.
@@ -104,6 +105,7 @@ declare function multiplexer:filings(
   $entities as item*,
   $fiscalPeriod as string*,
   $fiscalYear as integer*,
+  $filingKind as string*,
   $aid as string*) as object*
 {
   switch($profile-name)
@@ -116,6 +118,7 @@ declare function multiplexer:filings(
       $entities,
       $fiscalYear,
       $fiscalPeriod,
+      $filingKind,
       $aid)
   default return (
       archives:archives($aid),
