@@ -41,9 +41,9 @@ var isOnTravis = process.env.CIRCLECI === 'true';
 var isProd = fs.existsSync('config/' + process.env.CIRCLE_BRANCH + '.json.enc');
 var isOnTravisAndProd = isOnTravis && isProd && process.env.CI_PULL_REQUEST === '';
 
-if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== process.env.CELLSTORE_CONFIG){
+if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== configId){
     $.util.log('We are on Travis and on a Production branch.');
-    $.util.log('Current production branch "' + process.env.CIRCLE_BRANCH + '" doesn\'t match cellstore configuration "' + process.env.CELLSTORE_CONFIG + '"');
+    $.util.log('Current production branch "' + process.env.CIRCLE_BRANCH + '" doesn\'t match cellstore configuration "' + configId + '"');
     $.util.log($.util.colors.green('Nothing to do!'));
     process.exit(0);
 }
