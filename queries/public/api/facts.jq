@@ -7,14 +7,35 @@ import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace archives = "http://28.io/modules/xbrl/archives";
 
 import module namespace sec = "http://28.io/modules/xbrl/profiles/sec/core";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
 import module namespace request = "http://www.28msec.com/modules/http-request";
+
+declare variable $local:additional-concepts as object* := (
+  {
+    Name: "sec:DefaultLegalEntity",
+    Labels : [ {
+        Role : "http://www.xbrl.org/2003/role/label",
+        Language : "en-us",
+        Value : "Default Legal Entity [Member]"
+    } ]
+  },
+  {
+    Name: "xbrl:NonNumeric",
+    Labels : [ {
+        Role : "http://www.xbrl.org/2003/role/label",
+        Language : "en-us",
+        Value : "Non Numeric"
+    } ]
+  }
+);
 
 declare function local:param-values(
     $name as string,
@@ -31,8 +52,12 @@ declare function local:param-values(
         return "integer"
      case $name eq "sec:FiscalPeriod" and $profile-name eq "sec"
         return ($fiscalPeriod, request:param-values("sec:FiscalPeriod"))
+     case $name eq "sec:FiscalPeriod::type" and $profile-name eq "sec"
+        return "string"
      case $name eq "sec:FiscalPeriodType" and $profile-name eq "sec"
         return ($fiscalPeriodType, request:param-values("sec:FiscalPeriodType"))
+     case $name eq "sec:FiscalPeriodType::type" and $profile-name eq "sec"
+        return "string"
      case $name eq "dei:LegalEntityAxis" and $profile-name eq "sec"
         return
          if(empty((request:param-values("sec:LegalEntityAxis"), request:param-values("sec:LegalEntityAxis::default"))))
@@ -46,7 +71,7 @@ declare function local:param-values(
      case $name eq "xbrl:Entity" and $profile-name = ("sec", "japan")
          return (
                 if(empty(($cik,$tag,$ticker,$sic)) or exists($entities))
-                then $entities._id
+                then entities:eid($entities)
                 else "dummy",
                 request:param-values("xbrl:Entity")
             )
@@ -62,7 +87,7 @@ declare function local:param-values(
             let $fiscalPeriods := local:param-values($prefix || ":FiscalPeriod", $entities)
             return
                 if($fiscalYears = "LATEST")
-                then multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods)._id
+                then archives:aid(multiplexer:latest-filings($profile-name, $entities, $fiscalPeriods))
                 else (),
             $aid,
             request:param-values("xbrl28:Archive")
@@ -75,8 +100,12 @@ declare function local:param-values(
      return "integer"
      case $name eq "fsa:FiscalPeriod" and $profile-name eq "japan"
      return ($fiscalPeriod, request:param-values("fsa:FiscalPeriod"))
+     case $name eq "fsa:FiscalPeriod::type" and $profile-name eq "japan"
+     return "string"
      case $name eq "fsa:FiscalPeriodType" and $profile-name eq "japan"
      return ($fiscalPeriodType, request:param-values("fsa:FiscalPeriodType"))
+     case $name eq "fsa:FiscalPeriodType::type" and $profile-name eq "japan"
+     return "string"
 
      default return request:param-values($name)
 };
@@ -96,7 +125,8 @@ declare function local:param-names() as string*
         "sec:FiscalPeriod"[$profile-name eq "sec"],
         "sec:FiscalPeriodType"[$profile-name eq "sec"],
         "sec:FiscalYear"[$profile-name eq "sec"],
-        "xbrl:Entity"[$profile-name eq "sec" and $names = ("cik", "tag", "ticker", "sic")],
+        "xbrl:Entity"[$profile-name eq "sec" and
+                      $names = ("cik", "tag", "ticker", "sic")],
         "dei:LegalEntityAxis"[$profile-name eq "sec"],
         "dei:LegalEntityAxis::default"[$profile-name eq "sec"],
 
@@ -104,7 +134,9 @@ declare function local:param-names() as string*
         "fsa:Submitted"[$profile-name eq "japan"],
         "fsa:FiscalPeriod"[$profile-name eq "japan"],
         "fsa:FiscalPeriodType"[$profile-name eq "japan"],
-        "fsa:FiscalYear"[$profile-name eq "japan"]
+        "fsa:FiscalYear"[$profile-name eq "japan"],
+        "xbrl:Entity"[$profile-name eq "japan" and
+                      $names = ("edinetcode", "tag", "ticker")]
     ))
 };
 
@@ -154,7 +186,8 @@ declare function local:hypercube($entities as object*) as object
                 if(not($all))
                 then { "Domain" : [ $typed-values ] }[exists($typed-values)]
                 else (),
-                { "Default" : $typed-default-value }[$has-default]
+                { "Default" : $typed-default-value }[$has-default],
+                { "Default" : null }[(not $has-default) and $all and exists($type)]
             |}
         }
     |}
@@ -167,6 +200,7 @@ declare  %rest:case-insensitive                 variable $profile-name      as s
 declare  %rest:env                              variable $request-uri       as string  external;
 declare  %rest:case-insensitive                 variable $format            as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik               as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag               as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic               as string* external;
@@ -182,6 +216,7 @@ declare  %rest:case-insensitive                 variable $validate          as b
 declare  %rest:case-insensitive                 variable $labels            as boolean external := false;
 declare  %rest:case-insensitive                 variable $additional-rules  as string? external;
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
+declare  %rest:case-insensitive                 variable $language          as string  external := "en-US";
 
 session:audit-call($token);
 
@@ -189,16 +224,22 @@ session:audit-call($token);
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
 
-(: Object resolution :)
-let $entities as object* :=
-    multiplexer:entities(
-        $profile-name,
-        $eid,
-        $cik,
-        api:preprocess-tags($tag),
-        $ticker,
-        $sic,
-        $aid)
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
+let $entities := multiplexer:entities(
+  $profile-name,
+  $eid,
+  $cik,
+  api:preprocess-tags($tag),
+  $ticker,
+  $sic,
+  $aid)
+
 let $report as object? := reports:reports($report)
 let $map as item* :=
     if(exists($report))
@@ -235,30 +276,31 @@ let $facts :=
   then $facts
   else
     let $archives as string* := distinct-values($facts.Aspects."xbrl28:Archive")
-    let $concept-names as string* := distinct-values($facts.Aspects."xbrl:Concept")
+    let $concept-names as string* := (
+      distinct-values((keys($facts.Aspects), values($facts.Aspects)[$$ instance of string]))
+    )
     let $concepts as object* :=
       (
           concepts:concepts($concept-names, $archives, $concepts:ANY_COMPONENT_LINK_ROLE),
-          (reports:concepts(($report,$map)))[$$.Name = $concept-names]
+          $report.Concepts[][$$.Name = $concept-names],
+          if($profile-name eq "sec") then $local:additional-concepts else ()
       )
-    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
-    let $roles as string* := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )
-    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = $entities._id]
+    let $language as string := ( $language, $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
+    let $nonFetchedEntities as string* := request:param-values("xbrl:Entity")[not $$ = entities:eid($entities)]
     let $entities as object* := ($entities, entities:entities($nonFetchedEntities))
     for $fact as object in $facts
-    let $entityName as string :=
-        switch(true)
-        case $profile-name eq "sec" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.SEC.CompanyName
-        case $profile-name eq "japan" return
-            $entities[$$._id eq $fact.Aspects."xbrl:Entity"].Profiles.FSA.SubmitterName
-        default return $fact.Aspects."xbrl:Entity"
     return
     {|
       $fact,
-      let $concept-labels as object? := facts:labels($fact, $roles, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
-      let $standard-labels as object := conversion:get-standard-labels($fact, $entityName)
-      return { Labels : {| $concept-labels, $standard-labels |} }
+      let $concept-labels as object? := labels:labels-for-facts(
+        $fact,
+        $labels:STANDARD_LABEL_ROLE,
+        $language,
+        $concepts,
+        $entities,
+        ()
+      )
+      return { Labels : $concept-labels }
     |}
 
 let $facts :=
@@ -298,4 +340,4 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format) 
+return api:check-and-return-results($token, $results, $format)

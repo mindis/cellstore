@@ -8,6 +8,7 @@ var $ = require('gulp-load-plugins')();
 var $28 = new (require('28').$28)('http://portal.28.io/api');
 var VFS = require('28').VFS;
 var _ = require('lodash');
+var minimist = require('minimist');
 
 var Config = require('./config');
 
@@ -248,23 +249,23 @@ var createDatasource = function(projectName, datasource){
     return defered.promise;
 };
 
-gulp.task('28:login', [ 'load-config' ], function(){
+gulp.task('28:login', function(){
     return login(Config.credentials['28'].email, Config.credentials['28'].password).catch(throwError);
 });
 
-gulp.task('28:create-project', [ 'load-config' ], function(){
+gulp.task('28:create-project', function(){
     return createProject(Config.projectName, true).catch(throwError);
 });
 
-gulp.task('28:remove-project', [ 'load-config' ], function(){
+gulp.task('28:remove-project', function(){
     return removeProject(Config.projectName, true).catch(throwError);
 });
 
-gulp.task('28:upload', [ 'load-config' ], function(){
+gulp.task('28:upload', function(){
     return upload(Config.projectName).catch(throwError);
 });
 
-gulp.task('28:setup-datasource', [ 'load-config' ], function(){
+gulp.task('28:setup-datasource', function(){
     var promises = [];
     Config.credentials['28'].datasources.forEach(function(datasource){
         promises.push(createDatasource(Config.projectName, datasource).catch(throwError));
@@ -272,12 +273,53 @@ gulp.task('28:setup-datasource', [ 'load-config' ], function(){
     return Q.all(promises);
 });
 
-gulp.task('28:init', [ 'load-config' ], function(){
+gulp.task('28:init', function(){
     return runQueries(Config.projectName, Config.paths.initQueries).catch(throwError);
 });
 
-gulp.task('28:test', [ 'load-config' ], function(){
+gulp.task('28:test', function(){
     return runQueries(Config.projectName, Config.paths.apiTestQueries).catch(throwError);
+});
+
+gulp.task('trace', ['28:login'], function(done){
+    var knownOptions = {
+        string: [ 'path' ]
+    };
+    var args = minimist(process.argv.slice(2), knownOptions);
+    var path = args.path;
+    if(!path) {
+        throw new $.util.PluginError(__filename, 'Specify --path option.');
+    }
+    var projectName = Config.projectName;
+    /*jshint camelcase:false */
+    var projectToken = credentials.project_tokens['project_' + projectName];
+    var url = 'http://' + projectName + '.28.io' + '/v1/_queries';
+    var request = require('request');
+    path = path.indexOf('?') === -1 ? (path + '?') : path;
+    url += path + '&trace&_token=' + encodeURIComponent(projectToken);
+    request({
+        uri: url,
+        method: 'POST'
+    }, function(error, response, body){
+        if(error) {
+            throw new $.util.PluginError(__filename, error);
+        }
+        $.util.log($.util.colors.gray(body));
+        var traceFile = response.headers['x-28msec-trace'];
+        setTimeout(function(){
+            request({
+                uri: traceFile,
+                method: 'GET'
+            }, function(error, response, body){
+                if(body) {
+                    $.util.log($.util.colors.green(body));
+                } else {
+                    $.util.log($.util.colors.green('No trace.'));
+                }
+                done();
+            });
+        }, 1000);
+    });
 });
 
 module.exports = {

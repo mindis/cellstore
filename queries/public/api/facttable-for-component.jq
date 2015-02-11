@@ -8,9 +8,8 @@ import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace conversion = "http://28.io/modules/xbrl/conversion";
 import module namespace networks = "http://28.io/modules/xbrl/networks";
 import module namespace concept-maps = "http://28.io/modules/xbrl/concept-maps";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
-import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
@@ -24,6 +23,7 @@ declare  %rest:case-insensitive                 variable $token              as 
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
@@ -45,6 +45,7 @@ declare  %rest:case-insensitive                 variable $merge              as 
 declare  %rest:case-insensitive                 variable $additional-rules   as string? external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
 declare  %rest:case-insensitive %rest:distinct  variable $role               as string* external;
+declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 
 session:audit-call($token);
 
@@ -56,15 +57,20 @@ let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 let $networkIdentifier := distinct-values(($networkIdentifier, $role))
 
-(: Object resolution :)
-let $entities := multiplexer:entities(
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
+let $entities as object* := multiplexer:entities(
   $profile-name,
   $eid,
   $cik,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -73,7 +79,12 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $aid)
 
-let $entity    := entities:entities($archives.Entity)
+let $entities as object* :=
+    ($entities[entities:eid($$) = $archives.Entity],
+    let $not-found := $archives.Entity[not entities:eid($entities) = $$]
+    where exists($not-found)
+    return entities:entities($not-found))
+
 let $components as object* :=
     multiplexer:components(
       $profile-name,
@@ -82,7 +93,9 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-    $label)
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
 
 let $component as object? := if($merge) then components:merge($components) else $components[1]
 let $cid as string? := string-join($components ! components:cid($$), "--")
@@ -134,8 +147,14 @@ let $facts :=
         (: if labels are requested by the labels=true parameter then also add labels for concepts :)
         let $concepts as object* := $component.Concepts[]
         for $fact in $facts
-        let $labels :=
-            facts:labels($fact, $concepts:STANDARD_LABEL_ROLE,$concepts:AMERICAN_ENGLISH, $concepts, ())
+        let $labels := labels:labels-for-facts(
+          $fact,
+          $labels:STANDARD_LABEL_ROLE,
+          $language,
+          $concepts,
+          $entities,
+          ()
+        )
         return
             {|
                 trim($fact, "Labels"),
@@ -146,8 +165,8 @@ let $facts := api:normalize-facts($facts)
 let $result :=
         {|
             {
-                CIK : $entity._id,
-                EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
+                CIK : entities:eid($entities),
+                EntityRegistrantName : $entities.Profiles.SEC.CompanyName,
                 TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name,
                 Label : $component.Label,
                 AccessionNumber : $component.Archive,

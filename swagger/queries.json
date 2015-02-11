@@ -12,11 +12,11 @@
         "description": "Entities",
         "operations": [{
             "method": "POST",
-            "summary": "Retrieve information about all or a selection of entities",
+            "summary": "Retrieve metadata about the entities that submit filings. These entities are also referred to by facts with the xbrl:Entity aspect, of which the values are called Entity IDs (EIDs). One entity might have several EIDs.",
             "nickname": "listEntities",
             "parameters": [{
                 "name": "format",
-                "description": "The result format",
+                "description": "Returns the results in the supplied format.",
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -29,7 +29,7 @@
                 "paramType": "query"
             }, {
                 "name": "tag",
-                "description": "A tag to filter",
+                "description": "Includes in the results entities that have the supplied tags. A tag is often a stock index.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -44,34 +44,41 @@
                 "paramType": "query"
             }, {
                 "name": "eid",
-                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "description": "Includes in the results the entity with the supplied Entity ID (scheme + local name).",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "description": "Includes in the results the entity with the supplied CIK number.",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "Includes in the results the entity with the supplied EDINET Code.",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "sic",
-                "description": "The industry group",
+                "description": "Includes in the results the entity with the supplied industry group.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
-                "description": "A ticker symbols",
-                "profile": ["sec"],
+                "description": "Includes in the results the entity with the supplied ticker symbol.",
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "token",
-                "description": "The token of the current session",
+                "description": "The token that allows you to use this API.",
                 "required": true,
                 "type": "string",
                 "paramType": "query"
@@ -93,29 +100,29 @@
                 "message": "Returns query listing."
             }],
             "examples": [{
-                "title": "Get list of all companies/IDs as JSON",
+                "title": "Get all companies as JSON.",
                 "description": "Retrieve information about all entities. Return the result as JSON.",
                 "parameters": {
                     "format": "json"
                 }
             }, {
-                "title": "Get list of all companies/IDs as XML",
+                "title": "Get all companies as XML.",
                 "description": "Retrieve information about all entities. Return the result as XML.",
                 "parameters": {
                     "format": "xml"
                 }
             }, {
-                "title": "Get list of all companies with the tag NIKKEI as XML",
-                "description": "Get list of all companies with the tag NIKKEI. Return the result as XML",
+                "title": "Get all NIKKEI companies as XML.",
+                "description": "Retrieve information about all NIKKEI companies. Return the result as XML",
                 "profile": ["japan"],
                 "parameters": {
                     "tag": "NIKKEI",
                     "format": "xml"
                 }
             }, {
-                "title": "Retrieve information about all DOW30 entities",
+                "title": "Get all DOW30 companies as CSV.",
                 "profile": ["sec"],
-                "description": "Retrieve information about all DOW30 entities. Return the result as CSV.",
+                "description": "Retrieve information about all DOW30 companies. Return the result as CSV.",
                 "parameters": {
                     "tag": "DOW30",
                     "format": "csv"
@@ -127,11 +134,11 @@
         "description": "Filings",
         "operations": [{
             "method": "POST",
-            "summary": "Retrieve the filings of a particular entity",
+            "summary": "Retrieve metadata about the filings, also called archives. The filings are identified with Archive IDs (AIDs). Facts can be bound with filings with the xbrl28:Archive aspect, whose values are AIDs.",
             "nickname": "listFilings",
             "parameters": [{
                 "name": "format",
-                "description": "The result format",
+                "description": "Returns the results in the supplied format.",
                 "required": false,
                 "type": "string",
                 "enum": [
@@ -144,7 +151,7 @@
                 "paramType": "query"
             }, {
                 "name": "tag",
-                "description": "A tag to filter",
+                "description": "Filters the results for filings submitted by the entity identified by this tag, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -158,40 +165,47 @@
                 "paramType": "query"
             }, {
                 "name": "eid",
-                "description": "An Entity ID (a value of the xbrl:Entity aspect)",
+                "description": "Filters the results for filings submitted by the entity identified by this EID, with the same semantics as the entities.jq endpoint.",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "A CIK number",
-                "profile": ["sec", "japan"],
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
-                "name": "ticker",
-                "description": "A ticker symbol",
+                "description": "Filters the results for filings submitted by the entity identified by this CIK, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "edinetcode",
+                "description": "Filters the results for filings submitted by the entity identified by this EDINET code, with the same semantics as the entities.jq endpoint.",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "ticker",
+                "description": "Filters the results for filings submitted by the entity identified by this ticker symbol, with the same semantics as the entities.jq endpoint.",
+                "profile": ["sec", "japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "sic",
-                "description": "The industry group",
+                "description": "Filters the results for filings submitted by the entity identified by this industry group, with the same semantics as the entities.jq endpoint.",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "aid",
-                "description": "An Archive ID (a value of the xbrl28:Archive aspect)",
+                "description": "Includes in the results the filings with the supplied Archive ID. This parameter is unaffected by the other filters.",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the filings to retrieve (default: LATEST)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: LATEST)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -203,7 +217,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the filings to retrieve (default: FY)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -217,7 +231,7 @@
                 "paramType": "query"
             }, {
                 "name": "token",
-                "description": "The token of the current session",
+                "description": "The token that allows you to use this API.",
                 "required": true,
                 "type": "string",
                 "paramType": "query"
@@ -239,8 +253,8 @@
                 "message": "Returns all filings for the given entity."
             }],
             "examples": [{
-                "title": "Retrieve the filings of a specific entity",
-                "description": "Retrieve information about the filings of an entity identified by its CIK. Return the result as XML.",
+                "title": "Get all filings from a specific entity.",
+                "description": "Retrieve information about the filings of an entity. Return the result as XML.",
                 "profile": ["sec"],
                 "parameters": {
                     "cik": "66740",
@@ -290,14 +304,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "A ticker symbol",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -436,7 +457,7 @@
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -464,8 +485,15 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -587,6 +615,15 @@
                 "parameters": {
                     "ticker": "ko"
                 }
+            }, {
+                "title": "Retrieve information about all components of NIPPON STEEL & SUMITOMO METAL CORPORATION's 2014 Q1 filing.",
+                "description": "Retrieve information about all components of a particular filing which is identified by a company ID and a fiscal period. Return the result as JSON.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://disclosure.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear" : 2014,
+                    "fiscalPeriod" : "Q1"
+                }
             }]
         }]
     }, {
@@ -630,15 +667,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -699,6 +743,12 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "label",
                 "description": "A search term to search in the labels of components (e.g. stock)",
                 "required": false,
@@ -736,11 +786,13 @@
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
                 "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -806,8 +858,8 @@
                     "disclosure": "BalanceSheet"
                 }
             }, {
-                "title": "Get B/S report by company name/ID and period",
-                "description": "Get B/S report by company name/ID and period.",
+                "title": "Get B/S report by company name/ID and period (by default in English).",
+                "description": "Get B/S report by company name/ID and period (by default in English).",
                 "profile": ["japan"],
                 "parameters": {
                     "eid": "http://info.edinet-fsa.go.jp E01225-000",
@@ -816,6 +868,22 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
+                    "format": "xml"
+                }
+            }, {
+                "title": "Get B/S report by company name/ID and period, in Japanese.",
+                "description": "Get B/S report by company name/ID and period, in Japanese.",
+                "profile": ["japan"],
+                "parameters": {
+                    "eid": "http://info.edinet-fsa.go.jp E01225-000",
+                    "fiscalYear": "2014",
+                    "fiscalPeriod": "Q1",
+                    "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
+                    "profile-name": "japan",
+                    "merge": "true",
+                    "labels": "true",
+                    "language" : "ja",
                     "format": "xml"
                 }
             }, {
@@ -829,6 +897,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -842,6 +911,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -855,6 +925,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -868,6 +939,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -881,6 +953,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -894,6 +967,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -907,6 +981,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }, {
@@ -920,6 +995,7 @@
                     "role": "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
                     "profile-name": "japan",
                     "merge": "true",
+                    "labels": "true",
                     "format": "xml"
                 }
             }
@@ -965,15 +1041,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1030,6 +1113,12 @@
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
                 "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1270,13 +1359,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1320,6 +1418,18 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "reportElement",
+                "description": "Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill).",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "label",
+                "description": "A search term to search in the labels of components (e.g. stock)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1388,15 +1498,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1474,20 +1591,18 @@
                 "name": "validate",
                 "description": "Validate and stamp facts accordingly",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ]
+                "type": "boolean"
             }, {
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "language",
+                "description": "A language code",
+                "required": false,
                 "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -1556,15 +1671,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1642,21 +1764,13 @@
                 "name": "eliminate",
                 "description": "Wwether to eliminate empty rows/colummns",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "validate",
                 "description": "Validate and stamp facts accordingly",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -1727,15 +1841,22 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of the entity",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1857,11 +1978,7 @@
                 "name": "labels",
                 "description": "Whether human readable labels should be included for concepts in each fact. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -1951,7 +2068,7 @@
                 "description": "Get value of Total Assets and Profit/Loss by company name/ID for Q1/2014.",
                 "profile": ["japan"],
                 "parameters": {
-                    "xbrl:Entity": "http://disclosure.edinet-fsa.go.jp E02529-000",
+                    "edinetcode": "E02529",
                     "fiscalPeriod": "Q1",
                     "fiscalYear": 2014,
                     "concept": ["jpcrp-cor:TotalAssetsIFRSSummaryOfBusinessResults", "jpcrp-cor:ProfitLossAttributableToOwnersOfParentIFRSSummaryOfBusinessResults"]
@@ -1963,6 +2080,18 @@
                             "expectedResult": 2
                         }
                     ]
+                }
+            }, {
+                "title": "Get value of current assets for each fiscal year for E02513.",
+                "description": "Get value of current assets for each fiscal year for E02513.",
+                "profile": ["japan"],
+                "parameters": {
+                    "edinetcode": "E02513",
+                    "fiscalPeriod": "FY",
+                    "fiscalYear": "ALL",
+                    "concept": ["jppfs-cor:Assets", "jp-t-cte:Assets"],
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default" : "jppfs-cor:NonConsolidatedMember"
                 }
             }, {
                 "title": "Get Number of Shares held by major shareholders by company name/ID for Q2/2014",
@@ -2016,7 +2145,7 @@
             }, {
                 "name": "ticker",
                 "description": "The ticker of the entity",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2044,8 +2173,15 @@
                 "paramType": "query"
             }, {
                 "name": "cik",
-                "description": "The CIK of an entity. This parameter needs to be used together with the fiscalYear, fiscalPeriod, and disclosure parameters to identify a component.",
-                "profile": ["sec", "japan"],
+                "description": "A CIK number",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2082,13 +2218,6 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "cid",
-                "description": "[Deprecated] The id of a particular component",
-                "deprecated": true,
-                "required": false,
-                "type": "string",
-                "paramType": "query"
-            }, {
                 "name": "networkIdentifier",
                 "description": "The network identifier (=role) of a particular component",
                 "profile": ["sec"],
@@ -2113,7 +2242,7 @@
                 "description": "The name of the report element to search for (e.g. us-gaap:Goodwill)",
                 "required": false,
                 "type": "string",
-                "paramType": "query"
+                "paramType": "form"
             }, {
                 "name": "label",
                 "description": "A search term to search in the labels of components (e.g. stock). Exact match, except for the SEC profile where it performs full text search in English.",
@@ -2175,6 +2304,26 @@
                     "labelRole" : "http://www.xbrl.org/2003/role/label",
                     "format" : "xml"
                 }
+            }, {
+                "title": "Get label of standard taxonomy by element name, as XML.",
+                "description": "Get label of standard taxonomy by element name.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "reportElement": "jppfs-cor:CurrentAssets"
+                }
+            }, {
+                "title": "Get element name of standard taxonomy by label, as XML.",
+                "description": "Get element name of standard taxonomy by label.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "label": "Accounting policy for deferred assets"
+                }
             }]
         }]
     }, {
@@ -2221,14 +2370,21 @@
             }, {
                 "name": "cik",
                 "description": "A CIK number",
-                "profile": ["sec", "japan"],
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "edinetcode",
+                "description": "An EDINET Code",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "ticker",
                 "description": "A ticker symbols",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2272,14 +2428,23 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "role",
+                "description": "The role of a particular component",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "disclosure",
+                "description": "The disclosure to search for (e.g. BalanceSheet)",
+                "profile": ["sec"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "onlyNames",
                 "description": "Whether only the names of the report elements should be returned. If so, the values don't contain duplicates. (default: false)",
                 "required": false,
-                "type": "string",
-                "enum": [
-                    "true",
-                    "false"
-                ],
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "name",
@@ -2313,6 +2478,18 @@
                 "description": "A search term to search in the labels of report elements (e.g. stock)",
                 "required": false,
                 "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "onlyTextBlocks",
+                "description": "Filters by text block/not text block (default: no filtering).",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
+                "name": "abstract",
+                "description": "Filters by abstract/not abstract (default: no filtering).",
+                "required": false,
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "token",
@@ -2356,7 +2533,7 @@
                     "format": "csv"
                 }
             }, {
-                "title": "Get element name of standard taxonomy by label, as XML.",
+                "title": "Get report element of standard taxonomy by label, as XML.",
                 "description": "Get element name of standard taxonomy by label.",
                 "profile": ["japan"],
                 "parameters": {
@@ -2366,31 +2543,42 @@
                     "label": "Accounting policy for deferred assets"
                 }
             }, {
+                "title": "Get all non-abstract standard report elements.",
+                "description": "Get all non-abstract standard report elements.",
+                "profile": ["japan"],
+                "parameters": {
+                    "aid": "STANDARD-TAXONOMY-2014",
+                    "format": "xml",
+                    "profile-name": "japan",
+                    "abstract": "false"
+                }
+            }, {
                 "title": "Get element name of specified company's taxonomy by label and company ID",
                 "description": "Get element name of specified company's taxonomy by label and company ID.",
                 "profile": ["japan"],
                 "parameters": {
-                    "cik": "E01225",
+                    "edinetcode": "E01225",
                     "format": "json",
                     "profile-name": "japan",
                     "label": "Loss of inactive facilities"
                 }
             }, {
-                "title": "Get label of standard taxonomy by element name",
-                "description": "Get label of standard taxonomy by element name.",
+                "title": "Get metadata of a report element of standard taxonomy by name, as XML.",
+                "description": "Get metadata of standard taxonomy by element name.",
                 "profile": ["japan"],
                 "parameters": {
                     "aid": "STANDARD-TAXONOMY-2014",
                     "format": "json",
                     "profile-name": "japan",
-                    "name": "jppfs-cor:CurrentAssets"
+                    "name": "jppfs-cor:CurrentAssets",
+                    "format": "xml"
                 }
             }, {
                 "title": "Get label of specified company's taxonomy by element name and company ID",
                 "description": "Get label of specified company's taxonomy by element name and company ID.",
                 "profile": ["japan"],
                 "parameters": {
-                    "cik": "E01225",
+                    "edinetcode": "E01225",
                     "name": "jpcrp-cor:NotesConsolidatedStatementOfCashFlowsHeading"
                 }
             }]

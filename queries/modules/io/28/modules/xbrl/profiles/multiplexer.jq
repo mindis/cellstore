@@ -15,12 +15,15 @@ module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
+import module namespace concepts = "http://28.io/modules/xbrl/concepts";
+import module namespace reports = "http://28.io/modules/xbrl/reports";
 
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
-
 import module namespace japan = "http://28.io/modules/xbrl/profiles/japan/core";
+
+import module namespace seq = "http://zorba.io/modules/sequence";
 
 (:~
  : <p>Return latest filings of entities and fiscal periods.</p>
@@ -78,8 +81,8 @@ declare function multiplexer:entities(
     order by $entity.Profiles.SEC.CompanyName
     return $entity
   case "japan" return
-    for $entity in japan:entities($cik, $eid, $tag)
-    order by $entity._id
+    for $entity in japan:entities($cik, $ticker, $eid, $tag)
+    order by $entity.SubmitterNameAlphabetic
     return $entity
   default return
     entities:entities($eid)
@@ -128,11 +131,11 @@ declare function multiplexer:filings(
   : @param $concept a sequence of report element names.
   : @param $disclosure a sequence of disclosure names.
   : @param $role a sequence of network identifiers.
-  : @param $label a sequence of labels.
+  : @param $exact-label a sequence of labels for exact matches.
+  : @param $full-text-label a sequence of labels for full-text search.
   : searched.
   : @param $options additional options. among which <ul>
-  :   <li>LabelsOnly: to only get label information.</li>
-  :   <li>ExactLabelMatch: to only get exact label matches.</li>
+  :   <li>MetadataOnly: to only get Archive and Role information.</li>
   : </lu>
   :
   : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
@@ -146,7 +149,8 @@ declare function multiplexer:components(
   $concept as string*,
   $disclosure as string*,
   $role as string*,
-  $label as string*,
+  $exact-label as string*,
+  $full-text-label as string*,
   $options as object?) as object*
 {
   switch($profile-name)
@@ -156,7 +160,7 @@ declare function multiplexer:components(
     $concept,
     $disclosure,
     $role,
-    $label)
+    $full-text-label)
   default return
     let $role as string* := if(empty($role))
                             then $components:ALL-ROLES
@@ -167,16 +171,14 @@ declare function multiplexer:components(
     let $concept as item* := if(empty($concept))
                              then $components:ALL-CONCEPTS
                              else $concept
-    let $label as item* :=
-      switch(true)
-      case empty($label) return $components:ALL-LABELS
-      case not $options.ExactLabelMatches eq false return $label
-      default return ()
+    let $exact-label as item* := if(empty($exact-label))
+                            then $components:ALL-LABELS
+                            else $exact-label
     return components:components-for(
       $archive,
       $role,
       $concept,
-      $label,
+      $exact-label,
       $options
     )
 };
@@ -190,7 +192,8 @@ declare function multiplexer:components(
   : @param $concept a sequence of report element names.
   : @param $disclosure a sequence of disclosure names.
   : @param $role a sequence of network identifiers.
-  : @param $label a sequence of labels.
+  : @param $exact-label a sequence of labels for exact matches.
+  : @param $full-text-label a sequence of labels for full-text search.
   :
   : @error multiplexer:ARCHIVE-MISSING if a AID is required but not provided.
   :
@@ -203,7 +206,8 @@ declare function multiplexer:components(
   $concept as string*,
   $disclosure as string*,
   $role as string*,
-  $label as string*) as object*
+  $exact-label as string*,
+  $full-text-label as string*) as object*
 {
   multiplexer:components(
     $profile-name,
@@ -212,6 +216,116 @@ declare function multiplexer:components(
     $concept,
     $disclosure,
     $role,
-    $label,
+    $exact-label,
+    $full-text-label,
     ())
+};
+
+declare function multiplexer:concepts(
+  $profile-name as string,
+  $archive as object*,
+  $concept as string*,
+  $disclosure as string*,
+  $role as string*,
+  $exact-label as string*,
+  $full-text-label as string*,
+  $report as object?,
+  $onlyNames as boolean) as object*
+{
+  switch(true)
+  case exists($report)
+    return
+    let $map as object? := reports:concept-map($report)
+    let $concepts-computable-by-maps as object* :=
+        switch(true)
+            case not exists($map) return ()
+            case not exists($concept) return $map.Trees[]
+            default return
+                let $keys as string* := $map.Trees[].Name
+                for $c as string in $concept[$$ = $keys]
+                return ($map.Trees[])[$$.Name eq $c]
+    let $mapped-names as string* := $concepts-computable-by-maps.To[].Name
+    let $concepts-not-computable-by-maps as string* :=
+        seq:value-except($concept, $mapped-names)
+    let $results-not-computed-by-maps as object* :=
+        if(exists($concepts-not-computable-by-maps))
+        then
+          multiplexer:concepts(
+            $profile-name,
+            $archive,
+            $concepts-not-computable-by-maps,
+            $disclosure,
+            $role,
+            $exact-label,
+            $full-text-label,
+            (),
+            $onlyNames
+          )
+        else ()
+    let $results-computed-by-maps as object* :=
+        let $all-results as object* := multiplexer:concepts(
+          $profile-name,
+          $archive,
+          $mapped-names,
+          $disclosure,
+          $role,
+          $exact-label,
+          $full-text-label,
+          (),
+          $onlyNames
+        )
+        for $c as object in $concepts-computable-by-maps
+        for $result as object in
+            for $candidate-concept in $c.To[].Name
+            let $facts := $all-results[$$.Name = $candidate-concept]
+            where exists($facts)
+            count $n
+            where $n eq 1
+            return $facts
+        let $map-concept := (for $candidate in $concepts-computable-by-maps
+                            where $result.Name = (keys($candidate.To), $candidate.To[].Name)
+                            return $candidate)[1]
+        return
+            copy $n := $result
+            modify (
+                replace value of json $n.Name with $map-concept.Name,
+                insert json  { Origin : $result.Name } into $n)
+            return $n
+    return ($results-not-computed-by-maps, $results-computed-by-maps)
+
+  case empty($disclosure) and empty($report) and empty($full-text-label)
+    return
+    let $role as string* := if(empty($role))
+                            then $concepts:ANY_COMPONENT_LINK_ROLE
+                            else $role
+    let $concept as item* := if(empty($concept))
+                             then $concepts:ALL_CONCEPT_NAMES
+                             else $concept
+    let $exact-label as item* := if(empty($exact-label))
+                            then $concepts:ALL_CONCEPT_LABELS
+                            else $exact-label
+    return concepts:concepts(
+      $concept,
+      $archive,
+      $role,
+      $exact-label,
+      { OnlyNames: $onlyNames}
+    )
+  default return
+    let $components as object* :=
+      multiplexer:components(
+        $profile-name,
+        $archive,
+        (),
+        $concept,
+        $disclosure,
+        $role,
+        $exact-label,
+        $full-text-label,
+        { MetadataOnly: true })
+    return concepts:concepts-for-components(
+      $concept,
+      $components,
+      $exact-label,
+      { OnlyNames: $onlyNames})
 };

@@ -9,6 +9,7 @@ declare  %rest:case-insensitive                 variable $token              as 
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
@@ -18,7 +19,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $eid                as 
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $networkIdentifier  as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $role               as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $cid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $reportElement      as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $concept            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
@@ -37,15 +37,21 @@ let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 let $networkIdentifier := distinct-values(($networkIdentifier, $role))
 
-(: Object resolution :)
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
 let $entities := multiplexer:entities(
   $profile-name,
   $eid,
   $cik,
   $tag,
   $ticker,
-  $sic,
-  ())
+  $sic, ())
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -53,28 +59,28 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $aid)
 
-let $components as object* :=
-    multiplexer:components(
+let $concepts as object* :=
+    multiplexer:concepts(
       $profile-name,
       $archives,
-      $cid,
       $reportElement,
       $disclosure,
       $networkIdentifier,
-      $label,
-      { LabelsOnly: true, ExactLabelMatches: true})
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"],
+      (),
+      false)
 
 let $res as object* :=
-  for $component in $components
-  for $concept in $component.Concepts[]
+  for $concept in $concepts
   where empty($reportElement) or $concept.Name = $reportElement
   for $found-label in $concept.Labels[]
   where (empty($label) or $found-label.Value = $label) and
         (empty($language) or $found-label.Language = $language) and
         (empty($labelRole) or $found-label.Role = $labelRole)
   return {|
-    { Archive: $component.Archive },
-    { ComponentRole: $component.Role },
+    { Archive: $concept.Archive },
+    { ComponentRole: $concept.Role },
     { Concept: $concept.Name },
     $found-label
   |}

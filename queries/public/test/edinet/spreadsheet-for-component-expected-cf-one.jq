@@ -74,7 +74,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "5620fc2b-21b6-4a28-a127-a61e10780a12", 
+        "_id" : "df6a9fb1-a91b-439a-b001-cc01461372ba", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -137,13 +137,15 @@
   } ], 
   "GlobalConstraintLabels" : {
     "xbrl:Concept" : "Concept [Axis]", 
-    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "Description of fact that quarterly statement of cash flows has not been prepared [text block]", 
+    "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock" : "Description of fact that quarterly statement of cash flows has not been prepared", 
     "xbrl:Entity" : "Reporting Entity [Axis]", 
+    "http://disclosure.edinet-fsa.go.jp E01225-000" : "NIPPON STEEL & SUMITOMO METAL CORPORATION", 
     "xbrl:Unit" : "Unit [Axis]", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
     "xbrl28:Archive" : "Archive [Axis]", 
     "fsa:Submitted" : "FSA Submission Date [Axis]", 
+    "2014-08-07" : "August 7, 2014", 
     "fsa:FiscalYear" : "Fiscal Year [Axis]", 
     "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 
     "fsa:FiscalPeriodType" : "Fiscal Period Type [Axis]"
