@@ -2213,8 +2213,20 @@
                     "jpcrp-cor:MajorShareholdersAxis": "ALL",
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
-            },
-            {
+            }, {
+                "title": "Get forecast values by company name/ID and reported period/forecast period",
+                "description": "Get forecast values by company name/ID and reported period/forecast period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "format": "xml",
+                    "concept": "tse-ed-t:BasicEarningsPerShareIFRS",
+                    "ticker": 8058,
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "ALL",
+                    "fiscalYear": 2014
+                }
+            }, {
                 "title": "Get all dividend forecasts for 2014 by company name/ID",
                 "description": "Get all dividend forecasts for 2014 by company name/ID",
                 "profile": ["japan"],
