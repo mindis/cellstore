@@ -138,17 +138,17 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "df6a9fb1-a91b-439a-b001-cc01461372ba", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
+        "_id" : "a3a62612-f360-4443-ae09-8b9ba52259f0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
-          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
-          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "fsa:Submitted" : "2014-08-07", 
           "fsa:FiscalPeriod" : "Q1", 
+          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2014, 
-          "fsa:Submitted" : "2014-08-07", 
+          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
           "xbrl:Unit" : "xbrl28:NoUnit", 
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }, 
@@ -178,17 +178,17 @@
           }
         } ]
       }, {
-        "_id" : "ce7246ec-0802-4c6c-8819-1db13395c261", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
+        "_id" : "b34f1928-79ae-43df-acea-2a006d5cb278", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
-          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
-          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01264-000", 
-          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "fsa:Submitted" : "2014-08-04", 
           "fsa:FiscalPeriod" : "Q1", 
+          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01264-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2014, 
-          "fsa:Submitted" : "2014-08-04", 
+          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
           "xbrl:Unit" : "xbrl28:NoUnit", 
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }, 
@@ -218,17 +218,17 @@
           }
         } ]
       }, {
-        "_id" : "27cd6eed-ce05-4889-83db-d9e4df728e9c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
+        "_id" : "55463a6d-6381-4162-9292-59a52b2f3585", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
-          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
-          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04147-000", 
-          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "fsa:Submitted" : "2014-08-06", 
           "fsa:FiscalPeriod" : "Q1", 
+          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04147-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2014, 
-          "fsa:Submitted" : "2014-08-06", 
+          "xbrl:Concept" : "jpcrp-cor:DescriptionOfFactThatQuarterlyStatementOfCashFlowsHasNotBeenPreparedTextBlock", 
           "xbrl:Unit" : "xbrl28:NoUnit", 
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }, 
@@ -302,17 +302,17 @@
           "fsa:FiscalPeriodType" : "YTD"
         }
       }, {
-        "_id" : "f57c9cf0-abdc-4f50-bcc9-0d0c7918c2e3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
+        "_id" : "33e8f245-e9c4-4326-922b-6be1f79961e2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
-          "xbrl:Concept" : "jpcrp-cor:ReconciliationOfEndingBalanceOfCashAndCashEquivalentsWithAccountBalancesPerBalanceSheetTextBlock", 
-          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04425-000", 
-          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "fsa:Submitted" : "2014-08-05", 
           "fsa:FiscalPeriod" : "Q1", 
+          "xbrl:Period" : "2014-04-01/2014-06-30", 
+          "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04425-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2014, 
-          "fsa:Submitted" : "2014-08-05", 
+          "xbrl:Concept" : "jpcrp-cor:ReconciliationOfEndingBalanceOfCashAndCashEquivalentsWithAccountBalancesPerBalanceSheetTextBlock", 
           "xbrl:Unit" : "xbrl28:NoUnit", 
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }, 

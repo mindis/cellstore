@@ -1,6 +1,9 @@
 [
   {
     "FiscalYear" : 2014,
+    "FiscalPeriod" : "FY"
+  }, {
+    "FiscalYear" : 2014,
     "FiscalPeriod" : "Q1"
   }, {
     "FiscalYear" : 2014,

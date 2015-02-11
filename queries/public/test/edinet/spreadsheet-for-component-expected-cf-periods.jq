@@ -734,18 +734,18 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ null, null, null, null, null, null ], [ [ {
-        "_id" : "ece3adca-92b5-4a72-9a49-5abd5b470e63", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d7025007-ecff-4c29-88cc-763c93ed6444", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -136970000000, 
@@ -757,18 +757,18 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "27fd59b0-0c17-49dc-982c-69294cb485e7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c9eba32a-5d14-43ee-bf11-0352a85fcb14", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -220945000000, 
@@ -780,15 +780,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b1a9d0d8-c1b4-4673-8ca1-3364c38e4109", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f31ed308-eb2f-4b6e-940a-8fd98aef7aa5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -830,15 +830,15 @@
           }
         } ]
       }, {
-        "_id" : "09e1e084-4f66-400b-96de-ca57af5d1947", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "925c1bbe-a401-4cc3-aeb3-31b4733c28d9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -880,18 +880,18 @@
           }
         } ]
       }, {
-        "_id" : "a6e41232-a28e-4ba2-8563-160fbd9f9e79", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5cfbaee6-4b45-4eba-8de8-a28ac7d33006", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 120053000000, 
@@ -903,18 +903,18 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "9b63927f-b84c-4a8f-adb2-665c4d30b928", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "638a651b-eada-4af9-9dec-b292e6404c4e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 16506000000, 
@@ -926,15 +926,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "f3de920f-871c-4984-a2a0-7b0fccd0712d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f2050fd1-8f3f-4bef-92ff-b91a07e44509", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -976,15 +976,15 @@
           }
         } ]
       }, {
-        "_id" : "aeac6a6d-14e0-40a3-a936-fc1190c37e31", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "89506f13-ac4e-4198-87f3-5abc3e04d56e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1026,18 +1026,18 @@
           }
         } ]
       }, {
-        "_id" : "c4686859-0fb2-41cf-94cd-3e3080ef42d1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "547f2e64-0de4-47d8-a762-1051696d68db", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 185377000000, 
@@ -1049,18 +1049,18 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "f503a7b7-b6e5-4d7e-8a63-9dfc0e2643f9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f65c05d0-40c2-431c-a2db-35ac339ae5ad", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 59719000000, 
@@ -1072,15 +1072,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "aad81210-24c0-4816-b382-15374bc54ed3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ca468ea7-0ca4-4cee-846f-365f7cedb416", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1122,15 +1122,15 @@
           }
         } ]
       }, {
-        "_id" : "c6a63900-8d3f-4752-be31-61d728431c57", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "34092dd6-f1fd-45d9-9250-c9a588f59bff", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1172,18 +1172,18 @@
           }
         } ]
       }, {
-        "_id" : "d0ebba4c-8215-4eb0-b28d-74ff7f9383a4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a50c0b7f-f388-40aa-b0b7-97ff92652290", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11242000000, 
@@ -1195,18 +1195,18 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "45b91113-5045-4a03-a962-a142dfe0060c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bcc203f6-7795-4011-a6cf-6619540bc0f6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -89438000000, 
@@ -1218,15 +1218,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "fbe54465-6764-4039-936a-0f0b452e3fb6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c74833a7-c059-4d49-9b3b-a7b8d88f0775", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1268,15 +1268,15 @@
           }
         } ]
       }, {
-        "_id" : "319329d9-1d3e-4500-a5e8-66dbfb35c57b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2570a6cc-f3ef-4bad-b52b-9c62750402a8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1318,61 +1318,61 @@
           }
         } ]
       }, {
-        "_id" : "b005e0de-1bd6-4340-b203-70a817df8a0a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a6a59490-16bf-43cc-b216-1c4d0358c84f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
-          "fsa:FiscalPeriod" : "FY", 
-          "fsa:FiscalPeriodType" : "YTD", 
-          "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
-        }, 
-        "Type" : "NumericValue", 
-        "Value" : 281079000000, 
-        "Decimals" : -6, 
-        "Concept" : {
-          "Balance" : "CREDIT", 
-          "PeriodType" : "duration", 
-          "DataType" : "xbrli:monetaryItemType"
-        }, 
-        "AuditTrails" : [  ]
-      }, {
-        "_id" : "683acc4c-87f2-4b92-b7d0-1ebab1b764bd", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
-        "Aspects" : {
-          "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
-          "fsa:FiscalPeriod" : "FY", 
-          "fsa:FiscalPeriodType" : "YTD", 
-          "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
-        }, 
-        "Type" : "NumericValue", 
-        "Value" : 166786000000, 
-        "Decimals" : -6, 
-        "Concept" : {
-          "Balance" : "CREDIT", 
-          "PeriodType" : "duration", 
-          "DataType" : "xbrli:monetaryItemType"
-        }, 
-        "AuditTrails" : [  ]
-      } ], [ {
-        "_id" : "a085cd3f-e27e-45b0-a0bf-f89d3368938d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
-        "Aspects" : {
-          "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "fsa:FiscalPeriodType" : "YTD", 
+          "fsa:FiscalYear" : 2008, 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
+        }, 
+        "Type" : "NumericValue", 
+        "Value" : 281079000000, 
+        "Decimals" : -6, 
+        "Concept" : {
+          "Balance" : "CREDIT", 
+          "PeriodType" : "duration", 
+          "DataType" : "xbrli:monetaryItemType"
+        }, 
+        "AuditTrails" : [  ]
+      }, {
+        "_id" : "2851355e-e3e5-403b-a4fb-c4e437d2aaa7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
+        "Aspects" : {
+          "xbrl28:Archive" : "S0003FNS", 
+          "fsa:Submitted" : "2009-06-24", 
+          "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "fsa:FiscalPeriodType" : "YTD", 
+          "fsa:FiscalYear" : 2008, 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY"
+        }, 
+        "Type" : "NumericValue", 
+        "Value" : 166786000000, 
+        "Decimals" : -6, 
+        "Concept" : {
+          "Balance" : "CREDIT", 
+          "PeriodType" : "duration", 
+          "DataType" : "xbrli:monetaryItemType"
+        }, 
+        "AuditTrails" : [  ]
+      } ], [ {
+        "_id" : "3f4c7d0f-a396-4b2e-b444-c0b8e1f643ee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
+        "Aspects" : {
+          "xbrl28:Archive" : "S0003FNS", 
+          "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1414,15 +1414,15 @@
           }
         } ]
       }, {
-        "_id" : "c85820d9-198d-46ea-9aa3-3dd0396c897b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a43c3e78-1751-4a29-a957-dc5526badecb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeBeforeIncomeTaxes", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1464,18 +1464,18 @@
           }
         } ]
       } ] ], [ {
-        "_id" : "1bd126a5-fe15-498a-b1d1-3571b93634f3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "51da9b76-bce0-4b66-a716-07408728596d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 288770000000, 
@@ -1486,15 +1486,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "cdb09b76-071e-4819-acd6-23cd544d0b72", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "13f1cb09-5912-445e-a652-e5554664c515", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1535,18 +1535,18 @@
           }
         } ]
       }, {
-        "_id" : "c189de14-c69e-40a6-a004-c921dec510de", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ea5e9a51-28f8-4941-b479-ce67dccc5c43", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 280940000000, 
@@ -1557,15 +1557,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "e698deb1-33df-47a7-b445-d579427c09af", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8ccc7208-5b62-4698-813f-5a8b4d4a01e0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1606,18 +1606,18 @@
           }
         } ]
       }, {
-        "_id" : "4b934f41-5985-4cf2-8ebd-c5d685409d25", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "070364a5-e590-4a86-8379-1587e76471ff", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 291587000000, 
@@ -1628,15 +1628,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "50e95b58-b204-4baa-9c9b-db1bc4bd8beb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "df41e6b1-5df8-438e-859a-fd6aca0d22db", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1677,18 +1677,18 @@
           }
         } ]
       }, {
-        "_id" : "d463f554-dc28-44e5-975c-b8a6ffa48d7c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c778b79f-e5b5-4d64-8aa1-98068e67095e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 284092000000, 
@@ -1699,15 +1699,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1107c180-8cc3-4275-9944-b21efaf5dfa6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d2a11a39-9895-46c3-8ae9-9a425f1f3b9f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1748,18 +1748,18 @@
           }
         } ]
       }, {
-        "_id" : "e0946747-9966-40e6-a7bd-1dcbcceabda4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "63ffae63-712c-4f08-adca-76e84a6490e7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 273744000000, 
@@ -1770,15 +1770,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "cd6b52f8-3e4d-4475-a1e6-ec80b96f094a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ffe503d7-338f-495c-b0d9-328176b51780", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DepreciationAndAmortizationOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1819,18 +1819,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "899099c9-9cef-4d17-9ec4-91759c6c1671", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0b5d7f9f-8279-44b9-a49d-2c801e24a5ee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ImpairmentLossOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ImpairmentLossOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 132818000000, 
@@ -1841,15 +1841,15 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "e9ab5104-2ea2-412d-867c-9ea4ad6c8f32", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "808cedf4-fd3f-4611-bf02-2a0a2070f9e1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ImpairmentLossOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ImpairmentLossOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1918,18 +1918,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       } ], [ {
-        "_id" : "bfeb55a2-a44b-4a4e-9da7-bd3bfe041618", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1d163b86-1f3e-496f-bbfb-d55a15407cb9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -17671000000, 
@@ -1940,15 +1940,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e1675145-c10d-48df-a58d-d90512f5c250", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e1d4b373-b233-48fa-af82-4df6cae53ab2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -1989,18 +1989,18 @@
           }
         } ]
       }, {
-        "_id" : "cf5de4cf-71cb-4c84-bcd3-74a2e1a4b679", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "180832ee-7dd7-4278-b512-da7ee278c75e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16087000000, 
@@ -2011,15 +2011,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "01e14f79-077e-4284-a728-5e3e219b7bd6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c6d598c7-9601-440d-a6f2-c109e0b8292c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2060,18 +2060,18 @@
           }
         } ]
       }, {
-        "_id" : "45a74d96-2efc-488c-9aac-59d95a2fdf90", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ce0d0bcf-6439-4a5c-af37-17113160f5a4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16116000000, 
@@ -2082,15 +2082,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "05cb1782-b47f-4e42-8495-bf0dea0826a0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cc2ef1fd-836a-429d-b814-bfb894518b12", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2131,18 +2131,18 @@
           }
         } ]
       }, {
-        "_id" : "12dec8c5-cb28-4fab-83ef-45bf3de0e288", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "35931123-7a33-4494-b5ce-7503226a1192", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16656000000, 
@@ -2153,15 +2153,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4492165b-5112-4f09-8e3e-6e39a32ce2de", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2537759f-7342-438a-99fa-7ea33e2cd105", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2202,18 +2202,18 @@
           }
         } ]
       }, {
-        "_id" : "fa01a11b-fa12-498d-a260-84f1ac98454c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4cad822d-0633-4ad1-903f-b1c6f50f1b84", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -25085000000, 
@@ -2224,15 +2224,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "69291cce-d24d-4eb0-a28f-4bcab68f7bab", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "918b5d7c-8a37-4727-88ad-b3312f1c43fc", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2273,18 +2273,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "dbc9b174-2b4b-4941-96bc-61ec52054d03", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "27560908-bb57-414a-8d55-e121a7b583e1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 23539000000, 
@@ -2295,15 +2295,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "219513db-5a26-4d70-8f8a-e13b22e8c553", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cdeb9144-1a53-4e07-8c53-3eb081f20d97", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2344,18 +2344,18 @@
           }
         } ]
       }, {
-        "_id" : "cb476e5d-061f-466f-be7b-01990888b4c7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "08699050-ea66-43dd-b638-0cac71b1685f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 17834000000, 
@@ -2366,15 +2366,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "d8e2addf-22d8-4b6b-9a53-b187b0b22e1b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ad8e4a4c-d4ae-4a6c-abc4-df815ed4297e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2415,18 +2415,18 @@
           }
         } ]
       }, {
-        "_id" : "14cd61cd-9a4d-420b-8398-b18cb73ec393", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b319c2a5-1ff7-4155-b401-ab47f7a7aebd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 18355000000, 
@@ -2437,15 +2437,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "fa5df8a4-d44c-4273-b8cb-ef6c4a4cad42", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4b34f76f-0621-4f32-87da-bed18c60e9f9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2486,18 +2486,18 @@
           }
         } ]
       }, {
-        "_id" : "1d113afd-53c4-42a0-b507-63010b727dd8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "af692e68-ebc9-4ad7-89a5-d7e341543f71", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 19803000000, 
@@ -2508,15 +2508,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "963480ef-b12d-40bc-859b-072d31fab9f1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9d1221fa-519a-4b28-8974-eb99bd6aa26d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2557,18 +2557,18 @@
           }
         } ]
       }, {
-        "_id" : "6c2549ad-8708-406f-ae29-ea74c309cf09", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "51ba5323-be16-49f3-a53e-3d8966dfac3c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 19813000000, 
@@ -2579,15 +2579,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "e4e2462c-3f29-4eb5-a749-769ec54a109b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "882c96ee-c869-48fd-bc18-958804c02b29", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2628,18 +2628,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "3500c9f1-7cd7-40fb-9168-ebbff0f4fd90", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ef8f1108-71da-41c7-a0e8-f9a61c5dbd7b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -11780000000, 
@@ -2650,15 +2650,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "40d16e38-9ae2-4ac7-8a2c-7d7451f66880", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fa16a742-9851-4cf5-b400-b5bd7a33001f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2699,18 +2699,18 @@
           }
         } ]
       }, {
-        "_id" : "e157db76-7672-458b-a32e-2661c9d3e4b8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0da420bb-4b20-4917-95ea-99087c376a3a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 2413000000, 
@@ -2721,15 +2721,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "334a8366-eba9-499f-af11-229b01f8d60e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c93b84f2-bba3-4377-acb7-53084a81b4f8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2770,18 +2770,18 @@
           }
         } ]
       }, {
-        "_id" : "378cc171-d564-4aed-8271-aecfbfc5cf0b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f5171f1b-ef5c-4d4e-b1ac-78c38298b7a7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 6131000000, 
@@ -2792,15 +2792,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "97de9568-c334-429f-a3fd-7287899741b6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f8f49b69-2679-49ed-8e28-ba8e73a33815", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2841,18 +2841,18 @@
           }
         } ]
       }, {
-        "_id" : "b500157f-6d1c-4c03-b37a-7f82bd8dabe0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8853cf97-4d1c-437d-9f0c-d82abece14e3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 8348000000, 
@@ -2863,15 +2863,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "e52b2eab-b6d7-44f8-8682-012151934e68", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e19b48a0-b27d-427d-97af-7efd9b599414", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2912,18 +2912,18 @@
           }
         } ]
       }, {
-        "_id" : "e398f138-c4ec-46ce-ae67-7542caff9004", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3db04f15-c14a-422f-a52c-21199456b6ee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 3487000000, 
@@ -2934,15 +2934,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "edf39ddf-1d8d-462f-aa14-f64797bb5146", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f02734a5-11e1-4cc8-944c-5dd179d9cdd9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ForeignExchangeLossesGainsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -2983,18 +2983,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "372d19cd-db6a-4feb-a9cf-ac5df9e7b8f2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c8ce2253-f52a-4bb6-9ca1-b3be4173e8ef", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 6054000000, 
@@ -3005,15 +3005,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "0b94387f-7a2a-438d-9926-6e9396bd24a6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "da786e44-5056-4f20-90c8-bc0168902fdb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3054,18 +3054,18 @@
           }
         } ]
       }, {
-        "_id" : "53815875-9353-4e67-a702-61616e168210", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a73a965f-7beb-4622-be00-c0352bab6488", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 3491000000, 
@@ -3076,15 +3076,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6ce0c130-3eff-4a3e-9255-234febcdaafb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "91122c3b-d587-4268-a174-f7d2d16a8758", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3125,18 +3125,18 @@
           }
         } ]
       }, {
-        "_id" : "0e2c6265-7bda-4862-9644-572948d62ff3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bbd8edd0-134c-4355-adfd-3a2643fe5217", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 1623000000, 
@@ -3147,15 +3147,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "55517c4d-cbbb-444f-8223-914f2780eba3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "491e65d8-7729-407b-8567-01b3422dcbe8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3196,18 +3196,18 @@
           }
         } ]
       }, {
-        "_id" : "24ba959d-5bdd-417e-ab54-4440ba85795c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9c7c19ee-21de-4327-8a20-a9a25a49fa5d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 3631000000, 
@@ -3218,15 +3218,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "99bc2ecc-5c31-4744-bd59-462aa161db4e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2546826e-4454-4ead-abf1-c2f408078528", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3267,18 +3267,18 @@
           }
         } ]
       }, {
-        "_id" : "00f8c98f-9972-4899-8fa0-71a5641fa1d5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "552b2ce6-928c-4e48-812b-79879d5731fe", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 1103000000, 
@@ -3289,15 +3289,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "01a1712f-ef6a-4650-ace3-7ee25f615839", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "508c37dd-fc6f-4333-870d-cbd3a8a17a90", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:AmortizationOfGoodwillAndNegativeGoodwillOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3338,18 +3338,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "451d05e7-8989-4516-9d6e-0c0ebf949d25", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "99c2f390-164b-41c3-939c-e94d2c24aa85", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -52658000000, 
@@ -3360,15 +3360,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "d7c2bc45-7e70-451d-a4f4-27807f0b4856", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5863bac1-337f-4a29-943b-334dd7bcb301", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3409,18 +3409,18 @@
           }
         } ]
       }, {
-        "_id" : "328c9d56-cccd-41d2-824c-d2565d6ae8a5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b042ad73-9ea4-4977-9720-8df2c4a65a20", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -66470000000, 
@@ -3431,15 +3431,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "94f868f9-5427-4568-b3c9-085b3cf5eb8d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "606a1caf-a156-464d-b782-03590bcc2bd0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3480,18 +3480,18 @@
           }
         } ]
       }, {
-        "_id" : "9f40168f-1654-4421-bb51-430e5fc55ef2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8e71d197-9486-4428-93d5-9c749f3091ca", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -77918000000, 
@@ -3502,15 +3502,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "c4a7e41c-60b5-4711-bf9c-1669e7a0b4d2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "536fffdd-261f-4f62-9407-3111c164f36e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3551,18 +3551,18 @@
           }
         } ]
       }, {
-        "_id" : "f6e2b223-c80a-442f-9d7d-7511c51c209f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "45534e93-07b4-412e-a3f3-26920c69ab01", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -34756000000, 
@@ -3573,15 +3573,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "59880009-a833-42f7-9a71-5d77161b0a1b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "74c55ff1-2e8e-4e59-995f-45be3cba3648", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3622,18 +3622,18 @@
           }
         } ]
       }, {
-        "_id" : "da4488be-7d69-41c0-a376-98393fd72a62", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "62cc8094-116b-4243-8b9d-568b8128e25c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -58876000000, 
@@ -3644,15 +3644,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "6f376bd7-d05e-4ae9-91ca-c383bc70b888", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c4f1e8d9-3a60-4b51-9e96-7839fa487f8f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EquityInEarningsLossesOfAffiliatesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3693,18 +3693,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "024f9d44-4c69-4897-a096-4ee4238ac757", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b5dfb018-3697-485b-93bc-20928302ec2c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 75307000000, 
@@ -3715,15 +3715,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "eb1dc65d-7251-4cfa-8e5f-658057f9f02e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fb662bd0-2af4-465d-af08-2d9dd850d211", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3764,18 +3764,18 @@
           }
         } ]
       }, {
-        "_id" : "1477c02a-d5cc-4d44-8599-b0a4134edabc", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d66a8ad2-a446-4f98-8f5e-60d9c23e655a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -8346000000, 
@@ -3786,15 +3786,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "e7109f78-0caa-40bc-8876-86c994f43dc9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a9606862-7d9a-413e-9c0b-875075207c9e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3835,18 +3835,18 @@
           }
         } ]
       }, {
-        "_id" : "18ff59e3-63c7-427d-b969-58482b8d780e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e7754524-794d-4b8a-b316-cd2864777be7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -782000000, 
@@ -3857,15 +3857,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "edabe415-7891-4202-9a54-b61dd46600a6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be15897c-9e16-4d92-aaa8-5a23e95f6832", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3906,18 +3906,18 @@
           }
         } ]
       }, {
-        "_id" : "d6d6f1a0-6476-4a9f-81c9-de5170cf18e4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "79564377-ee78-430b-85fa-caeb36f940ab", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -1046000000, 
@@ -3928,15 +3928,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "189085e2-a527-45e7-86a0-05a0b8cecd48", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "64e3bc3e-8373-4ad4-854a-7d00d460f04c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -3977,18 +3977,18 @@
           }
         } ]
       }, {
-        "_id" : "fded35bd-a281-4e9c-a350-6abc576b8c92", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e0bb0fa3-22c6-4760-9a62-17836ef77d21", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -3368000000, 
@@ -3999,15 +3999,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "e5958596-ee7d-4c38-a38d-fd3c8f6da94e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e81d8430-585a-4b60-aa8c-df5f941b39e4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4055,18 +4055,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       }, {
-        "_id" : "8411bc9b-d766-4dfc-ba7b-735b99cb2669", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "da9fe0cb-476b-414d-9925-3a7d1990aa25", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : null, 
@@ -4077,15 +4077,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "eda70196-25d3-4c04-8e54-94aa33fc32b1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c3f589c3-bb58-4dfa-8f6b-ff7a3f338102", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4126,18 +4126,18 @@
           }
         } ]
       }, {
-        "_id" : "0fb539a5-674c-4d28-8f4e-c289fb82e1cb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "71376cd2-fd74-410b-bbfd-1e143dfee1fb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11416000000, 
@@ -4148,15 +4148,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "f7d2447a-8d11-446a-a7b0-ad7476c9636d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5e5a0884-f2fe-42d4-a673-ef02660907aa", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jpfr-asr-e01225-000:ImpairmentLossOfNoncurrentAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4211,18 +4211,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       } ], [ {
-        "_id" : "be48cacb-21f6-40bb-853a-f47d55a9e2e3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "80f17f85-301f-45d6-81ee-0c72419eeaad", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : null, 
@@ -4233,15 +4233,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "67cc7f6f-1cb9-4e55-b9a3-22dfa2f85b2d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c6ea568c-259b-4337-af26-e46777454ded", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4282,18 +4282,18 @@
           }
         } ]
       }, {
-        "_id" : "b896f19a-75b3-411a-b117-2c8fa25e6761", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "737a6edd-c53f-4f5c-b94b-47156b3f3837", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11710000000, 
@@ -4304,15 +4304,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "94687701-11fc-471b-9ef2-9839c0bfdb0c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fa665be3-6644-4146-ae39-c742c03be275", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4353,18 +4353,18 @@
           }
         } ]
       }, {
-        "_id" : "2fa4ab2a-d173-47ef-9145-fde2fd4c8ca3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "20c9586d-0907-4a2e-b1e3-166184686193", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 5820000000, 
@@ -4375,15 +4375,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "13f4a0d6-86aa-4fe8-85d1-85e80a7e3a61", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7e6d775d-ddab-42dc-a643-63939f17902f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4424,18 +4424,18 @@
           }
         } ]
       }, {
-        "_id" : "c4925f59-f763-49f9-b4d7-13c987e0e49d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3c183891-c536-453d-ba26-df6e130ea18a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : null, 
@@ -4446,15 +4446,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "84035406-3898-4bda-8e7c-6c4ee7d022aa", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8d9847e5-5341-4610-ae55-603ed42fdec6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4495,18 +4495,18 @@
           }
         } ]
       }, {
-        "_id" : "6b4a1488-1ffa-4e7d-b4f9-0d657247b1a5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cbb82403-c967-4546-8e2b-9b0b49080289", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 68402000000, 
@@ -4517,15 +4517,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "5b83e162-4484-4edc-a44f-554864a087b4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d580c644-0866-4a30-9e26-fef90027cf4b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnValuationOfInvestmentSecuritiesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4566,18 +4566,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "333fa7f1-675e-40b3-9423-3195ecddc354", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9e974f49-8c3e-49d2-9d0c-570478acd9e7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 4437000000, 
@@ -4588,15 +4588,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "4e1274c6-4e10-42a0-9b79-caa741032609", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "685ec661-4b1d-4dbe-9d36-4d18f27d0263", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4637,18 +4637,18 @@
           }
         } ]
       }, {
-        "_id" : "06008db3-855c-447e-b5c8-8cae04c925fe", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "37535200-2b5d-4564-b682-4deb5cad7648", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 9328000000, 
@@ -4659,15 +4659,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "844b00d5-3de0-46e9-8f90-b7448b21ac67", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2cba200d-c327-4cc6-b03d-77277d5cc3f3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4708,18 +4708,18 @@
           }
         } ]
       }, {
-        "_id" : "52c64fff-a176-4b6b-b87d-6d6f6164a05b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5112d3fa-9afe-4a5f-8f50-b2e5f7e24a35", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 6834000000, 
@@ -4730,15 +4730,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4c6e96c0-119b-4b2d-945b-6f4640f435a9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ce54137e-df5e-4d47-8901-6f1df0630d03", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4779,18 +4779,18 @@
           }
         } ]
       }, {
-        "_id" : "7d60824c-7636-4220-8a34-edb5a62f7d1c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "05657c33-d867-4935-8cff-d28c96584ea9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 9013000000, 
@@ -4801,15 +4801,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9d4b1a66-5083-4bc7-a68f-72e8aa862859", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d7a1ec34-b0ee-4744-9b7d-02c6b6bc6213", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4850,18 +4850,18 @@
           }
         } ]
       }, {
-        "_id" : "d0a4097e-f88d-4c96-ad79-21196380f972", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a944df95-41aa-40a2-b78e-d7e5e5dbce68", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11781000000, 
@@ -4872,15 +4872,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "11bcb8b5-f161-443e-a369-e56636ad336d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9e3a9164-fad0-44a8-b819-ad376ca48573", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossOnRetirementOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4921,18 +4921,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "e4573adc-ed12-45f2-b001-3937c3a4cf7d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4927b062-f39b-49b0-8277-503c85f7ba2c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -7576000000, 
@@ -4943,15 +4943,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "a0b42d3b-870c-4037-9bf7-e57e461d9d80", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "156b8d13-72ef-4ed6-afb1-c9b4b25d27a0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -4992,18 +4992,18 @@
           }
         } ]
       }, {
-        "_id" : "79b5fffe-6861-4dce-8ccd-3a114ad92bc3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8bffc8ac-2cc6-41df-a41a-e10de311516c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -7429000000, 
@@ -5014,15 +5014,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "ff42ecde-cb22-4b9f-aa4a-3901a5c24d0b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "42c5bd7b-c6e5-470c-a747-21371bad7ffb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5063,18 +5063,18 @@
           }
         } ]
       }, {
-        "_id" : "e058bb60-73b6-4f82-9a27-1fdb92274040", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "35766dc3-1d28-42b3-a15b-43f9063b5148", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -8770000000, 
@@ -5085,15 +5085,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "35d4764d-6583-48d2-a65f-accf7bc7e5a9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1db7332d-d543-4ab6-9589-5a244106d7a6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5134,18 +5134,18 @@
           }
         } ]
       }, {
-        "_id" : "0633d1b2-bf99-4076-83a5-2f45de93a657", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2889de83-684c-4c9a-abf1-c682a2ccfc99", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -5809000000, 
@@ -5156,15 +5156,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "5e4efafd-c54e-4cbb-b0a8-8bf27787c37b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9aed8c84-53b6-4add-9292-81156d7343a3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5205,18 +5205,18 @@
           }
         } ]
       }, {
-        "_id" : "3eed38ae-502b-4e84-a346-6b49063dc456", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "36d5e51e-a1bf-4a64-8185-27554307db43", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -13342000000, 
@@ -5227,15 +5227,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "96a4b354-3cd2-47a6-831d-0e85160882fd", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a83fc6c3-9a80-4455-a3a4-9cd9c1222fa4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:LossGainOnSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5276,18 +5276,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "04d1a44a-59d6-4b52-9efb-db1d15ad4450", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2e9afb83-b5d6-4baf-b037-635c04fddd10", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -366000000, 
@@ -5298,15 +5298,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "3f722e1b-77a3-45fb-a9ca-5cdb1d21f458", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dca4ec02-02bf-4278-8495-fd71beab1c3a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5347,18 +5347,18 @@
           }
         } ]
       }, {
-        "_id" : "80f9da40-c182-43b5-bca7-7dfa44bd23ed", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3cee7571-8592-46de-8557-50395cc4d578", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -1745000000, 
@@ -5369,15 +5369,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "5720cb11-d2b2-4554-911a-8ff93694f4b1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3ec0d061-1b82-404a-ab9d-b817466dacea", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5418,18 +5418,18 @@
           }
         } ]
       }, {
-        "_id" : "99c0ec9c-51e7-4944-a466-3f3fecb9cb8a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d0d38a9b-d411-40b3-9261-b516706c1b5f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -4266000000, 
@@ -5440,15 +5440,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "26dfdc2e-b048-40cc-9cfa-765ceae9f603", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d5f1f184-9d2f-40d1-8ead-5dbe8769a90b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5489,18 +5489,18 @@
           }
         } ]
       }, {
-        "_id" : "14de0848-b9e4-46f1-9daf-0954548616fa", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7f98ecc0-723b-47ae-b1b3-0d141ffa90ce", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -2275000000, 
@@ -5511,15 +5511,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "de6c5992-0873-46d3-97a5-9e3f250dc933", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a8e31bd8-9a7e-4f04-a13b-273b577ecc8d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5560,18 +5560,18 @@
           }
         } ]
       }, {
-        "_id" : "d1c7ce0f-aa76-4dfa-b705-2d4ddd264197", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "09f36984-8350-4fc4-853e-0989c51b4c34", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -1850000000, 
@@ -5582,15 +5582,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "325c52b6-d728-4d05-9dec-78ea2e297613", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e76fbb3e-0bd0-4024-bb59-12e5a6298849", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInAllowanceForDoubtfulAccountsOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5631,18 +5631,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "0f7dfa1a-9a28-4826-ab8c-4dea60c15eaa", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be321840-f6e9-405e-8fa5-02525d2ea361", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -32630000000, 
@@ -5653,15 +5653,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "5991f207-e857-45dd-81f1-4aae3e61cfea", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "398195e5-5085-4296-bc75-b23d87f91105", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5702,18 +5702,18 @@
           }
         } ]
       }, {
-        "_id" : "9a172f69-9777-4ab7-828c-1f77c6d6973f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ed93c801-9ae4-463a-87c6-299746d2cb0f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 21222000000, 
@@ -5724,15 +5724,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b3ba0ec5-1513-4d86-85ff-bdb4f1b50006", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5fae26d8-e872-4d56-87c3-f062cb435b84", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5773,18 +5773,18 @@
           }
         } ]
       }, {
-        "_id" : "34b0b30b-bb9c-4eee-94b2-62f965ce67ec", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1013cfb7-5fd6-4001-82e2-378915364d2e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 14735000000, 
@@ -5795,15 +5795,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b89ef318-209a-41f3-9070-fe5b76f4357b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d253beb3-1328-4361-a956-674298e0f527", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5844,18 +5844,18 @@
           }
         } ]
       }, {
-        "_id" : "ddcb39e3-5f86-4c5c-a0e9-4f3780469fef", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "45e8aa06-99f4-4835-9792-df11fde88d3b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 27319000000, 
@@ -5866,15 +5866,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "2734c88b-34dc-4923-ad42-a646f5a9c7c8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e72464c2-10ea-460c-92dc-2bd84d569511", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5915,18 +5915,18 @@
           }
         } ]
       }, {
-        "_id" : "223989c8-e24b-4644-847d-ef90ac430573", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ba213d75-b324-4c77-8503-49a0ad98b4dc", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 37598000000, 
@@ -5937,15 +5937,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "640d4f32-a259-4521-8d89-6d9e36467f89", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c917fdc7-f91d-4754-add8-7cbeb92e010d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInNotesAndAccountsReceivableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -5986,18 +5986,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "94a45bad-2939-4510-a478-f258bd017022", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "85676e3a-226c-46e0-b406-36fc318f6d86", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 157786000000, 
@@ -6008,15 +6008,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "c4e3115c-aa9c-415e-9e68-db2d39cb180a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d6a2406b-5064-4a2a-bc03-49b64d8639d9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6057,18 +6057,18 @@
           }
         } ]
       }, {
-        "_id" : "7d499a3f-6c36-46d6-942a-aaa85f6deb4b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7850afc3-b37a-4737-abce-2d88b2f1ec6f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -48663000000, 
@@ -6079,15 +6079,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "c37516f9-12f3-4496-b7cb-799d859f3b92", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "037c9f88-2847-4d46-8693-46d733279228", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6128,18 +6128,18 @@
           }
         } ]
       }, {
-        "_id" : "8f635d38-ac45-47d5-8d51-4e66ea660bb0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f6b1c1c3-bd02-4514-8c50-06cba6e81113", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -64782000000, 
@@ -6150,15 +6150,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1920a18d-c731-4068-9730-2a5cb0d95097", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8412725c-d0f2-4eab-94a2-b3b91abcb773", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6199,18 +6199,18 @@
           }
         } ]
       }, {
-        "_id" : "5c1a01ca-ab89-46dd-b280-58afa3584532", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "232e297f-73d4-4a51-94f1-9d2db9a22595", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 178618000000, 
@@ -6221,15 +6221,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "24f85338-f371-4501-8881-db2c887d4afe", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "440b3dba-d8f7-4b20-9e39-453cac5ed5e8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6270,18 +6270,18 @@
           }
         } ]
       }, {
-        "_id" : "72247041-27df-44a6-9d0c-fbc43d6eb27b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ebd91ebc-e2ac-4302-a1cc-e87f0ed76bfb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -171535000000, 
@@ -6292,15 +6292,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "9cee82a4-4b7c-4758-b5f3-5702305faa27", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f147f319-7cb1-4452-9ebe-3f93682411e0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:DecreaseIncreaseInInventoriesOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6341,18 +6341,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "c42853f6-b631-48da-a58b-26206bdb5758", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "70efaa4c-c284-4417-9037-080d1a51ebed", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -86297000000, 
@@ -6363,15 +6363,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "6bf70488-f8a0-4bb5-9973-b694edb05b4f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c785072e-62c1-4046-ade9-f06433d52375", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6412,18 +6412,18 @@
           }
         } ]
       }, {
-        "_id" : "f845a158-e907-45a4-af6e-89d4ea0ddaf5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2f46e781-a455-4b89-9212-7b368313be1d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -6713000000, 
@@ -6434,15 +6434,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "7870fea8-3a28-4eae-9157-70a225332513", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "42fefde8-44dd-405b-b4f2-6ca8951483fe", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6483,18 +6483,18 @@
           }
         } ]
       }, {
-        "_id" : "a7782416-bfb9-48da-8ebe-75533f81f6d2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "17ae3f08-7638-4641-abbc-a3f2c9f106c7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 8337000000, 
@@ -6505,15 +6505,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b3e54aa2-3ab3-4386-93c4-025bcce70806", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6c732028-cf41-4cc1-826e-1f59067038de", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6554,18 +6554,18 @@
           }
         } ]
       }, {
-        "_id" : "37ebff23-beea-432b-8d68-71219fa0476a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "44d30956-a6ea-4a6c-a746-9ecccbf0f2af", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -10414000000, 
@@ -6576,15 +6576,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "d49e406d-5ac9-41d4-8712-f669b02f2c45", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fa644f8c-088f-4fff-a4ac-6e26fb330d86", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6625,18 +6625,18 @@
           }
         } ]
       }, {
-        "_id" : "2f9e26bd-a00f-4cdd-a124-742d2ed58940", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ffa972aa-6055-41b2-bacd-3ea54f489a6d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -127389000000, 
@@ -6647,15 +6647,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "73a065a2-458a-4173-8a08-7a003f786fe1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a2c4421f-0680-4e4e-a621-e22387251b97", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInNotesAndAccountsPayableTradeOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6696,18 +6696,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "e6954129-41c0-4a05-9122-9486cbf695e1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5e74f778-00db-4af6-b4cb-273eb6837126", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 26972000000, 
@@ -6718,15 +6718,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "b1d48d96-184c-42ad-bc07-df1f7040ec71", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5a44419c-f5ef-45e3-830d-2e17d1d52ef5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6767,18 +6767,18 @@
           }
         } ]
       }, {
-        "_id" : "aef15b83-7470-497f-ace2-0e385a3ccb73", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ba657fe7-6cf6-4982-a97f-2eec9a296d8d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -32187000000, 
@@ -6789,15 +6789,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "07619384-febe-4ef5-ba3a-9bd707e259ed", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0f9ab07a-c65f-4b7b-9fe3-c2f5c9094e24", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6838,18 +6838,18 @@
           }
         } ]
       }, {
-        "_id" : "59096a94-c811-423b-ab43-b32a4c74fb66", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "61d477ed-6298-40d0-8726-809928b64f37", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 35111000000, 
@@ -6860,15 +6860,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "446a9a47-afaa-451c-bc86-4820663648a8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ec87f9b1-d20f-4070-8ad0-deb1f2f706e9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6909,18 +6909,18 @@
           }
         } ]
       }, {
-        "_id" : "77a41e13-4421-41d1-8020-bfcf6c380ba1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1323ee84-c700-40e3-9de0-bc674e9aa095", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 35541000000, 
@@ -6931,15 +6931,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "cb3c4dea-63c7-43dc-a944-7d8e3717102b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "52a3e3aa-cf87-4932-a431-5f700cd68243", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -6980,18 +6980,18 @@
           }
         } ]
       }, {
-        "_id" : "f7a7993a-fb52-4f3f-b331-4ba4bdc6485b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4e9916da-7433-4df9-a8e6-3d77a2b5fd13", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 17818000000, 
@@ -7002,15 +7002,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "434b8112-5190-4137-a533-cf55ec40f3c0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f6707b05-2a5b-4560-a974-9383262b47d5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7051,18 +7051,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "2b0308bd-cebe-4a19-b1e5-12186367f661", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b145d434-b708-487f-bde9-53a4ec0ad18d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 26347000000, 
@@ -7073,15 +7073,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "2bece46b-f788-4bad-8f4c-c9da6be3db3e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5e82ebe7-be02-4a21-8dd7-1a2b9b779982", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7122,18 +7122,18 @@
           }
         } ]
       }, {
-        "_id" : "becbcc67-1c4a-48ff-88ae-5d3adacac1ce", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5d885e4e-c667-4be4-a8ec-2e4bf5e4c14a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 20660000000, 
@@ -7144,15 +7144,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "5f78eefb-5c55-4a10-bf65-fb5cdc81d8ca", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c7757394-bb0b-4ca2-9d12-d11cbfa25c42", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7193,18 +7193,18 @@
           }
         } ]
       }, {
-        "_id" : "00f5ba38-fde3-4da8-8d63-c6ccc3c46aa1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9e751293-71cd-41ca-a8d3-f0d6996db2e5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 27886000000, 
@@ -7215,15 +7215,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "18334489-cbc5-40ad-9ac4-b1ff42f2b949", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a9f9e088-9181-4705-8db0-c9aa87537852", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7264,18 +7264,18 @@
           }
         } ]
       }, {
-        "_id" : "5fac6fe7-7bc7-4a97-afb4-8aa65feee026", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "142f1f20-49a9-4279-aa13-670899877b72", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 18101000000, 
@@ -7286,15 +7286,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "3b9ff7bf-b973-4e80-b557-39a99e8ff398", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "db0bce3d-c740-4dec-b9bc-fce56b6b593a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7335,18 +7335,18 @@
           }
         } ]
       }, {
-        "_id" : "d5810061-d0d0-4d8b-89eb-1950f2ea3bc0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f000274c-0dca-4935-99ae-a3d9a0b68487", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 39330000000, 
@@ -7357,15 +7357,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "3e58df78-c0d6-4760-b53a-98d84ce6b7d5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7da8f263-be7e-4a50-ac62-38ec2d399b06", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestAndDividendsIncomeReceivedOpeCFInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7406,18 +7406,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "48ecf28e-6d9a-48b2-b1fe-d8d2c11ced47", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "24e75d99-dbbf-4acb-be73-a0cc5d83fb09", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -25727000000, 
@@ -7428,15 +7428,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "6a1d0db9-e5f6-4fc8-9d58-41a4fa5655d0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "acb37c0e-a22d-4af8-a802-6b6020a043c1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7477,18 +7477,18 @@
           }
         } ]
       }, {
-        "_id" : "b9c369f7-55c2-4003-a2ce-c6bae90d475f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "db93fe13-2fd2-4695-9e30-09468b1fa778", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16321000000, 
@@ -7499,15 +7499,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "2262efd1-2556-419c-ac0f-4c4c81356d6d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d83fb582-b0da-4c84-9b56-ab6c7b5d8120", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7548,18 +7548,18 @@
           }
         } ]
       }, {
-        "_id" : "b58063f0-8a7d-4e3c-b230-ac4e725d4ffb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "699cb47e-8d9d-4d40-a1a2-cfdbc646b204", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -18453000000, 
@@ -7570,15 +7570,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "209fd3b0-9996-408e-b5e5-a278d7a1a3ea", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "907b53b2-ca4a-47bf-a1b0-ff98285466ee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7619,18 +7619,18 @@
           }
         } ]
       }, {
-        "_id" : "cb60b420-7ad1-41d5-9646-3267c32fbc23", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9299fc1e-dec1-45a1-aa94-46ff6e1eb26a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -19911000000, 
@@ -7641,15 +7641,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "a19ee6cc-e809-45c0-827a-a6a97ee80447", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4cc744d6-944f-4c6f-b0ad-ed6043d8c82d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7690,18 +7690,18 @@
           }
         } ]
       }, {
-        "_id" : "fad313bf-518e-43c2-80ee-d774beaddc36", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ca0c6277-7a41-4e1b-b290-c946a767541f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -19511000000, 
@@ -7712,15 +7712,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "d9adaf8c-92b9-483e-aab3-d0358c60dff8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b761be6b-8cad-450d-aad2-04b894f40125", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:InterestExpensesPaidOpeCFFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7761,18 +7761,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "4da1027d-1cd8-486f-b710-3de07acc40b2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5ed82a80-862a-4995-ac9f-0b0d2f385fe9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -57038000000, 
@@ -7783,15 +7783,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e5c3b983-7119-4110-a93e-a0c709eaa7b1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "120a24e7-7496-4eee-b869-a53a8c687c4f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7832,18 +7832,18 @@
           }
         } ]
       }, {
-        "_id" : "050d1dd3-6c6d-4f0f-b197-c18bafe263b5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cb9a0e04-a190-4d04-90b1-55284f82a557", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -46276000000, 
@@ -7854,15 +7854,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "aad6a278-cb06-45ae-b9c2-8db787a96670", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0d9c15b7-3d43-418a-8bb2-1333a9f54af0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7903,18 +7903,18 @@
           }
         } ]
       }, {
-        "_id" : "74317514-e5e5-41a7-8fa7-a0fda82ddafc", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "792a0cec-cb36-42cf-b8f9-4282a6344a61", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -52626000000, 
@@ -7925,15 +7925,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "20e9f60d-7a7b-4c12-835c-f21bd741a140", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "622c3411-a589-4b61-aa39-23841e979472", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -7974,18 +7974,18 @@
           }
         } ]
       }, {
-        "_id" : "5d41d598-c3a5-4df0-96ff-7aed280ae253", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "afb9086f-71d6-40d5-9649-cdcc24b7b7e3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -67176000000, 
@@ -7996,15 +7996,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "50bc8a12-b3db-4a85-adf3-994d08fd9f2e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "64be73cb-4ab6-4786-8cc1-d1e57c34c581", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8045,18 +8045,18 @@
           }
         } ]
       }, {
-        "_id" : "a4b01b9e-c4eb-4ccf-8329-2a083ef19cec", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8c36ecc1-9849-45a2-9251-410f93d9bdd1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -205660000000, 
@@ -8067,15 +8067,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "87975289-8530-469c-b3d7-f1569e60caa3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3c195a1b-9999-4d59-bad0-3a96d8cf8b1a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncomeTaxesPaidOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8116,18 +8116,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "6921bd07-f37b-4110-a3e5-f43772bba91f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "94a9637d-116b-43e3-836a-d0b1619ed2bc", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 369735000000, 
@@ -8138,15 +8138,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "d6287ec0-744a-4cee-a8f9-7e5aa5c14c66", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3969ec66-1a3e-4583-9a83-e0b283b68e97", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8187,18 +8187,18 @@
           }
         } ]
       }, {
-        "_id" : "f26a2e1f-8cd8-4522-9762-daa8b6e7ceb8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9547ed95-fb17-4c40-9795-9c60e5cb8c87", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 279352000000, 
@@ -8209,15 +8209,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1447e710-51f7-4b9a-b000-e4a1392df85c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f9be47ac-584e-4fd2-a902-23e5e034bbaf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8258,18 +8258,18 @@
           }
         } ]
       }, {
-        "_id" : "98e800ab-f8de-4be8-b16c-fc538352147d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7750d47e-ee58-4be2-8a4e-bde2ab2da6c9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 412694000000, 
@@ -8280,15 +8280,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "424bc700-36a7-4dfe-9717-6993b6bb0495", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "548daa34-1cf2-4030-b20c-c0d67c112225", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8329,18 +8329,18 @@
           }
         } ]
       }, {
-        "_id" : "373d2e28-c6ee-46a9-b7c5-cf89fbaf80a3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5ba27bf7-43a6-4efe-bd7c-01a27b70b98b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 506653000000, 
@@ -8351,15 +8351,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "2ce1d48a-d501-4a5f-976b-afc72bfaf31c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9a593707-54c8-4abe-9d81-6e18e988d51b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8400,18 +8400,18 @@
           }
         } ]
       }, {
-        "_id" : "2800af33-2f89-4fe8-8615-334923e16646", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "68534eae-1148-4323-829b-84db850d8a05", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 313382000000, 
@@ -8422,15 +8422,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "2b66ccca-b2a4-4e5e-b230-d635519ba575", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4ed852e3-ad8b-45e7-b2b0-6a0af0a021be", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:SubtotalOpeCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8471,18 +8471,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "8c8d30db-0014-498a-a0bc-6888bda61b3a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6c07d381-7a9a-48e5-a591-f7610906a478", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 313317000000, 
@@ -8493,15 +8493,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "a52259a8-bc55-4490-9169-f0e32deac506", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cbaae998-744d-4116-846b-7dfdd1e0b514", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8542,18 +8542,18 @@
           }
         } ]
       }, {
-        "_id" : "006a23f0-d5b1-409f-997e-4f5c8c1af7c2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c7b5390e-754a-4886-9f0b-3a900392c165", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 237414000000, 
@@ -8564,15 +8564,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "de6f3cfb-d4f0-4bd3-ab39-39c55aca2ef7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fce6d797-459a-499e-8d17-4f7841a0664a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8613,18 +8613,18 @@
           }
         } ]
       }, {
-        "_id" : "c5dc620d-6b02-4f57-88bf-098d7f3db8fd", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "afdd19e1-65c7-452f-bfd3-6352356d93b9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 369500000000, 
@@ -8635,15 +8635,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "7d98596d-bf88-4e9a-929d-ab3a096dc9b4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6063fd90-f91a-4fab-a7cb-b003e7d379ef", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8684,18 +8684,18 @@
           }
         } ]
       }, {
-        "_id" : "b619df1f-d02f-4356-bda6-3415d5f9fe6c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "87034505-05c1-4193-ad02-99f32b213b06", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 437668000000, 
@@ -8706,15 +8706,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "7a9682e6-0f5f-4719-87da-bd43b70b5785", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9570d8d5-1794-4899-b1c1-3e9d61ff6f26", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8755,18 +8755,18 @@
           }
         } ]
       }, {
-        "_id" : "4ce178c5-f520-4ae8-9883-4fdbf3170ac4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8e34e570-ef2a-470b-adca-c982b5c46867", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 127540000000, 
@@ -8777,15 +8777,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "b1e9983d-9bb5-4839-aaa6-684eaffeeb98", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6350cfe7-ee9d-4c39-8418-578016c2725f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInOperatingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8826,18 +8826,18 @@
           }
         } ]
       } ], [ null, null, null, null, null, null ], [ {
-        "_id" : "f42768b1-3373-4fcd-8d6a-a09035db7288", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3b0283b0-1b7a-4650-9fd6-c0d17aa6c536", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -80728000000, 
@@ -8848,15 +8848,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "c95302c3-26a6-4d58-912e-e0457c148511", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "686cb20e-2db4-4c2e-aa4e-f78e5f0a93bf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8897,18 +8897,18 @@
           }
         } ]
       }, {
-        "_id" : "c79622fd-3cc3-4ee3-a2f1-736348a1c706", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8c7177d5-7863-4c3e-b958-6db9d2da1cec", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -33421000000, 
@@ -8919,15 +8919,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b86afa37-cb5d-48b1-baa3-8f62a9fd5384", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "11f5780e-3dd7-407e-b700-1a7244036b76", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -8968,18 +8968,18 @@
           }
         } ]
       }, {
-        "_id" : "f9dfa606-71c4-4bcf-8e11-3e54b4a192b0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0effcc14-a8f1-4853-aa21-6fc056eb8e72", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -31850000000, 
@@ -8990,15 +8990,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "85d00272-f37b-44e0-acfb-4679d381e699", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7a090a43-8192-494d-92d7-38f5fdeea8cd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9039,18 +9039,18 @@
           }
         } ]
       }, {
-        "_id" : "7844e72b-77e4-4bf4-87f4-3ce386d66432", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9e149e2d-0605-45a1-964c-7000db62cdd2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -88048000000, 
@@ -9061,15 +9061,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "25bfb510-5fbc-4164-81b6-f71b21a851c0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2401c693-0bc5-445a-b7a5-c14ef84d3f70", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9110,18 +9110,18 @@
           }
         } ]
       }, {
-        "_id" : "58c5225b-b8fa-4ac6-8e4a-eec3c7885848", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4e5d183c-ae41-4313-95b9-c8e259586086", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -70853000000, 
@@ -9132,15 +9132,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "bd5d2d8e-f2d8-4513-bc14-a660f2f7cd43", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "27010a5c-7689-49f8-9224-d574c9b3fbae", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9181,18 +9181,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "3a366e1d-1bf0-4ded-b559-01222ded65ae", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0dee3989-89e9-4e7b-983f-bab0e7eeb496", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 101005000000, 
@@ -9203,15 +9203,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "afb71f01-b272-4585-977b-54d6f64f07e0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "497449dc-c74d-4e52-9fad-a155410231f8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9252,18 +9252,18 @@
           }
         } ]
       }, {
-        "_id" : "734fb59a-7b66-4548-8cf6-6b2eff3adc93", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4a77a123-e826-4e76-b60c-288e15d59d6d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 51646000000, 
@@ -9274,15 +9274,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6505c37a-92c2-4bf4-ae20-206d105459f1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ef12482b-a642-48b7-9b95-67331473c80b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9323,18 +9323,18 @@
           }
         } ]
       }, {
-        "_id" : "edc0a585-d38c-4bcf-a96e-474bb233dcaf", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "17a89e4e-6ac0-4090-b311-8c982deafcef", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 3230000000, 
@@ -9345,15 +9345,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "cf8f973e-7c64-47c1-8992-522889699fac", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b5d54dff-7421-4739-8178-ad0f268e6860", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9394,18 +9394,18 @@
           }
         } ]
       }, {
-        "_id" : "ba0db77f-6cd3-4756-a0bf-c2315d8f0118", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2477f7ff-52c8-42b5-903a-4e61a5af2d8c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 17662000000, 
@@ -9416,15 +9416,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "768f13d9-467c-4bb5-9ff6-09defb21e85e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d49ad7c2-3735-4944-86a1-550fb324ad4f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9465,18 +9465,18 @@
           }
         } ]
       }, {
-        "_id" : "f388e611-9a6f-4647-a01c-b5cb5d7b5f46", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0df94452-0e48-455e-8944-bb9075e9ff6f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 39664000000, 
@@ -9487,15 +9487,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "82e34a97-191d-4814-b76b-b19cb255e9ce", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "663c128d-bbee-44ac-8441-8742a1ed583b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentSecuritiesInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9536,18 +9536,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "2c67e936-b32b-4592-9253-6a70efac3f76", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1c904b0f-f752-4718-86cc-f6a346745da4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -349817000000, 
@@ -9558,15 +9558,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "7eb8b0ef-da6c-47cc-ba1e-468c1c562d6e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4ca75de6-b817-4234-a05d-aadf2e709d22", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9607,18 +9607,18 @@
           }
         } ]
       }, {
-        "_id" : "79196f30-8e12-4f46-a492-611130f35640", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "292ad613-a9ec-4ef0-860e-745583e6fc34", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -257999000000, 
@@ -9629,15 +9629,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "669b4074-12d7-4335-aa5a-a6a144558ce7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be203e11-a93e-4815-b4a1-928856b26a1c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9678,18 +9678,18 @@
           }
         } ]
       }, {
-        "_id" : "1cd143d0-6eb5-43e8-942e-fff2da1f5315", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "64f08328-a37b-43bc-9d53-b37ed07c4521", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -315843000000, 
@@ -9700,15 +9700,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "fda1d601-7843-496d-8a72-b2f792d426b3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fd124954-19d4-4603-9845-88d52d5f5432", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9749,18 +9749,18 @@
           }
         } ]
       }, {
-        "_id" : "1163bd3f-ce33-476d-9160-eade6bc7a51d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b71b4b8d-7f67-473e-a254-bc6fe0d8c5b2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -339773000000, 
@@ -9771,15 +9771,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "073f4584-348e-4a17-a74c-aa3fb2fac855", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9eddd4b7-dada-4b51-bd8f-65011b80ed0c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9820,18 +9820,18 @@
           }
         } ]
       }, {
-        "_id" : "ae540dff-6e41-4342-bc4f-361d6a2bd660", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "148961e3-9419-4c65-8265-9ca25ade3797", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -295584000000, 
@@ -9842,15 +9842,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "dbce2a0c-669f-4f78-b1fa-ec6d3c622702", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "04443262-cbb0-4aed-bcee-c0312f7a1029", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9891,18 +9891,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "5b08d016-5c2c-43d0-84b3-f819e288dac8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "73e6886b-3dd8-410f-989d-bbf68156502e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 13206000000, 
@@ -9913,15 +9913,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "b23a0e35-7605-49f9-a24b-c1abe2ac46d5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "41dfae70-947e-4d93-a591-a2538df7a080", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -9962,18 +9962,18 @@
           }
         } ]
       }, {
-        "_id" : "027641ad-f760-4dc7-bed9-cb38dea9ddb1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "35b79538-0c0d-46cc-afad-293cd147b8b4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 15853000000, 
@@ -9984,15 +9984,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "de5bba23-f159-44b0-b9d2-ad73bb085f19", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "91204fd7-b876-42b9-a453-15f87d9e4f35", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10033,18 +10033,18 @@
           }
         } ]
       }, {
-        "_id" : "d6bbd7da-6ece-4132-9e0c-99e6a521db90", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bead1a0e-c490-467e-876c-e6c5ba1959d5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 14598000000, 
@@ -10055,15 +10055,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "efa36498-d9fc-459a-9464-3aac41e73bb8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7530be5a-2acb-4202-aeeb-8994e71c7800", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10104,18 +10104,18 @@
           }
         } ]
       }, {
-        "_id" : "cfaccfce-80b8-40d8-91a3-5fe0dabcd45c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0c82a7d5-ae4c-461c-ba7a-15cd23ed7054", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11877000000, 
@@ -10126,15 +10126,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6007bed3-f120-4d51-8261-9400f08d62a8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "06df8d95-47e7-4ee5-9b26-e9614885e5a6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10175,18 +10175,18 @@
           }
         } ]
       }, {
-        "_id" : "a939e064-563b-49ff-8406-fa8881c91445", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5e974760-3df8-4fb1-a015-3c4b27b5c860", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 16761000000, 
@@ -10197,15 +10197,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "50c07f6c-6fe7-43ba-9967-2d181dbcad64", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a6dcb42f-d6a5-42cb-b9b4-480ca747a740", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfPropertyPlantAndEquipmentAndIntangibleAssetsInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10253,18 +10253,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       }, {
-        "_id" : "e254d369-0182-4cdf-ae44-6bbed2ca393f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c78f857d-fa0b-48a8-a458-16df666ef041", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -70000000, 
@@ -10275,15 +10275,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "b4bd5d72-ec2d-4ff9-87fb-6eae42e9a7cb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4bbc3397-4838-437e-92f0-e02d2a17ff9b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10324,18 +10324,18 @@
           }
         } ]
       }, {
-        "_id" : "0327fe92-2e74-4115-8191-da4278262a4c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "485e5254-f35a-4002-af25-7ea90a42b0f7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 2671000000, 
@@ -10346,15 +10346,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "56337bd8-7942-4d1f-9d7a-90c357b4d9fa", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bc4661b0-5dd7-4c81-965c-3b2cadbb0238", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10395,18 +10395,18 @@
           }
         } ]
       }, {
-        "_id" : "61617cd1-5a69-4752-944c-b5c67a9130a6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ae59acfd-d673-4017-b64b-fd73f865ad68", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -2366000000, 
@@ -10417,15 +10417,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4e5ebc94-6a31-4888-b901-f00cf081efd9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1b4d0f5a-a88c-4599-98c9-0e727ccfca2a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10466,18 +10466,18 @@
           }
         } ]
       }, {
-        "_id" : "b48f4af5-31f6-4dec-8cf9-080587550dd3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "661523ca-02b0-4e9d-849d-4ab3846abfbb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -2666000000, 
@@ -10488,15 +10488,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "284f7588-9533-4697-abda-5a5121888f93", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "22f45db0-ba62-4798-a316-f5967b69c1f2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10544,18 +10544,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       }, {
-        "_id" : "298073f5-1968-48be-af8b-da5bd32f192a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "526dde8e-c58f-45df-8260-b0b3720cda51", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 304000000, 
@@ -10566,15 +10566,15 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "b16599c1-10a6-413d-96e8-fa0906682ef8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a150be3f-b15e-4951-8ab4-ff88dbbe8227", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10622,18 +10622,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       }, {
-        "_id" : "25213aec-a9b5-4c8d-b8bb-fc7a52b51a10", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "35ea72d2-1c02-4db7-85b4-2c5f5afe2fb9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : null, 
@@ -10644,15 +10644,15 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "e9563f8f-ae09-4d66-915e-3de1d76a8db2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4467ceb5-2783-46a6-9fcf-ee9285700bd0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromSalesOfInvestmentsInSubsidiariesResultingInChangeInScopeOfConsolidationInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10693,18 +10693,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "8722c82d-68b8-4e0b-9eb1-9b271ae83028", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8dea1a75-f84e-4838-ac88-2f0af566672b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -14515000000, 
@@ -10715,15 +10715,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "9c871206-2512-423a-ab24-fb0321c88c66", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4f513d92-5f97-475c-8b83-f72512287bcd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10764,18 +10764,18 @@
           }
         } ]
       }, {
-        "_id" : "8212ef1b-5dca-415b-ab40-51011aa70d22", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d3db9e06-6e03-4067-b87e-afc9d6ff0aee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -1945000000, 
@@ -10786,15 +10786,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6c0974e2-a920-4842-944e-ff326ddb0061", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c02517c8-9c92-4f9d-b04c-73830b050879", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10835,18 +10835,18 @@
           }
         } ]
       }, {
-        "_id" : "904246ff-6a63-4983-a0b1-61b8d8d4a62f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be74adef-7e49-49d7-a983-65a139ac4c70", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -6485000000, 
@@ -10857,15 +10857,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "915ffcac-8318-4a15-8cdf-4d66eba7505b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "173c4e7d-2f1f-44af-9036-1269c25a8caa", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10906,18 +10906,18 @@
           }
         } ]
       }, {
-        "_id" : "2720ebca-f767-412c-8ca8-4a239ba28da1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5de97171-b7aa-4b75-893b-c855b53812e9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16817000000, 
@@ -10928,15 +10928,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4dbd28a4-efa9-41bd-9864-216930271b65", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ef0f5992-b5d0-4398-a050-9c60f87ddc84", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -10977,18 +10977,18 @@
           }
         } ]
       }, {
-        "_id" : "be7ca5e0-7491-4336-becb-cf548e721d65", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9c8be5af-8f6f-4a40-b18c-156d387aba9b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -1355000000, 
@@ -10999,15 +10999,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "997cd055-3608-4c5f-a4e3-97d022820c3b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "fe8eadc1-6d94-4170-bbef-042679bba10f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PaymentsOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11048,18 +11048,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "f770e6f9-ab18-4b43-ba08-08b561eae0c2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "33e57fe1-5ac7-44ca-81c4-c3eda09a0a92", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 4175000000, 
@@ -11070,15 +11070,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "6eaead57-4a4e-4a3a-b61d-f4429ea505e8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4bcbbe31-00ad-4e9e-8af0-0cd0b9fbd89a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11119,18 +11119,18 @@
           }
         } ]
       }, {
-        "_id" : "6055e75e-7f9c-4ebf-a963-749090da89df", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8cb5d46e-1833-4fe9-bcca-ae38cf3cfeba", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 4282000000, 
@@ -11141,15 +11141,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6642afe6-8a23-4934-a72b-321a145a5653", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "36c255f5-3679-45cf-8ba7-18d39227dc21", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11190,18 +11190,18 @@
           }
         } ]
       }, {
-        "_id" : "827b33d3-6b10-4e5b-9ea7-2e26119bd48b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d0914aa0-4ae7-4ed8-b559-aecb75b00c19", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 4876000000, 
@@ -11212,15 +11212,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "c6276791-5a37-4700-8802-bc815e460bbb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1670756d-60fb-407a-abac-f13f3ca75f4a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11261,18 +11261,18 @@
           }
         } ]
       }, {
-        "_id" : "725f4ff3-fba7-4ee3-8309-50c3db759fd7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dd0e9751-c9bb-4f26-8324-8bb09064bd62", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 5155000000, 
@@ -11283,15 +11283,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "c0c1facd-0582-4682-93f0-d4e3bb34819a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "17226e9a-cfee-48c4-a370-45562b54615f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11332,18 +11332,18 @@
           }
         } ]
       }, {
-        "_id" : "8822b585-b03c-4399-a3f0-a528621002ef", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5f7d8a45-dd41-4593-be4f-bb6d030b83a5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 6136000000, 
@@ -11354,15 +11354,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "9e8637d6-00d5-4f3d-868f-60ee882ac1df", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e3cd6531-f202-4e13-89c8-f6d287e9e9a3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CollectionOfLoansReceivableInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11403,18 +11403,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "43780ee6-9b26-48e4-a4ef-c3f2bf4f2c66", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "457c1a2e-873e-4845-8549-1a88ce63462e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -661000000, 
@@ -11425,15 +11425,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "9c386b44-b157-45fb-8ca3-bd697d367e05", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "47e39837-9c97-44e9-9636-ba5f07d2922f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11474,18 +11474,18 @@
           }
         } ]
       }, {
-        "_id" : "f14cee69-3294-46b8-a193-e81d63d6445e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6523b30c-cf8b-4308-9d27-cec636c2b7c8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -4746000000, 
@@ -11496,15 +11496,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "81b99eda-5bc1-4991-b03a-cfc73f1dbacd", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5a68cbeb-3715-4ced-8362-cc125b6bc22b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11545,18 +11545,18 @@
           }
         } ]
       }, {
-        "_id" : "a66d499c-6b9c-45f6-bfc1-225589245d68", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3d9779ad-b8f0-4d05-b856-5f24bb151827", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 3019000000, 
@@ -11567,15 +11567,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "43c3d3b9-969e-420d-9867-a9decbcbec98", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ad088931-12cd-4ee2-91e8-2b691c630c34", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11616,18 +11616,18 @@
           }
         } ]
       }, {
-        "_id" : "8911e01f-866b-4e66-8039-f1449f5da2b2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a2a416c9-194b-4b8d-b66b-5e230880af52", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -516000000, 
@@ -11638,15 +11638,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9688c8d8-2283-4f75-9007-dba2e78a2f1b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5053aeb5-2168-4c9f-ab6d-13061056fa92", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11687,18 +11687,18 @@
           }
         } ]
       }, {
-        "_id" : "355af299-feba-4bd4-9f76-b8c6379ed992", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1c258b09-eb06-4078-8228-ed652db548c7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 1293000000, 
@@ -11709,15 +11709,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "ab1d1427-3044-4420-9802-b3a0a8ed0408", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bbdce7ab-39e7-40ca-8e5c-7e361d299224", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetInvCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11758,18 +11758,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "ce13f309-20fe-4931-820f-493bed75b505", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9df1bdd5-de6b-48d6-81c3-df44026e5e41", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -327336000000, 
@@ -11780,15 +11780,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e25d0e01-fd8c-45d0-b277-0950d830853e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f806c29e-cc17-46ab-8d77-2bd3f1fd4547", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11829,18 +11829,18 @@
           }
         } ]
       }, {
-        "_id" : "f2143af0-c34b-48e0-9c76-1d8b7fd4fb52", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5d613259-b62c-49b4-ae6a-faeda0f415e2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -226096000000, 
@@ -11851,15 +11851,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "d9a34c75-cc0f-4925-848c-536e24c36e86", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7649d363-d415-48fa-93a9-c13cd2394d27", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11900,18 +11900,18 @@
           }
         } ]
       }, {
-        "_id" : "c2e9d6d5-393c-4816-9e9e-8e28ddaf8ba8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8c25423b-62fa-44dc-be30-30403c41d30e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -325781000000, 
@@ -11922,15 +11922,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1140f3bc-0dc2-47b3-96ca-8bca47cb5cbd", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d03ef803-e38b-4267-bdd6-b6a67f22da65", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -11971,18 +11971,18 @@
           }
         } ]
       }, {
-        "_id" : "06d1931d-1c8a-4f78-8f7f-a8d8e2260985", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6ebb5716-6dd5-4048-860a-07dc6fb9f708", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -412827000000, 
@@ -11993,15 +11993,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9bd21fba-0304-4407-8c11-51641acee06d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "61cf1b65-ccb9-4819-b4df-6c2bac63884d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12042,18 +12042,18 @@
           }
         } ]
       }, {
-        "_id" : "7867de7c-001c-47aa-98d5-dd63c0e684fe", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4ee69002-c108-4fcc-bb76-7263eb5a6f4a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -306603000000, 
@@ -12064,15 +12064,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "438d86df-6e74-48a1-b1ed-45c8e46730f3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "761eab4b-7550-4b67-b629-3a426289772d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInInvestmentActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12113,18 +12113,18 @@
           }
         } ]
       } ], [ null, null, null, null, null, null ], [ {
-        "_id" : "4f2b7819-8c60-407c-816a-0839342cc277", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2f68a27b-bca5-46d1-97fb-c5e0dafb7701", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -16286000000, 
@@ -12135,15 +12135,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "1d31bcfc-a041-4d3b-9259-71a3ba3bcd1d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "95f82d6a-4449-40cc-bceb-1cd9a14e0d0d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12184,18 +12184,18 @@
           }
         } ]
       }, {
-        "_id" : "13bdf434-3d62-411b-81ec-c9ab3efc62c9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "aa9b79dd-3c3c-4955-a9c0-d6b431c4d341", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -31267000000, 
@@ -12206,15 +12206,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "5e7f1781-2d9b-4777-8ef5-baee2adf6461", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5673ccc5-decd-48a9-8371-734bc0566f9d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12255,18 +12255,18 @@
           }
         } ]
       }, {
-        "_id" : "004d02c8-3921-4cd5-a73a-89de2b0744d9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d65c9512-11a2-40cd-9518-638f45e7d7b9", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -33118000000, 
@@ -12277,15 +12277,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "eb214da4-10a1-47dc-b5cb-76a112c38076", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6543be7c-fbd1-41d5-8193-9a73c0879e6e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12326,18 +12326,18 @@
           }
         } ]
       }, {
-        "_id" : "cab0e285-b148-4e48-a282-d0047a6f08eb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b186a6f9-6f6b-490c-8df1-2dfea8264004", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -67063000000, 
@@ -12348,15 +12348,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4cd23e8f-a4d8-44e9-8200-d65a1ed8ee7a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ca924db8-7939-4e2d-8a2a-6f52cdda1245", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12397,18 +12397,18 @@
           }
         } ]
       }, {
-        "_id" : "7badd172-d56f-48d9-a0e1-8aa44389aafe", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2a6439b2-d9dd-461b-a58c-4ff1fc8e4a7e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 95229000000, 
@@ -12419,15 +12419,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "e4fd276f-c49b-4713-824f-0f748dd837be", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "255ec81a-2190-447e-89d7-d821efc4fcf2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInShortTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12468,18 +12468,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "6b373c78-271c-42a4-a56b-b4096ba038e9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "431bac5b-8c3f-4a68-aa5a-a4bc1156509d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -68000000000, 
@@ -12490,15 +12490,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "302025e9-281a-4a7f-823e-3d899857c2b9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2a6d2718-0ab9-4cf4-8c17-6eb334469c30", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12539,18 +12539,18 @@
           }
         } ]
       }, {
-        "_id" : "483f2fde-96e3-4a2e-878a-a6d55c6aaeb9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6ae5788d-dc1c-4ddb-8b18-b625297dfa1a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -32000000000, 
@@ -12561,15 +12561,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "0bab5d5b-1f85-48ba-a1d4-edd6915c8259", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d17c4a2b-7355-4ec6-b526-eae1de1f4294", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12610,18 +12610,18 @@
           }
         } ]
       }, {
-        "_id" : "952abb86-79a1-4c64-b1c1-38abacae9e50", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8f81c121-0e11-4fc5-aeec-682d749d2d02", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -46000000000, 
@@ -12632,15 +12632,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "106957db-b409-49a8-9b07-9f4462158969", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f7bfbe5f-e0f6-41b2-a5c1-ad7a52714c6d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12681,18 +12681,18 @@
           }
         } ]
       }, {
-        "_id" : "f0ee1b67-c09f-4bd7-a6d3-44bb73b82986", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2f579b9f-6173-4d87-b9ef-00b0369b66b0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -70000000000, 
@@ -12703,15 +12703,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "596ff93c-0bf9-4456-abec-150911770dc8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9278b0db-9170-4147-a0f8-67481b879573", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12752,18 +12752,18 @@
           }
         } ]
       }, {
-        "_id" : "74b535b0-574d-4429-be85-71313fa322d3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7cf88242-94d1-4bd9-885a-56fbc0bc6f5c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 13000000000, 
@@ -12774,15 +12774,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "fdf0cf7e-5173-45ed-990f-da0b619ba473", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9b0a68d4-681e-4386-848a-6e7461df8520", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCommercialPapersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12823,18 +12823,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "28957f62-4252-4ea8-bfc2-a16964390d9c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "759b52c3-19cc-4342-bf33-1bd12641884b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 278698000000, 
@@ -12845,15 +12845,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "2ffbb2ec-5bff-499a-a5f9-dae86619dd3f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7f37bf26-84c9-4d75-aa02-d0a7854cadfc", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12894,18 +12894,18 @@
           }
         } ]
       }, {
-        "_id" : "3643e8f8-1d5e-4df3-82ab-59a938a4db22", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6a0f3c0f-afe8-4128-83e2-9cdfac4704dd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 155233000000, 
@@ -12916,15 +12916,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9f2e4f3b-00ee-4892-90b2-e9d88bdd7891", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "794a9a2f-3086-43f5-b182-9c4c0f6fd9d2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -12965,18 +12965,18 @@
           }
         } ]
       }, {
-        "_id" : "c9077638-81ea-41bc-8b9e-fa84b2773025", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f3c29917-4a0b-48dc-aef0-9a4a78e99194", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 101778000000, 
@@ -12987,15 +12987,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4344df03-7ae5-4c49-9b12-540b07737152", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0846d1b0-37b4-428c-b46a-ebe9cbdd5929", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13036,18 +13036,18 @@
           }
         } ]
       }, {
-        "_id" : "fa90043e-81ea-409a-afcf-2e6409f87654", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8bbf909e-1314-4090-8425-2e235ebc3d99", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 125087000000, 
@@ -13058,15 +13058,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6744c263-cb4a-4c80-aae1-caed734d87e9", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "29f08638-8771-45bf-ad8a-d9573e41ba75", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13107,18 +13107,18 @@
           }
         } ]
       }, {
-        "_id" : "a356743b-4e4a-4741-b29d-eec61898acf8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b31f741d-a1b7-489e-8d13-b589133a1794", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 185119000000, 
@@ -13129,15 +13129,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "9a0f8bb4-4e90-497a-8730-4d41564ae197", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0b36b91f-bc16-42f6-856b-63f2e94ae991", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13178,18 +13178,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "8fd6e42f-409c-44ba-bd33-5a165402e33b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "55e239e6-7ddc-4ea0-ae3c-8c19ba6d3638", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -165864000000, 
@@ -13200,15 +13200,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "eb66ec20-3a31-4dcc-953b-4d124923d260", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "69631bd9-948e-4562-83ed-bbf0d763f317", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13249,18 +13249,18 @@
           }
         } ]
       }, {
-        "_id" : "4b04cfce-7865-426e-9399-4228fb34da6d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b98e001b-862d-4148-b703-321e66b2b798", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -143162000000, 
@@ -13271,15 +13271,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "0e90a41f-ca9c-4632-b977-ff60c3aa848b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be9448dc-c05e-4df5-9600-a42a4bead504", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13320,18 +13320,18 @@
           }
         } ]
       }, {
-        "_id" : "57deffff-5705-4bb7-a9d2-27996795b946", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "804ceba2-e1e5-481f-aaaf-88039670cc4b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -84490000000, 
@@ -13342,15 +13342,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "3c038cd4-f320-44ab-ade9-ce890af3c828", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9971e2a5-d4ae-4987-8e5d-4c651e314b9c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13391,18 +13391,18 @@
           }
         } ]
       }, {
-        "_id" : "4bf56e58-b53f-47b9-a3cd-67447564607d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8c916218-6d88-4ac9-87eb-368bc8f0425b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -67367000000, 
@@ -13413,15 +13413,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "3801cce2-bbe5-49e4-8285-38d2067c99b7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0fe38b38-9e64-49d2-9290-93f7dedb79ef", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13462,18 +13462,18 @@
           }
         } ]
       }, {
-        "_id" : "11db695f-af47-44e6-97a0-4f6799dc84a1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0605e66f-780a-4238-a51d-4165d513c14d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -85159000000, 
@@ -13484,15 +13484,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "ed21d51b-377a-41bf-9fc8-0bfa8311c1f3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ef80ebf1-1a36-42c2-82cc-131930bb620e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RepaymentOfLongTermLoansPayableFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13533,18 +13533,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "d938ba71-8725-4eb2-878d-29d941c161a1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7b9e3c15-fa6e-4961-8995-c95061085c87", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 30000000000, 
@@ -13555,15 +13555,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e420ac61-30dd-4ffa-a765-f4c779e2ca10", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f8bfb0d3-cbcf-4992-8c4a-f7d426629982", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13604,18 +13604,18 @@
           }
         } ]
       }, {
-        "_id" : "1d824189-962d-4987-b11b-05bd2e7e0552", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c2d6f942-6977-4c20-baf1-ae07ddd9f16e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 55000000000, 
@@ -13626,15 +13626,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "3462be75-dfe6-425e-9804-d38d4188d003", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "67576b90-5114-4ea2-86c3-0612d96fc4ed", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13675,18 +13675,18 @@
           }
         } ]
       }, {
-        "_id" : "ca6eeae0-4f57-4ef6-87c8-2678e3781646", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c28b846f-e9fc-46c8-97fd-787f73abe63f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 35000000000, 
@@ -13697,15 +13697,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "f425ea32-4178-49c1-910e-7e3fd44ad87a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e280b50e-b01b-44a8-af3f-37dbeb367b59", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13746,18 +13746,18 @@
           }
         } ]
       }, {
-        "_id" : "7ac2883b-32ce-45f9-8a01-8dc452bae72e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3b5024c9-7795-47c6-b1ae-7eca1f106b81", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 39861000000, 
@@ -13768,15 +13768,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "5f94e758-cc8a-4559-803a-37cffbaecf74", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d4a8b05b-67cb-4061-ab36-841ef1a00ab7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13817,18 +13817,18 @@
           }
         } ]
       }, {
-        "_id" : "2fb64664-eb98-4780-b72f-28468792885a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ee2a0734-70db-4f28-bc54-f150e2d4d2c2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 144448000000, 
@@ -13839,15 +13839,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "fbb87ba3-98c4-4f78-a0a5-3358250a3b38", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0e50c450-d6dc-4d91-93cd-4a9558fef5d7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromIssuanceOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13888,18 +13888,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "f0e40f9d-f16b-42d9-91d4-6fc908c8c6b3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b8e6e2bf-502d-4d24-a1c4-5969ed653944", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -65000000000, 
@@ -13910,15 +13910,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "0327799b-72b2-4fd6-b8f1-9177fffc9c8d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a9fb10ae-67b1-4dbc-9b3b-32f0f54729ff", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -13959,18 +13959,18 @@
           }
         } ]
       }, {
-        "_id" : "70419db0-7cc5-4246-93e2-b048e41dd083", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8c644d12-f859-4df5-b4c7-2eff59706fc4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -5000000000, 
@@ -13981,15 +13981,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "da2cb5eb-7f73-4ceb-85cf-43df0afb5579", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "eea05dec-950a-48ba-a26c-8d1793c0a35f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14030,18 +14030,18 @@
           }
         } ]
       }, {
-        "_id" : "7068e404-93fe-4488-9fe5-9faa72604790", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5000c902-7372-4e7e-baad-16bb258f8718", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -15000000000, 
@@ -14052,15 +14052,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "ee814865-fb90-4938-b13f-39e84b340c31", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "067451c9-a45c-4151-b9a4-b3357daacd66", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14101,18 +14101,18 @@
           }
         } ]
       }, {
-        "_id" : "dff737b1-b666-4163-b132-edf28d99bcd5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "50e128f6-c8a1-4d0d-bf6a-29e1cfda0aa8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -43266000000, 
@@ -14123,15 +14123,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4ad251dc-3f3a-44cb-8a08-509bb4554297", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3bb2b796-ee07-4e31-8d53-b3c533305c9d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14172,18 +14172,18 @@
           }
         } ]
       }, {
-        "_id" : "de390eee-a686-47f4-a3cf-0cfe68e7c957", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ce7e91d1-2a49-4844-a459-3187af55df7e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -95324000000, 
@@ -14194,15 +14194,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "d0338d8d-bec4-486b-829e-4af7c2532ac0", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "eddb2213-1328-4ece-ab1d-0037809c5d62", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:RedemptionOfBondsFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14243,18 +14243,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "e497a748-a180-49be-9928-502c9c9f62f5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9c59f3ab-b1a1-450d-b913-91de76192761", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -563000000, 
@@ -14265,15 +14265,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "9a51375d-4836-4b77-a686-4a3b9dcba775", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "39fe1eb9-0029-4bab-87cc-8ea9d659ed05", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14314,18 +14314,18 @@
           }
         } ]
       }, {
-        "_id" : "39651878-84ac-4dd4-b771-566066f8ca04", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7252c5c5-09e0-4b61-8b1c-eaf4fba9767e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -15000000, 
@@ -14336,15 +14336,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4b221790-124e-45ef-8a57-f599cbd9f1a6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ec4f3bab-163c-4c8e-9ba6-112336795cdb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14385,18 +14385,18 @@
           }
         } ]
       }, {
-        "_id" : "43df7af9-371c-47fd-9e25-587ff0c6e007", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3a7b18d6-287b-4db3-8537-6e78849b0b93", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -40000000, 
@@ -14407,15 +14407,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b7247e8f-0352-44bf-813f-1a06b98f2495", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "60a65ddb-bcd4-425b-b134-77032826e4d7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14456,18 +14456,18 @@
           }
         } ]
       }, {
-        "_id" : "38c881c5-710e-455c-827b-066e6e96904f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9c3c9a34-1a69-43f0-89d0-15ad31219749", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -179000000, 
@@ -14478,15 +14478,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9daaa90d-9c0c-4008-98b5-cd0e73f8cb1c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cf6eb3f8-1609-48db-9958-3c9bda93f7b4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14527,18 +14527,18 @@
           }
         } ]
       }, {
-        "_id" : "052dd804-1b32-45cf-bd47-212ee662f911", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "18752a9f-5a46-4887-887e-9f4ea3633589", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -178000000, 
@@ -14549,15 +14549,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "7dbcd0d0-d713-4d95-95b7-108c2002ab43", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a66d80e4-d120-4f35-8e52-05cfe27bb4ee", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:PurchaseOfTreasuryStockFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14598,18 +14598,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "90eb5a8c-3f4b-424d-bf15-317086f559be", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a6fb1760-7ee5-41f2-9809-ce8c2e1984d5", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -6302000000, 
@@ -14620,15 +14620,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "ae7cf55e-bfea-478a-98f5-33df292d81d1", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "58636507-017f-4854-8b11-122966dac1ff", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14669,18 +14669,18 @@
           }
         } ]
       }, {
-        "_id" : "ee09550f-3984-45df-84d1-94c84b553bc2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "55a9c888-1b8c-4bb9-a901-0f6225827a6e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -28363000000, 
@@ -14691,15 +14691,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "8d1afc3f-4236-4ef8-955d-059f06eecad2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "bcdc7ec5-413f-4e50-8ae3-71b64d76a9bb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14740,18 +14740,18 @@
           }
         } ]
       }, {
-        "_id" : "e94b3723-3cfa-4b7c-80ce-255a2fd20e51", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "60e7d30d-b239-4f8c-8b0e-c2ab3a4bcc02", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -9454000000, 
@@ -14762,15 +14762,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "0564007a-b1e5-49a0-a07d-d1b2e3fba512", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e45eb6a4-d774-4ec1-a775-9d131923345a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14811,18 +14811,18 @@
           }
         } ]
       }, {
-        "_id" : "e01189ca-d642-4624-b00f-4ea53041ffef", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "48d79342-7744-45eb-82e8-c9f9ad45444d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -6303000000, 
@@ -14833,15 +14833,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "cf05f406-951f-4514-9632-c820ab26e7d6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5e268e35-be72-4b02-9f7d-e4f3b3d5512b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14882,18 +14882,18 @@
           }
         } ]
       }, {
-        "_id" : "5125f540-2afe-43f4-bf94-24cae86bab96", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cacc55e6-c1e0-4e00-b9d2-bad6caea49c6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -69335000000, 
@@ -14904,15 +14904,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "60ed0c6f-bf36-4d8d-9933-ef7d87bacb65", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "76017ce5-7954-4e05-a51f-7e26a9164e6a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -14953,18 +14953,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "63ecf532-8581-4861-bc09-ad6a9ab7e001", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f72d50fe-449f-4dab-b3ec-5139260516a6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -9191000000, 
@@ -14975,15 +14975,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "0b4eecc1-2368-43d3-a926-e07ed6f74b6a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a5b8ceda-5c09-4dd3-bb58-a2d788db06f4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15024,18 +15024,18 @@
           }
         } ]
       }, {
-        "_id" : "77b2a161-9b94-4bde-bbf7-70c559656ec3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "cbd288c7-9b72-4046-94e8-ddd6bcb1adc1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -9903000000, 
@@ -15046,15 +15046,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "b19ea204-c9f4-40b9-b75d-8174c7681e2e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d1e31d97-5475-4709-88fb-fc2743d18e26", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15095,18 +15095,18 @@
           }
         } ]
       }, {
-        "_id" : "e9ad76a7-458c-4778-984f-4812a7b88e21", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "aec2e8cd-57d5-4745-af77-b7098df4ecb3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -8703000000, 
@@ -15117,15 +15117,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "19f5cdd9-090e-47d4-9185-88493aef1e68", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "26fb9f17-3bb5-474d-8977-d6d8545fa45c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15166,18 +15166,18 @@
           }
         } ]
       }, {
-        "_id" : "388f8658-6d1e-4b3d-97b0-a5aded012ee7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3ac35d81-4772-4966-9ead-8f2a8de93113", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -9756000000, 
@@ -15188,15 +15188,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "59e3fc2d-d183-4628-8a57-dbb64ad46c4b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "84dcd142-c4ac-4bc6-9cbe-bac894b9d99f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15237,18 +15237,18 @@
           }
         } ]
       }, {
-        "_id" : "23387e25-99a2-4c03-befe-5bb25a6da96e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3f230497-dd02-4436-ad63-2b9887477dab", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -10305000000, 
@@ -15259,15 +15259,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "dfa6ebd3-73c5-4929-82d1-dda4b2e1cf7d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5c2d050a-87da-4b2a-b585-3431f76b149a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashDividendsPaidToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15308,18 +15308,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "0536b67f-278d-4b16-b074-7f94e0ddcb36", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f01b5d0c-46e2-4fd2-a062-9f027493b654", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 1108000000, 
@@ -15330,15 +15330,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "7488f7e5-1727-4323-a6be-b391e4af0a47", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dc26c13c-db02-48fe-a906-24240441fe41", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15379,18 +15379,18 @@
           }
         } ]
       }, {
-        "_id" : "53f274e0-8073-4f38-bd29-66574af300ca", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1bb2c4c5-c8f8-459b-aaf2-325390787f9a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 824000000, 
@@ -15401,15 +15401,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "af52be23-75d4-473e-a531-6afc9ed008ce", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2cab13c0-9dd6-4835-911d-12078600e71d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15450,18 +15450,18 @@
           }
         } ]
       }, {
-        "_id" : "272d74da-646b-488f-8cce-c4429a1fdc24", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "170e88a6-ce4f-40d7-b2d4-c4bfd3023adf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 1089000000, 
@@ -15472,15 +15472,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9dbc2768-f9a4-40a5-9def-2b7a182593ef", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "db4999a8-1374-45a6-8fd6-970b3a4aa2ba", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15521,18 +15521,18 @@
           }
         } ]
       }, {
-        "_id" : "94c065bd-9550-409a-a00e-acee2d0ebd1d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "502523c7-cb55-4b1e-bde4-6515e0f47069", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 84000000, 
@@ -15543,15 +15543,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "f876a707-a6ef-403b-aca3-75fee178d961", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f54cc480-4954-403a-8a55-4b34ac7fc3ef", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15592,18 +15592,18 @@
           }
         } ]
       }, {
-        "_id" : "c8abc85f-579e-42ea-bc81-e33e26de35bc", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dbee404d-e527-424a-bee7-b5f345a1ca8b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 290000000, 
@@ -15614,15 +15614,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "cbcb2f97-fc4a-4ce1-9ff6-e38fee277a2e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "43d7fb3b-8e1b-4108-908d-9108894d9f47", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:ProceedsFromStockIssuanceToMinorityShareholdersFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15663,18 +15663,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "04922e4e-4895-4048-829a-3e02b9b00581", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a2604292-bf5d-43e6-9786-1080c8d9b19f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 54735000000, 
@@ -15685,15 +15685,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "db021cf3-ec8a-4c17-b984-32cf7006022f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3f56a289-89dc-45ca-81b0-26fa56cebb91", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15734,18 +15734,18 @@
           }
         } ]
       }, {
-        "_id" : "e45fe6dc-4841-417a-993b-df2341d359d7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6f8c266a-4a63-4bd5-9e63-10555561a680", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 6868000000, 
@@ -15756,15 +15756,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "37ebb9d2-43a8-43e8-99c2-2c00520752cf", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e0da435f-6dec-49c3-982c-1d45bbaf5eff", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15805,18 +15805,18 @@
           }
         } ]
       }, {
-        "_id" : "8be66efe-68db-4347-979d-57b76e97de38", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "8801fc1d-5500-4633-bc8e-29686ba6cc1c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 11696000000, 
@@ -15827,15 +15827,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "53329b3f-9a63-444d-b901-b9f6a8a0d956", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "74b162c7-ddf1-49cc-9b9a-1dd17d0c96a2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15876,18 +15876,18 @@
           }
         } ]
       }, {
-        "_id" : "ed177d01-2cf5-44b2-8684-179e545dd064", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "1c543055-782a-4689-9a04-109c2356fb98", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 18917000000, 
@@ -15898,15 +15898,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1119d4fa-4db2-4549-ba52-aff5608ac970", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "31247279-be84-4ee9-9464-c5b57bfbad5a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -15947,18 +15947,18 @@
           }
         } ]
       }, {
-        "_id" : "4ed80a7a-dee3-4847-972b-46360b82ef03", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ce9d8600-95e5-4ebb-ad44-41d845c791c7", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -7575000000, 
@@ -15969,15 +15969,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "67761f62-d222-4c55-bbc7-676f67fe7bfc", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d6eedeb3-2f17-4f89-9baf-1f8fe79cd608", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:OtherNetFinCF", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16018,18 +16018,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "a82864c7-7d0e-4ec8-9dc2-608025dfd407", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c6b56fb1-41b1-472b-a2e6-b6ae62bb016e", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 33332000000, 
@@ -16040,15 +16040,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e0daa56b-130d-4b4b-afa9-cafc40749d5c", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "79bdc4a3-d9a7-4ca6-aa5f-d467739d4912", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16089,18 +16089,18 @@
           }
         } ]
       }, {
-        "_id" : "83960d4d-7441-46e7-afc4-0a1b306f6414", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "13666f7b-82dd-44f3-a6c0-0e0f628149e0", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -31785000000, 
@@ -16111,15 +16111,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1e753c8d-d563-4dcd-bf13-334a7d900c0a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "648435f2-e526-49e2-806a-1fb0881e7211", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16160,18 +16160,18 @@
           }
         } ]
       }, {
-        "_id" : "85f29cfa-5195-4710-8854-b3bf00933b49", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2be2aa8a-b12a-4816-a26f-eac0fb63564d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -47244000000, 
@@ -16182,15 +16182,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "a8a2b627-bd12-4f27-8b46-bc9f26b63382", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e8c95a90-ca1c-42ca-8be4-86fe4bda1bf8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16231,18 +16231,18 @@
           }
         } ]
       }, {
-        "_id" : "e217183a-cd8b-4acd-9258-90e12b0901b4", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7471e84f-33c5-4bdd-a25b-4c37f73ba176", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -79985000000, 
@@ -16253,15 +16253,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "fcf7d5fc-f345-42a3-8162-f9805fbe5cec", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "966a2807-3ac3-405b-ab21-c9acd9204f56", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16302,18 +16302,18 @@
           }
         } ]
       }, {
-        "_id" : "8b8cc483-69b0-442f-8b26-b8e422af6118", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "30664f7d-fa11-4c04-ad88-1de9dddbb430", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 170209000000, 
@@ -16324,15 +16324,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "048a993c-be7e-4849-8b4a-c6006570ee38", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a9d85f09-2848-4f95-a4ab-08ea49e0eff1", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetCashProvidedByUsedInFinancingActivities", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16373,18 +16373,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "b4cabb12-8774-443a-b24b-b8e0e5a43b06", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4c014550-f24d-4021-b191-1a859b624432", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 22229000000, 
@@ -16395,15 +16395,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "e3ae0aeb-c1cb-4e96-b2c5-b47c501cac06", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "75ce4fa2-3fd6-4ac5-8f3a-481566b2f50f", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16444,18 +16444,18 @@
           }
         } ]
       }, {
-        "_id" : "2414521a-cca2-4763-a6ad-321ccdd1e070", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "129f2642-cd15-4e4a-af78-3853803f444a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -2444000000, 
@@ -16466,15 +16466,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "7a0ac509-1d9f-4692-b11d-55c3e49ba5e7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "f2bbcc77-50d1-4df2-bdfa-70f5a645e538", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16515,18 +16515,18 @@
           }
         } ]
       }, {
-        "_id" : "1c9e84ab-ca86-4bdc-92c4-daa45f32854d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "64a59748-88d4-4247-91ae-1036228d0e79", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -2811000000, 
@@ -16537,15 +16537,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "9b3b9bee-d0df-40c3-ae6d-e7d43a76cd82", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "41620040-451d-4067-b5d0-d772276cf9a4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16586,18 +16586,18 @@
           }
         } ]
       }, {
-        "_id" : "205ef565-ce64-44e9-b02c-02aed31a5d4e", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0f8690a8-dd58-40ad-9b85-ad4d2163a25a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 7246000000, 
@@ -16608,15 +16608,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "fd969abd-4880-4c0f-80a9-7523066a411d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "e8adc383-93ee-4e38-b2fb-06797fc4be2a", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16657,18 +16657,18 @@
           }
         } ]
       }, {
-        "_id" : "5b0fb3f1-8bb1-4480-bef3-c8c8ebea8f01", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "17477008-7b84-4fb6-acbc-ce2bcebc1cfd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -23069000000, 
@@ -16679,15 +16679,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "687e46c1-35e9-4c26-87ac-0f01bd0760ca", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "31dc3231-5880-4224-840d-efdade6afdb8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:EffectOfExchangeRateChangeOnCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16728,15 +16728,15 @@
           }
         } ]
       } ], [ [ {
-        "_id" : "247bd915-42b3-4d4f-bfa8-e1673ac4d035", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2ad64974-f60e-41e8-93e4-bf4805833a91", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16777,18 +16777,18 @@
           }
         } ]
       }, {
-        "_id" : "31f47dc6-e81f-431a-953e-b96b2849f249", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "de9f1f32-fec0-4e2e-a6c7-ae0fa56606e8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "instant", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 55747000000, 
@@ -16799,15 +16799,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "507ab73c-9341-447d-8923-f1846e2715ba", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "be64c91e-3cc8-4d84-8184-356934acce49", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16848,15 +16848,15 @@
           }
         } ]
       }, {
-        "_id" : "2dc517e2-e08c-4fdb-b904-90dd761d3a72", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "55171276-77a6-4a2f-a012-23c371e451cf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16897,18 +16897,18 @@
           }
         } ]
       }, {
-        "_id" : "3d006b71-6033-4f6b-a87c-b101f8d3abbf", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7213b753-19d8-4eb2-bf2d-2c13cbcd9ed4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "instant", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 76256000000, 
@@ -16919,15 +16919,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "3c8abaeb-248a-4f0c-a812-9a03e213ced8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "619a7a52-277c-422a-843b-169b243ed1fe", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -16968,15 +16968,15 @@
           }
         } ]
       }, {
-        "_id" : "1406aefd-2e6c-43f8-b0fd-2a375c6f01a7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a3ba72fa-f892-4c0e-b606-d5d3a632e9e2", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17017,18 +17017,18 @@
           }
         } ]
       }, {
-        "_id" : "3230de12-a2a9-4858-ab30-c2d343c106e6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "7d7875cc-9a85-4405-b8cb-785d0c784f50", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "instant", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 80470000000, 
@@ -17039,15 +17039,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "4926170a-178a-4cf7-b3d7-5b3f5ee434e7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c9f04d49-be4d-41ee-abc8-9d8992f34159", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17088,15 +17088,15 @@
           }
         } ]
       }, {
-        "_id" : "1fc92c2d-0bfa-4bcd-994a-8c8a04733b08", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a3431438-fda0-4401-b9bd-2c42c5050d6c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17137,18 +17137,18 @@
           }
         } ]
       }, {
-        "_id" : "c9f5fc32-6de5-4edb-9f58-49aff262c5b6", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "b96ead02-6ef8-4c55-a8be-d559d487c7ad", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "instant", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 128390000000, 
@@ -17159,15 +17159,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "65d31158-c78d-41fd-a00c-bc9d0d398135", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0ca6be28-da43-4e23-a1e7-854f70d60227", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
-          "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl28:Archive" : "S0003FNS", 
+          "fsa:Submitted" : "2009-06-24", 
           "xbrl:Period" : "2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
           "xbrl:Unit" : "iso4217:JPY", 
-          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17208,15 +17208,15 @@
           }
         } ]
       }, {
-        "_id" : "69b70737-7713-4d6e-a1eb-5a63803d54f8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "75946cc8-718d-488d-9638-8a7580e0c907", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
-          "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl28:Archive" : "S000623B", 
+          "fsa:Submitted" : "2010-06-24", 
           "xbrl:Period" : "2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
           "xbrl:Unit" : "iso4217:JPY", 
-          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17257,15 +17257,15 @@
           }
         } ]
       } ], {
-        "_id" : "40a68c04-4957-421b-bcb7-2b56408f69af", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "ded80b31-68cd-43e7-8a0e-ebbd8bbacf71", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:CashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17306,18 +17306,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "46f009a6-7914-4850-8a6b-ef98789ef4eb", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d203e2a8-d0ff-46eb-be94-66ebb6d5e4b4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -19735000000, 
@@ -17328,15 +17328,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "16721074-693d-4b8c-a43c-e54e1455638d", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "5aabdc63-d335-4dc4-924a-130d8656c0ba", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17377,18 +17377,18 @@
           }
         } ]
       }, {
-        "_id" : "6f20b63a-a023-4607-841e-45b3888a9174", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dad5e9e4-cc35-4944-a8b2-bdcdc3414fdf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 2402000000, 
@@ -17399,15 +17399,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6eb3ddab-4a67-4f46-ac05-b2f9203e772f", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "c998d259-6d39-407a-8b2b-a1f3d05bb5cd", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17448,18 +17448,18 @@
           }
         } ]
       }, {
-        "_id" : "d61302a2-4416-4ff9-b235-0c139cac96a5", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "57092497-5d7c-4900-a578-2092bb72921c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 2123000000, 
@@ -17470,15 +17470,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "19f5844d-591f-4632-b59e-23c499398321", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "dab07b7a-940e-4842-9305-3374b4fb9cc6", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17519,18 +17519,18 @@
           }
         } ]
       }, {
-        "_id" : "265c93c2-f368-4df8-b778-03e5373dc64a", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "08b8d8c7-4fb2-432c-8fba-04247a3f9455", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -22000000, 
@@ -17541,15 +17541,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "242238d3-0ae7-4094-baac-c9aee320ac10", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "095f0f59-4001-45d2-b8ba-7e420378219c", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17590,18 +17590,18 @@
           }
         } ]
       }, {
-        "_id" : "295d257c-c6d0-474e-9185-b4342b877091", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "a3c3e523-691b-4783-a527-3ee97778b4ca", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : null, 
@@ -17612,15 +17612,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "b6aec11e-3a8a-468c-bc68-6b22030022f8", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "604e050a-4a5f-4845-a763-f7fd05995fda", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseDecreaseInCashAndCashEquivalentsResultingFromChangeOfScopeOfConsolidationCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17661,18 +17661,18 @@
           }
         } ]
       } ], [ {
-        "_id" : "21e62d7c-4d25-4c9c-9084-bb061fdae2b7", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "d3a18aa0-2329-4f24-a8e8-afbff07f7df3", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseInCashAndCashEquivalentsResultingFromMergerCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:IncreaseInCashAndCashEquivalentsResultingFromMergerCCE", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 12975000000, 
@@ -17683,15 +17683,15 @@
         }, 
         "AuditTrails" : [  ]
       }, {
-        "_id" : "21fa6d45-2d64-46d5-b1a2-032fb4595882", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "2715f511-0791-4316-a2ad-850f7ea912a8", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:IncreaseInCashAndCashEquivalentsResultingFromMergerCCE", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:IncreaseInCashAndCashEquivalentsResultingFromMergerCCE", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17760,18 +17760,18 @@
           "xbrl:Unit" : "iso4217:JPY"
         }
       } ], [ {
-        "_id" : "bcb97157-0836-4b0b-a91c-616586f0c9a2", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "0b5c8f76-3bd1-469e-8e4f-188850327adc", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2012-04-01/2013-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2013-06-25", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2012-04-01/2013-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2012, 
-          "fsa:Submitted" : "2013-06-25"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : 41542000000, 
@@ -17782,15 +17782,15 @@
         }, 
         "AuditTrails" : [  ]
       }, [ {
-        "_id" : "8a165bfa-01bf-434d-bbfc-d0a132b791b3", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "91adc311-56eb-4ed6-813d-1ccae1bfee9d", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000DR20", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2013-06-25", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17831,18 +17831,18 @@
           }
         } ]
       }, {
-        "_id" : "8a63ac92-9fb8-4896-95ec-06e3bda8fb5b", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "9b504fc1-45ad-4757-a32e-b1e09f7bfebe", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2011-04-01/2012-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2012-06-26", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2011-04-01/2012-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2011, 
-          "fsa:Submitted" : "2012-06-26"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -22911000000, 
@@ -17853,15 +17853,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "1322b7f7-bf4d-4a7f-9b88-a9db3da269de", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "90b3ccb9-34e6-480b-953c-82ee2bfd99bf", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000B7F8", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2012-06-26", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17902,18 +17902,18 @@
           }
         } ]
       }, {
-        "_id" : "4d956583-4a40-42e2-bb60-6d9a506e1796", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "29520815-a34b-4df2-ab68-e01e6036ee4b", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2010-04-01/2011-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2011-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2010-04-01/2011-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2010, 
-          "fsa:Submitted" : "2011-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -6336000000, 
@@ -17924,15 +17924,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "32e26d90-12d1-4bc7-8f00-727b0d8af1be", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "3af7fd4d-3c13-40fd-9715-c434095d5655", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0008MK4", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2011-06-24", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -17973,18 +17973,18 @@
           }
         } ]
       }, {
-        "_id" : "f69f38ee-968d-49ff-8ee1-60104a95c059", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "4ea15d87-a751-447d-ab0a-a6f0c9e21d44", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2009-04-01/2010-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2010-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2009-04-01/2010-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2009, 
-          "fsa:Submitted" : "2010-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -47897000000, 
@@ -17995,15 +17995,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], [ {
-        "_id" : "6f3c597c-ee93-4c21-bfb3-526137da98ab", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "df1b8b51-36c8-496b-b265-1d3ee0402ce4", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S000623B", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2010-06-24", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null
@@ -18044,18 +18044,18 @@
           }
         } ]
       }, {
-        "_id" : "6a0b325c-a7ea-43b3-8389-626cb8c0dc91", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "6892ed56-f287-48b8-8500-71c3bf5d28eb", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2008-04-01/2009-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
+          "fsa:Submitted" : "2009-06-24", 
           "fsa:FiscalPeriod" : "FY", 
+          "xbrl:Period" : "2008-04-01/2009-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
           "fsa:FiscalPeriodType" : "YTD", 
           "fsa:FiscalYear" : 2008, 
-          "fsa:Submitted" : "2009-06-24"
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY"
         }, 
         "Type" : "NumericValue", 
         "Value" : -31923000000, 
@@ -18066,15 +18066,15 @@
         }, 
         "AuditTrails" : [  ]
       } ], {
-        "_id" : "1318c65a-38f0-464d-a974-e4326b5d6e93", 
-        "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
+        "_id" : "007a06b1-ff78-4592-b5ff-4b1d50907989", 
+        "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S0003FNS", 
-          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
-          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
-          "xbrl:Period" : "2007-04-01/2008-03-31", 
-          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:Submitted" : "2009-06-24", 
+          "xbrl:Period" : "2007-04-01/2008-03-31", 
+          "xbrl:Entity" : "http://info.edinet-fsa.go.jp E01225-000", 
+          "xbrl:Concept" : "jp-t-cte:NetIncreaseDecreaseInCashAndCashEquivalents", 
+          "xbrl:Unit" : "iso4217:JPY", 
           "fsa:FiscalYear" : null, 
           "fsa:FiscalPeriod" : null, 
           "fsa:FiscalPeriodType" : null

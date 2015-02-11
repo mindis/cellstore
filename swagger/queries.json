@@ -230,6 +230,25 @@
                 ],
                 "paramType": "query"
             }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
+                ],
+                "paramType": "query"
+            }, {
                 "name": "token",
                 "description": "The token that allows you to use this API.",
                 "required": true,
@@ -259,6 +278,16 @@
                 "parameters": {
                     "cik": "66740",
                     "format": "xml"
+                }
+            },{
+                "title": "Get all EDINET filings.",
+                "description": "Retrieve all EDINET filings for 2012.",
+                "profile": ["japan"],
+                "parameters": {
+                    "tag":"all",
+                    "filingKind" : "EDINET",
+                    "fiscalPeriod" : "ALL",
+                    "fiscalYear" : 2012
                 }
             }]
         }]
@@ -359,6 +388,25 @@
                     "Q3",
                     "FY",
                     "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
                 ],
                 "paramType": "query"
             }, {
@@ -513,6 +561,25 @@
                     "Q3",
                     "FY",
                     "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
                 ],
                 "paramType": "query"
             }, {
@@ -726,6 +793,25 @@
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
+                ],
                 "paramType": "query"
             }, {
                 "name": "disclosure",
@@ -1102,6 +1188,25 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
+                ],
+                "paramType": "query"
+            }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
                 "profile": ["sec"],
@@ -1406,6 +1511,25 @@
                 "description": "The fiscal period of the filing",
                 "required": false,
                 "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
+                ],
                 "paramType": "query"
             }, {
                 "name": "disclosure",
@@ -2089,6 +2213,93 @@
                     "jpcrp-cor:MajorShareholdersAxis": "ALL",
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
+            }, {
+                "title": "Get forecast values by company name/ID and reported period/forecast period",
+                "description": "Get forecast values by company name/ID and reported period/forecast period.",
+                "profile": ["japan"],
+                "parameters": {
+                    "format": "xml",
+                    "concept": "tse-ed-t:BasicEarningsPerShareIFRS",
+                    "ticker": 8058,
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "ALL",
+                    "fiscalYear": 2014
+                }
+            }, {
+                "title": "Get all dividend forecasts for 2014 by company name/ID",
+                "description": "Get all dividend forecasts for 2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 54010",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "ALL",
+                    "fiscalPeriodType": "QTD",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
+            },
+            {
+                "title": "Get all dividend forecasts for 2014 by company name/ID reported in Q1/2014",
+                "description": "Get all dividend forecasts for 2014 by company name/ID reported in Q1/2014",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 54010",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "ALL",
+                    "fiscalPeriodType": "QTD",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:AnnualDividendPaymentScheduleAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE",
+                    "fsa:ArchiveFiscalPeriod": "Q1",
+                    "fsa:ArchiveFiscalYear": 2014
+                }
+            },
+            {
+                "title": "Get all Profit forecasts for FY/2014 by company name/ID",
+                "description": "Get all Profit forecasts for FY/2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 80580",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:ProfitAttributableToOwnersOfParentIFRS",
+                    "tse-ed-t:ResultForecastAxis": "tse-ed-t:ForecastMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
+            },
+            {
+                "title": "Get all Profit forecasts and actual values for FY/2014 by company name/ID",
+                "description": "Get all Profit forecasts and actual values for FY/2014 by company name/ID",
+                "profile": ["japan"],
+                "parameters": {
+                    "xbrl:Entity": "http://www.tse.or.jp/sicc 80580",
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:ProfitAttributableToOwnersOfParentIFRS",
+                    "tse-ed-t:ResultForecastAxis": ["tse-ed-t:ForecastMember", "xbrl28:EDINETReportedValue"],
+                    "tse-ed-t:ResultForecastAxis::default": "xbrl28:EDINETReportedValue",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE",
+                    "fsa:ArchiveFiscalPeriod": "ALL",
+                    "fsa:ArchiveFiscalYear": "ALL"
+                }
             }]
         }]
     }, {
@@ -2184,6 +2395,25 @@
                     "Q3",
                     "FY",
                     "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
                 ],
                 "paramType": "query"
             }, {
@@ -2394,6 +2624,25 @@
                     "Q3",
                     "FY",
                     "ALL"
+                ],
+                "paramType": "query"
+            }, {
+                "name": "filingKind",
+                "description": "Filters the results for the filings submitted for kind of filing. (default: no filtering)",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "enum": [
+                    "EDINET",
+                    "TDNET",
+                    "entity",
+                    "quarterly-securities-report",
+                    "extraordinary-report",
+                    "internal-control-report",
+                    "annual-securities-report",
+                    "reports-of-possession-of-large-volumes",
+                    "change-report",
+                    "amend"
                 ],
                 "paramType": "query"
             }, {
