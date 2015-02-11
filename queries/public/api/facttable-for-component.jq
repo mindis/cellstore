@@ -78,6 +78,7 @@ let $archives as object* := multiplexer:filings(
   $entities,
   $fiscalPeriod,
   $fiscalYear,
+  $filingKind,
   $aid)
 
 let $entities as object* :=
