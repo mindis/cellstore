@@ -4,10 +4,9 @@ import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
 import module namespace conversion = "http://28.io/modules/xbrl/conversion";
 import module namespace reports = "http://28.io/modules/xbrl/reports";
 import module namespace components = "http://28.io/modules/xbrl/components";
-import module namespace concepts = "http://28.io/modules/xbrl/concepts";
-import module namespace facts = "http://28.io/modules/xbrl/facts";
+import module namespace labels = "http://28.io/modules/xbrl/labels";
 
-import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
+import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 
 import module namespace response = "http://www.28msec.com/modules/http-response";
@@ -21,6 +20,7 @@ declare  %rest:case-insensitive                 variable $token         as strin
 declare  %rest:env                              variable $request-uri   as string  external;
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik           as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode    as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic           as string* external;
@@ -33,6 +33,7 @@ declare  %rest:case-insensitive                 variable $validate      as boole
 declare  %rest:case-insensitive                 variable $labels        as boolean external := false;
 declare  %rest:case-insensitive                 variable $report        as string? external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
+declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 
 session:audit-call($token);
 
@@ -43,21 +44,21 @@ let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $fiscalPeriodType as string* := api:preprocess-fiscal-period-types($fiscalPeriodType)
 let $tag as string* := api:preprocess-tags($tag)
 
-(: Object resolution :)
-let $entities := ($eid,
-    if($profile-name eq "sec")
-    then
-        for $entity in
-            companies:companies(
-                $cik,
-                $tag,
-                $ticker,
-                $sic,
-                $eid,
-                $aid)
-        order by $entity.Profiles.SEC.CompanyName
-        return $entity
-    else ())
+let $cik as string* :=
+    switch($profile-name)
+    case "sec" return $cik
+    case "japan" return $edinetcode
+    default return ()
+
+(: Entity resolution :)
+let $entities := multiplexer:entities(
+  $profile-name,
+  $eid,
+  $cik,
+  $tag,
+  $ticker,
+  $sic, ())
+
 let $report-id as string? := $report
 let $report as object? := reports:reports($report-id)
 
@@ -96,8 +97,7 @@ then
                 )
 
     let $concepts as object* := $report.Concepts[]
-    let $language as string := ( $report.$components:DEFAULT-LANGUAGE , $concepts:AMERICAN_ENGLISH )[1]
-    let $role as string := ( $report.Role, $concepts:ANY_COMPONENT_LINK_ROLE )[1]
+    let $language as string := ( $language, $report.$components:DEFAULT-LANGUAGE , $labels:AMERICAN_ENGLISH )[1]
     let $facts :=
       if($profile-name eq "sec")
       then
@@ -112,18 +112,32 @@ then
             { "EntityRegistrantName" : $entity.Profiles.SEC.CompanyName },
             if($labels)
             then
-                let $labels as object? := facts:labels($fact, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
+                let $labels as object? := labels:labels-for-facts(
+                  $fact,
+                  $labels:STANDARD_LABEL_ROLE,
+                  $language,
+                  $concepts,
+                  $entities,
+                  ()
+                )
                 return
                     { Labels : $labels }
             else ()
         |}
       else
         for $fact in $facts
-        let $labels-object as object? := facts:labels($fact, $role, $concepts:STANDARD_LABEL_ROLE, $language, $concepts, ())
+        let $labels := labels:labels-for-facts(
+          $fact,
+          $labels:STANDARD_LABEL_ROLE,
+          $language,
+          $concepts,
+          $entities,
+          ()
+        )
         return
         {|
             trim($fact, "Labels"),
-            { Labels : $labels-object }[exists($labels)]
+            { Labels : $labels }[exists($labels)]
         |}
 
     let $facts := api:normalize-facts($facts)

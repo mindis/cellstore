@@ -10,7 +10,7 @@ import module namespace csv = "http://zorba.io/modules/json-csv";
 
 declare function api:json-to-csv($objects as object*) as string
 {
-  let $flattened as object* := api:flatten-json-object($objects)
+  let $flattened as object* := api:flatten-json-object($objects, ())
   return string-join(
     csv:serialize($flattened, { field-names: [ keys($flattened) ], serialize-null-as : "" }),
     "")
@@ -18,24 +18,39 @@ declare function api:json-to-csv($objects as object*) as string
 
 declare function api:json-to-xml($objects as object*, $root-name as string) as element()*
 {
-  for $flattened-object as object in api:flatten-json-object($objects)
+  for $flattened-object as object in api:flatten-json-object($objects, { KeepArray: true })
   return element { $root-name } {
     for $key in keys($flattened-object)
-    return element { $key } { $flattened-object.$key }
+    let $value := $flattened-object.$key
+    return typeswitch($value)
+           case array return
+             let $key-with-s := if(substring($key, string-length($key), 1) eq "s")
+                                then $key
+                                else $key || "s"
+             let $key-no-s := if(substring($key, string-length($key), 1) eq "s")
+                                then substring($key, 1, string-length($key) - 1)
+                                else $key
+             return element {$key-with-s} { for $v in $value[] return element { $key-no-s } { $v } }
+           default return element { $key } { $value }
   }
 };
 
-declare %private function api:flatten-json-object($items as item*) as item*
+declare %private function api:flatten-json-object(
+  $items as item*,
+  $options as object?) as item*
 {
   for $item in $items
   return typeswitch($item)
          case atomic return $item
-         case array return string-join(flatten($item)[$$ instance of atomic], ", ")
+         case array return let $atomic-items := flatten($item)[$$ instance of atomic]
+                           return if ($options.KeepArray)
+                                 then [ $atomic-items ]
+                                  else string-join($atomic-items, ", ")
          case object return {|
              for $key in keys($item)
              return typeswitch($item.$key)
-                    case object return api:flatten-json-object($item.$key)
-                    default return { $key: api:flatten-json-object($item.$key) }
+                    case object return api:flatten-json-object($item.$key, $options)
+                    default return { $key: api:flatten-json-object($item.$key, $options) }
          |}
          default return ()
 };
@@ -184,7 +199,19 @@ declare %an:sequential function api:csv-to-html(
     $csv as string) as item*
 {
     let $csv as string* := $csv
-    return <html xmlns="http://w3.org/1999/xhtml">
+    let $rows := tokenize($csv, "\n")
+    let $header := $rows[1]
+    let $body := subsequence($rows, 2)
+    let $display-cell := function($row as string?, $cell-tag-name as string) {
+      for tumbling window $cells as string* in tokenize($row, ",")
+      start $start at $i when true
+      only end $end at $j when not contains(replace($start, "\"\"", ""), "\"") or ($j gt $i and contains(replace($end, "\"\"", ""), "\""))
+      let $cell := replace(string-join($cells, ","), "\"", "")
+      return if(contains($cell, "http://") and (contains($cell, "28.io") or contains($cell, "rendering.secxbrl.info")))
+      then element { $cell-tag-name } { <a href="{$cell}">Link</a> }
+      else element { $cell-tag-name } {$cell}
+    }
+    return <html>
       <head>
         <title>Cell Store REST API</title>
         <style>
@@ -198,20 +225,15 @@ declare %an:sequential function api:csv-to-html(
       </head>
       <body>
         <table>
+          <thead>
+	          <tr>{$display-cell($header, "th")}</tr>
+          </thead>
+          <tbody>
           {
-            for $row as string in tokenize($csv, "\n")
-            return <tr>
-              {
-                for tumbling window $cells as string* in tokenize($row, ",")
-                start $start at $i when true
-                only end $end at $j when not contains(replace($start, "\"\"", ""), "\"") or ($j gt $i and contains(replace($end, "\"\"", ""), "\""))
-                let $cell := replace(string-join($cells, ","), "\"", "")
-                return if(contains($cell, "http://") and (contains($cell, "28.io") or contains($cell, "rendering.secxbrl.info")))
-                       then <td><a href="{$cell}">Link</a></td>
-                       else <td>{$cell}</td>
-              }
-            </tr>
+            for $row as string in $body
+            return <tr>{$display-cell($row, "td")}</tr>
           }
+          </tbody>
         </table>
       </body>
     </html>

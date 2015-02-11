@@ -55,7 +55,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E01225-000" ], 
+          "CellLabels" : [ "NIPPON STEEL & SUMITOMO METAL CORPORATION", "http://disclosure.edinet-fsa.go.jp E01225-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01225-000"
@@ -65,7 +65,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E01264-000" ], 
+          "CellLabels" : [ "JFE Holdings,Inc.", "http://disclosure.edinet-fsa.go.jp E01264-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E01264-000"
@@ -75,7 +75,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E04147-000" ], 
+          "CellLabels" : [ "East Japan Railway Company", "http://disclosure.edinet-fsa.go.jp E04147-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04147-000"
@@ -85,7 +85,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "http://disclosure.edinet-fsa.go.jp E04425-000" ], 
+          "CellLabels" : [ "KDDI CORPORATION", "http://disclosure.edinet-fsa.go.jp E04425-000" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Entity" : "http://disclosure.edinet-fsa.go.jp E04425-000"
@@ -138,7 +138,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "5620fc2b-21b6-4a28-a127-a61e10780a12", 
+        "_id" : "df6a9fb1-a91b-439a-b001-cc01461372ba", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -178,7 +178,7 @@
           }
         } ]
       }, {
-        "_id" : "24d5421b-c76d-4ca8-96aa-eaf59a2fc836", 
+        "_id" : "ce7246ec-0802-4c6c-8819-1db13395c261", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -218,7 +218,7 @@
           }
         } ]
       }, {
-        "_id" : "2717c301-52e4-4194-85da-f7ccf31c7cdc", 
+        "_id" : "27cd6eed-ce05-4889-83db-d9e4df728e9c", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -302,7 +302,7 @@
           "fsa:FiscalPeriodType" : "YTD"
         }
       }, {
-        "_id" : "fff777cd-d0f9-4d27-94da-2467c5bbaa50", 
+        "_id" : "f57c9cf0-abdc-4f50-bcc9-0d0c7918c2e3", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -357,7 +357,7 @@
   } ], 
   "GlobalConstraintLabels" : {
     "xbrl:Unit" : "Unit [Axis]", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
     "fsa:FiscalYear" : "Fiscal Year [Axis]", 
     "fsa:FiscalPeriod" : "Fiscal Period [Axis]", 

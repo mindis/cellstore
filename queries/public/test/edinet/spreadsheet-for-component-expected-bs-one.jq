@@ -26,7 +26,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "2014-06-30" ], 
+          "CellLabels" : [ "June 30, 2014", "2014-06-30" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2014-06-30"
@@ -42,7 +42,7 @@
           "CellSpan" : 1, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "2014-03-31" ], 
+          "CellLabels" : [ "March 31, 2014", "2014-03-31" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2014-03-31"
@@ -766,7 +766,7 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ null, null ], [ null, null ], [ {
-        "_id" : "13e99509-7245-41dd-bf9b-072b6bcd6e58", 
+        "_id" : "e91bf23c-fb14-4802-9ae0-46fc86482a05", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -799,7 +799,7 @@
           }
         } ]
       }, {
-        "_id" : "de4eacc6-2068-4b78-a17a-c3d57b8d09e3", 
+        "_id" : "d2dc6ea9-12d3-4990-ad8c-4957233719f4", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -859,7 +859,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "07856478-b767-4b64-81e4-529acd404944", 
+        "_id" : "86e277ab-221d-4fbb-b22b-f3ea336beeb1", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -892,7 +892,7 @@
           }
         } ]
       }, {
-        "_id" : "d3a7a845-3412-4fa0-a0bc-98b5bfd10891", 
+        "_id" : "d3a25987-956f-4678-b456-faf710b74ad7", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -952,7 +952,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "e0e47f7d-1d5b-4ac5-923d-3717ca200413", 
+        "_id" : "fe588233-0ebf-4de7-b7ae-f3d04b3d1a35", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -985,7 +985,7 @@
           }
         } ]
       }, {
-        "_id" : "d538ef55-dd78-4ba3-9b71-f6cefeefd4a3", 
+        "_id" : "a3c9da31-bdb2-44bb-b748-fa84160d5150", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1045,7 +1045,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "71892f2e-f697-4620-81b8-f8bb0c5e751f", 
+        "_id" : "0743ec84-57a6-4ae7-ba3a-d3353b04726a", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1078,7 +1078,7 @@
           }
         } ]
       }, {
-        "_id" : "65047bea-18a3-41a4-ac9a-c95ce4d10561", 
+        "_id" : "f120e242-d71d-49e2-a53f-c1767f7dde37", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1138,7 +1138,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "28e1a1d4-04f0-4560-b1d9-7623870c4932", 
+        "_id" : "e1d1fffb-27ff-4ca3-876f-da25bd48b3c3", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1171,7 +1171,7 @@
           }
         } ]
       }, {
-        "_id" : "eaeebbfa-cccb-4bbb-b996-2d341f874616", 
+        "_id" : "a0d5bf4f-a758-4ef5-b8f4-67caae215fff", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1231,7 +1231,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "3bb15cc8-9fda-4ffb-bf3a-abb066bd330b", 
+        "_id" : "3c416e6f-18d3-452e-9713-2da72f94df96", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1264,7 +1264,7 @@
           }
         } ]
       }, {
-        "_id" : "2443b695-d283-48af-a245-c09c07e8d40e", 
+        "_id" : "40d07a71-1ab7-497e-95ce-cf440a87ce3e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1324,7 +1324,7 @@
           }
         } ]
       } ], [ null, null ], [ null, null ], [ {
-        "_id" : "91fbb20c-8119-4b16-984f-270341db2205", 
+        "_id" : "fa3c99ee-1fb1-44cb-96a4-3fec6e0d5cd6", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1357,7 +1357,7 @@
           }
         } ]
       }, {
-        "_id" : "362485c4-58fc-41ab-b28c-6aa29ef2abc1", 
+        "_id" : "e4627f1b-a963-428b-b280-c5479d1987d3", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1417,7 +1417,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "3e5a36d1-4733-430a-9bbf-f52e15540979", 
+        "_id" : "24929e5e-7653-4b05-8075-f52ddc6e9d12", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1450,7 +1450,7 @@
           }
         } ]
       }, {
-        "_id" : "3c594923-065c-4bad-9b6f-ded5337efa54", 
+        "_id" : "b812f230-308d-46c3-823d-0a8d7dc4e839", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1510,7 +1510,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "f3664d67-6c3a-447f-add6-8697c9394a96", 
+        "_id" : "b69919d7-cebf-4ecf-bc7b-8b4d3cf3f8ab", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1543,7 +1543,7 @@
           }
         } ]
       }, {
-        "_id" : "382a0317-f14d-4d8a-ab95-78585ef36fcb", 
+        "_id" : "ba2f9251-aa61-4a75-9791-a0673489954c", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1603,7 +1603,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "cd778190-a2aa-4251-9438-32a57663e653", 
+        "_id" : "9b6a88da-3dea-4973-8a64-2c7a8175841e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1636,7 +1636,7 @@
           }
         } ]
       }, {
-        "_id" : "2f05e111-f544-4d5d-b651-28357c1d5420", 
+        "_id" : "257d5138-2db0-4f61-9851-6d5fb574b548", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1696,7 +1696,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "672e5487-bf03-4b21-8f8d-f477fbafa012", 
+        "_id" : "ab95d8e9-9c94-426d-b027-47a3f6a7605a", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1729,7 +1729,7 @@
           }
         } ]
       }, {
-        "_id" : "545f1940-e608-41f5-a736-a6875d0832b8", 
+        "_id" : "5501195b-2a3a-445a-b390-b3587c13bfb0", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1789,7 +1789,7 @@
           }
         } ]
       } ], [ null, null ], [ {
-        "_id" : "15a8f39d-cf1a-4e1b-906b-d1d659dd9a76", 
+        "_id" : "ead622ca-b569-42d6-8b9a-2d7147aa0124", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1822,7 +1822,7 @@
           }
         } ]
       }, {
-        "_id" : "b447f0d0-3ac3-4eca-b63e-f07d199a760c", 
+        "_id" : "83db9141-8938-479d-9427-592c99f23e9e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1882,7 +1882,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "993abd56-3581-4161-b12b-9e5cb9a9f600", 
+        "_id" : "fcaa9a4f-2d1c-44fd-955b-8613d6aed9de", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1915,7 +1915,7 @@
           }
         } ]
       }, {
-        "_id" : "a208f96d-2d0d-483d-936c-2b2252cc3bb8", 
+        "_id" : "276e7534-d5c4-4c22-98db-28103652062e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1975,7 +1975,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "2027707c-91a2-499d-8974-a21341417e97", 
+        "_id" : "c81ceca3-7e36-4efa-82c1-7f90ffa5cba2", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2008,7 +2008,7 @@
           }
         } ]
       }, {
-        "_id" : "a0865590-2070-4f05-87a0-116b289b8da3", 
+        "_id" : "f3832df5-5c96-4be3-aef0-c20da9e41fe2", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2068,7 +2068,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "91b25ef9-0d72-4b8d-9136-66ad7f9c4f32", 
+        "_id" : "ed11a91c-3b37-446f-a88c-689d8aa5dacd", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2101,7 +2101,7 @@
           }
         } ]
       }, {
-        "_id" : "50c2e152-7451-44c3-8806-52ae17f88d08", 
+        "_id" : "306bbd1f-d444-4c02-95a6-9bb2482ba0b6", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2161,7 +2161,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "5a699968-422c-4833-a74f-70972be3577c", 
+        "_id" : "06f735e7-7f1b-4127-ba07-7aa6a9c1ca6e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2194,7 +2194,7 @@
           }
         } ]
       }, {
-        "_id" : "3695635b-f3b5-460e-8c70-7714acf7c828", 
+        "_id" : "6462c749-67fd-43ad-9069-63cd9a7bd5e3", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2254,7 +2254,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "7ceb939f-1c60-4bb5-9554-feacfc0a1655", 
+        "_id" : "76ba8c23-dfaf-4a27-b1e1-d289c3263738", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2287,7 +2287,7 @@
           }
         } ]
       }, {
-        "_id" : "2b88ab9f-81d9-45b6-a4bf-e32d4b92c136", 
+        "_id" : "0d5c93aa-63d3-45df-8426-b7483cb23f59", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2347,7 +2347,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "69173eee-0490-46d6-9a2b-ca613dc826be", 
+        "_id" : "142ab108-24b2-4fcf-bb18-baa59d610467", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2380,7 +2380,7 @@
           }
         } ]
       }, {
-        "_id" : "817aea2b-fefb-4f5a-9098-dc15d1a67385", 
+        "_id" : "a58bde88-9187-41ef-a877-ccc744c3a0ee", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2440,7 +2440,7 @@
           }
         } ]
       } ], [ null, null ], [ null, null ], [ {
-        "_id" : "f4040ec5-9a4b-41b2-afb2-a897008cbdde", 
+        "_id" : "52aa8bd7-de9a-45d1-bd4f-a1794e47652e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2473,7 +2473,7 @@
           }
         } ]
       }, {
-        "_id" : "5d28144e-0ee7-40ea-83cc-137c8ea0a957", 
+        "_id" : "581abe96-54e8-456d-b3c2-45dc29b7701f", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2533,7 +2533,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "cb7545d6-5f64-44a7-8a21-de42e73a031f", 
+        "_id" : "6c2a15bc-9936-4382-b7f3-034f821c2140", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2566,7 +2566,7 @@
           }
         } ]
       }, {
-        "_id" : "6d7af44d-b805-4dc8-ad6a-25217178c018", 
+        "_id" : "ebff2743-aa53-4398-9ad3-ad46eda928e6", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2626,7 +2626,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "2c216d8f-47bc-4dd0-812d-fa8162d69b5f", 
+        "_id" : "95a0181e-ad85-4f15-8fb5-13bf83ab757b", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2659,7 +2659,7 @@
           }
         } ]
       }, {
-        "_id" : "952ea370-fd8d-4511-b0f4-78dbc73532f9", 
+        "_id" : "dc7e7897-494c-44db-93f8-0c6ba3529c44", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2719,7 +2719,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "061a7f6d-3ee6-4532-89c8-234aff85831d", 
+        "_id" : "95c4650f-d379-46e7-943f-631084911b66", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2752,7 +2752,7 @@
           }
         } ]
       }, {
-        "_id" : "d88e049b-8f43-4015-985d-6490cc4e4b79", 
+        "_id" : "e34847fb-4422-46bf-926b-7e958e284c55", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2812,7 +2812,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "c5e36235-e03b-47b5-93c1-73d140677539", 
+        "_id" : "8bc33102-f546-4b15-b0a3-a5c300ff7e33", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2845,7 +2845,7 @@
           }
         } ]
       }, {
-        "_id" : "6534bfaa-91bc-4c4b-93bd-1d34b2673d23", 
+        "_id" : "17e75641-b5ce-4f97-b8ad-8d5a36d86b6d", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2905,7 +2905,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "8602ad36-eec6-47b0-a339-42716b04e1ef", 
+        "_id" : "b885a58b-9f2f-4766-8e08-8f51491c0eb8", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2938,7 +2938,7 @@
           }
         } ]
       }, {
-        "_id" : "e8de3860-b5c4-4d4c-81e8-a6cab712f8a0", 
+        "_id" : "58b3cf2a-39d2-4fe2-abe3-f1251eade163", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -2998,7 +2998,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "4d031f4c-1a8b-439b-b082-85777bb762c9", 
+        "_id" : "e806f261-90d2-4fef-a724-446da207dd81", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3031,7 +3031,7 @@
           }
         } ]
       }, {
-        "_id" : "ad19c20d-b4ad-4fe5-ad1b-587f88cddcc6", 
+        "_id" : "53ba1f77-3a2c-48ce-bc69-296ce1f4a21f", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3091,7 +3091,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "bbed9e78-7365-4851-a7b0-fbb00535feaf", 
+        "_id" : "2cae249e-9cb8-40f7-ac9a-801ce40fac70", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3124,7 +3124,7 @@
           }
         } ]
       }, {
-        "_id" : "a39ee4e1-e15d-489b-b990-5cedfb80388d", 
+        "_id" : "c84ae54a-a4e8-4b24-a33f-47f5d4984ecf", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3184,7 +3184,7 @@
           }
         } ]
       } ], [ null, null ], [ {
-        "_id" : "072ab94b-b0ed-42d1-b06a-9a16d85fb3e8", 
+        "_id" : "c16425ca-77c4-4792-9ab5-46f48d29981f", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3217,7 +3217,7 @@
           }
         } ]
       }, {
-        "_id" : "44b0dafc-9cfc-4d99-9384-3ea03622a2a6", 
+        "_id" : "176c600f-dda5-4613-9804-081f708f3d5a", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3277,7 +3277,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "cf01af63-a456-4bf7-8631-587a666434d6", 
+        "_id" : "56d95fc6-4a27-4a84-bff4-deeae58b6b8e", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3310,7 +3310,7 @@
           }
         } ]
       }, {
-        "_id" : "109ed2f2-1b70-4425-95f1-79d6ede17529", 
+        "_id" : "be600afe-8ac6-477e-86c7-e46743d3e1d6", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3370,7 +3370,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "ceb8cffe-6e5b-4986-b0e2-352ab7b2fe36", 
+        "_id" : "916bfa72-163c-41e6-bd67-96444a8b2b42", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3403,7 +3403,7 @@
           }
         } ]
       }, {
-        "_id" : "32affd29-8340-42bf-8958-d17c73b374e7", 
+        "_id" : "6d34e05b-f19a-490b-ac82-0c0f1d608035", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3463,7 +3463,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "ce13c124-7da7-4784-ba85-9c40e57da10b", 
+        "_id" : "9cdf463f-95fe-466a-985a-09830c8ab083", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3496,7 +3496,7 @@
           }
         } ]
       }, {
-        "_id" : "63505533-e52a-4140-be8f-e379258dc72e", 
+        "_id" : "2ee7e2c0-7a19-4e06-8e21-814c3e0a50e4", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3556,7 +3556,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "657616e6-c2e8-40bd-8983-a772d632f304", 
+        "_id" : "6d229139-440c-46a8-b720-945577a48a84", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3589,7 +3589,7 @@
           }
         } ]
       }, {
-        "_id" : "f6f7d242-c21f-484b-8c7c-4f34cf8b25fc", 
+        "_id" : "8e3c0483-88e3-4c0f-ba0d-dc3ee274ad10", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3649,7 +3649,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "5674f4b2-2aa0-490e-8da0-67920ce1b4e2", 
+        "_id" : "174b9066-f0c7-47c8-bb72-9c08a06bde67", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3682,7 +3682,7 @@
           }
         } ]
       }, {
-        "_id" : "4a8b6cea-7731-4cf3-a797-a2b48749f591", 
+        "_id" : "c8533101-7636-46dd-8537-5aa78258b891", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3742,7 +3742,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "b55a7155-beb2-474b-8811-3363ac63b2c2", 
+        "_id" : "b15fd0b9-386a-455d-97af-fe40be50ef68", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3775,7 +3775,7 @@
           }
         } ]
       }, {
-        "_id" : "2f4af476-3963-4c3d-aa32-81930e6e98c0", 
+        "_id" : "28e6387d-1b89-4e6a-8d17-a6356100c016", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3835,7 +3835,7 @@
           }
         } ]
       } ], [ null, null ], [ null, null ], [ {
-        "_id" : "9651f9db-c131-4169-a89d-1b40e97872b8", 
+        "_id" : "19c7c59d-79a1-4e50-b129-d798b09fe1c5", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3868,7 +3868,7 @@
           }
         } ]
       }, {
-        "_id" : "b39710e7-f68d-4a19-befc-a0c9f04a9353", 
+        "_id" : "54695805-dd26-4a71-a752-4655037aa3df", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3928,7 +3928,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "b5b43aa4-562d-4166-8832-86b728c78cd6", 
+        "_id" : "bec32e87-38c0-42a7-9af0-88ceef756917", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3961,7 +3961,7 @@
           }
         } ]
       }, {
-        "_id" : "5124eddd-22b5-4feb-9977-1a9951ba1686", 
+        "_id" : "915c10e6-3c69-40be-8984-cd7e61c3f5fc", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4021,7 +4021,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "34216daf-6b50-40cd-b548-5b428e4b4b92", 
+        "_id" : "bf71ee42-ea2c-4dcd-8290-3758204e1f25", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4054,7 +4054,7 @@
           }
         } ]
       }, {
-        "_id" : "5587e26c-184a-4e0b-8795-40b807052744", 
+        "_id" : "ba8cc7d9-e55c-4abc-9dde-ad4c23d68c98", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4114,7 +4114,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "f7eda990-093a-4213-a32f-4171e9d6ff1d", 
+        "_id" : "4d144ec8-0bf6-4fe1-97c2-c723236af901", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4147,7 +4147,7 @@
           }
         } ]
       }, {
-        "_id" : "9d03574d-05d4-4f57-98f7-d09cac96f4c2", 
+        "_id" : "4539479c-9045-4ae9-9a22-4bd27830617f", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4207,7 +4207,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "d26dae61-5a43-4984-b026-0a5d89de7aa9", 
+        "_id" : "a431c070-9237-472e-93a5-4fe66eb6f51c", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4240,7 +4240,7 @@
           }
         } ]
       }, {
-        "_id" : "29942163-33cc-43e8-b201-c0f065858a07", 
+        "_id" : "ae6a80f2-dec8-4377-8748-4b510f059472", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4300,7 +4300,7 @@
           }
         } ]
       } ], [ null, null ], [ {
-        "_id" : "3eeca88f-3142-4758-8f7f-ba5f5ed19561", 
+        "_id" : "9fb92171-7332-4eb7-84be-fb6b3f7a8561", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4333,7 +4333,7 @@
           }
         } ]
       }, {
-        "_id" : "66256900-ba68-469e-9b6c-0fc6d8fbe923", 
+        "_id" : "6a118e98-f00a-4b55-b376-706881f62e92", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4393,7 +4393,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "1efab38f-66a7-4710-8691-046f604dee97", 
+        "_id" : "62af3a41-6ede-4173-bd59-0f9715b3c214", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4426,7 +4426,7 @@
           }
         } ]
       }, {
-        "_id" : "4f386999-59a3-4742-ab13-9054743854bf", 
+        "_id" : "7793c6b9-2b81-418f-a66d-d50320bc6c9a", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4486,7 +4486,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "b0787033-68bd-4ffc-8cc0-6ecf64334e47", 
+        "_id" : "c60455c4-a5cb-40a3-911f-e23c86611547", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4519,7 +4519,7 @@
           }
         } ]
       }, {
-        "_id" : "a58a6ffd-c369-475c-86bf-1d9660a6c635", 
+        "_id" : "35a4e60f-3f66-4e24-a9e8-47d44719fa94", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4579,7 +4579,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "068b02c5-6ebc-4c61-b2d2-cc3ae5218b7e", 
+        "_id" : "d48ce4e2-8200-4e56-95a2-8a1f27a95c35", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4612,7 +4612,7 @@
           }
         } ]
       }, {
-        "_id" : "ea7f17e6-c6a6-4b19-8462-c54fff5149af", 
+        "_id" : "3ed1aa99-249b-4d87-bb47-a2acb39ab101", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4672,7 +4672,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "be39f624-dd25-4b4b-b5f1-1c66cdd74cf2", 
+        "_id" : "4e223457-833c-4757-9a19-08e8a367e001", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4705,7 +4705,7 @@
           }
         } ]
       }, {
-        "_id" : "0453946b-c28b-4b5b-b2ad-496edfb7224a", 
+        "_id" : "ea74c059-7a4b-450c-8160-43c9420e59d1", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4765,7 +4765,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "ff0760bc-f50c-4633-b665-e22ac41165f5", 
+        "_id" : "33076968-fda1-4e11-bdb7-ad4937f7a549", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4798,7 +4798,7 @@
           }
         } ]
       }, {
-        "_id" : "2b978f66-f950-42b7-b720-1f2343f2c1a7", 
+        "_id" : "d5fc1cf6-c481-4586-b771-b2f65ba794dc", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4858,7 +4858,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "125a6b6f-59c8-41f3-b77c-c2cd58c7135a", 
+        "_id" : "609775cb-4c08-4ff6-933d-81622b7749fe", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4891,7 +4891,7 @@
           }
         } ]
       }, {
-        "_id" : "30fafcee-dd81-4320-9753-d38f143bbcb5", 
+        "_id" : "7091e06d-496e-4628-b5c2-32ff4f96d89f", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4951,7 +4951,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "d1ab500c-6e07-4230-8760-10b406620b5f", 
+        "_id" : "9645160c-0933-411e-9f73-a48fe562f30d", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4984,7 +4984,7 @@
           }
         } ]
       }, {
-        "_id" : "4b6bde6e-7bde-48ff-bbe0-6205c1bd0d51", 
+        "_id" : "1e26deb2-c526-4dcf-83d3-6ea2a2d51366", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5044,7 +5044,7 @@
           }
         } ]
       } ], [ {
-        "_id" : "1226c8c1-e88c-4a0c-bd45-5ba778bb576e", 
+        "_id" : "1f1af982-7caa-43b1-bae8-b5f7f0e4aa08", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5077,7 +5077,7 @@
           }
         } ]
       }, {
-        "_id" : "70c43c6f-f5e6-42af-b13b-67d371f4e015", 
+        "_id" : "51a0a649-b134-4d1f-9465-beb458489809", 
         "KeyAspects" : [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "fsa:Submitted" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5152,10 +5152,13 @@
   } ], 
   "GlobalConstraintLabels" : {
     "xbrl:Entity" : "Reporting Entity [Axis]", 
+    "http://disclosure.edinet-fsa.go.jp E01225-000" : "NIPPON STEEL & SUMITOMO METAL CORPORATION", 
     "xbrl:Unit" : "Unit [Axis]", 
-    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated", 
+    "iso4217:JPY" : "JPY", 
+    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "Consolidated or non-consolidated [axis]", 
     "jppfs-cor:ConsolidatedMember" : "Consolidated [member]", 
     "xbrl28:Archive" : "Archive [Axis]", 
-    "fsa:Submitted" : "FSA Submission Date [Axis]"
+    "fsa:Submitted" : "FSA Submission Date [Axis]", 
+    "2014-08-07" : "August 7, 2014"
   }
 }

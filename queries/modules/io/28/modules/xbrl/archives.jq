@@ -46,9 +46,9 @@ declare variable $archives:ENTITY as string:= "Entity";
 
 (:~
  : <p>Retrieves all archives.</p>
- : 
+ :
  : @return all archives.
- :) 
+ :)
 declare function archives:archives() as object*
 {
   mw:find($archives:col,{})
@@ -58,11 +58,11 @@ declare function archives:archives() as object*
  : <p>Retrieves the archives with the given AIDs.</p>
  :
  : @param $id the ids of the archives (AIDs) or the archives themselves.
- : 
+ :
  : @return the archives with the given AIDs
  :         the empty sequence if no archive was found or if the input is an
  : empty sequence.
- :) 
+ :)
 declare function archives:archives($archive-or-ids as item*) as object*
 {
   let $ids as string* :=
@@ -99,16 +99,15 @@ declare function archives:entities($archives-or-ids as item*) as object*
 
 (:~
  : <p>Return all archives created by the supplied entities.</p>
- : 
+ :
  : @param $entities-or-ids arbitrary number of entity objects or EIDs.
  :
  : @return all archives created by these entities.
- :) 
+ :)
 declare function archives:archives-for-entities($entities-or-ids as item*) as object*
 {
-  for $cik-or-entity in $entities-or-ids
-  let $eid as xs:string := entities:eid($cik-or-entity)
-  return mw:find($archives:col,{ $archives:ENTITY : $eid })
+  let $eids as string* := entities:eid($entities-or-ids)
+  return mw:find($archives:col,{ $archives:ENTITY : { "$in" : [ $eids ] } })
 };
 
 (:~
@@ -279,7 +278,7 @@ declare function archives:aid($archives-or-ids as item*) as atomic*
     let $aid := $archive-or-id._id
     return if(exists($aid))
            then $aid
-           else error(QName("archives:INVALID_PARAMETER"), 
+           else error(QName("archives:INVALID_PARAMETER"),
                       "Invalid archive provided (no _id field)")
   case $aid as atomic return $aid
   default return error(
