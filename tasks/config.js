@@ -36,13 +36,6 @@ if(!fs.existsSync(encryptedConfigFile)){
     throw new $.util.PluginError(__filename, msg);
 }
 
-console.log('CIRCLECI');
-console.log(process.env.CIRCLECI);
-console.log('CIRCLE_BRANCH');
-console.log(process.env.CIRCLE_BRANCH);
-console.log('CI_PULL_REQUEST');
-console.log(process.env.CI_PULL_REQUEST);
-console.log(typeof(process.env.CI_PULL_REQUEST));
 var isOnTravis = process.env.CIRCLECI === 'true';
 // if a config/<branch>.json.enc exists we are on a production deployment branch
 var isProd = fs.existsSync('config/' + process.env.CIRCLE_BRANCH + '.json.enc');
