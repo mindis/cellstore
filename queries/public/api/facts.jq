@@ -106,6 +106,10 @@ declare function local:param-values(
      return ($fiscalPeriodType, request:param-values("fsa:FiscalPeriodType"))
      case $name eq "fsa:FiscalPeriodType::type" and $profile-name eq "japan"
      return "string"
+     case $name eq "fsa:ArchiveFiscalYear::type" and $profile-name eq "japan"
+     return "integer"
+     case $name eq "fsa:ArchiveFiscalPeriod::type" and $profile-name eq "japan"
+     return "string"
 
      default return request:param-values($name)
 };
