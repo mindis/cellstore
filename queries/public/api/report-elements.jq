@@ -33,12 +33,13 @@ declare  %rest:case-insensitive                 variable $profile-name   as stri
 declare  %rest:env                              variable $request-uri    as string   external;
 declare  %rest:case-insensitive                 variable $format         as string?  external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik            as string*  external;
-declare  %rest:case-insensitive %rest:distinct  variable $edinetcode    as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $edinetcode     as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag            as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker         as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic            as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear     as string*  external := "LATEST";
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod   as string*  external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $filingKind     as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $aid            as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure     as string*  external;
 declare  %rest:case-insensitive %rest:distinct  variable $role           as string*  external;
@@ -78,6 +79,7 @@ let $archives as object* := multiplexer:filings(
   $entities,
   $fiscalPeriod,
   $fiscalYear,
+  $filingKind,
   $aid)
 
 let $entities as object* :=

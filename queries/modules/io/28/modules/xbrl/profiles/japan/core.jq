@@ -56,6 +56,7 @@ declare function japan:entities(
  : @param $entities a sequence of entities or EIDs.
  : @param $fiscalYear a sequence of fiscal years.
  : @param $fiscalPeriod a sequence of fiscal periods.
+ : @param $filingKind a sequence of filing kinds to filter for.
  : @param $aid a sequence of AIDs.
  :
  : @return the filings that match those criteria.
@@ -64,13 +65,16 @@ declare function japan:filings(
     $entities as item*,
     $fiscalYear as integer*,
     $fiscalPeriod as string*,
+    $filingKind as string*,
     $aid as string*) as object*
 {
     archives:archives($aid),
     if($fiscalYear = 1)
     then
         for $a as object in archives:archives-for-entities($entities)
-        where (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
+        where empty($filingKind) or $a.Profiles.FSA.FilingKinds[] = $filingKind
+        where (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or
+               $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
         group by $a.Entity
         return
             for $filing in $a
@@ -80,10 +84,12 @@ declare function japan:filings(
             return $filing
     else
         for $a as object in archives:archives-for-entities($entities)
+        where empty($filingKind) or $a.Profiles.FSA.FilingKinds[] = $filingKind
         where (empty($fiscalYear) or
                $fiscalYear = 0 or
                $fiscalYear = $a.Profiles.FSA.DocumentFiscalYearFocus)
-               and (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
+               and (empty($fiscalPeriod) or ($fiscalPeriod = "ALL") or
+               $a.Profiles.FSA.DocumentFiscalPeriodFocus = $fiscalPeriod)
         return $a
 };
 
