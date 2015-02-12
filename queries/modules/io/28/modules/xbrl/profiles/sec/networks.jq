@@ -280,7 +280,6 @@ declare %private function sec-networks:model-structures-recursive(
     let $children := sec-networks:model-structures-recursive(
                          $component,
                          (values($xbrl-concept.To), $xbrl-concept.To[]),
-                         $kind,
                          $depth + 1
                      )
     return if (exists($children)) then { Children: [ $children ] } else ()
