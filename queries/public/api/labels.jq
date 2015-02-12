@@ -27,6 +27,8 @@ declare  %rest:case-insensitive %rest:distinct  %rest:encoding("UTF-8") variable
 declare  %rest:case-insensitive %rest:distinct  variable $language           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $labelRole          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
+declare  %rest:case-insensitive                 variable $onlyTextBlocks     as boolean? external := ();
+declare  %rest:case-insensitive                 variable $kind               as string*  external := ();
 
 session:audit-call($token);
 
@@ -71,7 +73,10 @@ let $concepts as object* :=
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"],
       (),
-      false)
+      false)[
+    (empty($onlyTextBlocks) or $$.IsTextBlock eq $onlyTextBlocks) and
+    (empty($kind) or $$.Kind = $kind)
+  ]
 
 let $res as object* :=
   for $concept in $concepts

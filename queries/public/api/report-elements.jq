@@ -48,6 +48,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $name           as stri
 declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
 declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := ();
 declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
+declare  %rest:case-insensitive                 variable $kind           as string*  external := ();
 
 session:audit-call($token);
 
@@ -100,7 +101,8 @@ let $concepts as object* :=
       $report,
       $onlyNames)[
     (empty($onlyTextBlocks) or $$.IsTextBlock eq $onlyTextBlocks) and
-    (empty($abstract) or $$.IsAbstract eq $abstract)
+    (empty($abstract) or $$.IsAbstract eq $abstract) and
+    (empty($kind) or $$.Kind = $kind)
   ]
 
 let $result :=

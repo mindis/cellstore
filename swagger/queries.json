@@ -2467,6 +2467,20 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "kind",
+                "description": "Filters by concept kind (default: no filtering).",
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum" : [
+                  "Hypercube",
+                  "Dimension",
+                  "Member",
+                  "LineItems",
+                  "Abstract",
+                  "Concept"
+                ]
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -2711,10 +2725,24 @@
                 "paramType": "query"
             }, {
                 "name": "abstract",
-                "description": "Filters by abstract/not abstract (default: no filtering).",
+                "description": "[Deprecated] Filters by abstract/not abstract (default: no filtering).",
                 "required": false,
                 "type": "boolean",
                 "paramType": "query"
+            }, {
+                "name": "kind",
+                "description": "Filters by concept kind (default: no filtering).",
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum" : [
+                  "Hypercube",
+                  "Dimension",
+                  "Member",
+                  "LineItems",
+                  "Abstract",
+                  "Concept"
+                ]
             }, {
                 "name": "token",
                 "description": "The token of the current session",
@@ -2774,7 +2802,7 @@
                     "aid": "STANDARD-TAXONOMY-2014",
                     "format": "xml",
                     "profile-name": "japan",
-                    "abstract": "false"
+                    "kind": "Concept"
                 }
             }, {
                 "title": "Get element name of specified company's taxonomy by label and company ID",
