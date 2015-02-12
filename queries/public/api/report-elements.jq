@@ -12,8 +12,6 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
-import module namespace csv = "http://zorba.io/modules/json-csv";
-
 declare function local:concepts-for-archives-and-labels($aids as string*, $labels as string) as object*
 {
    mw:run-cmd-deterministic(
