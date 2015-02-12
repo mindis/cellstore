@@ -47,6 +47,18 @@ declare function multiplexer:latest-filings(
     ()
 };
 
+declare function multiplexer:entities(
+  $profile-name as string,
+  $eid as string*,
+  $cik as string*,
+  $tag as string*,
+  $ticker as string*,
+  $sic as string*,
+  $aid as string*) as object*
+{
+  multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic, $aid, ())
+};
+
 (:~
  : <p>Retrieves entities depending on the profile.</p>
  :
@@ -57,7 +69,8 @@ declare function multiplexer:latest-filings(
  : @param $ticker a sequence of stock exchange tickers.
  : @param $sic a sequence of industry group SIC codes.
  : @param $aid a sequence of archive IDs.
-  :
+ : @param $search Search term.
+ :
  : @return the entities retrieved according to the profile specified.
  :)
 declare function multiplexer:entities(
@@ -67,25 +80,29 @@ declare function multiplexer:entities(
   $tag as string*,
   $ticker as string*,
   $sic as string*,
-  $aid as string*) as object*
+  $aid as string*,
+  $search as string?) as object*
 {
-  switch($profile-name)
-  case "sec" return
-    for $entity in companies:companies(
-      $cik,
-      $tag,
-      $ticker,
-      $sic,
-      $eid,
-      $aid)
-    order by $entity.Profiles.SEC.CompanyName
-    return $entity
-  case "japan" return
-    for $entity in japan:entities($cik, $ticker, $eid, $tag)
-    order by $entity.SubmitterNameAlphabetic
-    return $entity
-  default return
-    entities:entities($eid)
+  if($search) then
+      companies:company-search($search)
+  else
+      switch($profile-name)
+      case "sec" return
+        for $entity in companies:companies(
+          $cik,
+          $tag,
+          $ticker,
+          $sic,
+          $eid,
+          $aid)
+        order by $entity.Profiles.SEC.CompanyName
+        return $entity
+      case "japan" return
+        for $entity in japan:entities($cik, $ticker, $eid, $tag)
+        order by $entity.SubmitterNameAlphabetic
+        return $entity
+      default return
+        entities:entities($eid)
 };
 
 (:~

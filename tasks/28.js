@@ -249,7 +249,7 @@ var createDatasource = function(projectName, datasource){
     return defered.promise;
 };
 
-gulp.task('28:login', function(){
+gulp.task('28:login', ['load-config'], function(){
     return login(Config.credentials['28'].email, Config.credentials['28'].password).catch(throwError);
 });
 

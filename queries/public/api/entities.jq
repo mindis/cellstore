@@ -16,6 +16,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string
 declare  %rest:case-insensitive %rest:distinct  variable $tag          as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker       as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic          as string* external;
+declare  %rest:case-insensitive                 variable $search       as string? external;
 declare  %rest:case-insensitive                 variable $profile-name as string  external := $config:profile-name;
 
 session:audit-call($token);
@@ -45,7 +46,9 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic, ())
+  $sic,
+  (),
+  $search)
 let $entities :=
   for $entity in $entities
   return {|

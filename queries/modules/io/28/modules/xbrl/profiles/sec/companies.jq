@@ -34,9 +34,9 @@ declare option ver:module-version "1.0";
 
 (:~
  : <p>Return all companies</p>
- : 
+ :
  : @return all companies.
- :) 
+ :)
 declare function companies:companies() as object*
 {
   entities:entities()
@@ -44,13 +44,13 @@ declare function companies:companies() as object*
 
 (:~
  : <p>Return the companies with the given identifiers.</p>
- : 
+ :
  : @param $companies-or-ids the ids of the companies or the companies themselves.
  :
  : @return the companies with the given identifiers
  :         the empty sequence if no company was found or if the input is an
  :         empty sequence.
- :) 
+ :)
 declare function companies:companies($companies-or-ids as item*) as object*
 {
   let $ids as atomic* :=
@@ -73,7 +73,7 @@ declare function companies:companies($companies-or-ids as item*) as object*
 (:~
  : <p>Return a distinct set of companies identified by either
  :   CIKs, tags, tickers, or sics.</p>
- : 
+ :
  : @param $ciks a set of CIKs.
  : @param $tags a set of tags (ALL retrieves all companies).
  : @param $tickers a set of tickers.
@@ -91,10 +91,19 @@ declare function companies:companies(
     companies:companies($ciks, $tags, $tickers, $sics, $eids, ())
 };
 
+declare function companies:company-search($search as string) as object*
+{
+  trace(mw:run-cmd-deterministic(
+  {
+      "text" : "entities",
+      "search" : $search
+    }), "search").results[].obj
+};
+
 (:~
  : <p>Return a distinct set of companies identified by either
  :   CIKs, tags, tickers, sics, or aids.</p>
- : 
+ :
  : @param $ciks a set of CIKs.
  : @param $tags a set of tags (ALL retrieves all companies).
  : @param $tickers a set of tickers.
@@ -129,7 +138,7 @@ declare function companies:companies(
 (:~
  : <p>Return a distinct set of companies identified by either
  :   CIKs, tags, tickers, or sics.</p>
- : 
+ :
  : @param $options an object of the form
  :   {
  :     ciks : [ ],
@@ -155,11 +164,11 @@ declare function companies:companies-for(
 
 (:~
  : <p>Retrieves the type of a company.</p>
- : 
+ :
  : @param $companies-or-ciks a sequence of companies or their identifiers (CIKs).
  :
  : @return all company types.
- :) 
+ :)
 declare function companies:types($companies-or-ciks as item*) as string*
 {
   let $companies := companies:companies($companies-or-ciks)
@@ -168,11 +177,11 @@ declare function companies:types($companies-or-ciks as item*) as string*
 
 (:~
  : <p>Retrieves all companies for the given archives.</p>
- : 
+ :
  : @param $archives a sequence of archive objects or ids.
  :
  : @return all companies for the given archives.
- :) 
+ :)
 declare function companies:companies-for-archives($aids as string*) as object*
 {
     if(empty($aids))
@@ -184,12 +193,12 @@ declare function companies:companies-for-archives($aids as string*) as object*
 
 (:~
  : <p>Retrieves all companies in the given sectors.</p>
- : 
+ :
  : @deprecated please use companies:companies-for-sectors#1
  : @param $sectors a sequence of sectors as strings.
  :
  : @return all companies in these sectors.
- :) 
+ :)
 declare function companies:companies-for-sector($sectors as string*) as object*
 {
   companies:companies-for-sectors($sectors)
@@ -197,11 +206,11 @@ declare function companies:companies-for-sector($sectors as string*) as object*
 
 (:~
  : <p>Retrieves all companies in the given sectors.</p>
- : 
+ :
  : @param $sectors a sequence of sectors as strings.
  :
  : @return all companies in these sectors.
- :) 
+ :)
 declare function companies:companies-for-sectors($sectors as string*) as object*
 {
   for $s in $sectors
@@ -211,11 +220,11 @@ declare function companies:companies-for-sectors($sectors as string*) as object*
 (:~
  : <p>Retrieves all companies whose type of business
  : matches the SIC (Standard Industrial Classification) code.</p>
- : 
+ :
  : @param $sic-codes a sequence of SIC codes.
  :
  : @return all companies with one of these SIC codes.
- :) 
+ :)
 declare function companies:companies-for-sic($sic-codes as string*) as object*
 {
   mw:find($entities:col, { "Profiles.SEC.SIC" : [ $sic-codes ] })
@@ -224,12 +233,12 @@ declare function companies:companies-for-sic($sic-codes as string*) as object*
 (:~
  : <p>Retrieves all companies whose type of business
  : matches the SIC (Standard Industrial Classification) code.</p>
- : 
+ :
  : @deprecated please use companies:companies-for-sic
  : @param $sic-codes a sequence of SIC codes.
  :
  : @return all companies with one of these SIC codes.
- :) 
+ :)
 declare function companies:companies-for-SIC($sic-codes as string*) as object*
 {
   for $s in $sic-codes
@@ -238,12 +247,12 @@ declare function companies:companies-for-SIC($sic-codes as string*) as object*
 
 (:~
  : <p>Retrieves all companies whose company type matches the passed string(s).</p>
- : 
+ :
  : @deprecated please use companies:companies-for-types
  : @param $company-type a sequence of strings of "Corporation", "Partnership", or "unknown".
  :
  : @return all companies with matching company type.
- :) 
+ :)
 declare function companies:companies-by-types($company-types as string*) as object*
 {
   companies:companies-for-types($company-types)
@@ -251,19 +260,19 @@ declare function companies:companies-by-types($company-types as string*) as obje
 
 (:~
  : <p>Retrieves all companies whose company type matches the passed string(s).</p>
- : 
+ :
  : @param $company-type a sequence of strings of "Corporation", "Partnership", or "unknown".
  :
  : @return all companies with matching company type.
- :) 
+ :)
 declare function companies:companies-for-types($company-types as string*) as object*
 {
   for $t in $company-types
-  return 
+  return
     if ($t = ("Corporation", "Partnership", "unknown"))
-    then (); 
+    then ();
     else error(QName("companies:UNKNOWN-COMPANY-TYPE"), $t || ": Unknown company type. Allowed values: \"Corporation\", \"Partnership\", or \"unknown\".");
-    
+
   for $t in $company-types
   return mw:find($entities:col, { "Profiles.SEC.CompanyType" : $t })
 };
@@ -273,7 +282,7 @@ declare function companies:companies-for-types($company-types as string*) as obj
  :
  : @param $tags the tags to filter.
  : @return all companies with the given tags.
- :) 
+ :)
 declare function companies:companies-for-tags($tags as string*) as object*
 {
   for $tag in $tags
@@ -304,12 +313,12 @@ declare function companies:companies-for-tickers(
  :     <li>unknown</li>
  :   </ul>
  : </p>
- : 
+ :
  : @deprecated please use companies:types-for-names
  : @param $company-name the name of a company
  :
  : @return the company type string or "unknown" if the type can not be inferred
- :) 
+ :)
 declare function companies:company-type($company-name as string) as string
 {
   companies:types-for-names($company-name)
@@ -368,7 +377,7 @@ declare function companies:to-xml($companies-or-ids as item*) as element()*
           <SICDescription>{$e.Profiles.SEC.SICDescription}</SICDescription>
           <SICGroup>{$e.Profiles.SEC.SICGroup}</SICGroup>
           <Sector>{$e.Profiles.SEC.Sector}</Sector>
-          <IsTrust>{$e.Profiles.SEC.IsTrust}</IsTrust>    
+          <IsTrust>{$e.Profiles.SEC.IsTrust}</IsTrust>
           <Tickers>{
               for $t in $e.Profiles.SEC.Tickers[]
               return <Ticker>{$t}</Ticker>
@@ -392,11 +401,11 @@ declare function companies:to-xml($companies-or-ids as item*) as element()*
  :     <li>unknown</li>
  :   </ul>
  : </p>
- : 
+ :
  : @param $company-names the sequence of the names of the companies
  :
  : @return the company type string or "unknown" if the type can not be inferred
- :) 
+ :)
 declare function companies:types-for-names($company-names as string*) as string*
 {
   for $company-name in $company-names
@@ -419,7 +428,7 @@ declare function companies:types-for-names($company-names as string*) as string*
     case contains($lower-name, " ltd")
     case contains($lower-name, " partnership")
       return "Partnership"
-    default return "unknown" 
+    default return "unknown"
 };
 
 (:~
@@ -441,7 +450,7 @@ declare function companies:eid($companies-or-eids-or-ciks as item*) as string*
                        return switch(true)
                               case not $c instance of atomic return $c
                               case $c castable as string return string($c)
-                              default return $c                              
+                              default return $c
   let $eids := entities:eid($preprocessed)
   for $eid in $eids
   return typeswitch ($eid)

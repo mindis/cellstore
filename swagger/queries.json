@@ -83,6 +83,12 @@
                 "type": "string",
                 "paramType": "query"
             }, {
+                "name": "search",
+                "description": "Entity search term.",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "_method",
                 "paramType": "query"
             }],
