@@ -6,7 +6,7 @@ angular.module('report-editor')
     $scope.entities = entities;
     $scope.disclosure = 'BalanceSheet';
     $scope.entities.forEach(function(entity){
-        if(entity.Profiles.FSA.EDINETCode === $state.params.edinetcode) {
+        if(entity.e === $state.params.edinetcode) {
             $scope.entity = entity;
         }
     });
@@ -16,12 +16,12 @@ angular.module('report-editor')
             return;
         }
         if($scope.entity) {
-            $state.go('dashboard.concepts', { edinetcode: $scope.entity.Profiles.FSA.EDINETCode, disclosure: $scope.disclosure });
+            $state.go('dashboard.concepts', { edinetcode: $scope.entity.e, disclosure: $scope.disclosure });
         }
     });
 
     $scope.selectEntity = function(entity){
         $scope.entity = entity;
-        $state.go('dashboard.concepts', { edinetcode: entity.Profiles.FSA.EDINETCode, disclosure: $scope.disclosure });
+        $state.go('dashboard.concepts', { edinetcode: entity.e, disclosure: $scope.disclosure });
     };
 });

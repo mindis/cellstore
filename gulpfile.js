@@ -32,7 +32,7 @@ gulp.task('copy-svg', function(){
 });
 
 gulp.task('extras', function () {
-    var extras = Config.paths.html.concat(Config.paths.fonts);
+    var extras = Config.paths.html.concat(Config.paths.fonts).concat('app/**/*.json');
     return gulp.src(extras, { dot: true })
         .pipe(gulp.dest(Config.paths.dist));
 });
