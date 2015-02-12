@@ -257,7 +257,6 @@ declare function sec-networks:networks-for-filings-and-label(
 declare %private function sec-networks:model-structures-recursive(
     $component as object,
     $xbrl-concepts as object*,
-    $ancestor as string,
     $depth as integer)
     as object*
 {
@@ -306,7 +305,6 @@ declare function sec-networks:model-structures($networks as object*) as object*
   return sec-networks:model-structures-recursive(
       $sec-network,
       $presentation-network.Trees[],
-      "None",
       1)
 };
 
