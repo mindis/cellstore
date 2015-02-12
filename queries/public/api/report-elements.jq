@@ -162,7 +162,7 @@ let $result :=
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
-                      Labels: backend:url("labels", {|
+                      Labels: backend:url("labels",
                         {
                           token: $token,
                           concept: $original-name,
@@ -171,8 +171,12 @@ let $result :=
                           format: $format,
                           profile-name: $profile-name
                         }
-                      |}),
-                      Facts: backend:url("facts", {|
+                      )
+                    },
+                    {
+                      Facts:
+                        if($concept.Kind eq "Concept")
+                        then backend:url("facts", {|
                         {
                           token: $token,
                           "xbrl:Concept": $original-name,
@@ -186,8 +190,9 @@ let $result :=
                           fiscalPeriodType: "ALL"
                         }[$profile-name eq "japan"]
                       |})
+                      else "None"
                     },
-                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels")),
+                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels", "Label", "IsAbstract", "SubstitutionGroup")),
                     $metadata
                 |}
         ]
@@ -214,7 +219,7 @@ let $serializers := {
           string-join(("Name", $res.ReportElements[]), "
 ")
       else
-          string-join(csv:serialize($res.ReportElements[], { serialize-null-as : "" }))
+          api:json-to-csv($res.ReportElements[])
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "report-elements")
