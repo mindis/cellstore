@@ -445,7 +445,7 @@ as object*
  :
  : @param $components sequence of components.
  :
- : @return the said number of hypercubes
+ : @return the number of hypercubes
  :)
 declare function components:num-hypercubes($components as object*) as integer*
 {
@@ -457,7 +457,7 @@ declare function components:num-hypercubes($components as object*) as integer*
  :
  : @param $components sequence of components.
  :
- : @return the said number of networks
+ : @return the number of networks
  :)
 declare function components:num-networks($components as object*) as integer*
 {
@@ -465,27 +465,27 @@ declare function components:num-networks($components as object*) as integer*
 };
 
 (:~
- : Return the number of (distinct) explicit dimensions in each of the given components.
+ : Return the number of report elements in each of the given components.
  :
  : @param $components sequence of components.
  :
- : @return the said number of dimensions
+ : @return the number of report elements
  :)
-declare function components:num-explicit-dimensions($components as object*) as integer*
+declare function components:num-report-elements($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctExplicitDimensions
+  $components ! $$.Statistics.NumReportElements
 };
 
 (:~
- : Return the number of (distinct) domains in each of the given components.
+ : Return the number of (distinct) dimensions in each of the given components.
  :
  : @param $components sequence of components.
  :
- : @return the said number of domains
+ : @return the number of dimensions
  :)
-declare function components:num-domains($components as object*) as integer*
+declare function components:num-dimensions($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctDomains
+  $components ! $$.Statistics.NumDimensions
 };
 
 (:~
@@ -497,59 +497,43 @@ declare function components:num-domains($components as object*) as integer*
  :)
 declare function components:num-members($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctMembers
+  $components ! $$.Statistics.NumMembers
 };
 
 (:~
- : Return the number of (distinct) concrete primary items being
- : in a hypercube for each of the given components.
+ : Return the number of (distinct) concrete concepts in each of the given components.
  :
  : @param $components sequence of components.
  :
- : @return the said number of primary items
+ : @return the said number of concepts
  :)
-declare function components:num-concrete-primary-items-in-hypercubes($components as object*) as integer*
+declare function components:num-concepts($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctConcretePrimaryItemsInHypercubes
+  $components ! $$.Statistics.NumConcepts
 };
 
 (:~
- : Return the number of (distinct) abstract primary items being
- : in a hypercube for each of the given components.
+ : Return the number of (distinct) abstract concepts in each of the given components.
  :
  : @param $components sequence of components.
  :
- : @return the said number of primary items
+ : @return the said number of abstracts
  :)
-declare function components:num-abstract-primary-items-in-hypercubes($components as object*) as integer*
+declare function components:num-abstracts($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctAbstractPrimaryItemsInHypercubes
+  $components ! $$.Statistics.NumAbstracts
 };
 
 (:~
- : Return the number of (distinct) concrete primary items not being
- : in a hypercube for each of the given components.
+ : Return the number of (distinct) line items report elements in each of the given components.
  :
  : @param $components sequence of components.
  :
- : @return the said number of primary items
+ : @return the said number of line items
  :)
-declare function components:num-concrete-primary-items-not-in-hypercubes($components as object*) as integer*
+declare function components:num-line-items($components as object*) as integer*
 {
-  $components ! $$.Statistics.NumDistinctConcretePrimaryItemsNotInHypercubes
-};
-
-(:~
- : Return the number of (distinct) abstract primary items not being
- : in a hypercube for each of the given components.
- :
- : @param $components sequence of components.
- :
- : @return the said number of primary items
- :)
-declare function components:num-distinct-abstract-primary-items-not-in-hypercubes($components as object*) as integer*
-{
-  $components ! $$.Statistics.NumDistinctAbstractPrimaryItemsNotInHypercubes
+  $components ! $$.Statistics.NumLineItems
 };
 
 (:~
@@ -872,22 +856,7 @@ declare function components:merge($components as object*) as object
  :)
 declare function components:line-items($components as object*) as string*
 {
-    let $presentation-networks as object* := networks:networks-for-components-and-short-names($components, "Presentation")
-    return components:line-items-recursive($components, $presentation-networks.Trees[])
-};
-
-declare %private function components:line-items-recursive($components as object*, $networks as object*) as string*
-{
-  let $concepts as object* := $components.Concepts[]
-  for $network in $networks
-  let $concept-name := $network.Name
-  let $substitution-group as string := $concepts[$$.Name eq $concept-name].SubstitutionGroup[1]
-  let $has-table-child as boolean := $concepts[$$.Name = $network.To[].Name].SubstitutionGroup = "xbrldt:hypercubeItem"
-  return switch(true)
-          case $has-table-child return components:line-items-recursive($components, $network.To[])
-          case $substitution-group eq "xbrldt:dimensionItem" return ()
-          case $substitution-group eq "xbrldt:hypercubeItem" return ()
-          default return $concept-name
+    $components.Concepts[][$$.Kind eq "LineItems"].Name
 };
 
 (:~
@@ -899,7 +868,7 @@ declare %private function components:line-items-recursive($components as object*
  :)
 declare function components:hypercubes($components as object*) as string*
 {
-  $components.Concepts[][$$.SubstitutionGroup = "xbrldt:hypercubeItem"].Name
+  $components.Concepts[][$$.Kind = "Hypercube"].Name
 };
 
 (:~
@@ -911,7 +880,19 @@ declare function components:hypercubes($components as object*) as string*
  :)
 declare function components:dimensions($components as object*) as string*
 {
-  $components.Concepts[][$$.SubstitutionGroup = "xbrldt:dimensionItem"].Name
+  $components.Concepts[][$$.Kind = "Dimension"].Name
+};
+
+(:~
+ : <p>Returns the member names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of member names.
+ :)
+declare function components:members($components as object*) as string*
+{
+  $components.Concepts[][$$.Kind = "Member"].Name
 };
 
 (:~
@@ -921,9 +902,94 @@ declare function components:dimensions($components as object*) as string*
  :
  : @return the sequence of concrete concept names.
  :)
-declare function components:concrete-concepts($components as object*) as string*
+declare function components:concepts($components as object*) as string*
 {
-  $components.Concepts[][not $$.IsAbstract].Name
+  $components.Concepts[][$$.Kind = "Concept"].Name
+};
+
+(:~
+ : <p>Returns the abstract concept names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of abstract concept names.
+ :)
+declare function components:abstracts($components as object*) as string*
+{
+  $components.Concepts[][$$.Kind = "Abstract"].Name
+};
+
+(:~
+ : <p>Returns the line items, that is the top-level abstracts or concepts in the
+ : presentation network.</p>
+ :
+ : @param $components the input components.
+ :
+ : @return the line items report elements metadata objects.
+ :)
+declare function components:line-items-metadata($components as object*) as object*
+{
+    $components.Concepts[][$$.Kind eq "LineItems"]
+};
+
+(:~
+ : <p>Returns the hypercube names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of hypercube metadata objects.
+ :)
+declare function components:hypercubes-metadata($components as object*) as object*
+{
+  $components.Concepts[][$$.Kind = "Hypercube"]
+};
+
+(:~
+ : <p>Returns the dimension names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of dimension metadata objects.
+ :)
+declare function components:dimensions-metadata($components as object*) as object*
+{
+  $components.Concepts[][$$.Kind = "Dimension"]
+};
+
+(:~
+ : <p>Returns the member names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of member metadata objects.
+ :)
+declare function components:members-metadata($components as object*) as object*
+{
+  $components.Concepts[][$$.Kind = "Member"]
+};
+
+(:~
+ : <p>Returns the concrete concept names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of concrete concept metadata objects.
+ :)
+declare function components:concepts-metadata($components as object*) as object*
+{
+  $components.Concepts[][$$.Kind = "Concept"]
+};
+
+(:~
+ : <p>Returns the abstract concept names that are in the component.
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the sequence of abstract concept metadata objects.
+ :)
+declare function components:abstracts-metadata($components as object*) as object*
+{
+  $components.Concepts[][$$.Kind = "Abstract"]
 };
 
 (:~
