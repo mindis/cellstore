@@ -27,6 +27,7 @@ declare  %rest:case-insensitive %rest:distinct  %rest:encoding("UTF-8") variable
 declare  %rest:case-insensitive %rest:distinct  variable $language           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $labelRole          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
+declare  %rest:case-insensitive                 variable $entity-search      as string? external;
 
 session:audit-call($token);
 
@@ -51,7 +52,7 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic, ())
+  $sic, (), $entity-search)
 
 let $archives as object* := multiplexer:filings(
   $profile-name,

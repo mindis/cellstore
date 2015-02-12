@@ -50,6 +50,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $name           as stri
 declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
 declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := ();
 declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
+declare  %rest:case-insensitive                 variable $entity-search  as string? external;
 
 session:audit-call($token);
 
@@ -72,7 +73,7 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic, ())
+  $sic, (), $entity-search)
 
 let $archives as object* := multiplexer:filings(
   $profile-name,

@@ -77,15 +77,16 @@
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "token",
-                "description": "The token that allows you to use this API.",
-                "required": true,
+                "name": "search",
+                "description": "Includes in the results the entities whose name match the search term (5 characters minimum).",
+                "profile": ["japan"],
+                "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
-                "name": "search",
-                "description": "Entity search term. 5 characters minimum.",
-                "required": false,
+                "name": "token",
+                "description": "The token that allows you to use this API.",
+                "required": true,
                 "type": "string",
                 "paramType": "query"
             }, {
@@ -644,6 +645,13 @@
                 ],
                 "paramType": "query"
             }, {
+                "name": "entity-search",
+                "description": "Includes in the results the entities whose name match the search term (5 characters minimum).",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            },  {
                 "name": "token",
                 "description": "The token of the current session",
                 "required": true,
@@ -887,6 +895,13 @@
                     "SEC",
                     "generic"
                 ],
+                "paramType": "query"
+            }, {
+                "name": "entity-search",
+                "description": "Includes in the results the entities whose name match the search term (5 characters minimum).",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
                 "paramType": "query"
             }, {
                 "name": "_method",
@@ -1737,6 +1752,13 @@
                 ],
                 "paramType": "query"
             }, {
+                "name": "entity-search",
+                "description": "Includes in the results the entities whose name match the search term (5 characters minimum).",
+                "profile": ["japan"],
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
                 "name": "_method",
                 "paramType": "query"
             }, {
@@ -2126,6 +2148,13 @@
                 "nameEditable": true,
                 "pattern": "^[^:]+:[^:]+::default$",
                 "description": "The default value of the dimension [prefix:dimension] that should be returned if the dimension was not provided explicitly for a fact. Accepted format: prefix:dimension::default",
+                "required": false,
+                "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "entity-search",
+                "description": "Includes in the results the entities whose name match the search term (5 characters minimum).",
+                "profile": ["japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"

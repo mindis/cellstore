@@ -221,6 +221,7 @@ declare  %rest:case-insensitive                 variable $labels            as b
 declare  %rest:case-insensitive                 variable $additional-rules  as string? external;
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
 declare  %rest:case-insensitive                 variable $language          as string  external := "en-US";
+declare  %rest:case-insensitive                 variable $entity-search     as string? external;
 
 session:audit-call($token);
 
@@ -242,7 +243,7 @@ let $entities := multiplexer:entities(
   api:preprocess-tags($tag),
   $ticker,
   $sic,
-  $aid)
+  $aid, $entity-search)
 
 let $report as object? := reports:reports($report)
 let $map as item* :=

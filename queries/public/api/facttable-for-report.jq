@@ -33,7 +33,8 @@ declare  %rest:case-insensitive                 variable $validate      as boole
 declare  %rest:case-insensitive                 variable $labels        as boolean external := false;
 declare  %rest:case-insensitive                 variable $report        as string? external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
+declare  %rest:case-insensitive                 variable $language      as string  external := "en-US";
+declare  %rest:case-insensitive                 variable $entity-search as string? external;
 
 session:audit-call($token);
 
@@ -57,7 +58,7 @@ let $entities := multiplexer:entities(
   $cik,
   $tag,
   $ticker,
-  $sic, ())
+  $sic, (), $entity-search)
 
 let $report-id as string? := $report
 let $report as object? := reports:reports($report-id)

@@ -47,18 +47,6 @@ declare function multiplexer:latest-filings(
     ()
 };
 
-declare function multiplexer:entities(
-  $profile-name as string,
-  $eid as string*,
-  $cik as string*,
-  $tag as string*,
-  $ticker as string*,
-  $sic as string*,
-  $aid as string*) as object*
-{
-  multiplexer:entities($profile-name, $eid, $cik, $tag, $ticker, $sic, $aid, ())
-};
-
 (:~
  : <p>Retrieves entities depending on the profile.</p>
  :
@@ -69,7 +57,7 @@ declare function multiplexer:entities(
  : @param $ticker a sequence of stock exchange tickers.
  : @param $sic a sequence of industry group SIC codes.
  : @param $aid a sequence of archive IDs.
- : @param $search Search term.
+ : @param $search a search term.
  :
  : @return the entities retrieved according to the profile specified.
  :)
@@ -83,26 +71,35 @@ declare function multiplexer:entities(
   $aid as string*,
   $search as string?) as object*
 {
-  if($search) then
-      companies:company-search($search)
-  else
-      switch($profile-name)
-      case "sec" return
-        for $entity in companies:companies(
-          $cik,
-          $tag,
-          $ticker,
-          $sic,
-          $eid,
-          $aid)
-        order by $entity.Profiles.SEC.CompanyName
-        return $entity
-      case "japan" return
-        for $entity in japan:entities($cik, $ticker, $eid, $tag)
-        order by $entity.SubmitterNameAlphabetic
-        return $entity
-      default return
-        entities:entities($eid)
+  switch($profile-name)
+  case "sec" return
+    for $entity in companies:companies(
+        $cik,
+        $tag,
+        $ticker,
+        $sic,
+        $eid,
+        $aid)
+    order by $entity.Profiles.SEC.CompanyName
+    return $entity
+  case "japan" return
+    let $entities := if($search and ($cik or $ticker or $eid or $tag)) then
+                        let $entities := (
+                          japan:entities($cik, $ticker, $eid, $tag),
+                          companies:company-search($search)
+                        )
+                        for $entity in $entities
+                        group by $entity._id
+                        return $entity[1]
+                      else if($search) then
+                        companies:company-search($search)
+                      else
+                      japan:entities($cik, $ticker, $eid, $tag)
+    for $entity in $entities
+    order by $entity.SubmitterNameAlphabetic
+    return $entity
+  default return
+    entities:entities($eid)
 };
 
 (:~
