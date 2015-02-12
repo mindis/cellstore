@@ -84,7 +84,7 @@
                 "paramType": "query"
             }, {
                 "name": "search",
-                "description": "Entity search term.",
+                "description": "Entity search term. 5 characters minimum.",
                 "required": false,
                 "type": "string",
                 "paramType": "query"

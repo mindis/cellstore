@@ -23,8 +23,7 @@ gulp.task('swagger', function(done){
           swagger: 'swagger/billing.json',
           moduleName: 'billing-api',
           className: 'BillingAPI'
-        },
-        {
+        }, {
             swagger: 'swagger/reports.json',
             moduleName: 'report-api',
             className: 'ReportAPI'

@@ -93,11 +93,11 @@ declare function companies:companies(
 
 declare function companies:company-search($search as string) as object*
 {
-  trace(mw:run-cmd-deterministic(
+  mw:run-cmd-deterministic(
   {
       "text" : "entities",
       "search" : $search
-    }), "search").results[].obj
+  }).results[].obj
 };
 
 (:~
