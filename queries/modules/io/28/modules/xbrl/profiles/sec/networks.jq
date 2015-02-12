@@ -266,7 +266,6 @@ declare %private function sec-networks:model-structures-recursive(
   let $kind := $main-object.Kind
   return {|
     {
-      "Kind" : $kind,
       "Name" : $main-object.Name,
       "Label" : $main-object.Label,
       "Depth" : $depth
