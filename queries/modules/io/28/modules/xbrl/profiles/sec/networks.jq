@@ -480,49 +480,6 @@ declare function sec-networks:standard-definition-models-for-components($compone
 };
 
 (:~
- : <p>Returns all SEC Tables contained in the supplied SEC Networks.</p>
- :
- : <p>SEC Tables are XBRL hypercubes.</p>
- :
- : @param $networks a sequence of SEC Network objects.
- : @param $options <a href="core#standard_options">standard SEC BizQL options</a>.
- :
- : @return the SEC Tables.
- :
- :)
-declare function sec-networks:tables($networks as object*, $options as object?) as object*
-{
-  let $include-implied-table as boolean := if(exists($options("IncludeImpliedTable")))
-                                           then $options("IncludeImpliedTable")
-                                           else false
-  for $sec-network in $networks
-  let $hypercube-metadata as object* := ($sec-network.Concepts[])[$$.Kind eq "Hypercube"]
-  return if (exists($hypercube-metadata) or not $include-implied-table)
-         then $hypercube-metadata
-         else {
-           Name: "xbrl28:ImpliedTable",
-           Label: "BizQL SEC Implied Table"
-         }
-};
-
-(:~
- : <p>Returns the names of all SEC Tables contained in the supplied SEC Networks.</p>
- :
- : <p>SEC Tables are XBRL hypercubes.</p>
- :
- : @param $networks a sequence of SEC Network objects.
- : @param $options <a href="core#standard_options">standard SEC BizQL options</a>.
- :
- : @return the names of the SEC Tables.
- :
- :)
-declare function sec-networks:table-names($networks as object*) as string*
-{
-  let $names := $networks.Hypercubes[].Name
-  return if (exists($names)) then $names else "xbrl28:ImpliedTable"
-};
-
-(:~
  :
  : <p>Retrieves all facts belonging to the SEC Network.</p>
  :
@@ -535,37 +492,6 @@ declare function sec-networks:facts(
 as object*
 {
   sec-networks:facts($networks-or-ids, ())
-};
-
-(:~
- :
- : <p>Retrieves all facts belonging to the SEC Network.</p>
- :
- : @param $networks-or-ids a sequence of SEC Network objects, or their XBRL Component IDs.
- : @return a array populated with fact values.
- :)
-declare function sec-networks:fact-tables(
-    $networks-or-ids as item*
-)
-as array
-{
-  sec-networks:fact-tables($networks-or-ids, ())
-};
-
-(:~
- :
- : <p>Retrieves all facts belonging to the SEC Networks and populates the model structures.</p>
- :
- : @param $networks-or-ids a sequence of SEC Network objects, or their XBRL Component IDs.
- :
- : @return the populated model structures (Facts array fields).
- :)
-declare function sec-networks:populated-model-structures(
-    $networks-or-ids as item*
-)
-as object*
-{
-  sec-networks:populated-model-structures($networks-or-ids, ())
 };
 
 (:~
@@ -603,68 +529,6 @@ as object*
     )
   )
   return sec:hide-amended-facts($facts, $options)
-};
-
-(:~
- :
- : <p>Retrieves all facts belonging to the SEC Network.</p>
- :
- : @param $networks a sequence of SEC Network objects.
- : @param $options <a href="core#standard_options">standard SEC BizQL options</a>.
- :
- : @return a array of arrays filled with fact values.
- :)
-declare function sec-networks:fact-tables(
-    $networks as object*,
-    $options as object?
-)
-as array
-{
-  for $component as object in $networks
-  for $table as string? allowing empty in sec-networks:table-names($component)[$$ ne "xbrl28:ImpliedTable"]
-  let $hypercube as object? := hypercubes:hypercubes-for-components($component, $table)
-  let $hypercube as object := if (exists($hypercube))
-                              then $hypercube
-                              else sec:dimensionless-hypercube({
-                                  Concepts: [ components:concepts($component) ]
-                              })
-  return hypercubes:fact-table-for-hypercube(
-      $hypercube,
-      $component.Archive,
-      {|
-        $options,
-        { "facts-for-archives-and-concepts": sec:facts-for-archives-and-concepts#3 }
-      |}
-  )
-};
-
-(:~
- :
- : <p>Retrieves all facts belonging to the SEC Networks and populates the model structures.</p>
- :
- : @param $networks-or-ids a sequence of SEC Network objects, or their XBRL Component IDs.
- : @param $options <a href="core#standard_options">standard SEC BizQL options</a>.
- :
- : @return the populated model structures (Facts array fields).
- :)
-declare function sec-networks:populated-model-structures(
-    $networks-or-ids as item*,
-    $options as object?
-)
-as object*
-{
-  let $fact-table-by-concepts := {|
-    for $f in sec-networks:facts($networks-or-ids, $options)
-    group by $concept := $f.Aspects."xbrl:Concept"
-    return { $concept : [ $f ] }
-  |}
-  return
-    copy $result := sec-networks:model-structures($networks-or-ids)
-    modify
-      for $concept in ($result, descendant-objects(values($result)))[$$.Kind eq "Concept"]
-      let $name := $concept.Name
-      return insert json { "Facts" : $fact-table-by-concepts.$name } into $concept
-    return $result
 };
 
 (:~
