@@ -130,18 +130,6 @@ declare function filings:num-extension-facts($filings-or-ids as item*) as intege
 };
 
 (:~
- : Return the number of footnotes in each of the given filings.
- :
- : @param $filings-or-ids list of filings or IDs
- :
- : @return the said number of facts
- :)
-declare function filings:num-footnotes($filings-or-ids as item*) as integer*
-{
-  archives:num-footnotes($filings-or-ids)
-};
-
-(:~
  : Return the number of extension concepts in each of the given filings.
  :
  : @param $filings-or-ids list of filings or IDs
@@ -200,7 +188,7 @@ declare function filings:summaries($filings-or-ids as item*) as object*
         LineItems : $a.Statistics.Profiles.SEC.NumDistinctReportElementNamesEndingWithLineItems,
         Concepts : archives:num-concepts($a),
         Abstracts : archives:num-abstracts($a),
-        Footnotes : filings:num-footnotes($a),
+        Footnotes : archives:num-footnotes($a),
         Facts: archives:num-facts($a),
         ExtensionFacts:  filings:num-extension-facts($a),
         ExtensionConcepts : filings:num-extension-concepts($a),
