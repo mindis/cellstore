@@ -333,9 +333,18 @@ declare function multiplexer:concepts(
         $exact-label,
         $full-text-label,
         { MetadataOnly: true })
+    let $role as string* := if(empty($role))
+                            then $concepts:ANY_COMPONENT_LINK_ROLE
+                            else $role
+    let $exact-label as item* := if(empty($exact-label))
+                            then $concepts:ALL_CONCEPT_LABELS
+                            else $exact-label
+    let $concept as item* := if(empty($concept))
+                             then $concepts:ALL_CONCEPT_NAMES
+                             else $concept
     return concepts:concepts-for-components(
       $concept,
-      $components,
       $exact-label,
+      $components,
       { OnlyNames: $onlyNames})
 };
