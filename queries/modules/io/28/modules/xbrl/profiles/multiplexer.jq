@@ -184,7 +184,7 @@ declare function multiplexer:components(
       $exact-label,
       {|
         $options,
-        { ExtraFilter: { "Profiles.FSA.Disclosure" : { "$in" : [ $disclosure ] } } }
+        { ExtraFilter: { "Profiles.FSA.Disclosure" : { "$in" : [ $disclosure ] } } }[$profile-name eq "japan"]
       |}
     )
 };
