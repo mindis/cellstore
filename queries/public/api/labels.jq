@@ -40,6 +40,7 @@ let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
 let $networkIdentifier := distinct-values(($networkIdentifier, $role))
+let $kind as string* := api:preprocess-concept-kind($kind)
 
 let $cik as string* :=
     switch($profile-name)
