@@ -121,6 +121,12 @@ declare function components:components($component-or-ids as item*) as object*
  : @param $roles a sequence of component roles.
  : @param $concepts a sequence of concept names.
  : @param $exact-labels a sequence of exact labels to match.
+ : @param $options Optional parameters:
+ : <ul>
+ :   <li>MetadataOnly: only return the Archive and Role fields.</li>
+ :   <li>ExtraFilter a Mongo query to further filter components (mostly
+ :   with profile-related filters)</li>
+ : </ul>
  :
  : @error components:TOO-MANY-COMPONENTS if all parameters are set to ALL-*.
  :
@@ -141,7 +147,8 @@ declare function components:components-for(
     { "Archive" : { "$in" : [ $aids ] } }[not $aids = $components:ALL-ARCHIVES],
     { "Role" : { "$in" : [ $roles ] } }[not $roles = $components:ALL-ROLES],
     { "Concepts.Name" : { "$in" : [ $concepts ] } }[not $concepts = $components:ALL-CONCEPTS],
-    { "Concepts.Labels.Value" : { "$in" : [ $exact-labels ] } }[not $exact-labels = $components:ALL-LABELS]
+    { "Concepts.Labels.Value" : { "$in" : [ $exact-labels ] } }[not $exact-labels = $components:ALL-LABELS],
+    $options.ExtraFilter treat as object?
   |}
   return
     switch(true)
