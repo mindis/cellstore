@@ -29,6 +29,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $labelRole          as 
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
 declare  %rest:case-insensitive                 variable $onlyTextBlocks     as boolean? external := ();
 declare  %rest:case-insensitive                 variable $kind               as string*  external := ();
+declare  %rest:case-insensitive                 variable $eliminateReportElementDuplicates as boolean external := false;
 
 session:audit-call($token);
 
@@ -79,18 +80,35 @@ let $concepts as object* :=
   ]
 
 let $res as object* :=
-  for $concept in $concepts
-  where empty($reportElement) or $concept.Name = $reportElement
-  for $found-label in $concept.Labels[]
-  where (empty($label) or $found-label.Value = $label) and
-        (empty($language) or $found-label.Language = $language) and
-        (empty($labelRole) or $found-label.Role = $labelRole)
-  return {|
-    { Archive: $concept.Archive },
-    { ComponentRole: $concept.Role },
-    { Concept: $concept.Name },
-    $found-label
-  |}
+  if($eliminateReportElementDuplicates)
+  then
+    for $concept in $concepts
+    group by $concept.Name
+    let $concept := $concept[1]
+    where empty($reportElement) or $concept.Name = $reportElement
+    for $found-label in $concept.Labels[]
+    where (empty($label) or $found-label.Value = $label) and
+          (empty($language) or $found-label.Language = $language) and
+          (empty($labelRole) or $found-label.Role = $labelRole)
+    return {|
+      { Archive: $concept.Archive },
+      { ComponentRole: $concept.Role },
+      { Concept: $concept.Name },
+      $found-label
+    |}
+  else
+    for $concept in $concepts
+    where empty($reportElement) or $concept.Name = $reportElement
+    for $found-label in $concept.Labels[]
+    where (empty($label) or $found-label.Value = $label) and
+          (empty($language) or $found-label.Language = $language) and
+          (empty($labelRole) or $found-label.Role = $labelRole)
+    return {|
+      { Archive: $concept.Archive },
+      { ComponentRole: $concept.Role },
+      { Concept: $concept.Name },
+      $found-label
+    |}
 
 let $result := { Labels: [ $res ] }
 let $comment :=
