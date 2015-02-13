@@ -52,19 +52,19 @@ declare %an:nondeterministic function local:test-example1() as item
             "Generator": "IBM Cognos",
             "SECFilingPage": "http://www.sec.gov/Archives/edgar/data/66740/000110465914009773/0001104659-14-009773-index.htm",
             "XBRLInstanceURL": "http://www.sec.gov/Archives/edgar/data/66740/000110465914009773/mmm-20131231.xml",
-            "Networks" : 104,
-            "ReportElements" : 1699,
-            "Tables" : 52,
-            "Axis" : 35,
-            "Members" : 746,
+            "Networks" : 175,
+            "ReportElements" : 1203, 
+            "Tables" : 29,
+            "Axis" : 44,
+            "Members" : 276,
             "LineItems" : 29,
-            "Concepts" : 1154,
-            "Abstracts" : 516,
+            "Concepts" : 720,
+            "Abstracts" : 76,
             "Footnotes" : 0,
             "Facts" : 3506,
             "ExtensionFacts" : 1180,
             "ExtensionConcepts" : 184,
-            "ExtensionAbstracts" : 164
+            "ExtensionAbstracts" : 175
         }
     ]
     let $endpoint := "filings"

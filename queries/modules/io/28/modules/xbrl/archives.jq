@@ -115,7 +115,7 @@ declare function archives:archives-for-entities($entities-or-ids as item*) as ob
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of hypercubes
+ : @return the number of hypercubes
  :)
 declare function archives:num-hypercubes($archives-or-ids as item*) as integer*
 {
@@ -123,11 +123,23 @@ declare function archives:num-hypercubes($archives-or-ids as item*) as integer*
 };
 
 (:~
+ : Return the number of report elements in each of the given archives.
+ :
+ : @param $archives-or-ids list of archives or IDs
+ :
+ : @return the number of report elements
+ :)
+declare function archives:num-report-elements($archives-or-ids as item*) as integer*
+{
+  archives:archives($archives-or-ids) ! $$.Statistics.NumReportElements
+};
+
+(:~
  : Return the number of networks in each of the given archives.
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of networks
+ : @return the number of networks
  :)
 declare function archives:num-networks($archives-or-ids as item*) as integer*
 {
@@ -135,27 +147,15 @@ declare function archives:num-networks($archives-or-ids as item*) as integer*
 };
 
 (:~
- : Return the number of (distinct) explicit dimensions in each of the given archives.
+ : Return the number of (distinct) dimensions in each of the given archives.
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of dimensions
+ : @return the number of dimensions
  :)
-declare function archives:num-explicit-dimensions($archives-or-ids as item*) as integer*
+declare function archives:num-dimensions($archives-or-ids as item*) as integer*
 {
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctExplicitDimensions
-};
-
-(:~
- : Return the number of (distinct) domains in each of the given archives.
- :
- : @param $archives-or-ids list of archives or IDs
- :
- : @return the said number of domains
- :)
-declare function archives:num-domains($archives-or-ids as item*) as integer*
-{
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctDomains
+  archives:archives($archives-or-ids) ! $$.Statistics.NumDimensions
 };
 
 (:~
@@ -163,63 +163,47 @@ declare function archives:num-domains($archives-or-ids as item*) as integer*
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of members
+ : @return the number of members
  :)
 declare function archives:num-members($archives-or-ids as item*) as integer*
 {
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctMembers
+  archives:archives($archives-or-ids) ! $$.Statistics.NumMembers
 };
 
 (:~
- : Return the number of (distinct) concrete primary items being
- : in a hypercube for each of the given archives.
+ : Return the number of (distinct) concrete concepts in each of the given archives.
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of primary items
+ : @return the number of concepts
  :)
-declare function archives:num-concrete-primary-items-in-hypercubes($archives-or-ids as item*) as integer*
+declare function archives:num-concepts($archives-or-ids as item*) as integer*
 {
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctConcretePrimaryItemsInHypercubes
+  archives:archives($archives-or-ids) ! $$.Statistics.NumConcepts
 };
 
 (:~
- : Return the number of (distinct) abstract primary items being
- : in a hypercube for each of the given archives.
+ : Return the number of (distinct) abstracts in each of the given archives.
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of primary items
+ : @return the number of abstracts
  :)
-declare function archives:num-abstract-primary-items-in-hypercubes($archives-or-ids as item*) as integer*
+declare function archives:num-abstracts($archives-or-ids as item*) as integer*
 {
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctAbstractPrimaryItemsInHypercubes
+  archives:archives($archives-or-ids) ! $$.Statistics.NumAbstracts
 };
 
 (:~
- : Return the number of (distinct) concrete primary items not being
- : in a hypercube for each of the given archives.
+ : Return the number of (distinct) line items report elements in each of the given archives.
  :
  : @param $archives-or-ids list of archives or IDs
  :
- : @return the said number of primary items
+ : @return the number of line items
  :)
-declare function archives:num-concrete-primary-items-not-in-hypercubes($archives-or-ids as item*) as integer*
+declare function archives:num-line-items($archives-or-ids as item*) as integer*
 {
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctConcretePrimaryItemsNotInHypercubes
-};
-
-(:~
- : Return the number of (distinct) abstract primary items not being
- : in a hypercube for each of the given archives.
- :
- : @param $archives-or-ids list of archives or IDs
- :
- : @return the said number of primary items
- :)
-declare function archives:num-distinct-abstract-primary-items-not-in-hypercubes($archives-or-ids as item*) as integer*
-{
-  archives:archives($archives-or-ids) ! $$.Statistics.NumDistinctAbstractPrimaryItemsNotInHypercubes
+  archives:archives($archives-or-ids) ! $$.Statistics.NumLineItems
 };
 
 (:~

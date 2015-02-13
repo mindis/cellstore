@@ -29,7 +29,6 @@ angular
                             'fsa:ArchiveFiscalPeriod': 'ALL',
                             'fsa:ArchiveFiscalYear': 'ALL'
                         }).then(function(response){
-                            console.log(response.FactTable);
                             return response.FactTable;
                         });
                     }]
