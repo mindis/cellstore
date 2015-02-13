@@ -510,7 +510,7 @@ declare function sec-networks:facts(
 as object*
 {
   for $component as object in $networks
-  for $table as string? allowing empty in sec-networks:table-names($component)[$$ ne "xbrl28:ImpliedTable"]
+  for $table as string? allowing empty in components:hypercubes($component)[$$ ne "xbrl28:ImpliedTable"]
   let $hypercube as object? := hypercubes:hypercubes-for-components($component, $table)
   let $hypercube as object := if (exists($hypercube))
                               then $hypercube
