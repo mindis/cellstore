@@ -182,7 +182,10 @@ declare function multiplexer:components(
       $role,
       $concept,
       $exact-label,
-      $options
+      {|
+        $options,
+        { ExtraFilter: { "Profiles.FSA.Disclosure" : { "$in" : [ $disclosure ] } } }
+      |}
     )
 };
 

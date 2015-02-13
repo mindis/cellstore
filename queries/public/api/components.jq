@@ -159,10 +159,11 @@ let $res as object* :=
            }
     default return
         for $r in $components
-        return {
+        return {|
+          {
             Archive: $r.Archive,
-            Role: $r.Role,
             Label: $r.Label,
+            Role: $r.Role,
             FactTable: backend:url("facttable-for-component", {
                             token: $token,
                             aid: $r.Archive,
@@ -197,7 +198,9 @@ let $res as object* :=
             NumConcepts: components:num-concepts($r),
             Hypercubes: [ keys($r.Hypercubes) ],
             ValidationErrors: [ components:validation-errors($r) ]
-        }
+          },
+          { Disclosure: $r.Profiles.FSA.Disclosure}[$profile-name eq "japan"]
+        |}
 let $result := switch($profile-name)
                case "sec"
                return { Archives: [ $res ] }
