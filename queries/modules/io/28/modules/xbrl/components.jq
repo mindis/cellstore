@@ -1028,6 +1028,26 @@ declare %private function components:has-table(
 };
 
 (:~
+ : <p>Checks whether all report elements have metadata.</p>
+ :
+ : @param $component a component.
+ :
+ : @return all report elements without metadata.
+ :)
+declare %private function components:missing-metadata(
+    $component as object
+) as string*
+{
+  let $metadata-names := $component.Concepts[].Name
+  for $name in distinct-values((
+    descendant-objects($component.Networks).Name,
+    descendant-objects($component.Hypercubes).Name
+  ))
+  where not $name = $metadata-names
+  return $name
+};
+
+(:~
  : <p>Checks components for semantic validation errors.</p>
  :
  : @param $components a sequence of components.
@@ -1041,6 +1061,9 @@ declare function components:validation-errors(
   for $component in $components
   return (
     "Presentation network is missing"[not components:has-presentation-network($component)],
-    "Hypercube is missing (implied table)"[not components:has-table($component)]
+    "Hypercube is missing (implied table)"[not components:has-table($component)],
+    let $missing := components:missing-metadata($component)
+    where exists($missing)
+    return "Some metadata is missing (" || string-join($missing, ", ") || ")"
   )
 };
