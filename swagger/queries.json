@@ -2482,6 +2482,12 @@
                   "Concept"
                 ]
             }, {
+                "name": "eliminateReportElementDuplicates",
+                "description": "Whether to eliminate (concept name, language, label role) duplicates. By default no duplicate elimination.",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
