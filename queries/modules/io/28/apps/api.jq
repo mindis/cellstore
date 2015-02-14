@@ -296,6 +296,21 @@ declare function api:preprocess-tags($tags as string*) as string*
   distinct-values($tags ! upper-case($$))
 };
 
+declare function api:preprocess-concept-kind($kind as string*) as string*
+{
+  distinct-values(
+    for $kind in $kind
+    return switch(lower-case($kind))
+           case "hypercube" return "Hypercube"
+           case "dimension" return "Dimension"
+           case "member" return "Member"
+           case "lineitems" return "LineItems"
+           case "abstract" return "Abstract"
+           case "concept" return "Concept"
+           default return ()
+  )
+};
+
 declare function api:preprocess-boolean($name as string, $value as string)
 as boolean
 {

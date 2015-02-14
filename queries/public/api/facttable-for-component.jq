@@ -11,7 +11,6 @@ import module namespace concept-maps = "http://28.io/modules/xbrl/concept-maps";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 import module namespace labels = "http://28.io/modules/xbrl/labels";
 
-import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
 import module namespace config = "http://apps.28.io/config";
@@ -165,29 +164,27 @@ let $facts :=
 let $facts := api:normalize-facts($facts)
 
 let $result :=
-        {|
-            {
-                CIK : entities:eid($entities),
-                EntityRegistrantName : $entities.Profiles.SEC.CompanyName,
-                TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name,
-                Label : $component.Label,
-                AccessionNumber : $component.Archive,
-                FormType : $archives.Profiles.SEC.FormType,
-                FiscalPeriod : $archives.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
-                FiscalYear : $archives.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
-                AcceptanceDatetime : ($archives ! filings:acceptance-dateTimes($$)),
-                NetworkIdentifier: $component.Role,
-                Disclosure : $component.Profiles.SEC.Disclosure,
-                FactTable : [ $facts ]
-            }[$profile-name eq "sec"],
-            {
-                Archive : $component.Archive,
-                Role: $component.Role,
-                TableName : keys($component.Hypercubes),
-                Label : $component.Label,
-                FactTable : [ $facts ]
-            }[$profile-name ne "sec"]
-        |}
+  if($profile-name eq "sec")
+  then {
+    CIK : entities:eid($entities),
+    EntityRegistrantName : $entities.Profiles.SEC.CompanyName,
+    TableName : components:hypercubes($component),
+    Label : $component.Label,
+    AccessionNumber : $component.Archive,
+    FormType : $archives.Profiles.SEC.FormType,
+    FiscalPeriod : $archives.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
+    FiscalYear : $archives.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
+    AcceptanceDatetime : ($archives ! filings:acceptance-dateTimes($$)),
+    NetworkIdentifier: $component.Role,
+    Disclosure : $component.Profiles.SEC.Disclosure,
+    FactTable : [ $facts ]
+  } else {
+    Archive : $component.Archive,
+    Role: $component.Role,
+    TableName : keys($component.Hypercubes),
+    Label : $component.Label,
+    FactTable : [ $facts ]
+  }
 
 let $comment := {
     NumFacts : count($facts),

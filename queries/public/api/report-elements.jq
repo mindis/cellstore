@@ -12,8 +12,6 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
-import module namespace csv = "http://zorba.io/modules/json-csv";
-
 declare function local:concepts-for-archives-and-labels($aids as string*, $labels as string) as object*
 {
    mw:run-cmd-deterministic(
@@ -50,6 +48,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $name           as stri
 declare  %rest:case-insensitive                 variable $onlyNames      as boolean? external := false;
 declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := ();
 declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
+declare  %rest:case-insensitive                 variable $kind           as string*  external := ();
 
 session:audit-call($token);
 
@@ -58,6 +57,7 @@ let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
 let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
+let $kind as string* := api:preprocess-concept-kind($kind)
 
 let $cik as string* :=
     switch($profile-name)
@@ -102,7 +102,8 @@ let $concepts as object* :=
       $report,
       $onlyNames)[
     (empty($onlyTextBlocks) or $$.IsTextBlock eq $onlyTextBlocks) and
-    (empty($abstract) or $$.IsAbstract eq $abstract)
+    (empty($abstract) or $$.IsAbstract eq $abstract) and
+    (empty($kind) or $$.Kind = $kind)
   ]
 
 let $result :=
@@ -162,7 +163,7 @@ let $result :=
                 return {|
                     project($concept, ("Name", "Origin")),
                     {
-                      Labels: backend:url("labels", {|
+                      Labels: backend:url("labels",
                         {
                           token: $token,
                           concept: $original-name,
@@ -171,8 +172,12 @@ let $result :=
                           format: $format,
                           profile-name: $profile-name
                         }
-                      |}),
-                      Facts: backend:url("facts", {|
+                      )
+                    },
+                    {
+                      Facts:
+                        if($concept.Kind eq "Concept")
+                        then backend:url("facts", {|
                         {
                           token: $token,
                           "xbrl:Concept": $original-name,
@@ -186,8 +191,9 @@ let $result :=
                           fiscalPeriodType: "ALL"
                         }[$profile-name eq "japan"]
                       |})
+                      else "None"
                     },
-                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels")),
+                    trim($concept, ("_id", "Archive", "Role", "Name", "Labels", "Label", "IsAbstract", "SubstitutionGroup")),
                     $metadata
                 |}
         ]
@@ -214,7 +220,7 @@ let $serializers := {
           string-join(("Name", $res.ReportElements[]), "
 ")
       else
-          string-join(csv:serialize($res.ReportElements[], { serialize-null-as : "" }))
+          api:json-to-csv($res.ReportElements[])
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "report-elements")

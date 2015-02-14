@@ -46,7 +46,7 @@ declare %an:nondeterministic function local:test-labels() as item
     let $res as object := test:invoke-raw($endpoint, $params)
     let $actual := $res.body.content
     let $expectedLines := (
-        "Archive [Axis],Concept [Axis],Reporting Entity [Axis],Period [Axis],Fiscal Period [Axis],Fiscal Period Type [Axis],Fiscal Year [Axis],SEC Acceptance Date [Axis],Legal Entity [Axis],Unit,Value,Decimals\r\n0000021344-13-000050,\"Cash and Cash Equivalents, at Carrying Value\",COCA COLA CO,\"September 27, 2013\",Q3,instant,2013,20131024121047,Default Legal Entity [Member],USD,11118000000,-6\r\n0000021344-13-000050,Assets,COCA COLA CO,\"September 27, 2013\",Q3,instant,2013,20131024121047,Default Legal Entity [Member],USD,89432000000,-6"
+        "SEC Acceptance Date [Axis],Archive [Axis],Fiscal Period [Axis],Fiscal Year [Axis],Fiscal Period Type [Axis],Period [Axis],Reporting Entity [Axis],Concept [Axis],Legal Entity [Axis],Unit,Value,Decimals\r\n20131024121047,0000021344-13-000050,Q3,2013,instant,\"September 27, 2013\",COCA COLA CO,\"Cash and Cash Equivalents, at Carrying Value\",Default Legal Entity [Member],USD,11118000000,-6\r\n20131024121047,0000021344-13-000050,Q3,2013,instant,\"September 27, 2013\",COCA COLA CO,Assets,Default Legal Entity [Member],USD,89432000000,-6\r\n"
     )
     return if($res.status eq 200 and (every $line in $expectedLines satisfies contains($actual,$line))) then true else {
         url: test:url($endpoint, $params),
