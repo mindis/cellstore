@@ -7,6 +7,7 @@ test:check-all-success({
         eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
         merge: "true",
         eliminate: "true"
@@ -21,6 +22,7 @@ test:check-all-success({
         eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
         language: "en",
         merge: "true",
@@ -36,6 +38,7 @@ test:check-all-success({
         eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
         merge: "true",
         eliminate: "true"
@@ -50,6 +53,7 @@ test:check-all-success({
         eid: "http://disclosure.edinet-fsa.go.jp E01225-000",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
         merge: "true",
         eliminate: "true"
@@ -64,6 +68,7 @@ test:check-all-success({
         tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_QuarterlyConsolidatedBalanceSheet",
         merge: "true",
         eliminate: "true"
@@ -78,6 +83,7 @@ test:check-all-success({
         tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_YearToQuarterEndConsolidatedStatementOfIncome",
         merge: "true",
         eliminate: "true"
@@ -92,6 +98,7 @@ test:check-all-success({
         tag: "NIKKEI",
         fiscalYear: "2014",
         fiscalPeriod: "Q1",
+        filingKind: "EDINET",
         role: "http://disclosure.edinet-fsa.go.jp/role/jpcrp/rol_NotesQuarterlyConsolidatedStatementOfCashFlows",
         merge: "true",
         eliminate: "true"
@@ -106,6 +113,7 @@ test:check-all-success({
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
+        filingKind: "EDINET",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedBalanceSheets",
         merge: "true",
         eliminate: "true"
@@ -120,6 +128,7 @@ test:check-all-success({
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
+        filingKind: "EDINET",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedStatementsOfIncome",
         merge: "true",
         eliminate: "true"
@@ -134,6 +143,7 @@ test:check-all-success({
         eid: "http://info.edinet-fsa.go.jp E01225-000",
         fiscalYear: "ALL",
         fiscalPeriod: "FY",
+        filingKind: "EDINET",
         role: "http://info.edinet-fsa.go.jp/jp/fr/gaap/role/ConsolidatedStatementsOfCashFlowsIndirect",
         merge: "true",
         eliminate: "true"

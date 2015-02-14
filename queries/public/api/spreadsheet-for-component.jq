@@ -21,6 +21,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $ticker             as 
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "LATEST";
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $networkIdentifier  as string* external;
@@ -69,6 +70,7 @@ let $archives as object* := multiplexer:filings(
   $entities,
   $fiscalPeriod,
   $fiscalYear,
+  $filingKind,
   $aid)
 
 let $components as object* :=
@@ -79,7 +81,9 @@ let $components as object* :=
       $reportElement,
       $disclosure,
       $networkIdentifier,
-      $label)
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
 
 let $component as object? := switch(true)
                               case empty($components) return ()
