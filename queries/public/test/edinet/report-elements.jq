@@ -40,7 +40,7 @@ test:check-all-success({
       "report-elements",
       {aid:"STANDARD-TAXONOMY-2014", abstract: "true", onlyNames: "true" },
       function($b as item*) as item* { count($b.ReportElements[]) },
-      1027,
+      1029,
       ()
     ),
     abstract-false : test:invoke-and-assert-deep-equal(
