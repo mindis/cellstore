@@ -2215,6 +2215,23 @@
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
             }, {
+                "title": "Compare stocks of subsidiaries and affiliates between Canon and Mitsubishi",
+                "description": "Compare Balance Sheet between Canon and Mitsubishi as XML.",
+                "profile": ["japan"],
+                "parameters": {
+                    "format": "xml",
+                    "concept": ["jp-t-cte:StocksOfSubsidiariesAndAffiliates", "jppfs-cor:StocksOfSubsidiariesAndAffiliates"],
+                    "edinetcode": ["E02274", "E02529"],
+                    "fiscalPeriod": "FY",
+                    "fiscalYear": "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis": "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default": "jppfs-cor:NonConsolidatedMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
+            }, {
                 "title": "Get forecast values by company name/ID and reported period/forecast period",
                 "description": "Get forecast values by company name/ID and reported period/forecast period.",
                 "profile": ["japan"],
