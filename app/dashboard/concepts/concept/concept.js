@@ -15,11 +15,25 @@ angular.module('report-editor')
         $scope.facts = [[], []];
         $scope.labels = [];
         $scope.series = [$stateParams.label + ' (consolidated)', $stateParams.label + ' (non consolidated)'];
+        var years = {};
         facts.forEach(function(fact){
-            var index = fact.Aspects['xbrl:Scenario'] === 'xbrl28:Consolidated' ? 0 : 1;
-            console.log(index);
-            $scope.labels.push(fact.Aspects['fsa:FiscalYear']);
-            $scope.facts[index].push(fact.Value);
-            $scope.facts[Math.abs(index - 1)].push(null);
+            var isNonConsolidated = fact.Aspects['xbrl:Scenario'] === 'jp-o-oe:NonConsolidated' || fact.Aspects['jppfs-cor:ConsolidatedOrNonConsolidatedAxis'] === 'jppfs-cor:NonConsolidatedMember';
+            if(!years[fact.Aspects['fsa:FiscalYear']]) {
+                years[fact.Aspects['fsa:FiscalYear']] = {
+                    consolidated: null,
+                    nonConsolidated: null
+                }
+            }
+            if(isNonConsolidated) {
+                years[fact.Aspects['fsa:FiscalYear']].nonConsolidated = fact.Value;
+            } else {
+                years[fact.Aspects['fsa:FiscalYear']].consolidated = fact.Value;
+            }
+        });
+        Object.keys(years).sort().forEach(function(year){
+            var values = years[year];
+            $scope.labels.push(year);
+            $scope.facts[0].push(values.consolidated);
+            $scope.facts[1].push(values.nonConsolidated);
         });
     });
