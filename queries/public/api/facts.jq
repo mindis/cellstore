@@ -187,10 +187,13 @@ declare function local:hypercube($entities as object*) as object
         {
             $dimension-name : {|
                 { "Type" : $type }[exists($type)],
-                { "Domain" : [ $typed-values ] }[exists($typed-values) and not($all)],
+                { "Domain" : [ $typed-values ] }
+                    [exists($typed-values) and not($all)],
                 { "Default" : $typed-default-value }[$has-default],
-                { "Default" : null }[$all and (not $has-default) and exists($type)],
-                { "Default" : "xbrl28:DefaultValue" }[$all and  (not $has-default) and empty($type)]
+                { "Default" : null }
+                    [$all and (not $has-default) and exists($type)],
+                { "Default" : "xbrl28:DefaultValue" }
+                    [$all and (not $has-default) and empty($type)]
             |}
         }
     |}
