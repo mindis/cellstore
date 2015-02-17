@@ -23,7 +23,7 @@ angular.module('report-editor')
                 years[year] = {
                     consolidated: null,
                     nonConsolidated: null
-                }
+                };
             }
             years[year][isNonConsolidated ? 'nonConsolidated' : 'consolidated'] = fact.Value;
         });
