@@ -26,7 +26,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "2014-04-01/2014-06-30" ], 
+          "CellLabels" : [ "From April 1, 2014 to June 30, 2014", "2014-04-01/2014-06-30" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2014-04-01/2014-06-30"
@@ -138,7 +138,6 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "a3a62612-f360-4443-ae09-8b9ba52259f0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -178,7 +177,6 @@
           }
         } ]
       }, {
-        "_id" : "b34f1928-79ae-43df-acea-2a006d5cb278", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -218,7 +216,6 @@
           }
         } ]
       }, {
-        "_id" : "55463a6d-6381-4162-9292-59a52b2f3585", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -302,7 +299,6 @@
           "fsa:FiscalPeriodType" : "YTD"
         }
       }, {
-        "_id" : "33e8f245-e9c4-4326-922b-6be1f79961e2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
