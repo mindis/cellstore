@@ -12,11 +12,14 @@ angular.module('report-editor')
             }
         };
         $scope.label = $stateParams.label;
-        $scope.facts = [[]];
+        $scope.facts = [[], []];
         $scope.labels = [];
-        $scope.series = [$stateParams.label];
+        $scope.series = [$stateParams.label + ' (consolidated)', $stateParams.label + ' (non consolidated)'];
         facts.forEach(function(fact){
+            var index = fact.Aspects['xbrl:Scenario'] === 'xbrl28:Consolidated' ? 0 : 1;
+            console.log(index);
             $scope.labels.push(fact.Aspects['fsa:FiscalYear']);
-            $scope.facts[0].push(fact.Value);
+            $scope.facts[index].push(fact.Value);
+            $scope.facts[Math.abs(index - 1)].push(null);
         });
     });

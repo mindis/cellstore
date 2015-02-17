@@ -19,6 +19,8 @@ angular
                             fiscalPeriod: 'FY',
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis': 'ALL',
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default': 'jppfs-cor:NonConsolidatedMember',
+                            'xbrl:Scenario': 'ALL',
+                            'xbrl:Scenario::default': 'xbrl28:Consolidated',
 
                             'tse-ed-t:ResultForecastAxis': ['tse-ed-t:ForecastMember', 'xbrl28:EDINETReportedValue'],
                             'tse-ed-t:ResultForecastAxis::default': 'xbrl28:EDINETReportedValue',
