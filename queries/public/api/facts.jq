@@ -192,7 +192,7 @@ declare function local:hypercube($entities as object*) as object
                 { "Default" : $typed-default-value }[$has-default],
                 { "Default" : null }
                     [$all and (not $has-default) and exists($type)],
-                { "Default" : "xbrl28:DefaultValue" }
+                { "Default" : "xbrl28:Domain" }
                     [$all and (not $has-default) and empty($type)]
             |}
         }
