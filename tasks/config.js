@@ -133,7 +133,7 @@ gulp.task('load-config', ['config-template'], function(done){
 
         // where to deploy the cellstore?
         config.portalAPIUrl =
-            _.template(''<%= protocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
+            _.template('<%= protocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
 
         $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));
