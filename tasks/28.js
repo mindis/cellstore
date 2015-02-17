@@ -5,7 +5,7 @@ var expand = require('glob-expand');
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var $28 = new (require('28').$28)('http://portal.28.io/api');
+
 var VFS = require('28').VFS;
 var _ = require('lodash');
 var minimist = require('minimist');
@@ -95,7 +95,7 @@ var summarizeTestError = function(error){
 
 var login = function(email, password){
     $.util.log('Logging in as ' + email);
-    return $28.login(email, password).then(function(response){
+    return Config.$28.login(email, password).then(function(response){
         $.util.log('Logged in.');
         credentials = response.body;
         return credentials;
@@ -108,7 +108,7 @@ var removeProject = function(projectName, isIdempotent){
     if(!Config.isOnProduction) {
         var token = credentials.access_token;
         $.util.log('Deleting project ' + projectName);
-        $28.deleteProject(projectName, token).then(function () {
+        Config.$28.deleteProject(projectName, token).then(function () {
             $.util.log('Project deleted.');
             defered.resolve(credentials);
         }).catch(function (error) {
@@ -131,7 +131,7 @@ var createProject = function(projectName){
     if(!Config.isOnProduction) {
         var token = credentials.access_token;
         $.util.log('Creating project ' + projectName);
-        $28.createProject(projectName, token).then(function (response) {
+        Config.$28.createProject(projectName, token).then(function (response) {
             $.util.log('Project  ' + projectName + ' created.');
             /*jshint camelcase:false */
             credentials.project_tokens['project_' + projectName] = response.body.projectToken;
@@ -162,7 +162,7 @@ var upload = function(projectName){
     var deleteOrphaned = true;
     var simulate = false;
     $.util.log('Uploading queries.');
-    return $28.upload(projectName, projectToken, projectPath, overwrite, deleteOrphaned, simulate, ignoreQueriesFunction).then(function(){
+    return Config.$28.upload(projectName, projectToken, projectPath, overwrite, deleteOrphaned, simulate, ignoreQueriesFunction).then(function(){
         $.util.log('Queries uploaded.');
         return credentials;
     });
@@ -170,7 +170,7 @@ var upload = function(projectName){
 
 var runQueriesInParallel = function(projectName, queriesToRun) {
     var promises = [];
-    var QueriesAPI = $28.api.Queries(projectName);
+    var QueriesAPI = Config.$28.api.Queries(projectName);
     /*jshint camelcase:false */
     var projectToken = credentials.project_tokens['project_' + projectName];
     _.each(queriesToRun, function(nextQuery){
@@ -233,7 +233,7 @@ var createDatasource = function(projectName, datasource){
         var difault = datasource.default ? datasource.default : false;
         /*jshint camelcase:false */
         var projectToken = credentials.project_tokens['project_' + projectName];
-        $28.createDatasource(projectName, datasource.category, datasource.name, projectToken, difault, JSON.stringify(datasource.credentials))
+        Config.$28.createDatasource(projectName, datasource.category, datasource.name, projectToken, difault, JSON.stringify(datasource.credentials))
             .then(function(){
                 $.util.log(datasource.name + ' created');
                 defered.resolve(credentials);
@@ -330,7 +330,7 @@ module.exports = {
         var projectToken = credentials.project_tokens['project_' + projectName];
         var upath = require('upath');
         var projectPath = upath.resolve(Config.paths.queries);
-        var vfs = new VFS($28.api, projectName, projectToken, projectPath);
+        var vfs = new VFS(Config.$28.api, projectName, projectToken, projectPath);
 
         //Do the Watch
         gulp.watch(Config.paths.jsoniq, {}, function(event){
