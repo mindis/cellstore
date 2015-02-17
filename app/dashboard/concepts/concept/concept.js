@@ -18,17 +18,14 @@ angular.module('report-editor')
         var years = {};
         facts.forEach(function(fact){
             var isNonConsolidated = fact.Aspects['xbrl:Scenario'] === 'jp-o-oe:NonConsolidated' || fact.Aspects['jppfs-cor:ConsolidatedOrNonConsolidatedAxis'] === 'jppfs-cor:NonConsolidatedMember';
-            if(!years[fact.Aspects['fsa:FiscalYear']]) {
-                years[fact.Aspects['fsa:FiscalYear']] = {
+            var year = fact.Aspects['fsa:FiscalYear'];
+            if(!years[year]) {
+                years[year] = {
                     consolidated: null,
                     nonConsolidated: null
                 }
             }
-            if(isNonConsolidated) {
-                years[fact.Aspects['fsa:FiscalYear']].nonConsolidated = fact.Value;
-            } else {
-                years[fact.Aspects['fsa:FiscalYear']].consolidated = fact.Value;
-            }
+            years[year][isNonConsolidated ? 'nonConsolidated' : 'consolidated'] = fact.Value;
         });
         Object.keys(years).sort().forEach(function(year){
             var values = years[year];

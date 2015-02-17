@@ -20,16 +20,16 @@ angular
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis': 'ALL',
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default': 'xbrl28:Absent',
                             'xbrl:Scenario': 'ALL',
-                            'xbrl:Scenario::default': 'xbrl28:Absent',
+                            'xbrl:Scenario::default': 'xbrl28:Absent'
 
-                            'tse-ed-t:ResultForecastAxis': ['tse-ed-t:ForecastMember', 'xbrl28:EDINETReportedValue'],
-                            'tse-ed-t:ResultForecastAxis::default': 'xbrl28:EDINETReportedValue',
-                            'tse-ed-t:ConsolidatedNonconsolidatedAxis': 'ALL',
-                            'tse-ed-t:PreviousCurrentAxis': 'ALL',
-                            'tse-ed-t:ConsolidatedNonconsolidatedAxis::default': 'NONE',
-                            'tse-ed-t:PreviousCurrentAxis::default': 'NONE',
-                            'fsa:ArchiveFiscalPeriod': 'ALL',
-                            'fsa:ArchiveFiscalYear': 'ALL'
+                            //'tse-ed-t:ResultForecastAxis': ['tse-ed-t:ForecastMember', 'xbrl28:EDINETReportedValue'],
+                            //'tse-ed-t:ResultForecastAxis::default': 'xbrl28:EDINETReportedValue',
+                            //'tse-ed-t:ConsolidatedNonconsolidatedAxis': 'ALL',
+                            //'tse-ed-t:PreviousCurrentAxis': 'ALL',
+                            //'tse-ed-t:ConsolidatedNonconsolidatedAxis::default': 'NONE',
+                            //'tse-ed-t:PreviousCurrentAxis::default': 'NONE',
+                            //'fsa:ArchiveFiscalPeriod': 'ALL',
+                            //'fsa:ArchiveFiscalYear': 'ALL'
                         }).then(function(response){
                             return response.FactTable;
                         });
