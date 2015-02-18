@@ -109,6 +109,11 @@ gulp test:unit --build-id=mydemo --config=sec
         "28-projectPrefix": "example-project",
         "28-email": "user@example.com",
         "28-password": "<password>",
+        "28-portal-protocol": "http",
+        "28-portal-project": "portal",
+        "28-portal-domain": "28.io",
+        "28-portal-api-prefix": "/api",
+
         "28-datasource-conn": "set-lskjdfaoieurlkajpoidgja/db.example.com:27017,db.example.com:27017",
         "28-datasource-db": "db",
         "28-datasource-user": "dbuser",
