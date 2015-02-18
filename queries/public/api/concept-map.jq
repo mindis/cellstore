@@ -69,6 +69,6 @@ return
     if (exists($map))
     then api:serialize($map, $comment, $serializers, $format, "components")
     else {
-        { status: 403 },
+        { status: 404 },
         session:error("concept map not found", "json")
     }
