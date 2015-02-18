@@ -26,7 +26,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "2014-04-01/2014-06-30" ], 
+          "CellLabels" : [ "From April 1, 2014 to June 30, 2014", "2014-04-01/2014-06-30" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2014-04-01/2014-06-30"
@@ -74,7 +74,6 @@
     "TableCells" : {
       "AxisOrder" : [ "y", "x" ], 
       "Facts" : [ [ {
-        "_id" : "a3a62612-f360-4443-ae09-8b9ba52259f0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 

@@ -132,10 +132,8 @@ gulp.task('load-config', ['config-template'], function(done){
         config.projectName = config.isOnProduction ? config.credentials['28'].projectPrefix : config.credentials['28'].projectPrefix + '-' + buildId;
 
         // where to deploy the cellstore?
-        config.portalAPIUrl = config.credentials['28'].protocol ? config.credentials['28'].protocol : 'http';
-        config.portalAPIUrl += '://' + (config.credentials['28'].portalProject ? config.credentials['28'].portalProject : 'portal');
-        config.portalAPIUrl += '.' + (config.credentials['28'].portalDomain ? config.credentials['28'].portalDomain : '28.io');
-        config.portalAPIUrl += config.credentials['28'].portalApiPrefix ? config.credentials['28'].portalApiPrefix : '/api';
+        config.portalAPIUrl =
+            _.template('<%= portalProtocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
 
         $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));

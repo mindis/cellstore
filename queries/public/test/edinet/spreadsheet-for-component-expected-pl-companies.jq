@@ -26,7 +26,7 @@
           "IsRollUp" : false, 
           "IsNegated" : false
         } ], [ {
-          "CellLabels" : [ "2014-04-01/2014-06-30" ], 
+          "CellLabels" : [ "From April 1, 2014 to June 30, 2014", "2014-04-01/2014-06-30" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2014-04-01/2014-06-30"
@@ -42,7 +42,7 @@
           "CellSpan" : 4, 
           "RollUp" : false
         }, {
-          "CellLabels" : [ "2013-04-01/2013-06-30" ], 
+          "CellLabels" : [ "From April 1, 2013 to June 30, 2013", "2013-04-01/2013-06-30" ], 
           "CellConstraints" : {
             "" : {
               "xbrl:Period" : "2013-04-01/2013-06-30"
@@ -1002,7 +1002,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "8d03968d-f199-491f-b116-1329bcb742ea", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -1059,7 +1058,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "f200cdf6-3431-42e6-b644-a4ea700ef357", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -1127,7 +1125,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ [ {
-        "_id" : "855bd34e-746b-478d-ae5b-2cd50e2cac11", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1160,7 +1157,6 @@
           }
         } ]
       }, {
-        "_id" : "b24a896b-f1c4-4639-b03b-d0a51aaed164", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1193,7 +1189,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "2365f6cd-3c24-4798-92c1-6e24b17fc60f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -1226,7 +1221,6 @@
           }
         } ]
       }, {
-        "_id" : "902ff51f-219f-423c-a5dd-5ea959de6528", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -1267,7 +1261,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "3a5aa7a9-60b0-4774-8d19-51996665afaf", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1300,7 +1293,6 @@
           }
         } ]
       }, [ {
-        "_id" : "f6ccae2a-8582-42fe-9ca8-4a4020b4dfdd", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1360,7 +1352,6 @@
           }
         } ]
       }, {
-        "_id" : "e3c93c57-e46a-41a1-9ea5-e8f3e14d4a8d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -1420,7 +1411,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "455dfd4b-0165-4807-9cfc-af9c270f7c85", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -1480,7 +1470,6 @@
           }
         } ]
       }, {
-        "_id" : "c935f492-0a5e-4da5-a5cc-0af852df80b2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -1548,7 +1537,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "07251cbf-c2b5-440d-90da-a8c9b08eb6fb", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1632,7 +1620,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "40afa1d1-3d30-4349-9f2c-3f524bc876e3", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1689,7 +1676,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "f47b5dcc-113f-4c00-a265-f81d1e6d72ed", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1773,7 +1759,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "bc5ea0f2-bd9c-4662-8266-1bd0277fc724", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1830,7 +1815,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "8e44d593-7407-488e-ae11-d3f7bdd622ae", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1914,7 +1898,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "b8f1437a-b8b3-4edf-b2a9-c12481d6101f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -1971,7 +1954,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "a712374e-ae8f-401b-94b8-640c67b7dbf8", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2055,7 +2037,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "275e44a4-1d0e-4334-8351-a677fbcda1f5", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2112,7 +2093,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "90386ca8-7df4-4c1e-9c6c-3a1846d037e1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2196,7 +2176,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5f8a26cc-1bb2-4bc0-aa21-c16217a12074", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2253,7 +2232,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "7e073681-395a-474d-a3f4-42d281669d00", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2337,7 +2315,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "48ec44a2-009a-4d47-9087-c7f3a90abcb9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2394,7 +2371,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "cc4587f2-a3e8-4191-8769-55116a5db07d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2478,7 +2454,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "87c19694-a990-4c81-87e6-02e56ba286fd", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2535,7 +2510,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "42090e40-8dc6-4c31-b325-0749be096cc6", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2619,7 +2593,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "c8c4e568-0f76-4c89-bd24-c33fc2676ee7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2676,7 +2649,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "d0260ebb-e111-487b-8ede-327983fcc4c5", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2760,7 +2732,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "ab3d90c0-2a03-4bfd-98fe-2399a3cc3f11", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2817,7 +2788,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "2e60c1a7-5da9-47d5-b55b-85c47bddf528", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2901,7 +2871,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1f3edfd2-f5c1-41fb-83c7-4ea6e7247e10", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -2958,7 +2927,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "6cbad443-626f-4b9f-be4a-7ed29233c5a1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3042,7 +3010,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "e9b38eda-bb59-47ef-a365-c1ef1f27c57f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3099,7 +3066,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "a7eeb3c3-4acf-4b8c-8da6-3480567e9f3f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3183,7 +3149,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "65f6f855-e31e-40f9-b8d2-9c5217291a2f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3240,7 +3205,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "697abe22-5af2-4cd8-b646-d6f0634391ef", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3324,7 +3288,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "81f2e792-b6b5-4019-86d2-fc1c047a1cc6", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3381,7 +3344,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "b55acd28-dcf5-42e3-a0ee-aeccef97eb17", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3465,7 +3427,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "861c7258-0b4d-4149-8d3f-289756e66c1a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3522,7 +3483,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5d799382-5b4c-4e09-bf63-60125d069265", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3606,7 +3566,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "0814fe9c-7c06-48c0-b590-f25f424f915c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3663,7 +3622,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "f0ac0933-3c09-4b0a-bc43-adee678621ab", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3747,7 +3705,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "d796adb4-4317-442c-9376-c4f96f977678", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3804,7 +3761,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4193f001-7973-452f-a9d5-d357b103ebb9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -3864,7 +3820,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "2f71159a-7261-47d7-9d1c-1def64b1405b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -3897,7 +3852,6 @@
           }
         } ]
       }, {
-        "_id" : "10007d3a-f9f7-4ca5-8ec6-f42511ffe022", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -3946,7 +3900,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "42151d4f-c5fc-415c-beca-e3dbef20fe78", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4006,7 +3959,6 @@
           }
         } ]
       }, {
-        "_id" : "813f2141-1a4b-4a35-b8c4-5a7ba5ff974e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -4098,7 +4050,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "53a18f5f-3b84-49d0-b148-b513ec2cc5b5", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4155,7 +4106,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "a6b4374e-f136-464b-895e-4f6412a1d220", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4223,7 +4173,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "fd4fb943-a593-415e-a19f-b27e89182f09", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4256,7 +4205,6 @@
           }
         } ]
       }, {
-        "_id" : "50f766cb-2048-4ae6-a067-4ee17fae1f30", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -4289,7 +4237,6 @@
           }
         } ]
       }, {
-        "_id" : "fe277153-7846-4565-bc08-d20e8b925ff9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4330,7 +4277,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1d3b662c-bd89-406b-a262-38376d7c47bf", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4390,7 +4336,6 @@
           }
         } ]
       }, {
-        "_id" : "8a9d8ef2-f5b5-4421-81cf-c15f8c3fce10", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -4450,7 +4395,6 @@
           }
         } ]
       }, {
-        "_id" : "b43b0166-5405-4f0f-813e-b2a5ca539af2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4534,7 +4478,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5cf064e5-0918-4c42-87c7-309f11045b8f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4591,7 +4534,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "cb894e41-958f-49dd-a788-65ed41f9768d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4659,7 +4601,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "f81f43e3-ce4e-4123-adf3-aad101acd91e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4692,7 +4633,6 @@
           }
         } ]
       }, {
-        "_id" : "a89c864e-7fc4-452e-8083-806e247b36f7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -4725,7 +4665,6 @@
           }
         } ]
       }, [ {
-        "_id" : "63665bc5-91d5-4b28-a3b5-106a3dd32d0a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4758,7 +4697,6 @@
           }
         } ]
       }, {
-        "_id" : "d4a3abf3-2c26-4301-887c-a8a63b450fe4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -4791,7 +4729,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "0ab4c407-1ade-41e8-a819-466ea2cb3c03", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -4824,7 +4761,6 @@
           }
         } ]
       }, {
-        "_id" : "26d0db82-17bb-459f-b750-94834756aa6d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -4857,7 +4793,6 @@
           }
         } ]
       } ], {
-        "_id" : "392ba5c0-1bca-4b1f-9d9d-ebb62c153680", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -4917,7 +4852,6 @@
           }
         } ]
       }, {
-        "_id" : "3c5d20a3-22f8-4d8e-8a07-d0da1ec24571", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -4977,7 +4911,6 @@
           }
         } ]
       }, [ {
-        "_id" : "218f1876-d18c-49f5-b5b0-77ca12c0cf92", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -5037,7 +4970,6 @@
           }
         } ]
       }, {
-        "_id" : "c2b0caa0-d2b7-44f7-8a13-7a7d20f3d970", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -5097,7 +5029,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "7b4fba7d-5f01-4ed3-8214-d02cef842fea", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -5157,7 +5088,6 @@
           }
         } ]
       }, {
-        "_id" : "43413b57-dc8f-4547-9101-5d84a169a179", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -5217,7 +5147,6 @@
           }
         } ]
       } ] ], [ {
-        "_id" : "9b9ff90a-677f-460e-aeb6-df0cbd27da72", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5250,7 +5179,6 @@
           }
         } ]
       }, {
-        "_id" : "ca962920-e6d0-4da5-829c-eaa79c91c639", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5299,7 +5227,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "0525461a-b344-4e9a-824e-ab4d59799018", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5359,7 +5286,6 @@
           }
         } ]
       }, {
-        "_id" : "3e13c68b-878f-4ff5-99bc-a595a5e82e9e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5435,7 +5361,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "fd4fb943-a593-415e-a19f-b27e89182f09", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5468,7 +5393,6 @@
           }
         } ]
       }, {
-        "_id" : "50f766cb-2048-4ae6-a067-4ee17fae1f30", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5501,7 +5425,6 @@
           }
         } ]
       }, {
-        "_id" : "fe277153-7846-4565-bc08-d20e8b925ff9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -5542,7 +5465,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1d3b662c-bd89-406b-a262-38376d7c47bf", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5602,7 +5524,6 @@
           }
         } ]
       }, {
-        "_id" : "8a9d8ef2-f5b5-4421-81cf-c15f8c3fce10", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5662,7 +5583,6 @@
           }
         } ]
       }, {
-        "_id" : "b43b0166-5405-4f0f-813e-b2a5ca539af2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -5730,7 +5650,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ null, null, null, null, null, null, null, null ], [ {
-        "_id" : "4c9d9d7a-09ff-4bd5-a42f-2e82f24a5f19", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5763,7 +5682,6 @@
           }
         } ]
       }, {
-        "_id" : "0b70df4c-ba86-4eaf-b341-b63606ba5450", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5796,7 +5714,6 @@
           }
         } ]
       }, {
-        "_id" : "116eebc0-de08-43bc-abce-7d513ecefb1f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -5829,7 +5746,6 @@
           }
         } ]
       }, {
-        "_id" : "1b94a33f-fe60-4668-8071-67c2c032edf6", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -5862,7 +5778,6 @@
           }
         } ]
       }, {
-        "_id" : "840570ca-5cd9-4ec2-833d-a67676ce4c2e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -5922,7 +5837,6 @@
           }
         } ]
       }, {
-        "_id" : "d0f36ef5-70e6-4404-b7b7-a5fe3de8d00e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -5982,7 +5896,6 @@
           }
         } ]
       }, {
-        "_id" : "982fe5d6-b818-48b4-8423-4f077fe3c9cc", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -6042,7 +5955,6 @@
           }
         } ]
       }, {
-        "_id" : "a070de26-403c-4c5a-968c-add198896e4d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6102,7 +6014,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "b1e0e58a-12f0-465c-8825-d8e60fedb4df", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -6135,7 +6046,6 @@
           }
         } ]
       }, {
-        "_id" : "cebee7ae-aff7-4602-8919-ef35f18d6859", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -6168,7 +6078,6 @@
           }
         } ]
       }, {
-        "_id" : "577564cd-6476-42f3-86ab-358641ca065e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -6201,7 +6110,6 @@
           }
         } ]
       }, {
-        "_id" : "8134fd49-37df-4b5b-ac33-7d4024d70f01", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6234,7 +6142,6 @@
           }
         } ]
       }, {
-        "_id" : "697da642-f618-4c7e-ad1c-932599d32f77", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -6294,7 +6201,6 @@
           }
         } ]
       }, {
-        "_id" : "4c483dae-3532-4d80-9ac2-27655a86bd46", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -6354,7 +6260,6 @@
           }
         } ]
       }, {
-        "_id" : "4c89e1e3-9602-4f25-ba9d-03ef8196c704", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -6414,7 +6319,6 @@
           }
         } ]
       }, {
-        "_id" : "863ca3a2-f970-4e8c-bb81-cbaa768d9520", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6474,7 +6378,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "0a9e3d92-17ed-453b-b7b2-3c0b57463f2c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -6507,7 +6410,6 @@
           }
         } ]
       }, {
-        "_id" : "2b000e15-c995-4e79-889d-e050eb78169a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -6540,7 +6442,6 @@
           }
         } ]
       }, {
-        "_id" : "3226a40f-89ee-4578-b272-6cbb4df5ef19", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -6573,7 +6474,6 @@
           }
         } ]
       }, {
-        "_id" : "5f472be0-3e6f-48b2-96b9-8db7ea81652d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6606,7 +6506,6 @@
           }
         } ]
       }, {
-        "_id" : "cf53f10a-f99a-4a32-9ccb-e3ac42cdc35d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -6666,7 +6565,6 @@
           }
         } ]
       }, {
-        "_id" : "74f95400-1269-4596-b942-23412385ec63", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -6726,7 +6624,6 @@
           }
         } ]
       }, {
-        "_id" : "95906812-ef3b-4e15-84f2-1c93cb3caf48", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -6786,7 +6683,6 @@
           }
         } ]
       }, {
-        "_id" : "cb7221b7-38f7-4371-800d-c61d62e5a188", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6846,7 +6742,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "0556a7ad-91f6-404b-91ea-a2a04d5d857b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -6895,7 +6790,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5534ec28-2ad0-46d5-a968-2fc07ed6a278", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -6928,7 +6822,6 @@
           }
         } ]
       }, {
-        "_id" : "14ed2ca0-f98b-40ef-9e53-ea0e5f1acac7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7004,7 +6897,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "0181c6fc-443c-40b9-a232-bffcb284491e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -7080,7 +6972,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "950ff140-7db1-431e-9543-6323e7e989e0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -7137,7 +7028,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "e0a7aaf9-6c50-46dd-841a-513f39e970d7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -7205,7 +7095,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "abbb5c1c-f396-4adb-91d5-0ae401299d62", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7238,7 +7127,6 @@
           }
         } ]
       }, {
-        "_id" : "d1e5686c-1bdd-48c7-976b-3ed058fc7d59", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -7287,7 +7175,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1a9ad107-3a76-4d7a-98b4-744adc4bee2a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7347,7 +7234,6 @@
           }
         } ]
       }, {
-        "_id" : "18443611-e1d0-4fc5-92c1-ead6db5bc912", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -7447,7 +7333,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "45971643-5e81-49af-9426-4dcb8e96f796", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -7504,7 +7389,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "737a1c38-4217-4d37-b7cc-7d1619de1f36", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -7564,7 +7448,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "ccb7c968-0139-4ae1-81ac-271fa0289a24", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7597,7 +7480,6 @@
           }
         } ]
       }, {
-        "_id" : "ff9d1369-a813-4ebe-a38e-230cd316cf90", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -7630,7 +7512,6 @@
           }
         } ]
       }, {
-        "_id" : "48f8190e-3df5-4945-a332-2ff642cba3a0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -7663,7 +7544,6 @@
           }
         } ]
       }, {
-        "_id" : "153a42be-ff23-4417-9f03-fc8f98ed09c0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -7696,7 +7576,6 @@
           }
         } ]
       }, {
-        "_id" : "132b03b2-0796-4ab9-ab1f-67a4912121f3", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7756,7 +7635,6 @@
           }
         } ]
       }, {
-        "_id" : "ead79506-a523-44cd-a5eb-4270ad00dd3a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -7816,7 +7694,6 @@
           }
         } ]
       }, {
-        "_id" : "51ad027c-270e-41cb-9a64-004f21669950", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -7876,7 +7753,6 @@
           }
         } ]
       }, {
-        "_id" : "425c853a-ca31-4017-bd5f-f42a707fef4f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -7936,7 +7812,6 @@
           }
         } ]
       } ], [ null, null, null, null, null, null, null, null ], [ {
-        "_id" : "55e8a6bf-0cc3-4fdc-a6ee-38602208fc9d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -7969,7 +7844,6 @@
           }
         } ]
       }, {
-        "_id" : "30b1a493-8e72-45a1-8bb2-760789a559ed", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -8002,7 +7876,6 @@
           }
         } ]
       }, {
-        "_id" : "a4a80f12-22fc-489a-a5f3-757c7f329bea", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -8035,7 +7908,6 @@
           }
         } ]
       }, {
-        "_id" : "a4c49f33-2f6c-4303-809f-2aca5176b3c9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -8068,7 +7940,6 @@
           }
         } ]
       }, {
-        "_id" : "9a0d3b9a-747a-4717-8a27-b77ebce1d1d3", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -8128,7 +7999,6 @@
           }
         } ]
       }, {
-        "_id" : "5d2c2856-5c69-40b7-be7e-5e2260a06da0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -8188,7 +8058,6 @@
           }
         } ]
       }, {
-        "_id" : "dbbfe2c0-ff67-4514-a197-7f6518568299", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -8248,7 +8117,6 @@
           }
         } ]
       }, {
-        "_id" : "b30c19d7-e0af-47fe-bac0-7ca13973563b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -8308,7 +8176,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "c56ee98d-6fea-40b0-ba3b-22c6ff03e023", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -8341,7 +8208,6 @@
           }
         } ]
       }, {
-        "_id" : "f80dbe51-fd0b-49e7-8517-25633c8296ee", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -8390,7 +8256,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "f5790e56-9c80-49a2-a6d9-d51f1ea659d7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -8450,7 +8315,6 @@
           }
         } ]
       }, {
-        "_id" : "12e13f8a-32cc-4988-80b8-dc70502e760d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -8542,7 +8406,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "c1d943a1-fac8-4a76-b91f-295ee5fb8e7e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -8599,7 +8462,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "069ecb49-19cc-4087-8f11-60c856bacd77", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -8691,7 +8553,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "8432f284-3394-4c7c-809e-daeaa110fb2d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -8748,7 +8609,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "ef87df2b-daec-4e3c-b128-f919d8eeded3", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -8808,7 +8668,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "d7be37e3-8114-4b68-bc97-0909a1d029c4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -8841,7 +8700,6 @@
           }
         } ]
       }, {
-        "_id" : "9c6b00e1-6e81-449b-bfba-3c70c6f465f1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -8890,7 +8748,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5940f46b-aa1d-4a0f-8ba5-11cb1d129a9c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -8950,7 +8807,6 @@
           }
         } ]
       }, {
-        "_id" : "a653727e-e44e-490d-abff-951c3830c423", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9026,7 +8882,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "f711f8e8-052b-484f-acd3-ea657c12a1a7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9059,7 +8914,6 @@
           }
         } ]
       }, {
-        "_id" : "0e0a6c62-ac4d-4089-8d1b-faffe857d462", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9092,7 +8946,6 @@
           }
         } ]
       }, {
-        "_id" : "fe011095-cb9b-446f-980b-a556d54fd606", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -9125,7 +8978,6 @@
           }
         } ]
       }, {
-        "_id" : "a65c736c-a9ac-4bf3-a5d7-e1aada72ef68", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -9158,7 +9010,6 @@
           }
         } ]
       }, {
-        "_id" : "79e1a03a-354f-4ef9-8bd4-c1a670415490", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9218,7 +9069,6 @@
           }
         } ]
       }, {
-        "_id" : "066b4ff0-cc23-4cc3-931f-8388403bc80a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9278,7 +9128,6 @@
           }
         } ]
       }, {
-        "_id" : "264481d6-0d57-4a52-8d5c-c27a8df63726", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -9338,7 +9187,6 @@
           }
         } ]
       }, {
-        "_id" : "ac6d4c05-d461-4d35-a9cf-7ffd65966acb", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -9398,7 +9246,6 @@
           }
         } ]
       } ], [ [ {
-        "_id" : "7cdef3f5-6cff-43ec-824f-7b0be9fbbcfb", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9431,7 +9278,6 @@
           }
         } ]
       }, {
-        "_id" : "b853c220-e4a5-4dae-a9fa-9d8c8d298ba1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9464,7 +9310,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "9a3bebd7-0f55-49a6-b799-6b9bfe898920", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9497,7 +9342,6 @@
           }
         } ]
       }, {
-        "_id" : "ffeb0901-9061-461b-a3bd-5a9386349a99", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9530,7 +9374,6 @@
           }
         } ]
       } ], {
-        "_id" : "1810c6e7-0e46-44eb-b1df-21b6aabb58a2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -9563,7 +9406,6 @@
           }
         } ]
       }, {
-        "_id" : "ce6d93da-ec32-437f-94d9-a1ca216c2a2a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -9596,7 +9438,6 @@
           }
         } ]
       }, [ {
-        "_id" : "96191616-98e6-4203-a460-b42d64f8a312", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9656,7 +9497,6 @@
           }
         } ]
       }, {
-        "_id" : "e1a2a4e5-6319-4e37-8751-2c7a0c21b679", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -9716,7 +9556,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "b353caaa-b99b-498e-9361-1b8dabf03fac", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9776,7 +9615,6 @@
           }
         } ]
       }, {
-        "_id" : "73b7a2b1-2c21-4c84-a598-28602082dcc4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -9836,7 +9674,6 @@
           }
         } ]
       } ], {
-        "_id" : "eb7346da-4f6b-4c99-a03f-c41269b7f27b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -9896,7 +9733,6 @@
           }
         } ]
       }, {
-        "_id" : "839b66d2-c6d0-43f2-ae5f-31ba22754aef", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -9972,7 +9808,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "c62241f1-ddde-4861-9b42-f2a7fd52af1e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10029,7 +9864,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "36ce5f32-1408-4f23-a82e-4f52839a2fa0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10097,7 +9931,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "5cc91247-a5b3-42c4-86c4-65110255e195", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -10146,7 +9979,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "e3e3a9e2-e25d-4c85-ba91-72aacb379100", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -10179,7 +10011,6 @@
           }
         } ]
       }, {
-        "_id" : "46a8807b-e1f0-451d-9678-0dd22bc1697a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -10255,7 +10086,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "353ba452-48c3-487e-bf49-f7c15e97f4bf", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -10331,7 +10161,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "3944d508-c397-4aff-a403-a3d890d89b80", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10388,7 +10217,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "97d8f57a-5c61-487d-b3c6-9fb35347f731", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10472,7 +10300,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4d418b5c-d75f-468b-99df-dc1a60022d2c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10529,7 +10356,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4d4de88b-c3cc-4fab-a8e5-99f1b6581c9a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10597,7 +10423,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "dcb8d942-06e8-4391-943a-775e5a46066f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -10638,7 +10463,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "7e4f86b8-b129-4f8b-8c7e-1d0582a1f36c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10671,7 +10495,6 @@
           }
         } ]
       }, {
-        "_id" : "4b67b575-8dcf-4552-9bbc-01ef0267f199", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -10704,7 +10527,6 @@
           }
         } ]
       }, {
-        "_id" : "46803bd9-e274-4ef8-9d08-8f696764940d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -10772,7 +10594,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "11b1da41-b1e1-4173-8b96-e9b291183974", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -10832,7 +10653,6 @@
           }
         } ]
       }, {
-        "_id" : "a29f1e3b-1038-4e20-9bb7-368985a63b2e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -10916,7 +10736,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "c2587f34-9c6d-481e-bb88-9c982b3952a4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -10973,7 +10792,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "d62f448a-a4d9-4eb6-805e-68510acab4b7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -11049,7 +10867,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "9854028c-e04a-4870-a427-f248de6d31b2", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11106,7 +10923,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "3cdef678-6057-4c3c-a0df-f3c801484cb7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11190,7 +11006,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "0aaaa610-7621-48c2-a5f0-d73e9cd439ff", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11247,7 +11062,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "d8c1a9dd-0944-44e7-846c-b2039be5e056", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11323,7 +11137,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4a66a14b-0aff-48fa-9091-6722ab9f5ab7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -11356,7 +11169,6 @@
           }
         } ]
       }, {
-        "_id" : "3beaed8d-edf1-4b0b-b0de-75458dd33b7a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11389,7 +11201,6 @@
           }
         } ]
       }, {
-        "_id" : "6598e427-85fe-48fd-8ca0-f6806980db16", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -11430,7 +11241,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5542bd3c-046d-490c-ab0a-9398f56d11b9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -11490,7 +11300,6 @@
           }
         } ]
       }, {
-        "_id" : "403b0bc4-4290-4734-86ab-ac40873ae085", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11550,7 +11359,6 @@
           }
         } ]
       }, {
-        "_id" : "94396692-3fea-482c-87c5-b7c208634a06", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -11618,7 +11426,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1cd29960-f01b-46eb-9688-a44ae7935dcc", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -11675,7 +11482,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4a930f1a-f4bd-4714-b0c0-9d56e7f1d107", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -11751,7 +11557,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       } ], [ {
-        "_id" : "6c45eebd-b6f2-4811-bbde-ce4c7482384a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -11784,7 +11589,6 @@
           }
         } ]
       }, {
-        "_id" : "996e28bd-b4f0-4ab8-ad95-d04489218b02", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -11817,7 +11621,6 @@
           }
         } ]
       }, {
-        "_id" : "ad25b730-d5e9-406c-b4bc-4d455f02ee94", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -11850,7 +11653,6 @@
           }
         } ]
       }, [ {
-        "_id" : "34e7c869-f97c-49ef-a4fc-084c58dd2ec9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -11883,7 +11685,6 @@
           }
         } ]
       }, {
-        "_id" : "7f9b3790-4d0d-41c7-ae17-3a240b6f0fb8", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -11916,7 +11717,6 @@
           }
         } ]
       } ], {
-        "_id" : "9ce72061-ce66-4e39-9290-509b6a4d69d4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -11976,7 +11776,6 @@
           }
         } ]
       }, {
-        "_id" : "b318b144-0818-46a8-aaec-ab01cbba414c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -12036,7 +11835,6 @@
           }
         } ]
       }, {
-        "_id" : "c042a728-daca-4fca-a59c-d42bc43eae9b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -12096,7 +11894,6 @@
           }
         } ]
       }, [ {
-        "_id" : "ca0b7cac-e46e-4498-97c8-4b149a1da6f8", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12156,7 +11953,6 @@
           }
         } ]
       }, {
-        "_id" : "192093d0-8322-430a-a438-c8cb86b4699b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12232,7 +12028,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "d25b8f88-477b-4dee-9d58-22337fcf59d4", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -12265,7 +12060,6 @@
           }
         } ]
       }, {
-        "_id" : "803114b4-a562-4725-8093-c5ed2787b157", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12314,7 +12108,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "f39336b6-59ad-40c5-8009-82ab8b7e0269", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -12374,7 +12167,6 @@
           }
         } ]
       }, {
-        "_id" : "ff21f733-cb39-4317-a409-f2ad070c3424", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12458,7 +12250,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4352554d-d1b1-41bc-bb76-f6232478bd1d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12515,7 +12306,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "6bc52cc3-88d3-4668-9c82-879f734fe971", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12575,7 +12365,6 @@
           }
         } ]
       } ], [ [ {
-        "_id" : "888526a9-11c7-4a81-a531-5f8336351361", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -12608,7 +12397,6 @@
           }
         } ]
       }, {
-        "_id" : "5922fc26-9c86-459f-b5a0-17587b80b1de", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -12641,7 +12429,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "98f6aa96-6225-46f4-99d3-06c07e9c931e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -12674,7 +12461,6 @@
           }
         } ]
       }, {
-        "_id" : "e25bdc2b-ac4d-4a51-ac1f-7c143452d5ae", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -12707,7 +12493,6 @@
           }
         } ]
       } ], {
-        "_id" : "5039fc3f-58df-43af-b4f9-1659175f5cfb", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -12740,7 +12525,6 @@
           }
         } ]
       }, [ {
-        "_id" : "2af53213-3e2c-4d0e-9fe5-d325ad813f49", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12773,7 +12557,6 @@
           }
         } ]
       }, {
-        "_id" : "4fd3f466-3123-4e73-a2d9-4ae0ae3970bb", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -12806,7 +12589,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "135f6a63-a594-4a0e-a9c5-40183cd841cc", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -12866,7 +12648,6 @@
           }
         } ]
       }, {
-        "_id" : "28c69e9e-d6fd-4ea0-958b-3ed3d2fb11e6", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -12926,7 +12707,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "2eb92968-0f60-4298-8be1-5952404d0108", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -12986,7 +12766,6 @@
           }
         } ]
       }, {
-        "_id" : "d6e7e59f-2f92-4bef-8186-bad8afd11539", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -13046,7 +12825,6 @@
           }
         } ]
       } ], {
-        "_id" : "dcc09452-1645-45d6-89a8-2f28c103a938", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13106,7 +12884,6 @@
           }
         } ]
       }, [ {
-        "_id" : "87c6dea4-3c1d-4313-8ca3-e48a1277fd3f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13166,7 +12943,6 @@
           }
         } ]
       }, {
-        "_id" : "7d036c60-ab54-46c1-a0a0-289db205ed72", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13242,7 +13018,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "1c35593f-8839-4eac-a783-ba39f1e7a198", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13275,7 +13050,6 @@
           }
         } ]
       }, {
-        "_id" : "55910ab0-615e-4f09-8faf-d43012ba391d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13324,7 +13098,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "c54c822a-f02f-4bdc-81aa-30b61651bc5d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13384,7 +13157,6 @@
           }
         } ]
       }, {
-        "_id" : "69cf53ef-445d-4e5a-bdd3-c9ba56b3df5b", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13444,7 +13216,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "8427048a-1480-43e5-92dc-014995055330", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -13477,7 +13248,6 @@
           }
         } ]
       }, {
-        "_id" : "2c8dde5e-a06f-40f1-977b-16a7a84c1a12", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -13510,7 +13280,6 @@
           }
         } ]
       }, {
-        "_id" : "8faa5992-24d5-4ec1-a9d9-0d71ed7cbc1d", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13543,7 +13312,6 @@
           }
         } ]
       }, {
-        "_id" : "24c25978-e6f7-423d-97ab-5f8ef564c2fe", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13576,7 +13344,6 @@
           }
         } ]
       }, {
-        "_id" : "5603a075-d2ed-49ee-a276-01ce8e5327b0", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -13636,7 +13403,6 @@
           }
         } ]
       }, {
-        "_id" : "05bb9a33-930f-4de2-bac7-336ce11397f5", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -13696,7 +13462,6 @@
           }
         } ]
       }, {
-        "_id" : "fd8b45ea-02c7-4cde-8f08-e54e85f044e1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13756,7 +13521,6 @@
           }
         } ]
       }, {
-        "_id" : "02b854a7-e8c9-41c2-927d-078e41dee785", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13816,7 +13580,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "33485c86-5d5a-4473-b194-3a17f85ddb7f", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -13849,7 +13612,6 @@
           }
         } ]
       }, {
-        "_id" : "adbcf24f-59ef-4052-9895-5675fc30b892", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -13882,7 +13644,6 @@
           }
         } ]
       }, {
-        "_id" : "374dc099-a0a8-4033-8520-650f9b2aa5ff", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -13915,7 +13676,6 @@
           }
         } ]
       }, {
-        "_id" : "64e28626-ea63-4f3b-9b49-657ded510674", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -13948,7 +13708,6 @@
           }
         } ]
       }, {
-        "_id" : "d8138c91-bff3-4cd9-ace4-47a85802db2e", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -14008,7 +13767,6 @@
           }
         } ]
       }, {
-        "_id" : "2dc253b8-66ba-4744-b48d-03fdd7a91c4c", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -14068,7 +13826,6 @@
           }
         } ]
       }, {
-        "_id" : "0ca8c36f-de3d-4e19-9f30-367502625650", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -14128,7 +13885,6 @@
           }
         } ]
       }, {
-        "_id" : "8907b08b-25e9-4d79-9181-b3680c969bd9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -14196,7 +13952,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "4a66a14b-0aff-48fa-9091-6722ab9f5ab7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -14229,7 +13984,6 @@
           }
         } ]
       }, {
-        "_id" : "3beaed8d-edf1-4b0b-b0de-75458dd33b7a", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -14262,7 +14016,6 @@
           }
         } ]
       }, {
-        "_id" : "6598e427-85fe-48fd-8ca0-f6806980db16", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -14303,7 +14056,6 @@
           "jppfs-cor:ConsolidatedOrNonConsolidatedAxis" : "jppfs-cor:ConsolidatedMember"
         }
       }, {
-        "_id" : "5542bd3c-046d-490c-ab0a-9398f56d11b9", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -14363,7 +14115,6 @@
           }
         } ]
       }, {
-        "_id" : "403b0bc4-4290-4734-86ab-ac40873ae085", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -14423,7 +14174,6 @@
           }
         } ]
       }, {
-        "_id" : "94396692-3fea-482c-87c5-b7c208634a06", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -14483,7 +14233,6 @@
           }
         } ]
       } ], [ {
-        "_id" : "0d1b0cd0-fac5-4f54-856c-870c38dc5e51", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -14516,7 +14265,6 @@
           }
         } ]
       }, {
-        "_id" : "5a5e608a-9cb3-481d-9baa-a20b7bf22dcf", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -14549,7 +14297,6 @@
           }
         } ]
       }, {
-        "_id" : "46cdfa89-30a7-4ecd-9d8a-792ca2ae13ab", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -14582,7 +14329,6 @@
           }
         } ]
       }, {
-        "_id" : "b976e2ee-077c-4278-8b48-f66ad875f893", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 
@@ -14615,7 +14361,6 @@
           }
         } ]
       }, {
-        "_id" : "b719e6e9-abbc-4e05-bda0-30bd66e13cf1", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002Q54", 
@@ -14675,7 +14420,6 @@
           }
         } ]
       }, {
-        "_id" : "c3f387e6-4274-45f7-ac4e-3946c7b70469", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002MRZ", 
@@ -14735,7 +14479,6 @@
           }
         } ]
       }, {
-        "_id" : "ca7bd840-0448-4bd0-8d4c-dc6a7b0b44f7", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NTM", 
@@ -14795,7 +14538,6 @@
           }
         } ]
       }, {
-        "_id" : "f12ac62c-346e-4584-839d-6527d4d7bbbc", 
         "KeyAspects" : [ "fsa:Submitted", "xbrl:Period", "xbrl:Entity", "xbrl:Concept", "xbrl:Unit" ], 
         "Aspects" : {
           "xbrl28:Archive" : "S1002NIQ", 

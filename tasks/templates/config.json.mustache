@@ -40,10 +40,10 @@
         "projectPrefix": "{{{credentials.28-projectPrefix}}}",
         "email": "{{{credentials.28-email}}}",
         "password": "{{{credentials.28-password}}}",
-        "protocol": "{{{credentials.28-protocol}}}",
-        "portalProject": "{{{credentials.28-portal-project}}}",
-        "portalDomain": "{{{credentials.28-portal-domain}}}",
-        "portalApiPrefix": "{{{credentials.28-portal-api-prefix}}}",
+        "portalProtocol": "{{{credentials.28-portal-protocol}}}{{^credentials.28-portal-protocol}}http{{/credentials.28-portal-protocol}}",
+        "portalProject": "{{{credentials.28-portal-project}}}{{^credentials.28-portal-project}}portal{{/credentials.28-portal-project}}",
+        "portalDomain": "{{{credentials.28-portal-domain}}}{{^credentials.28-portal-domain}}28.io{{/credentials.28-portal-domain}}",
+        "portalApiPrefix": "{{{credentials.28-portal-api-prefix}}}{{^credentials.28-portal-api-prefix}}/api{{/credentials.28-portal-api-prefix}}",
         "datasources": [
             {
                 "category": "MongoDB",
