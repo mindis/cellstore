@@ -611,7 +611,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure to search for (e.g. BalanceSheet)",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -816,7 +816,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1209,7 +1209,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1534,6 +1534,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure of the component (e.g. BalanceSheet)",
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2214,6 +2215,23 @@
                     "jpcrp-cor:MajorShareholdersAxis::default": "NONE"
                 }
             }, {
+                "title": "Compare stocks of subsidiaries and affiliates between Canon and Mitsubishi",
+                "description": "Compare Balance Sheet between Canon and Mitsubishi as XML.",
+                "profile": ["japan"],
+                "parameters": {
+                    "format": "xml",
+                    "concept": ["jp-t-cte:StocksOfSubsidiariesAndAffiliates", "jppfs-cor:StocksOfSubsidiariesAndAffiliates"],
+                    "edinetcode": ["E02274", "E02529"],
+                    "fiscalPeriod": "FY",
+                    "fiscalYear": "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis": "ALL",
+                    "jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default": "jppfs-cor:NonConsolidatedMember",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis": "ALL",
+                    "tse-ed-t:ConsolidatedNonconsolidatedAxis::default": "NONE",
+                    "tse-ed-t:PreviousCurrentAxis": "ALL",
+                    "tse-ed-t:PreviousCurrentAxis::default": "NONE"
+                }
+            }, {
                 "title": "Get forecast values by company name/ID and reported period/forecast period",
                 "description": "Get forecast values by company name/ID and reported period/forecast period.",
                 "profile": ["japan"],
@@ -2438,7 +2456,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure to search for (e.g. BalanceSheet)",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2465,6 +2483,26 @@
                 "description": "A label role",
                 "required": false,
                 "type": "string",
+                "paramType": "query"
+            }, {
+                "name": "kind",
+                "description": "Filters by concept kind (default: no filtering).",
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum" : [
+                  "Hypercube",
+                  "Dimension",
+                  "Member",
+                  "LineItems",
+                  "Abstract",
+                  "Concept"
+                ]
+            }, {
+                "name": "eliminateReportElementDuplicates",
+                "description": "Whether to eliminate (concept name, language, label role) duplicates. By default no duplicate elimination.",
+                "required": false,
+                "type": "boolean",
                 "paramType": "query"
             }, {
                 "name": "profile-name",
@@ -2660,7 +2698,7 @@
             }, {
                 "name": "disclosure",
                 "description": "The disclosure to search for (e.g. BalanceSheet)",
-                "profile": ["sec"],
+                "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -2711,10 +2749,24 @@
                 "paramType": "query"
             }, {
                 "name": "abstract",
-                "description": "Filters by abstract/not abstract (default: no filtering).",
+                "description": "[Deprecated] Filters by abstract/not abstract (default: no filtering).",
                 "required": false,
                 "type": "boolean",
                 "paramType": "query"
+            }, {
+                "name": "kind",
+                "description": "Filters by concept kind (default: no filtering).",
+                "required": false,
+                "type": "string",
+                "paramType": "query",
+                "enum" : [
+                  "Hypercube",
+                  "Dimension",
+                  "Member",
+                  "LineItems",
+                  "Abstract",
+                  "Concept"
+                ]
             }, {
                 "name": "token",
                 "description": "The token of the current session",
@@ -2774,7 +2826,7 @@
                     "aid": "STANDARD-TAXONOMY-2014",
                     "format": "xml",
                     "profile-name": "japan",
-                    "abstract": "false"
+                    "kind": "Concept"
                 }
             }, {
                 "title": "Get element name of specified company's taxonomy by label and company ID",

@@ -159,10 +159,11 @@ let $res as object* :=
            }
     default return
         for $r in $components
-        return {
+        return {|
+          {
             Archive: $r.Archive,
-            Role: $r.Role,
             Label: $r.Label,
+            Role: $r.Role,
             FactTable: backend:url("facttable-for-component", {
                             token: $token,
                             aid: $r.Archive,
@@ -187,14 +188,19 @@ let $res as object* :=
                             profile-name: $profile-name
                         }),
             NumRules: size($r.Rules),
-            NumNetworks: size($r.Networks),
-            NumReportElements: size($r.Concepts),
-            NumHypercubes: count(keys($r.Hypercubes)),
-            NumDimensions: count(components:dimensions($r)),
-            NumConcepts: count(components:concrete-concepts($r)),
+            NumNetworks: components:num-networks($r),
+            NumReportElements: components:num-report-elements($r),
+            NumHypercubes: components:num-hypercubes($r),
+            NumDimensions: components:num-dimensions($r),
+            NumMembers: components:num-members($r),
+            NumLineItems: components:num-line-items($r),
+            NumAbstracts: components:num-abstracts($r),
+            NumConcepts: components:num-concepts($r),
             Hypercubes: [ keys($r.Hypercubes) ],
             ValidationErrors: [ components:validation-errors($r) ]
-        }
+          },
+          { Disclosure: $r.Profiles.FSA.Disclosure}[$profile-name eq "japan"]
+        |}
 let $result := switch($profile-name)
                case "sec"
                return { Archives: [ $res ] }

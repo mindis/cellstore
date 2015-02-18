@@ -1,6 +1,7 @@
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
+import module namespace components = "http://28.io/modules/xbrl/components";
 
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
@@ -183,20 +184,20 @@ let $component := $components[1] (: only one for now :)
 let $archive   := archives:archives($component.Archive)
 let $entity    := entities:entities($archive.Entity)
 
-let $result := {|
-    { CIK : entities:eid($entity) },
-    { EntityRegistrantName : $entity.Profiles.SEC.CompanyName },
-    { ModelStructure : [ sec-networks:model-structures($component) ] },
-    { TableName : sec-networks:tables($component, {IncludeImpliedTable: true}).Name },
-    { Label : $component.Label },
-    { AccessionNumber : $component.Archive },
-    { FormType : $archive.Profiles.SEC.FormType },
-    { FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus },
-    { FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus },
-    { AcceptanceDatetime : filings:acceptance-dateTimes($archive) },
-    { NetworkIdentifier: $component.Role },
-    { Disclosure : $component.Profiles.SEC.Disclosure }
-|}
+let $result := {
+    CIK : entities:eid($entity),
+    EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
+    ModelStructure : [ sec-networks:model-structures($component) ],
+    TableName : components:hypercubes($component),
+    Label : $component.Label,
+    AccessionNumber : $component.Archive,
+    FormType : $archive.Profiles.SEC.FormType,
+    FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
+    FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
+    AcceptanceDatetime : filings:acceptance-dateTimes($archive),
+    NetworkIdentifier: $component.Role,
+    Disclosure : $component.Profiles.SEC.Disclosure
+}
 let $comment := {
     TotalNumArchives: session:num-archives(),
     TotalNumEntities: session:num-entities()

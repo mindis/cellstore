@@ -62,6 +62,7 @@ var config =
     configId: configId,
     bucketName: '',
     projectName: '',
+    portalAPIUrl: '',
     paths: {
         //src and build folders
         app: 'app',
@@ -111,7 +112,8 @@ var config =
         protractorConfigTravis: 'tests/e2e/config/protractor-travis-nosaucelabs-conf.js',
         e2eSpecs: specs
     },
-    credentials: {}
+    credentials: {},
+    '$28': undefined
 };
 
 gulp.task('load-config', ['config-template'], function(done){
@@ -129,10 +131,16 @@ gulp.task('load-config', ['config-template'], function(done){
         config.bucketName = config.isOnProduction ? config.credentials.s3.bucketPrefix : config.credentials.s3.bucketPrefix + '-' + config.buildId;
         config.projectName = config.isOnProduction ? config.credentials['28'].projectPrefix : config.credentials['28'].projectPrefix + '-' + buildId;
 
+        // where to deploy the cellstore?
+        config.portalAPIUrl =
+            _.template('<%= portalProtocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
+
+        $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
 
+        config.$28 = new (require('28').$28)(config.portalAPIUrl);
         done();
     }
 });

@@ -12,11 +12,25 @@ angular.module('report-editor')
             }
         };
         $scope.label = $stateParams.label;
-        $scope.facts = [[]];
+        $scope.facts = [[], []];
         $scope.labels = [];
-        $scope.series = [$stateParams.label];
+        $scope.series = [$stateParams.label + ' (consolidated)', $stateParams.label + ' (non consolidated)'];
+        var years = {};
         facts.forEach(function(fact){
-            $scope.labels.push(fact.Aspects['fsa:FiscalYear']);
-            $scope.facts[0].push(fact.Value);
+            var isNonConsolidated = fact.Aspects['xbrl:Scenario'] === 'jp-o-oe:NonConsolidated' || fact.Aspects['jppfs-cor:ConsolidatedOrNonConsolidatedAxis'] === 'jppfs-cor:NonConsolidatedMember';
+            var year = fact.Aspects['fsa:FiscalYear'];
+            if(!years[year]) {
+                years[year] = {
+                    consolidated: null,
+                    nonConsolidated: null
+                };
+            }
+            years[year][isNonConsolidated ? 'nonConsolidated' : 'consolidated'] = fact.Value;
+        });
+        Object.keys(years).sort().forEach(function(year){
+            var values = years[year];
+            $scope.labels.push(year);
+            $scope.facts[0].push(values.consolidated);
+            $scope.facts[1].push(values.nonConsolidated);
         });
     });

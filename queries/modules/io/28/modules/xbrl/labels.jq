@@ -114,6 +114,11 @@ declare function labels:labels(
             return substring($concept, 9)
             case $concept castable as date
             return format-date(date($concept), "[MNn] [D], [Y]", "en", (), ())
+            case (every $date in tokenize($concept, "/") satisfies $date castable as date)
+            return "From " || string-join(
+                     for $date in tokenize($concept, "/")
+                     return format-date(date($date), "[MNn] [D], [Y]", "en", (), ()),
+                   " to ")
             case contains($concept, " ")
             return
               switch(true)
