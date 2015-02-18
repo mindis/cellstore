@@ -16,10 +16,6 @@ require('./tasks/netdna');
 require('./tasks/server');
 require('./tasks/templates');
 
-/*gulp.task('watch', function() {
-    return gulp.watch(Config.paths.sass, ['html:sass']);
-});*/
-
 gulp.task('extras', function () {
     var extras = Config.paths.html.concat(Config.paths.fonts);
     return gulp.src(extras, { dot: true })
