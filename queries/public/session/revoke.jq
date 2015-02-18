@@ -3,9 +3,9 @@ jsoniq version "1.0";
 import module namespace user = "http://apps.28.io/user";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
+declare option rest:response "first-item";
 
 declare function local:to-csv($o as object*) as string
 {
@@ -51,21 +51,29 @@ then {
     $res := api:success();
 }
 
-response:status-code($status);
-
 switch ($format)
     case "xml" return {
-        response:content-type("application/xml");
-        response:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+        { 
+            status: $status,
+            "content-type": "application/xml",
+            (: Ideally serialization method should be xml and content-type would be omitted, 
+               see: https://github.com/28msec/28.io/issues/163 :)
+            serialization: { method: "json-xml-hybrid", "omit-xml-declaration" : false, indent : true }
+        },
         local:to-xml($res)
     }
     case "text" case "csv" case "excel" return {
-        response:content-type("text/csv");
-        response:header("Content-Disposition", "attachment; filename=login.csv");
+        {
+            status: $status,
+            "content-type": "text/csv",
+            headers: { "Content-Disposition", "attachment; filename=revoke.csv" }
+        },
         local:to-csv($res)
     }
     default return {
-        response:content-type("application/json");
-        response:serialization-parameters({"indent" : true});
+        { 
+            status: $status,
+            serialization: { method: "json", indent : true } 
+        },
         $res
     }

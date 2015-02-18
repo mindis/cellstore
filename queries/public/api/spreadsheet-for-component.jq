@@ -4,11 +4,11 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace config = "http://apps.28.io/config";
 import module namespace session = "http://apps.28.io/session";
 import module namespace api = "http://apps.28.io/api";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
@@ -92,8 +92,7 @@ let $component as object? := switch(true)
 let $rules as object* := if(exists($additional-rules)) then rules:rules($additional-rules) else ()
 
 return if(empty($component)) then {
-    response:status-code(404);
-    response:content-type("application/json");
+    { status: 404 },
     session:error("component not found", "json")
 } else
 (: Fact resolution :)
@@ -128,8 +127,7 @@ let $spreadsheet as object? :=
 
 let $results :=
         {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
+            { serialization: { method: "json", indent : true } },
             $spreadsheet
         }
 return api:check-and-return-results($token, $results, $format)

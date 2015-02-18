@@ -3,8 +3,9 @@ import module namespace session = "http://apps.28.io/session";
 
 import module namespace concept-maps = "http://28.io/modules/xbrl/concept-maps";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace csv = "http://zorba.io/modules/json-csv";
+
+declare option rest:response "first-item";
 
 declare function local:to-xml($c as object) as node()*
 {
@@ -68,7 +69,6 @@ return
     if (exists($map))
     then api:serialize($map, $comment, $serializers, $format, "components")
     else {
-        response:status-code(404);
-        response:content-type("application/json");
+        { status: 403 },
         session:error("concept map not found", "json")
     }

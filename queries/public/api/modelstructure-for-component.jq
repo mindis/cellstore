@@ -9,8 +9,6 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace session = "http://apps.28.io/session";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
@@ -209,7 +207,6 @@ let $serializers := {
 return if (exists($component))
     then api:serialize($result, $comment, $serializers, $format, "components")
     else {
-        response:status-code(404);
-        response:content-type("application/json");
+        { status: 404 },
         session:error("component not found", "json")
     }

@@ -4,6 +4,7 @@ import module namespace session = "http://apps.28.io/session";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token         as string? external;

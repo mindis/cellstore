@@ -1,7 +1,8 @@
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace user = "http://apps.28.io/user";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
+
+declare option rest:response "automatic";
 
 (: Query parameters :)
 declare %rest:case-insensitive variable $token  as string   external;
@@ -17,11 +18,11 @@ try{{
 }} 
 catch session:expired
 {{ 
-    response:status-code(401);
+    { status: 401 },
     session:error("Unauthorized: Login required", "json")
 }}
 catch session:missing-authorization
 {{ 
-    response:status-code(403);
+    { status: 403 },
     session:error("Forbidden", "json")
 }}

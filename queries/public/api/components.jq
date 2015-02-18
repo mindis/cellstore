@@ -13,6 +13,8 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
+declare option rest:response "first-item";
+
 declare function local:to-csv($res as object*) as string*
 {
     csv:serialize(
