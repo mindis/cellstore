@@ -12,6 +12,8 @@ import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
+declare option rest:response "first-item";
+
 declare function local:to-xml-rec($o as object*, $level as integer) as element()*
 {
     for $o in $o

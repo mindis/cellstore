@@ -177,7 +177,7 @@ declare function api:serialize(
     case "text" case "csv" return {
         {
             "content-type": "text/csv",
-            headers: { "Content-Disposition", "attachment; filename=" || $file-name || ".csv" }
+            headers: { "Content-Disposition": "attachment; filename=" || $file-name || ".csv" }
         },
         $serializers.to-csv($result)
     }
@@ -192,7 +192,7 @@ declare function api:serialize(
     case "excel" return {
         {
             "content-type": "application/vnd.ms-excel",
-            headers: { "Content-Disposition", "attachment; filename=" || $file-name || ".csv" }
+            headers: { "Content-Disposition": "attachment; filename=" || $file-name || ".csv" }
         },
         $serializers.to-csv($result)
     }

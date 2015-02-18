@@ -68,7 +68,7 @@ switch ($format)
     case "text" case "csv" case "excel" return {
         {
             "content-type": "text/csv",
-            headers: { "Content-Disposition", "attachment; filename=forgotPassword.csv" }
+            headers: { "Content-Disposition": "attachment; filename=forgotPassword.csv" }
         },
         local:to-csv($res)
     }

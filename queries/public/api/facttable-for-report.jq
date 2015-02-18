@@ -166,14 +166,14 @@ then
         case "text" case "csv" return {
             {
                 "content-type": "text/csv",
-                headers: { "Content-Disposition", "attachment; filename=facts.csv" }
+                headers: { "Content-Disposition": "attachment; filename=facts.csv" }
             },
             conversion:facts-to-csv($facts, { Caller: "Report"})
         }
         case "excel" return {
             {
                 "content-type": "application/vnd.ms-excel",
-                headers: { "Content-Disposition", "attachment; filename=facts.csv" }
+                headers: { "Content-Disposition": "attachment; filename=facts.csv" }
             },
             conversion:facts-to-csv($facts, { Caller: "Report"})
         }

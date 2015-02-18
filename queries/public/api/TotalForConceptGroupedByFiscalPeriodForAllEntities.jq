@@ -152,14 +152,14 @@ return
     case "text" case "csv" return {
         {
             "content-type": "text/csv",
-            headers: { "Content-Disposition", "attachment; filename=Total-" || $concept || ".csv" }
+            headers: { "Content-Disposition": "attachment; filename=Total-" || $concept || ".csv" }
         },
         local:to-csv($json-result)
     }
     case "excel" return {
         {
             "content-type": "application/vnd.ms-excel",
-            headers: { "Content-Disposition", "attachment; filename=Total-" || $concept || ".csv" }
+            headers: { "Content-Disposition": "attachment; filename=Total-" || $concept || ".csv" }
         },
         local:to-csv($json-result)
     }

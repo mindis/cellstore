@@ -3,7 +3,7 @@ module namespace export = "http://apps.28.io/reports-export";
 
 import module namespace random = "http://zorba.io/modules/random";
 
-declare function export:cleanup($report as item) as item*
+declare %an:nondeterministic function export:cleanup($report as item) as item*
 {
     (: add Ids everywhere :)
     copy $report := $report

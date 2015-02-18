@@ -346,6 +346,5 @@ let $serializers := {
         (conversion:facts-to-csv($res.FactTable[], { Caller: "Report" }), "")[1]
     }
 }
-
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format)
+return $results(:api:check-and-return-results($token, $results, $format):)

@@ -1,9 +1,8 @@
+import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace session = "http://apps.28.io/session";
 import module namespace user = "http://apps.28.io/user";
 import module namespace reports = "http://apps.28.io/reports";
 import module namespace archive = "http://zorba.io/modules/archive";
-
-declare option rest:response "first-item";
 
 (: Query parameters :)
 declare %rest:case-insensitive                variable $token        as string  external;
@@ -52,26 +51,26 @@ try {
         
         (: ### AUTHORIZATION :)
         case not(session:has-right($token, "reports_get")) return {
-            { status: 403 },
+            response:status-code(403);
             session:error("Forbidden: You are not authorized to access the requested resource", "json")
         }
         
         (: ### BAD REQUEST HANDLING :)
         case (empty($reports) and exists($_id))
         return {
-            { status: 404 },
+            response:status-code(404);
             session:error("report not found", "json")
         }
         
         case ($export and empty($_id))
         return {
-            { status: 400 },
+            response:status-code(400);
             session:error("export requested, but report _id missing", "json")
         }
         
         case ($export and count($_id) gt 1)
         return {
-            { status: 400 },
+            response:status-code(400);
             session:error("export requested, but more than one report _id provided", "json")
         }
         
@@ -98,10 +97,8 @@ try {
                     },
                     serialize($report))
             return {
-                {
-                    "content-type": "application/zip",
-                    headers: { "Content-Disposition", "attachment; filename=\"" || $filenamebase || ".xbrlb\"" }
-                },
+                response:content-type("application/zip");
+                response:header("Content-Disposition", "attachment; filename=\"" || $filenamebase || ".xbrlb\"");
                 $archive
             }
 
@@ -110,7 +107,9 @@ try {
         (: ### MAIN WORK :)
         default
         return {
-            { serialization: { method: "json", indent : true } },
+            response:content-type("application/json");
+            response:serialization-parameters({"indent" : true});
+            
             [
                 if($onlyMetadata)
                 then
@@ -126,7 +125,7 @@ try {
         }
 } catch session:expired {
     {
-        { status: 401 },
+        response:status-code(401);
         session:error("Unauthorized: Login required", "json")
     }
 }

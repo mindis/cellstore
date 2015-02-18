@@ -88,14 +88,14 @@ then {
             case "text" case "csv" return {
                 {
                     "content-type": "text/csv",
-                    headers: { "Content-Disposition", "attachment; filename=usageStats.csv" }
+                    headers: { "Content-Disposition": "attachment; filename=usageStats.csv" }
                 },
                 local:to-csv($info)
             }
             case "excel" return {
                 {
                     "content-type": "application/vnd.ms-excel",
-                    headers: { "Content-Disposition", "attachment; filename=usageStats.csv" }
+                    headers: { "Content-Disposition": "attachment; filename=usageStats.csv" }
                 },
                 local:to-csv($info)
             }

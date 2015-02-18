@@ -45,7 +45,7 @@ return
     case "text" case "csv" case "excel" return {
         {
             "content-type": "text/csv",
-            headers: { "Content-Disposition", "attachment; filename=logout.csv" }
+            headers: { "Content-Disposition": "attachment; filename=logout.csv" }
         },
         local:to-csv($res)
     }

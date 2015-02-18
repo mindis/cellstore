@@ -122,7 +122,7 @@ switch ($format)
         {
             status: $status,
             "content-type": "text/csv",
-            headers: { "Content-Disposition", "attachment; filename=edit.csv" }
+            headers: { "Content-Disposition": "attachment; filename=edit.csv" }
         },
         local:to-csv($res)
     }
