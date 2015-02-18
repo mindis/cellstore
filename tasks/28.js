@@ -147,6 +147,56 @@ var createProject = function(projectName){
     return defered.promise;
 };
 
+var upgradeProject = function(projectName){
+    /*jshint camelcase:false */
+    var deferred = Q.defer();
+    var token = credentials.access_token;
+    $.util.log('Upgrading project ' + projectName);
+    Config.$28.upgradeProject(projectName, token)
+    .then(function (response) {
+        $.util.log('Project  ' + projectName + ' upgraded.');
+        deferred.resolve(credentials);
+    }).catch(function (error) {
+        $.util.log('Upgrading Project failed: ' + error);
+        deferred.reject(error);
+    });
+    return deferred.promise;
+};
+
+var createOrUpgradeProject = function(project){
+    if(project.exists){
+        return upgradeProject(project.name);
+    } else {
+        return createProject(project.name);
+    }
+};
+
+var existsProject = function(projectName){
+    /*jshint camelcase:false */
+    var deferred = Q.defer();
+    var project = {
+        name: projectName
+    };
+    $.util.log('Checking project ' + projectName);
+    Config.$28.existsProject(projectName)
+    .then(function () {
+        $.util.log('project ' + projectName + ' exists already');
+        project.exists = true;
+        deferred.resolve(project);
+    })
+    .catch(function (data) {
+        if(data.response.statusCode === 404){
+            $.util.log('project ' + projectName + ' does not exist.');
+            project.exists = false;
+            deferred.resolve(project);
+        } else {
+            $.util.log('Checking Project failed: ' + data);
+            deferred.reject(data);
+        }
+    });
+    return deferred.promise;
+};
+
 var ignoreQueriesFunction = function(list){
     return list;
 };
@@ -299,7 +349,9 @@ gulp.task('28:login', function(){
 });
 
 gulp.task('28:create-project', function(){
-    return createProject(Config.projectName, true).catch(throwError);
+    return existsProject(Config.projectName)
+        .then(createOrUpgradeProject)
+        .catch(throwError);
 });
 
 gulp.task('28:remove-project', function(){
@@ -312,7 +364,8 @@ gulp.task('28:upload', function(){
 
 gulp.task('28:setup-datasources', function(){
     return listDatasources(Config.projectName)
-        .then(createOrUpdateDatasources);
+        .then(createOrUpdateDatasources)
+        .catch(throwError);
 });
 
 gulp.task('28:init', function(){
