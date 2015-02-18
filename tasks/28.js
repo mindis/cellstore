@@ -153,8 +153,8 @@ var upgradeProject = function(projectName){
     var token = credentials.access_token;
     $.util.log('Upgrading project ' + projectName);
     Config.$28.upgradeProject(projectName, token)
-    .then(function (response) {
-        $.util.log('Project  ' + projectName + ' upgraded.');
+    .then(function () {
+        $.util.log('Project ' + projectName + ' upgraded.');
         deferred.resolve(credentials);
     }).catch(function (error) {
         $.util.log('Upgrading Project failed: ' + error);
