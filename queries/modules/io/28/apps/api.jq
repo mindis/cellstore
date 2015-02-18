@@ -185,7 +185,7 @@ declare function api:serialize(
         let $csv as string := $serializers.to-csv($result)
         return 
         {
-            { serialization: { method: "html" } },
+            { "content-type": "text/html" },
             api:csv-to-html($csv)
         }
     }
