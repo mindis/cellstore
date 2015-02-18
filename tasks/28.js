@@ -344,7 +344,7 @@ var createOrUpdateDatasources = function(existingDataSources){
     return Q.all(promises);
 };
 
-gulp.task('28:login', function(){
+gulp.task('28:login', ['config:init'], function(){
     return login(Config.credentials['28'].email, Config.credentials['28'].password).catch(throwError);
 });
 
@@ -370,6 +370,10 @@ gulp.task('28:setup-datasources', function(){
 
 gulp.task('28:init', function(){
     return runQueries(Config.projectName, Config.paths.initQueries).catch(throwError);
+});
+
+gulp.task('28:setup', ['28:login'], function(done){
+    $.runSequence('28:remove-project', '28:create-project', ['28:setup-datasources', '28:upload'], '28:init', '28:test', done);
 });
 
 gulp.task('28:test', function(){

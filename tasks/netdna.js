@@ -6,7 +6,7 @@ var _ = require('lodash');
 
 var Config = require('./config');
 
-gulp.task('netdna', ['load-config'], function(done) {
+gulp.task('netdna:flush', ['config:load'], function(done) {
     var ca = Config.credentials.netdna.companyAlias,
         ck = Config.credentials.netdna.consumerKey,
         cs = Config.credentials.netdna.consumerSecret,
