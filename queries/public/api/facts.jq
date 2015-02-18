@@ -347,4 +347,4 @@ let $serializers := {
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return $results(:api:check-and-return-results($token, $results, $format):)
+return api:check-and-return-results($token, $results, $format)
