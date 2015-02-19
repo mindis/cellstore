@@ -33,7 +33,7 @@
     "gulp-uglify": "^1.0.1",
     "gulp-useref": "^1.0.2",
     "gulp-util": "^3.0.1",
-    "gulp-xqlint": "0.0.4",
+    "gulp-xqlint": "0.0.5",
     "karma": "^0.12.28",
     "karma-chrome-launcher": "^0.1.5",
     "karma-coverage": "^0.2.7",
