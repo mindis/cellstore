@@ -1081,23 +1081,19 @@ declare %private function components:model-structures-recursive(
   let $main-object := ($component.Concepts[])[$$.Name eq $xbrl-concept.Name]
   let $kind := $main-object.Kind
   return {|
+    project($xbrl-concept, ("Name", "Label", "Order")),
     {
-      "Name" : $xbrl-concept.Name,
-      "Label" : $xbrl-concept.Label,
       "Depth" : $depth
     },
-    if (exists($xbrl-concept.Order))
-    then { "Order" : $xbrl-concept.Order }
-    else (),
-    if ($kind eq "Concept")
-    then trim($main-object, ("Name", "Label", "Labels"))
-    else (),
-    let $children := components:model-structures-recursive(
-                         $component,
-                         (values($xbrl-concept.To), $xbrl-concept.To[]),
-                         $depth + 1
-                     )
-    return if (exists($children)) then { Children: [ $children ] } else ()
+    trim($main-object, ("Name", "Label", "Labels"))[$kind eq "Concept"]
+    let $children :=
+        components:model-structures-recursive(
+            $component,
+            $xbrl-concept.To[],
+            $depth + 1
+        )
+    where exists($children)
+    return { Children: [ $children ] }
   |}
 };
 
