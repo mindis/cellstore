@@ -81,43 +81,6 @@ declare function local:to-csv($model as object) as string
         else ""
 };
 
-
-declare function local:enrich-json-rec($objects as object*, $level as integer) as object*
-{
-    for $object in $objects
-    return
-        copy $o := $object
-        modify (
-            if (exists($o.Children)) then delete json $o("Children") else (),
-            insert json { Level : $level } into $o,
-            if ($o.Kind eq "Domain") then replace value of json $o("Kind") with "Member" else ()
-        )
-        return {|
-            $o,
-            let $children := local:enrich-json-rec($object.Children[], $level + 1)
-            return if (exists($children)) then { Children : [ $children ] } else ()
-        |}
-};
-
-
-declare function local:enrich-json($component as object) as object
-{
-    {
-        ModelStructure : [ local:enrich-json-rec($component.ModelStructure, 0) ] ,
-        CIK : $component.CIK,
-        EntityRegistrantName : $component.EntityRegistrantName,
-        Label : $component.Label,
-        AccessionNumber : $component.AccessionNumber,
-        TableName : $component.TableName,
-        FormType : $component.FormType,
-        FiscalPeriod : $component.FiscalPeriod,
-        FiscalYear : $component.FiscalYear,
-        AcceptanceDatetime : $component.AcceptanceDatetime,
-        NetworkIdentifier: $component.NetworkIdentifier,
-        Disclosure : $component.Disclosure
-    }
-};
-
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
