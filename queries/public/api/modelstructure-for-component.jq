@@ -96,6 +96,7 @@ declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as 
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $networkIdentifier  as string* external;
+declare  %rest:case-insensitive %rest:distinct  variable $role               as string* external;
 declare  %rest:case-insensitive                 variable $cid                as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $reportElement      as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $concept            as string* external;
@@ -111,6 +112,7 @@ let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
 let $fiscalPeriod as string* := api:preprocess-fiscal-periods($fiscalPeriod)
 let $tag as string* := api:preprocess-tags($tag)
 let $reportElement := ($reportElement, $concept)
+let $networkIdentifier := distinct-values(($networkIdentifier, $role))
 
 let $cik as string* :=
     switch($profile-name)
@@ -136,13 +138,18 @@ let $archives as object* := multiplexer:filings(
   $filingKind,
   $aid)
 
-let $components  := sec-networks:components(
-    $archives,
-    $cid,
-    $reportElement,
-    $disclosure,
-    $networkIdentifier,
-    $label)
+let $components as object* :=
+    multiplexer:components(
+      $profile-name,
+      $archives,
+      $cid,
+      $reportElement,
+      $disclosure,
+      $networkIdentifier,
+      $label[$profile-name ne "sec"],
+      $label[$profile-name eq "sec"]
+    )
+
 let $model-structures :=
     for $component in $components
     let $archive   := archives:archives($component.Archive)
