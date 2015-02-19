@@ -55,7 +55,7 @@ declare %an:nondeterministic function local:test-entities(
 {
     let $endpoint := "entities"
     let $request := test:invoke($endpoint, $params)
-    let $actual as array := [ $request[2].Entities[]._id ]
+    let $actual as array := [ $request[2].Entities[].EID ]
     let $status as integer := $request[1]
     return test:assert-eq-array($expected, $actual, $status, test:url($endpoint, $params))
 };
