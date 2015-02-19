@@ -167,7 +167,7 @@ let $model-structures :=
         Role : $component.Role,
         ModelStructure : [ components:model-structures($component) ]
     }
-let $result := { ModelStructures: $model-structures }
+let $result := { ModelStructures: [ $model-structures ] }
 let $comment := {
     NumComponents : count($components),
     TotalNumComponents: session:num-components()
