@@ -151,7 +151,7 @@ let $model-structures :=
     then {
         CIK : entities:eid($entity),
         EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
-        ModelStructure : [ sec-networks:model-structures($component) ],
+        ModelStructure : [ components:model-structures($component) ],
         TableName : components:hypercubes($component),
         Label : $component.Label,
         AccessionNumber : $component.Archive,

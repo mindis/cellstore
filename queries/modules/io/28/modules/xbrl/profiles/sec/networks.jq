@@ -251,61 +251,6 @@ declare function sec-networks:networks-for-filings-and-label(
   }).results[].obj
 };
 
-
-(:~
-:)
-declare %private function sec-networks:model-structures-recursive(
-    $component as object,
-    $xbrl-concepts as object*,
-    $depth as integer)
-    as object*
-{
-  for $xbrl-concept in $xbrl-concepts
-  order by $xbrl-concept.Order
-  let $main-object := ($component.Concepts[])[$$.Name eq $xbrl-concept.Name]
-  let $kind := $main-object.Kind
-  return {|
-    {
-      "Name" : $main-object.Name,
-      "Label" : $main-object.Label,
-      "Depth" : $depth
-    },
-    if (exists($xbrl-concept.Order))
-    then { "Order" : $xbrl-concept.Order }
-    else (),
-    if ($kind eq "Concept")
-    then trim($main-object, ("Name", "Label"))
-    else (),
-    let $children := sec-networks:model-structures-recursive(
-                         $component,
-                         (values($xbrl-concept.To), $xbrl-concept.To[]),
-                         $depth + 1
-                     )
-    return if (exists($children)) then { Children: [ $children ] } else ()
-  |}
-};
-
-(:~
- : <p>Computes the model structure of the supplied SEC Network, which is a hierarchy
- : of SEC Report Elements (Tables, Axes, Members, LineItems, Abstracts, Concepts).</p>
- :
- : @param $networks a sequence of SEC Network objects.
- :
- : @return the model structures of these SEC Networks.
- :
- :)
-declare function sec-networks:model-structures($networks as object*) as object*
-{
-  for $sec-network in $networks
-  let $presentation-network := networks:networks-for-components-and-short-names(
-      $sec-network,
-      $networks:PRESENTATION_NETWORK)
-  return sec-networks:model-structures-recursive(
-      $sec-network,
-      $presentation-network.Trees[],
-      1)
-};
-
 (:~
  : <p>Retrieves the components with the given CID, or belonging to the given archives and corresponding to one of report
  : elements, concepts, disclosures, roles or label search.</p>
