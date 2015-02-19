@@ -74,3 +74,13 @@ Finally, you can filter by the kind of filings (TDNET, EDINET, quarterly-securit
 ```REST
 http://edinet.28.io/v1/_queries/public/api/filings.jq?tag=NIKKEI&format=html&fiscalYear=2014&filingKind=TDNET
 ```
+
+##Available periods
+
+If you are unsure which periods are available, you can use the periods endpoint. For example, here is how to retrieve the periods for which Canon submitted an archive:
+
+```REST
+http://edinet.28.io/v1/_queries/public/api/periods.jq?ticker=7751
+```
+
+You can use all parameters from the entities endpoint, as well as fiscalYear and fiscalPeriod to filter by the one or the other.

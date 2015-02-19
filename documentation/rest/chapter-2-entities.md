@@ -3,11 +3,12 @@ Companies submit fiscal filings (which are archives) to the FSA.
 
 In the XBRL world, companies correspond to reporting *entities*. The entities interface provides metadata, such as name, ticker, etc, about the entities against which data has been stored in the cell store.
 
-Entities can be identified by ticker, by EDINET code, by stock index or by a regulation authority specific Entity ID.
+Entities can be identified in ways that differ from profile to profile. For many profiles, the ticker is available and the format of the ticker (ko, 7751, ...) depends on the country. Other codes are available depending on the regulation authority, such as the EDINET code in Japan. Often, entities are also tagged with  stock indices (DOW30, NIKKEI, ...).
+
+There is an identifier, though, that is available across all profiles: the Entity ID, even though its format may still vary depending on the profile.
 
 ##Looking Up A Company
 Let us begin with a very simple query that just retrieves a company, say, Canon. Canon's ticker is 7751.
-
 
 ```REST
 http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751
