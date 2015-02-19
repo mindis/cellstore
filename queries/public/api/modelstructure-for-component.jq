@@ -32,8 +32,13 @@ declare function local:to-xml-rec($o as object*, $level as integer) as element()
 
 declare function local:to-xml($model as object) as node()*
 {
-    <Component>
-        <Network entityRegistrantName="{$model.EntityRegistrantName}"
+    <ModelStructures>
+    {
+      for $model in $model.ModelStructures[]
+      return
+        if($profile-name eq "sec")
+        then
+          <ModelStructure entityRegistrantName="{$model.EntityRegistrantName}"
                  accessionNumber="{$model.AccessionNumber}"
                  tableName="{$model.TableName}"
                  cik="{$model.CIK}"
@@ -46,34 +51,46 @@ declare function local:to-xml($model as object) as node()*
                  disclosure="{$model.Disclosure}"
                  >{
             local:to-xml-rec($model.ModelStructure[], 0)
-        }</Network>
-    </Component>
+        }</ModelStructure>
+        else
+          <ModelStructure archive="{$model.Archive}"
+                 role="{$model.Role}"
+                 >{
+            local:to-xml-rec($model.ModelStructure[], 0)
+        }</ModelStructure>
+    }
+    </ModelStructures>
 };
 
-declare function local:to-csv-rec($objects as object*, $level as integer) as object*
+declare function local:to-csv-rec($model as object, $objects as object*, $level as integer) as object*
 {
     for $o in $objects
-    let $object := {
+    let $object := {|
+      $model,
+      {
         "Label" : $o.Label,
         "Name" : $o.Name,
-        "ObjectClass" : if ($o.Kind eq "Domain") then "Member" else $o.Kind,
+        "Kind" : $o.Kind,
         "DataType" : $o.DataType,
         "BaseDataType" : $o.BaseType,
         "Balance" : $o.Balance,
         "Abstract" : $o.IsAbstract,
         "PeriodType" : $o.PeriodType,
         "Level" : $level
-    }
+      }
+    |}
     return (
         $object,
-        local:to-csv-rec($o.Children[], $level + 1)
+        local:to-csv-rec($model, $o.Children[], $level + 1)
     )
 };
 
 
 declare function local:to-csv($model as object) as string
 {
-    let $lines := local:to-csv-rec($model.ModelStructure, 0)
+    let $lines :=
+      for $model in $model.ModelStructures[]
+      return local:to-csv-rec(trim($model, "ModelStructure"), $model.ModelStructure[], 0)
     return
         if (exists($lines))
         then string-join(csv:serialize($lines, { serialize-null-as : "" }))

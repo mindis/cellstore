@@ -1083,9 +1083,10 @@ declare %private function components:model-structures-recursive(
   return {|
     project($xbrl-concept, ("Name", "Label", "Order")),
     {
+      "Kind" : $main-object.Kind,
       "Depth" : $depth
     },
-    trim($main-object, ("Name", "Label", "Labels"))[$kind eq "Concept"],
+    trim($main-object, ("Name", "Label", "Labels", "Kind"))[$kind eq "Concept"],
     let $children :=
         components:model-structures-recursive(
             $component,
