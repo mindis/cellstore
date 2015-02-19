@@ -6,15 +6,21 @@ Archives can be though of Excel files. An Excel file is saved with an .xlsx exte
 
 The archives interface provides metadata about the archives that are present in the cell store, such as which entity filed it, when it was filed or accepted, which fiscal year and period it corresponds to if it's a fiscal report, and also some statistics about the number of facts it contains, etc.
 
+##Looking Up An Archive With Its Archive ID
+
 Archives can be identified with an Archive ID specific to the regulation authority. For example, SEC Archive IDs are called Accession Numbers.
 
-The rest of this section is showing developers how to use the archives interface to retrieve archive metadata in a format understandable ty computers. If you are not a developer, you can stop reading now and jump to the next section.
+Use the aid parameter to fetch an archive with its Archive ID.
+
+```REST
+http://edinet.28.io/v1/_queries/public/api/filings.jq?aid=S1003HDC
+```
 
 ##Looking Up Archives Belonging To A Given Entity
 
 Let us begin with a very simple query that just lists the archives submitted by an entity, like Canon. The way
  the entity or the entities are identified is identical to the [entities endpoint](gitbook/chap-BizQLTutorial-Companies.md).
- 
+
 ```REST
 http://edinet.28.io/v1/_queries/public/api/filings.jq?ticker=7751
 ```
@@ -68,4 +74,3 @@ Finally, you can filter by the kind of filings (TDNET, EDINET, quarterly-securit
 ```REST
 http://edinet.28.io/v1/_queries/public/api/filings.jq?tag=NIKKEI&format=html&fiscalYear=2014&filingKind=TDNET
 ```
-
