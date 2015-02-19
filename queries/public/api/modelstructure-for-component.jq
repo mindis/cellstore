@@ -180,33 +180,40 @@ let $components  := sec-networks:components(
     $disclosure,
     $networkIdentifier,
     $label)
-let $component := $components[1] (: only one for now :)
-let $archive   := archives:archives($component.Archive)
-let $entity    := entities:entities($archive.Entity)
-
-let $result := {
-    CIK : entities:eid($entity),
-    EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
-    ModelStructure : [ sec-networks:model-structures($component) ],
-    TableName : components:hypercubes($component),
-    Label : $component.Label,
-    AccessionNumber : $component.Archive,
-    FormType : $archive.Profiles.SEC.FormType,
-    FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
-    FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
-    AcceptanceDatetime : filings:acceptance-dateTimes($archive),
-    NetworkIdentifier: $component.Role,
-    Disclosure : $component.Profiles.SEC.Disclosure
-}
+let $model-structures :=
+    for $component in $components
+    let $archive   := archives:archives($component.Archive)
+    let $entity    := entities:entities($archive.Entity)
+    return if($profile-name eq "sec")
+    then {
+        CIK : entities:eid($entity),
+        EntityRegistrantName : $entity.Profiles.SEC.CompanyName,
+        ModelStructure : [ sec-networks:model-structures($component) ],
+        TableName : components:hypercubes($component),
+        Label : $component.Label,
+        AccessionNumber : $component.Archive,
+        FormType : $archive.Profiles.SEC.FormType,
+        FiscalPeriod : $archive.Profiles.SEC.Fiscal.DocumentFiscalPeriodFocus,
+        FiscalYear : $archive.Profiles.SEC.Fiscal.DocumentFiscalYearFocus,
+        AcceptanceDatetime : filings:acceptance-dateTimes($archive),
+        NetworkIdentifier: $component.Role,
+        Disclosure : $component.Profiles.SEC.Disclosure
+    }
+    else {
+        Archive : $component.Archive,
+        Role : $component.Role,
+        ModelStructure : [ components:model-structures($component) ]
+    }
+let $result := { ModelStructures: $model-structures }
 let $comment := {
-    TotalNumArchives: session:num-archives(),
-    TotalNumEntities: session:num-entities()
+    NumComponents : count($components),
+    TotalNumComponents: session:num-components()
 }
 let $serializers := {
     to-xml : local:to-xml#1,
     to-csv : local:to-csv#1
 }
-return if (exists($component))
+return if (exists($components))
     then api:serialize($result, $comment, $serializers, $format, "components")
     else {
         response:status-code(404);
