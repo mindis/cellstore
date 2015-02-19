@@ -63,7 +63,7 @@ let $summaries :=
     case "japan" return
       for $a in $archives
       order by $a.Profiles.FSA.SubmissionDate descending
-      return project($a, ("_id", "Entity", "Profiles"))
+      return project($a, ("_id", "Entity", "Profiles", "Statistics"))
     default return $archives
 
 let $summaries :=
@@ -95,8 +95,20 @@ let $summaries :=
               format: $format,
               profile-name: $profile-name
           })
-      },
-      trim($archive, "_id")
+       },
+      trim($archive, ("_id", "Statistics")),
+      {
+          NumComponents: archives:num-components($archive),
+          NumFacts: archives:num-facts($archive),
+          NumFootnotes: archives:num-footnotes($archive),
+          NumReportElements: archives:num-report-elements($archive),
+          NumHypercubes: archives:num-hypercubes($archive),
+          NumDimensions: archives:num-dimensions($archive),
+          NumMembers: archives:num-members($archive),
+          NumLineItems: archives:num-line-items($archive),
+          NumAbstracts: archives:num-abstracts($archive),
+          NumConcepts: archives:num-concepts($archive)
+      }
     |}
 
 let $result := { "Archives" : [ $summaries ] }
