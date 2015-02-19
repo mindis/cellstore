@@ -1085,7 +1085,7 @@ declare %private function components:model-structures-recursive(
     {
       "Depth" : $depth
     },
-    trim($main-object, ("Name", "Label", "Labels"))[$kind eq "Concept"]
+    trim($main-object, ("Name", "Label", "Labels"))[$kind eq "Concept"],
     let $children :=
         components:model-structures-recursive(
             $component,
