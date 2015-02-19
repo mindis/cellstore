@@ -3,7 +3,6 @@ import module namespace filings = "http://28.io/modules/xbrl/profiles/sec/filing
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace components = "http://28.io/modules/xbrl/components";
 
-import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
 import module namespace config = "http://apps.28.io/config";
