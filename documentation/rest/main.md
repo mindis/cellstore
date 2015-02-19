@@ -1,4 +1,4 @@
-#An Introduction To Cell Stores
+#An Introduction To The Cell Store REST API
 
 Dr. Ghislain Fourny, 28msec Inc.
 
