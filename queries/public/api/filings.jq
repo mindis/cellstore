@@ -86,8 +86,8 @@ let $summaries :=
   default return
     for $archive in $summaries
     return {|
-      project($archive, "_id"),
       {
+        AID: $archive._id,
         Components: backend:url("components",
           {
               token: $token,
