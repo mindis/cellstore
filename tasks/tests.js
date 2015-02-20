@@ -3,66 +3,16 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
-var modRewrite = require('connect-modrewrite');
-var rewriteRules = [
-  '!\\.html|\\.xml|\\images|\\.js|\\.css|\\.png|\\.jpg|\\.woff|\\.ttf|\\.svg|\\.map /index.html [L]'
-];
-
 var Config = require('./config');
-var $28 = require('./28');
-
-gulp.task('server:dist', function() {
-  browserSync({
-    port: 9000,
-    notify: false,
-    logPrefix: Config.bucketName,
-    open: false,
-    server: {
-      baseDir: ['dist'],
-      middleware: [
-        modRewrite(rewriteRules)
-      ]
-    }
-  });
-});
-
-//run the server after having built generated files, and watch for changes
-gulp.task('server:dev', function() {
-    browserSync({
-        port: 9000,
-        notify: false,
-        logPrefix: Config.bucketName,
-        server: {
-            baseDir: ['.', Config.paths.app],
-            middleware: [
-                modRewrite(rewriteRules)
-            ]
-        },
-        browser: 'default'
-    });
-
-    gulp.watch(Config.paths.html, reload);
-    gulp.watch(Config.paths.sass, ['sass', reload]);
-    gulp.watch(Config.paths.js, reload);
-    gulp.watch(Config.paths.json, ['jsonlint', reload]);
-    $28.watchJSONiqQueries();
-});
-
-gulp.task('server:stop', browserSync.exit);
 
 /* jshint camelcase:false*/
-//var webdriverStandalone = require('gulp-protractor').webdriver_standalone;
 var webdriverUpdate = require('gulp-protractor').webdriver_update;
 
-var Config = require('./config');
-
 //update webdriver if necessary, this task will be used by e2e task
-gulp.task('webdriver:update', webdriverUpdate);
+gulp.task('tests:update-webdriver', webdriverUpdate);
 
 // Run e2e tests using protractor, make sure serve task is running.
-gulp.task('test:e2e', ['webdriver:update'], function() {
+gulp.task('tests:e2e', ['tests:update-webdriver'], function() {
   var configFile = Config.paths.protractorConfigLocal;
   //var configFile = Config.isOnTravis ? Config.paths.protractorConfigTravis : Config.paths.protractorConfigLocal;
   var args = [];
@@ -83,7 +33,7 @@ gulp.task('test:e2e', ['webdriver:update'], function() {
     });
 });
 
-gulp.task('test:unit', function (done) {
+gulp.task('tests:unit', function (done) {
     var karma = require('karma').server;
     karma.start({
         configFile: __dirname + '/../karma.conf.js',

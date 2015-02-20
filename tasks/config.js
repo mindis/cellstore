@@ -5,6 +5,7 @@ var fs = require('fs');
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var _ = require('lodash');
+var install = require('gulp-install');
 
 var knownOptions = {
     string: [ 'build-id', 'config', 'specs' ],
@@ -30,7 +31,7 @@ if(configId === undefined || configId === ''){
 }
 var unencryptedConfigFile = 'config/' + configId + '.json';
 var encryptedConfigFile = unencryptedConfigFile + '.enc';
-if(!fs.existsSync(encryptedConfigFile)){
+if(!fs.existsSync(encryptedConfigFile) && !_.find(args._, function(target){ return target === 'encrypt'; })){
     var msg = 'Invalid --config command line argument. ' + $.util.colors.red('Config file ' + encryptedConfigFile + ' does not exist.');
     $.util.log(msg);
     throw new $.util.PluginError(__filename, msg);
@@ -86,6 +87,7 @@ var config =
 
         //CI
         tasks: ['gulpfile.js', 'tasks/*.js'],
+        dependencies: ['./bower.json', './package.json'],
 
         //Crypted config
         encryptedConfigFile: encryptedConfigFile,
@@ -116,7 +118,11 @@ var config =
     '$28': undefined
 };
 
-gulp.task('load-config', ['config-template'], function(done){
+gulp.task('config:install', function(){
+    return gulp.src(config.paths.dependencies).pipe(install());
+});
+
+gulp.task('config:load', ['templates:config'], function(done){
     if(!_.isEmpty(config.credentials)){
         done();
         return;
@@ -143,6 +149,10 @@ gulp.task('load-config', ['config-template'], function(done){
         config.$28 = new (require('28').$28)(config.portalAPIUrl);
         done();
     }
+});
+
+gulp.task('config:init', ['config:install', 'config:load', 'templates:create'], function(done){
+    done();
 });
 
 module.exports = config;
