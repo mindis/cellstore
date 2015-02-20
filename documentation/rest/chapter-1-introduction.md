@@ -58,5 +58,5 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751
 You actually need to understand it as being really:
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&token=54eb0587-1aee-44a5-bb56-627f6ef43da6&_method=POST
+http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&token=c3049752-4d35-43da-82a2-f89f1b06f7a4&_method=POST
 ```
