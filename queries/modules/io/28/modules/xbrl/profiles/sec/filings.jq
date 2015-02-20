@@ -192,7 +192,8 @@ declare function filings:summaries($filings-or-ids as item*) as object*
         Facts: archives:num-facts($a),
         ExtensionFacts:  filings:num-extension-facts($a),
         ExtensionConcepts : filings:num-extension-concepts($a),
-        ExtensionAbstracts : filings:num-extension-abstracts($a)
+        ExtensionAbstracts : filings:num-extension-abstracts($a),
+        Statistics: $a.Statistics
     }
 };
 

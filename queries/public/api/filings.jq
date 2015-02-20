@@ -67,36 +67,23 @@ let $summaries :=
     default return $archives
 
 let $summaries :=
-  switch($profile-name)
-  case "sec" return
     for $archive in $summaries
     return {|
-      project($archive, "AccessionNumber"),
+      switch($profile-name)
+      case "sec" return project($archive, "AccessionNumber")
+      default return { AID: $archive._id },
       {
         Components: backend:url("components",
           {
               token: $token,
-              aid: encode-for-uri($archive.AccessionNumber),
+              aid: encode-for-uri(switch($profile-name)
+                                  case "sec" return $archive.AccessionNumber
+                                  default return archives:aid($archive)),
               format: $format,
               profile-name: $profile-name
           })
       },
-      trim($archive, "AccessionNumber")
-    |}
-  default return
-    for $archive in $summaries
-    return {|
-      {
-        AID: $archive._id,
-        Components: backend:url("components",
-          {
-              token: $token,
-              aid: encode-for-uri(archives:aid($archive)),
-              format: $format,
-              profile-name: $profile-name
-          })
-       },
-      trim($archive, ("_id", "Statistics")),
+      trim($archive, ("_id", "Statistics", "AccessionNumber")),
       {
           NumComponents: archives:num-components($archive),
           NumFacts: archives:num-facts($archive),
