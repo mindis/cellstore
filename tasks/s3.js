@@ -72,6 +72,7 @@ var makeBucketWebsite = function() {
             WebsiteConfiguration : Config.credentials.s3.website
         }, function(err) {
             if (err && err.indexOf('NoSuchBucket:') === 0) {
+                $.util.log('trying again: putBucketWebsite(' + bucketName + ')');
                 setTimeout(function () {
                     s3.putBucketWebsite(
                         {
