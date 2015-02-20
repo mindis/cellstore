@@ -30,7 +30,7 @@ if(configId === undefined || configId === ''){
 }
 var unencryptedConfigFile = 'config/' + configId + '.json';
 var encryptedConfigFile = unencryptedConfigFile + '.enc';
-if(!fs.existsSync(encryptedConfigFile)){
+if(!fs.existsSync(encryptedConfigFile) && !_.find(args._, function(target){ return target === 'encrypt'; })){
     var msg = 'Invalid --config command line argument. ' + $.util.colors.red('Config file ' + encryptedConfigFile + ' does not exist.');
     $.util.log(msg);
     throw new $.util.PluginError(__filename, msg);
