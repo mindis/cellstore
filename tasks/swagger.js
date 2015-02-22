@@ -3,8 +3,14 @@
 var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
+var Config = require('./config');
 
-gulp.task('swagger', function(done){
+gulp.task('swagger:copy', function(){
+    return gulp.src('swagger/*', { dot: true })
+        .pipe(gulp.dest(Config.paths.dist + '/swagger'));
+});
+
+gulp.task('swagger:compile', function(done){
     var CodeGen = require('swagger-js-codegen').CodeGen;
     var apis = [
         {

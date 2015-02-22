@@ -191,7 +191,7 @@ var deleteBucket = function(idempotent) {
         });
 };
 
-gulp.task('s3-setup', function() {
+gulp.task('s3:setup', function() {
     var idempotent = true;
     init();
     if(!Config.isOnProduction) {
@@ -223,7 +223,7 @@ gulp.task('s3-setup', function() {
     }
 });
 
-gulp.task('s3-teardown', function(done) {
+gulp.task('s3:teardown', function(done) {
     init();
     if(!Config.isOnProduction) {
         deleteBucket().then(function(){
