@@ -14,6 +14,7 @@ require('./tasks/tests');
 require('./tasks/28');
 require('./tasks/netdna');
 require('./tasks/templates');
+require('./tasks/gitbook');
 
 gulp.task('watch', function() {
     return gulp.watch(Config.paths.sass, ['sass']);
@@ -42,10 +43,10 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['clean', 'swagger'], function(done){
-  $.runSequence('templates', ['lint', 'html', 'images', 'fonts', 'copy-swagger', 'copy-svg', 'extras'], done);
+  $.runSequence('templates', ['gitbook', 'lint', 'html', 'images', 'fonts', 'copy-swagger', 'copy-svg', 'extras'], done);
 });
 
-gulp.task('server', ['load-config', 'templates', 'sass', 'swagger', '28:login'], function(done){
+gulp.task('server', ['load-config', 'templates', 'gitbook', 'sass', 'swagger', '28:login'], function(done){
   $.runSequence('server:dev', done);
 });
 

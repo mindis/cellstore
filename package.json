@@ -8,6 +8,7 @@
     "browser-sync": "^1.7.1",
     "concurrent-transform": "^1.0.0",
     "connect-modrewrite": "^0.7.9",
+    "gitbook": "^1.5.0",
     "glob-expand": "0.0.2",
     "gulp": "^3.8.10",
     "gulp-awspublish": "0.0.23",
