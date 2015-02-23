@@ -107,6 +107,9 @@ var config =
             'queries/public/test/' + configId + '/*.jq'
         ],
 
+        //Documentation
+        documentation: 'documentation/**/*.md',
+
         //tests
         protractorConfigLocal: 'tests/e2e/config/protractor-conf.js',
         protractorConfigTravis: 'tests/e2e/config/protractor-travis-nosaucelabs-conf.js',

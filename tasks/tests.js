@@ -7,7 +7,7 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var modRewrite = require('connect-modrewrite');
 var rewriteRules = [
-  '!\\.html|\\.xml|\\images|\\.js|\\.css|\\.png|\\.jpg|\\.woff|\\.ttf|\\.svg|\\.map /index.html [L]'
+    '!\\.html|\\.xml|\\images|\\.js|\\.css|\\.png|\\.jpg|\\.woff|\\.ttf|\\.svg|\\.map /index.html [L]'
 ];
 
 var Config = require('./config');
@@ -47,6 +47,7 @@ gulp.task('server:dev', function() {
     gulp.watch(Config.paths.sass, ['sass', reload]);
     gulp.watch(Config.paths.js, reload);
     gulp.watch(Config.paths.json, ['jsonlint', reload]);
+    gulp.watch(Config.paths.documentation, ['gitbook', reload]);
     $28.watchJSONiqQueries();
 });
 
