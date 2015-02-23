@@ -42,7 +42,7 @@ test:check-all-success({
           {
               "edinetcode" : "E04147",
               "fiscalPeriod": "FY",
-              "fiscalYear": "ALL",
+              "fiscalYear": [ (2008 to 2013) ! string($$) ],
               "concept": ["jppfs-cor:Assets", "jp-t-cte:Assets"],
               "jppfs-cor:ConsolidatedOrNonConsolidatedAxis": "ALL",
               "xbrl:Scenario": "ALL"
