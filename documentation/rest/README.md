@@ -1,3 +1,9 @@
+#An Introduction To The Cell Store REST API
+
+by Dr. Ghislain Fourny, 28msec Inc.
+
+This tutorial is aimed at developers who need to get started using the cell stores REST API.
+
 #Introduction
 Just a few years ago, most companies were generating internal or external reports using text processors and spreadsheets. This was extremely inefficient and expensive: Excel and Word files were flowing from mailbox to mailbox, information was rekeyed on the fly, copied over, reorganized manually. In addition to the amount of time spent on these processes, this was very error-prone. For a few years now, the XBRL standard has been gaining importance, allowing reports to be made in a unified format. Some regulating authorities such as the SEC even made it mandatory.
 
@@ -41,7 +47,7 @@ An archive is made of facts, but also contains metainformation on these facts. T
 4. *Formulas*, that can be used to either validate the reported facts (example: the assets match the equities and liabilities) or to compute new, non reported facts. Formulas are like Excel formulas.
 
 ##Organization of the tutorial
-This tutorial will initiate you, in this order, to entities (companies), archives, components, fact tables, report 
+This tutorial will initiate you, in this order, to entities (companies), archives, components, fact tables, report
 elements, spreadsheets and labels.
 
 ##About the sample REST links (for developers)

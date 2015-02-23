@@ -17,7 +17,7 @@ A component is made of so-called *Report Elements*. Report Elements are metadata
 
 ##Fetching The Report Elements In A Component
 
-You can use the exact same parameters as the components endpoint to identify a component or several of them, and get the report elements it contains.
+You can use the exact same parameters as the components endpoint to identify a component or several of them, and get the report elements it contains. You just need to switch to the report-elements endpoint.
 
 ```REST
 http://edinet.28.io/v1/_queries/public/api/report-elements.jq?aid=S1001J4B&role=http://disclosure.edinet-fsa.go.jp/role/jppfs/rol_StatementOfIncome
