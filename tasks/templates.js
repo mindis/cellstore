@@ -22,7 +22,7 @@ var loadCredentials = function(){
     return credentials;
 };
 
-gulp.task('config-template', [ 'decrypt' ], function(done){
+gulp.task('templates:config', [ 'crypt:decrypt' ], function(done){
     var Mustache = require('mustache');
 
     //Fetch credentials
@@ -37,7 +37,7 @@ gulp.task('config-template', [ 'decrypt' ], function(done){
     done();
 });
 
-gulp.task('templates', ['load-config'], function(done){
+gulp.task('templates:create', ['config:load'], function(done){
 
     var Mustache = require('mustache');
     var expand = require('glob-expand');
