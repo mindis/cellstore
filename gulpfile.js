@@ -43,7 +43,7 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['clean', 'swagger'], function(done){
-  $.runSequence('templates', ['gitbook', 'lint', 'html', 'images', 'fonts', 'copy-swagger', 'copy-svg', 'extras'], done);
+  $.runSequence('templates', 'gitbook', [ 'lint', 'html', 'images', 'fonts', 'copy-swagger', 'copy-svg', 'extras', 'gitbook:copy'], done);
 });
 
 gulp.task('server', ['load-config', 'templates', 'gitbook', 'sass', 'swagger', '28:login'], function(done){

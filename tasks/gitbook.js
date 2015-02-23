@@ -4,7 +4,9 @@ var ffs = require('final-fs');
 var gulp = require('gulp');
 var gitbook = require('gitbook');
 
-gulp.task('gitbook', function(done){
+var Config = require('./config');
+
+gulp.task('gitbook:generate', function(done){
     var config = {
         input: 'documentation',
         output: 'app/documentation'
@@ -13,4 +15,10 @@ gulp.task('gitbook', function(done){
     gitbook.generate.folder(config).then(function() {
             done();
     }, done);
+});
+
+gulp.task('gitbook', ['gitbook:copy']);
+
+gulp.task('gitbook:copy', function(){
+    return gulp.src('app/documentation/**/*', { dot: true }).pipe(gulp.dest(Config.paths.dist + '/documentation'));
 });
