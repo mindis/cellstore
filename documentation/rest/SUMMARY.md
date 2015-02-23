@@ -5,3 +5,4 @@
 * [Archives](chapter-3-archives.md)
 * [Components](chapter-4-components.md)
 * [Report Elements](chapter-5-report-elements.md)
+* [Model Structures](chapter-6-model-structures.md)
