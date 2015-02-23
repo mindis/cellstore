@@ -7,7 +7,7 @@ var gitbook = require('gitbook');
 gulp.task('gitbook', function(done){
     var config = {
         input: 'documentation',
-        dest: 'app'
+        output: 'app/documentation'
     };
     gitbook.generate.folder(config).then(function() {
             done();
