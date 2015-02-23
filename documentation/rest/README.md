@@ -1,6 +1,6 @@
 #An Introduction To The Cell Store REST API
 
-by Dr. Ghislain Fourny, 28msec Inc.
+by Ghislain Fourny, 28msec Inc.
 
 This tutorial is aimed at developers who need to get started using the cell stores REST API.
 
