@@ -9,7 +9,10 @@ app/modules/formula-parser.js
 app/constants.js
 app/styles/*.css
 app/styles/index.css.map
+
 app/documentation
+app/documentation/api/*.md
+
 .DS_Store
 *~
 *.swp
