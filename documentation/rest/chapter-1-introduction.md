@@ -23,7 +23,7 @@ JSONiq is the language used by 28msec's Virtual Database platform, 28.io. It is 
 Business users do not need to learn anything about JSONiq (except, maybe, that it is a totally awesome language and that we love it) or REST (which is cool as well).
 
 ##Available repositories
-We provide various repositories containing data from reporting authorities (SEC for various subsets of fiscal reports filed by American companies, FSA in Japan, Chile, ...). This tutorial will be based on Japan data, however the ideas are the same for any other kind of data. If you are interesting in setting up a repository with any other kind of data, do not hesitate and contact us. We are here for you at hello@28.io and would love to help.
+We provide various repositories containing data from reporting authorities (SEC for various subsets of fiscal reports filed by American companies, FSA in Japan, Chile, ...). This tutorial will be based on Japan data, however the ideas are the same for any other kind of data. If you are interesting in setting up a repository with any other kind of data, do not hesitate and contact us. We are here for you at [hello@28.io](mailto:hello@28.io) and would love to help.
 
 ##How to run the queries
 All queries shown in this tutorial can be run directly on our platform. You are encouraged to register and get your own token. Private usage is free and we only bill for commercial use.
@@ -45,7 +45,7 @@ This tutorial will initiate you, in this order, to entities (companies), archive
 elements, spreadsheets and labels.
 
 ##About the sample REST links (for developers)
-For pedagogical reasons, links are only shown with the relevant parameters. When you create your own links, however, you need to add a token parameter. On this sample DB, the token is publicly available and is 54eb0587-1aee-44a5-bb56-627f6ef43da6.
+For pedagogical reasons, links are only shown with the relevant parameters. When you create your own links, however, you need to add a token parameter. On this sample DB, the token is publicly available and is `54eb0587-1aee-44a5-bb56-627f6ef43da6`.
 
 Also, the HTTP requests need to to sent as POST (although they will very soon be available as GET as well). For convenience, you can add &_method=POST if you are testing the links in your favorite browser. If you are using curl, add -X POST, etc.
 
