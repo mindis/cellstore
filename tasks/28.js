@@ -147,6 +147,56 @@ var createProject = function(projectName){
     return defered.promise;
 };
 
+var upgradeProject = function(projectName){
+    /*jshint camelcase:false */
+    var deferred = Q.defer();
+    var token = credentials.access_token;
+    $.util.log('Upgrading project ' + projectName);
+    Config.$28.upgradeProject(projectName, token)
+    .then(function () {
+        $.util.log('Project ' + projectName + ' upgraded.');
+        deferred.resolve(credentials);
+    }).catch(function (error) {
+        $.util.log('Upgrading Project failed: ' + error);
+        deferred.reject(error);
+    });
+    return deferred.promise;
+};
+
+var createOrUpgradeProject = function(project){
+    if(project.exists){
+        return upgradeProject(project.name);
+    } else {
+        return createProject(project.name);
+    }
+};
+
+var existsProject = function(projectName){
+    /*jshint camelcase:false */
+    var deferred = Q.defer();
+    var project = {
+        name: projectName
+    };
+    $.util.log('Checking project ' + projectName);
+    Config.$28.existsProject(projectName)
+    .then(function () {
+        $.util.log('project ' + projectName + ' exists already');
+        project.exists = true;
+        deferred.resolve(project);
+    })
+    .catch(function (data) {
+        if(data.response.statusCode === 404){
+            $.util.log('project ' + projectName + ' does not exist.');
+            project.exists = false;
+            deferred.resolve(project);
+        } else {
+            $.util.log('Checking Project failed: ' + data);
+            deferred.reject(data);
+        }
+    });
+    return deferred.promise;
+};
+
 var ignoreQueriesFunction = function(list){
     return list;
 };
@@ -228,33 +278,80 @@ var runQueries = function(projectName, sequenceOfQueriesToRun) {
 
 var createDatasource = function(projectName, datasource){
     var defered = Q.defer();
-    if(!Config.isOnProduction) {
-        $.util.log('Creating datasource ' + datasource.name);
-        var difault = datasource.default ? datasource.default : false;
-        /*jshint camelcase:false */
-        var projectToken = credentials.project_tokens['project_' + projectName];
-        Config.$28.createDatasource(projectName, datasource.category, datasource.name, projectToken, difault, JSON.stringify(datasource.credentials))
-            .then(function(){
-                $.util.log(datasource.name + ' created');
-                defered.resolve(credentials);
-            })
-            .catch(function (error) {
-                $.util.log('datasource creation failed: ' + datasource.name);
-                defered.reject(error);
-            });
-    } else {
-        $.util.log('Skipping data source creation on production: ' + datasource.name);
-        defered.resolve(credentials);
-    }
+    $.util.log('Creating datasource ' + datasource.name);
+    var difault = datasource.default ? datasource.default : false;
+    /*jshint camelcase:false */
+    var projectToken = credentials.project_tokens['project_' + projectName];
+    Config.$28.createDatasource(projectName, datasource.category, datasource.name, projectToken, difault, JSON.stringify(datasource.credentials))
+        .then(function(){
+            $.util.log(datasource.name + ' created');
+            defered.resolve(credentials);
+        })
+        .catch(function (error) {
+            $.util.log('datasource creation failed: ' + datasource.name);
+            defered.reject(error);
+        });
     return defered.promise;
 };
 
-gulp.task('28:login', function(){
+var updateDatasource = function(projectName, datasource){
+    var defered = Q.defer();
+    $.util.log('Updating datasource ' + datasource.name);
+    var difault = datasource.default ? datasource.default : false;
+    /*jshint camelcase:false */
+    var projectToken = credentials.project_tokens['project_' + projectName];
+    Config.$28.updateDatasource(projectName, datasource.name, datasource.category, datasource.name, projectToken, difault, JSON.stringify(datasource.credentials))
+        .then(function(){
+            $.util.log(datasource.name + ' updated');
+            defered.resolve(credentials);
+        })
+        .catch(function (error) {
+            $.util.log('Updating datasource failed: ' + datasource.name);
+            defered.reject(error);
+        });
+    return defered.promise;
+};
+
+var listDatasources = function(projectName){
+    var deferred = Q.defer();
+    /*jshint camelcase:false */
+    var projectToken = credentials.project_tokens['project_' + projectName];
+    Config.$28.listDatasources(projectName, projectToken)
+        .then(function(data){
+            var datasources = data.body;
+            if(_.isString(datasources)){
+                datasources = JSON.parse(datasources);
+            }
+            deferred.resolve(datasources);
+        })
+        .catch(function (error) {
+            $.util.log('listing datasources failed: ' + projectName);
+            deferred.reject(error);
+        });
+    return deferred.promise;
+};
+
+var createOrUpdateDatasources = function(existingDataSources){
+    var promises = [];
+    Config.credentials['28'].datasources.forEach(function(datasource){
+        var existing = _.find(existingDataSources, function(ds){ return ds.name === datasource.name; });
+        if(existing){
+            promises.push(updateDatasource(Config.projectName, datasource).catch(throwError));
+        } else {
+            promises.push(createDatasource(Config.projectName, datasource).catch(throwError));
+        }
+    });
+    return Q.all(promises);
+};
+
+gulp.task('28:login', ['config:init'], function(){
     return login(Config.credentials['28'].email, Config.credentials['28'].password).catch(throwError);
 });
 
 gulp.task('28:create-project', function(){
-    return createProject(Config.projectName, true).catch(throwError);
+    return existsProject(Config.projectName)
+        .then(createOrUpgradeProject)
+        .catch(throwError);
 });
 
 gulp.task('28:remove-project', function(){
@@ -265,16 +362,18 @@ gulp.task('28:upload', function(){
     return upload(Config.projectName).catch(throwError);
 });
 
-gulp.task('28:setup-datasource', function(){
-    var promises = [];
-    Config.credentials['28'].datasources.forEach(function(datasource){
-        promises.push(createDatasource(Config.projectName, datasource).catch(throwError));
-    });
-    return Q.all(promises);
+gulp.task('28:setup-datasources', function(){
+    return listDatasources(Config.projectName)
+        .then(createOrUpdateDatasources)
+        .catch(throwError);
 });
 
 gulp.task('28:init', function(){
     return runQueries(Config.projectName, Config.paths.initQueries).catch(throwError);
+});
+
+gulp.task('28:setup', ['28:login'], function(done){
+    $.runSequence('28:remove-project', '28:create-project', ['28:setup-datasources', '28:upload'], '28:init', '28:test', done);
 });
 
 gulp.task('28:test', function(){

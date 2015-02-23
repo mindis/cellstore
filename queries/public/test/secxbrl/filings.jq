@@ -31,7 +31,7 @@ declare %an:sequential function local:test-filings-generic($expected as array, $
 {
     let $endpoint := "filings"
     let $request := test:invoke($endpoint, $params)
-    let $actual as array := [ $request[2].Archives[]._id ]
+    let $actual as array := [ $request[2].Archives[].AID ]
     let $status as integer := $request[1]
     return test:assert-eq-array($expected, $actual, $status, test:url($endpoint, $params))
 };
@@ -52,19 +52,19 @@ declare %an:nondeterministic function local:test-example1() as item
             "Generator": "IBM Cognos",
             "SECFilingPage": "http://www.sec.gov/Archives/edgar/data/66740/000110465914009773/0001104659-14-009773-index.htm",
             "XBRLInstanceURL": "http://www.sec.gov/Archives/edgar/data/66740/000110465914009773/mmm-20131231.xml",
-            "Networks" : 175,
-            "ReportElements" : 1203, 
-            "Tables" : 29,
-            "Axis" : 44,
-            "Members" : 276,
-            "LineItems" : 29,
-            "Concepts" : 720,
-            "Abstracts" : 76,
-            "Footnotes" : 0,
-            "Facts" : 3506,
             "ExtensionFacts" : 1180,
             "ExtensionConcepts" : 184,
-            "ExtensionAbstracts" : 175
+            "ExtensionAbstracts" : 175,
+            "NumComponents" : 104,
+            "NumFacts" : 3506,
+            "NumFootnotes" : 0,
+            "NumReportElements" : 1203,
+            "NumHypercubes" : 29,
+            "NumDimensions" : 44,
+            "NumMembers" : 276,
+            "NumLineItems" : 58,
+            "NumAbstracts" : 76,
+            "NumConcepts" : 720
         }
     ]
     let $endpoint := "filings"

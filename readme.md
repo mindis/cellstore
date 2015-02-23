@@ -98,8 +98,6 @@ gulp test:unit --build-id=mydemo --config=sec
 ```json
 {
     "all": {
-        "githubToken": "oiifwjro984t834toaihzg9riejloi",
-
         "s3-region": "us-east-1",
         "s3-bucketPrefix": "csms.example.com",
         "s3-key": "ADUREIGMKODJAEO43SAJ3",

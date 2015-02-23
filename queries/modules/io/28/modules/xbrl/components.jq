@@ -1067,3 +1067,54 @@ declare function components:validation-errors(
     return "Some metadata is missing (" || string-join($missing, ", ") || ")"
   )
 };
+
+(:~
+:)
+declare %private function components:model-structures-recursive(
+    $component as object,
+    $xbrl-concepts as object*,
+    $depth as integer)
+    as object*
+{
+  for $xbrl-concept in $xbrl-concepts
+  order by $xbrl-concept.Order
+  let $main-object := ($component.Concepts[])[$$.Name eq $xbrl-concept.Name]
+  let $kind := $main-object.Kind
+  return {|
+    project($xbrl-concept, ("Name", "Label", "Order")),
+    {
+      "Kind" : $kind,
+      "Depth" : $depth
+    },
+    trim($main-object, ("Name", "Label", "Labels", "Kind"))[$kind eq "Concept"],
+    let $children :=
+        components:model-structures-recursive(
+            $component,
+            $xbrl-concept.To[],
+            $depth + 1
+        )
+    where exists($children)
+    return { Children: [ $children ] }
+  |}
+};
+
+(:~
+ : <p>Computes the model structure of the supplied component, which is a hierarchy
+ : of Report Elements (Tables, Axes, Members, LineItems, Abstracts, Concepts).</p>
+ :
+ : @param $components a sequence of components.
+ :
+ : @return the model structures of these components.
+ :
+ :)
+declare function components:model-structures($components as object*) as object*
+{
+  for $component in $components
+  let $presentation-network := networks:networks-for-components-and-short-names(
+      $component,
+      $networks:PRESENTATION_NETWORK)
+  return components:model-structures-recursive(
+      $component,
+      $presentation-network.Trees[],
+      1)
+};

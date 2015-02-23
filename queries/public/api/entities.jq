@@ -51,7 +51,8 @@ let $entities := multiplexer:entities(
 let $entities :=
   for $entity in $entities
   return {|
-    project($entity, "_id")[not $profile-name eq "japan"],
+    project($entity, "_id")[$profile-name eq "sec"],
+    { EID: $entity._id }[empty($entity.EIDs)],
     {
       Archives: backend:url(
         "filings",
