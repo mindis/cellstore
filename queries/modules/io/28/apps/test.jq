@@ -12,6 +12,10 @@ declare function test:is-dow30() as boolean{
   contains(credentials:credentials("MongoDB", "xbrl").db, "dow30")
 };
 
+declare function test:is-all() as boolean{
+  starts-with(credentials:credentials("MongoDB", "xbrl").db, "japanxbrl-big")
+};
+
 declare function test:url($endpoint as string, $parameters as object) as string
 {
     test:url($endpoint, $parameters, false)
