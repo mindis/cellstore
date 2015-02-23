@@ -82,10 +82,7 @@ switch ($format)
     case "xml" return {
         { 
             status: $status,
-            "content-type": "application/xml",
-            (: Ideally serialization method should be xml and content-type would be omitted, 
-               see: https://github.com/28msec/28.io/issues/163 :)
-            serialization: { method: "json-xml-hybrid", "omit-xml-declaration" : false, indent : true }
+            serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
         },
         local:to-xml($res)
     }
