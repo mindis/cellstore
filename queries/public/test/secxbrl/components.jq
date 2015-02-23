@@ -68,7 +68,7 @@ declare %an:sequential function local:check($o as object) as object
 };
 
 local:check({
-    cocacola: local:test-components(96, {
+    cocacola: local:test-components(94, {
         ticker:"ko"
     }),
     cocacolaincome: local:test-components(1, {
@@ -99,7 +99,7 @@ local:check({
       aid: "0000021344-14-000008",
       role: "http://www.thecocacolacompany.com/role/DocumentAndEntityInformationDocument"
     }),
-    generic-aid: local:test-generic-components(97, {
+    generic-aid: local:test-generic-components(95, {
       profile-name: "generic",
       aid: "0000021344-14-000008"
     }),
