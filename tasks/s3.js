@@ -128,23 +128,26 @@ var waitForBucketExists = function() {
 };
 
 var createBucket = function() {
-    var defered = Q.defer();
-    s3.createBucket({
+    var deferred = Q.defer();
+    var params = {
         Bucket : bucketName,
-        ACL : 'public-read',
-        CreateBucketConfiguration: {
+        ACL : 'public-read'
+    };
+    if(_.isString(region) && region !== '' && region !== 'us-east-1'){
+        params.CreateBucketConfiguration = {
             LocationConstraint: region
-        }
-    }, function(err, data) {
+        };
+    }
+    s3.createBucket(params, function(err, data) {
         if (err || data === null) {
             $.util.log($.util.colors.red(bucketName + ' (' + region + '): ' + err));
-            defered.reject();
+            deferred.reject();
         } else {
             $.util.log('createBucket(' + bucketName + ') in ' + data.Location );
-            defered.resolve();
+            deferred.resolve();
         }
     });
-    return defered.promise;
+    return deferred.promise;
 };
 
 var deleteBucket = function(idempotent) {
