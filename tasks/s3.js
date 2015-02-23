@@ -131,13 +131,16 @@ var createBucket = function() {
     var defered = Q.defer();
     s3.createBucket({
         Bucket : bucketName,
-        ACL : 'public-read'
+        ACL : 'public-read',
+        CreateBucketConfiguration: {
+            LocationConstraint: region
+        }
     }, function(err, data) {
         if (err || data === null) {
             $.util.log($.util.colors.red(bucketName + err));
             defered.reject();
         } else {
-            $.util.log('createBucket(' + bucketName + ')');
+            $.util.log('createBucket(' + bucketName + ') in ' + data.Location );
             defered.resolve();
         }
     });
