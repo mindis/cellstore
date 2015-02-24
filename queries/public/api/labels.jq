@@ -33,8 +33,6 @@ declare  %rest:case-insensitive                 variable $onlyTextBlocks     as 
 declare  %rest:case-insensitive                 variable $kind               as string*  external := ();
 declare  %rest:case-insensitive                 variable $eliminateReportElementDuplicates as boolean external := false;
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)

@@ -49,8 +49,6 @@ declare  %rest:case-insensitive  variable $format       as string? external;
 declare  %rest:case-insensitive  variable $map          as string? external;
 declare  %rest:case-insensitive  variable $name         as string? external;
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 

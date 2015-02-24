@@ -52,8 +52,6 @@ declare  %rest:case-insensitive                 variable $onlyTextBlocks as bool
 declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
 declare  %rest:case-insensitive                 variable $kind           as string*  external := ();
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)

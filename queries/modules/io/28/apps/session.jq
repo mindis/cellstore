@@ -202,25 +202,3 @@ declare function session:error($msg as string, $format as string?) as item
 		"description" : $msg
 	}
 };
-
-declare function session:audit-call($token as string?) as empty-sequence()
-{
-  $token[2]
-    (:
-    let $dist-aspects := [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period" ]
-    let $facts := {
-        KeyAspects : $dist-aspects,
-        Aspects : {
-            "xbrl:Concept" : "secxbrl:ClientIP",
-            "xbrl:Entity" : if (session:is-valid($token)) then user:get-by-id(session:get($token)).email else "Anonymous",
-            "xbrl:Period" : string(fn:current-dateTime()),
-            "xbrl:Unit" : "xbrl:NonNumeric",
-            "secxbrl:Query" : req:path()
-        },
-        Type : "NonNumericValue",
-        Value : (req:header-value("X-FORWARDED-FOR"), req:remote-addr())[1]
-    }
-    return
-        db:insert("audit", $facts);
-    :)
-};

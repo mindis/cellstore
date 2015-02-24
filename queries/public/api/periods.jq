@@ -22,8 +22,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $filingKind    as strin
 declare  %rest:case-insensitive %rest:distinct  variable $aid           as string* external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)

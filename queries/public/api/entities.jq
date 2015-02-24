@@ -20,8 +20,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $ticker       as string
 declare  %rest:case-insensitive %rest:distinct  variable $sic          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name as string  external := $config:profile-name;
 
-session:audit-call($token);
-
 (: HTTP parameter post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)

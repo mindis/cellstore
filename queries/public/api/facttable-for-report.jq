@@ -35,8 +35,6 @@ declare  %rest:case-insensitive                 variable $report        as strin
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
 declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)

@@ -226,8 +226,6 @@ declare  %rest:case-insensitive                 variable $additional-rules  as s
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
 declare  %rest:case-insensitive                 variable $language          as string  external := "en-US";
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)

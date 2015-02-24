@@ -40,8 +40,6 @@ declare  %rest:case-insensitive                 variable $profile-name       as 
 declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 declare  %rest:case-insensitive                 variable $debug         as boolean external := false;
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
