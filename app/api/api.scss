@@ -21,8 +21,12 @@
                         color: white;
                     }
 
-                    .method-post {
+					.method-get {
                         background-color: $brand-primary;
+                    }
+                    
+                    .method-post {
+                        background-color: $orange;
                     }
 
                     .path {

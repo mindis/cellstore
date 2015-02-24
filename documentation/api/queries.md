@@ -17,6 +17,7 @@ Retrieve metadata about the entities that submit filings. These entities are als
 | sic  | Includes in the results the entity with the supplied industry group. |
 | ticker  | Includes in the results the entity with the supplied ticker symbol. |
 | token  | The token that allows you to use this API. |
+| _method  | Entities |
 ##/filings.jq
 
 ###GET
@@ -37,6 +38,7 @@ Retrieve metadata about the filings, also called archives. The filings are ident
 | fiscalPeriod  | Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | token  | The token that allows you to use this API. |
+| _method  | Filings |
 ##/periods.jq
 
 ###GET
@@ -57,6 +59,7 @@ Retrieve the periods of the filings filed by a particular entity
 | fiscalPeriod  | The fiscal period focus of the filings to retrieve (default: FY) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | token  | The token of the current session. |
+| _method  | Fiscal Periods |
 ##/components.jq
 
 ###GET
@@ -84,6 +87,7 @@ Retrieve a summary for all components of a given filing
 | label  | A search term to search in the labels of components (e.g. stock) |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
 | token  | The token of the current session |
+| _method  | Components |
 ##/facttable-for-component.jq
 
 ###GET
@@ -116,6 +120,7 @@ Retrieve the fact table for a given component. A component can be selected in th
 | labels  | Whether human readable labels should be included for concepts in each fact. (default: false) |
 | language  | A language code |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
+| _method  | Retrieve a Fact Table for a Component |
 ##/spreadsheet-for-component.jq
 
 ###GET
@@ -147,6 +152,7 @@ Retrieve the business friendly Spreadsheet for a given component. A component ca
 | token  | The token of the current session |
 | additional-rules  | The name of a report from which to use rules in addition to the component's rules (e.g. FundamentalAccountingConcepts) |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
+| _method  | Retrieve a business-friendly Spreadsheet for a Component |
 ##/modelstructure-for-component.jq
 
 ###GET
@@ -172,6 +178,7 @@ Retrieve the model structure for a given component. A component can be selected 
 | reportElement  | Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill). |
 | label  | A search term to search in the labels of components (e.g. stock) |
 | token  | The token of the current session |
+| _method  | Retrieve a Model structure for a Component. |
 ##/facttable-for-report.jq
 
 ###GET
@@ -194,6 +201,7 @@ Retrieve the fact table for a given report. Filters can be overriden. Filters MU
 | labels  | Whether human readable labels should be included for concepts in each fact. (default: false) |
 | language  | A language code |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
+| _method  | Retrieve a Fact Table for a Report |
 | token  | The token of the current session |
 ##/spreadsheet-for-report.jq
 
@@ -246,6 +254,7 @@ Retrieve one or more facts for a combination of filings.
 | prefix:dimension  | The name of a dimension used for filtering. Accepted format: prefix:dimension. As a value, the value of the dimension or ALL can be provided if all facts with this dimension should be retrieved |
 | prefix:dimension::default  | The default value of the dimension [prefix:dimension] that should be returned if the dimension was not provided explicitly for a fact. Accepted format: prefix:dimension::default |
 | token  | The token of the current session |
+| _method  | Retrieve Facts |
 ##/labels.jq
 
 ###GET
@@ -276,6 +285,7 @@ Retrieve labels for the supplied components and report elements
 | eliminateReportElementDuplicates  | Whether to eliminate (concept name, language, label role) duplicates. By default no duplicate elimination. |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
 | token  | The token of the current session |
+| _method  | Labels |
 ##/report-elements.jq
 
 ###GET
@@ -306,4 +316,5 @@ Retrieve the report elements contained in a set of filings.
 | abstract  | [Deprecated] Filters by abstract/not abstract (default: no filtering). |
 | kind  | Filters by concept kind (default: no filtering). |
 | token  | The token of the current session |
+| _method  | Report Elements |
 | Content-Type  | Content-Type of the request. |
