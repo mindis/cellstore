@@ -205,6 +205,8 @@ declare function session:error($msg as string, $format as string?) as item
 
 declare function session:audit-call($token as string?) as empty-sequence()
 {
+  ()
+    (:
     let $dist-aspects := [ "xbrl:Concept", "xbrl:Entity", "xbrl:Period" ]
     let $facts := {
         KeyAspects : $dist-aspects,
@@ -218,7 +220,7 @@ declare function session:audit-call($token as string?) as empty-sequence()
         Type : "NonNumericValue",
         Value : (req:header-value("X-FORWARDED-FOR"), req:remote-addr())[1]
     }
-    return 
-        ()
-        (:db:insert("audit", $facts);:)
+    return
+        db:insert("audit", $facts);
+    :)
 };
