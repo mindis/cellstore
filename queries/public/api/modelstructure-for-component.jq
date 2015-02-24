@@ -98,7 +98,6 @@ declare function local:to-csv($model as object) as string
 };
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;

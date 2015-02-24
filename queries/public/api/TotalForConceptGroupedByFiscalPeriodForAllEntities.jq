@@ -66,7 +66,6 @@ declare function local:to-xml($o as object*) as node()*
 
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token         as string? external;
 declare  %rest:env                              variable $request-uri   as string  external;
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "ALL";
