@@ -42,7 +42,7 @@ declare %an:nondeterministic function local:test-example1() as item
     [
         {
             "AccessionNumber": "0001104659-14-009773",
-            "Components" : "http://" || request:server-name() || ":" || request:server-port() || "/v1/_queries/public/api/components.jq?_method=POST&token=" || $config:test-token || "&aid=0001104659-14-009773&format=&profile-name=sec",
+            "Components" : "http://" || request:server-name() || ":" || request:server-port() || "/v1/_queries/public/api/components.jq&token=" || $config:test-token || "&aid=0001104659-14-009773&format=&profile-name=sec",
             "CIK": "http://www.sec.gov/CIK 0000066740",
             "EntityRegistrantName": "3M CO",
             "FormType": "10-K",
