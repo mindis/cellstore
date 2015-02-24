@@ -5,7 +5,7 @@ test:check-all-success({
       "entities",
       {},
       function($b as item*) as item* { count($b.Entities[].Profiles.FSA.EDINETCode) },
-      12364,
+      12363,
       { NoArrayOrder: false }
     ),
     nikkei: test:invoke-and-assert-deep-equal(
