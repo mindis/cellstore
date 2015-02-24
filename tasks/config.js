@@ -5,6 +5,7 @@ var fs = require('fs');
 var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var _ = require('lodash');
+var install = require('gulp-install');
 
 var knownOptions = {
     string: [ 'build-id', 'config', 'specs' ],
@@ -30,7 +31,7 @@ if(configId === undefined || configId === ''){
 }
 var unencryptedConfigFile = 'config/' + configId + '.json';
 var encryptedConfigFile = unencryptedConfigFile + '.enc';
-if(!fs.existsSync(encryptedConfigFile)){
+if(!fs.existsSync(encryptedConfigFile) && !_.find(args._, function(target){ return target === 'encrypt'; })){
     var msg = 'Invalid --config command line argument. ' + $.util.colors.red('Config file ' + encryptedConfigFile + ' does not exist.');
     $.util.log(msg);
     throw new $.util.PluginError(__filename, msg);
@@ -62,6 +63,7 @@ var config =
     configId: configId,
     bucketName: '',
     projectName: '',
+    portalAPIUrl: '',
     paths: {
         //src and build folders
         app: 'app',
@@ -85,6 +87,7 @@ var config =
 
         //CI
         tasks: ['gulpfile.js', 'tasks/*.js'],
+        dependencies: ['./bower.json', './package.json'],
 
         //Crypted config
         encryptedConfigFile: encryptedConfigFile,
@@ -106,15 +109,23 @@ var config =
             'queries/public/test/' + configId + '/*.jq'
         ],
 
+        //Documentation
+        documentation: 'documentation/**/*.md',
+
         //tests
         protractorConfigLocal: 'tests/e2e/config/protractor-conf.js',
         protractorConfigTravis: 'tests/e2e/config/protractor-travis-nosaucelabs-conf.js',
         e2eSpecs: specs
     },
-    credentials: {}
+    credentials: {},
+    '$28': undefined
 };
 
-gulp.task('load-config', ['config-template'], function(done){
+gulp.task('config:install', function(){
+    return gulp.src(config.paths.dependencies).pipe(install());
+});
+
+gulp.task('config:load', ['templates:config'], function(done){
     if(!_.isEmpty(config.credentials)){
         done();
         return;
@@ -129,12 +140,22 @@ gulp.task('load-config', ['config-template'], function(done){
         config.bucketName = config.isOnProduction ? config.credentials.s3.bucketPrefix : config.credentials.s3.bucketPrefix + '-' + config.buildId;
         config.projectName = config.isOnProduction ? config.credentials['28'].projectPrefix : config.credentials['28'].projectPrefix + '-' + buildId;
 
+        // where to deploy the cellstore?
+        config.portalAPIUrl =
+            _.template('<%= portalProtocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
+
+        $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
 
+        config.$28 = new (require('28').$28)(config.portalAPIUrl);
         done();
     }
+});
+
+gulp.task('config:init', ['config:install', 'config:load', 'templates:create'], function(done){
+    done();
 });
 
 module.exports = config;

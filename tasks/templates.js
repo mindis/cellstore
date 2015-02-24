@@ -22,7 +22,7 @@ var loadCredentials = function(){
     return credentials;
 };
 
-gulp.task('config-template', [ 'decrypt' ], function(done){
+gulp.task('templates:config', [ 'crypt:decrypt' ], function(done){
     var Mustache = require('mustache');
 
     //Fetch credentials
@@ -37,7 +37,7 @@ gulp.task('config-template', [ 'decrypt' ], function(done){
     done();
 });
 
-gulp.task('templates', ['load-config'], function(done){
+gulp.task('templates:create', ['config:load'], function(done){
 
     var Mustache = require('mustache');
     var expand = require('glob-expand');
@@ -49,6 +49,9 @@ gulp.task('templates', ['load-config'], function(done){
         reportSources.push(fs.readFileSync(report, 'utf-8'));
     });
 
+    //API documentation
+    var queries = JSON.parse(fs.readFileSync('swagger/queries.json', 'utf-8'));
+    queries.title = 'Cell Store Query API';
     var templates = [
         {
             src: 'tasks/templates/config.js.mustache',
@@ -79,6 +82,13 @@ gulp.task('templates', ['load-config'], function(done){
                 reports: reportSources.join(',')
             },
             dest: Config.paths.queries + '/private/UpdateReportSchema.jq'
+        },
+        {
+            src: 'tasks/templates/api.md.mustache',
+            data: {
+                api: queries
+            },
+            dest: 'documentation/api/queries.md'
         },
         {
             src: 'tasks/templates/constants.js.mustache',

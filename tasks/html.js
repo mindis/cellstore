@@ -6,7 +6,7 @@ var sass = require('gulp-ruby-sass');
 
 var Config = require('./config');
 
-gulp.task('sass', function () {
+gulp.task('html:sass', function () {
     return gulp.src('./app/styles/index.scss')
             .pipe(sass({ loadPath: '.' }))
             .pipe(gulp.dest('./app/styles/'))
@@ -17,7 +17,12 @@ gulp.task('sass', function () {
             .pipe(gulp.dest('./app/styles/'));
 });
 
-gulp.task('html', ['sass'], function () {
+gulp.task('html:fonts', function(){
+    return gulp.src('bower_components/font-awesome/fonts/*', { dot: true })
+        .pipe(gulp.dest(Config.paths.dist + '/fonts'));
+});
+
+gulp.task('html:compile', ['html:sass'], function () {
     var assets = $.useref.assets({ searchPath: '{' + Config.paths.app + ',' + Config.paths.tmp + '}' });
     return gulp.src(Config.paths.index)
         .pipe(assets)

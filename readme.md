@@ -12,6 +12,9 @@ A CellStore with all SEC filings since 2010 is available at http://secxbrl.info.
 ## Whitepaper
 http://arxiv.org/pdf/1410.0600.pdf
 
+## Documentation of the REST API (for developers)
+a [tutorial](documentation/rest/main.md) can be found here where developers get a smooth introduction to the cell store REST API.
+
 ## Installation
 
 Prerequisites: [NPM](https://www.npmjs.com/), [Ruby](https://www.ruby-lang.org/) (needed for [SASS](http://sass-lang.com/)).
@@ -98,8 +101,6 @@ gulp test:unit --build-id=mydemo --config=sec
 ```json
 {
     "all": {
-        "githubToken": "oiifwjro984t834toaihzg9riejloi",
-
         "s3-region": "us-east-1",
         "s3-bucketPrefix": "csms.example.com",
         "s3-key": "ADUREIGMKODJAEO43SAJ3",
@@ -109,6 +110,11 @@ gulp test:unit --build-id=mydemo --config=sec
         "28-projectPrefix": "example-project",
         "28-email": "user@example.com",
         "28-password": "<password>",
+        "28-portal-protocol": "http",
+        "28-portal-project": "portal",
+        "28-portal-domain": "28.io",
+        "28-portal-api-prefix": "/api",
+
         "28-datasource-conn": "set-lskjdfaoieurlkajpoidgja/db.example.com:27017,db.example.com:27017",
         "28-datasource-db": "db",
         "28-datasource-user": "dbuser",

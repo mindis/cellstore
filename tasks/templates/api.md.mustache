@@ -1,0 +1,18 @@
+#{{api.title}}
+{{{api.description}}}
+
+{{#api.apis}}
+##{{{path}}}
+    {{#operations}}
+
+###{{method}}
+{{{summary}}}
+
+####Parameters
+| Name | Description |
+| ---- | ----------- |
+        {{#parameters}}
+| {{{name}}}  | {{{description}}} |
+        {{/parameters}}
+    {{/operations}}
+{{/api.apis}}
