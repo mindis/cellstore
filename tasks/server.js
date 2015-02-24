@@ -48,9 +48,10 @@ gulp.task('server:dev', function() {
     });
 
     gulp.watch(Config.paths.html, reload);
-    gulp.watch(Config.paths.sass, ['sass', reload]);
+    gulp.watch(Config.paths.sass, ['html:sass', reload]);
     gulp.watch(Config.paths.js, reload);
-    gulp.watch(Config.paths.json, ['jsonlint', reload]);
+    gulp.watch(Config.paths.json, ['lint:jsonlint', reload]);
+    gulp.watch(Config.paths.documentation, ['gitbook', reload]);
     $28.watchJSONiqQueries();
 });
 

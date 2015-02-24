@@ -26,22 +26,6 @@ import module namespace config = "http://apps.28.io/config";
       "SpreadSheet" : "http://rendering.secxbrl.info/#?url=http%3A%2F%2F"||request:server-name()||"%3A"||request:server-port()||"%2Fv1%2F_queries%2Fpublic%2Fapi%2Fspreadsheet-for-component.jq%3F_method%3DPOST%26token%3D"||$config:test-token||"%26aid%3D0000021344-14-000008%26format%3D%26role%3Dhttp%253A%252F%252Fwww.thecocacolacompany.com%252Frole%252FDocumentAndEntityInformationDocument%26profile-name%3Dsec"
     }, {
       "NetworkLabel" : "1001000 - Statement - CONSOLIDATED STATEMENTS OF INCOME",
-      "NetworkIdentifier" : "http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncomeCalc2",
-      "Category" : "Statement",
-      "SubCategory" : "Unknown",
-      "Table" : "xbrl28:ImpliedTable",
-      "Disclosure" : "IncomeStatement",
-      "ReportElements" : 11,
-      "Tables" : 1,
-      "Axis" : 9,
-      "Members" : 1,
-      "LineItems" : 0,
-      "Concepts" : 0,
-      "Abstracts" : 0,
-      "FactTable" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facttable-for-component.jq&token="||$config:test-token||"&aid=0000021344-14-000008&format=&role=http%3A%2F%2Fwww.thecocacolacompany.com%2Frole%2FConsolidatedStatementsOfIncomeCalc2&profile-name=sec",
-      "SpreadSheet" : "http://rendering.secxbrl.info/#?url=http%3A%2F%2F"||request:server-name()||"%3A"||request:server-port()||"%2Fv1%2F_queries%2Fpublic%2Fapi%2Fspreadsheet-for-component.jq%3F_method%3DPOST%26token%3D"||$config:test-token||"%26aid%3D0000021344-14-000008%26format%3D%26role%3Dhttp%253A%252F%252Fwww.thecocacolacompany.com%252Frole%252FConsolidatedStatementsOfIncomeCalc2%26profile-name%3Dsec"
-    }, {
-      "NetworkLabel" : "1001000 - Statement - CONSOLIDATED STATEMENTS OF INCOME",
       "NetworkIdentifier" : "http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome",
       "Category" : "Statement",
       "SubCategory" : "Detail",
@@ -72,22 +56,6 @@ import module namespace config = "http://apps.28.io/config";
       "Abstracts" : 2,
       "FactTable" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facttable-for-component.jq&token="||$config:test-token||"&aid=0000021344-14-000008&format=&role=http%3A%2F%2Fwww.thecocacolacompany.com%2Frole%2FConsolidatedStatementsOfComprehensiveIncome&profile-name=sec",
       "SpreadSheet" : "http://rendering.secxbrl.info/#?url=http%3A%2F%2F"||request:server-name()||"%3A"||request:server-port()||"%2Fv1%2F_queries%2Fpublic%2Fapi%2Fspreadsheet-for-component.jq%3F_method%3DPOST%26token%3D"||$config:test-token||"%26aid%3D0000021344-14-000008%26format%3D%26role%3Dhttp%253A%252F%252Fwww.thecocacolacompany.com%252Frole%252FConsolidatedStatementsOfComprehensiveIncome%26profile-name%3Dsec"
-    }, {
-      "NetworkLabel" : "1002000 - Statement - CONSOLIDATED STATEMENTS OF COMPREHENSIVE INCOME",
-      "NetworkIdentifier" : "http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfComprehensiveIncomeCalc2",
-      "Category" : "Statement",
-      "SubCategory" : "Unknown",
-      "Table" : "xbrl28:ImpliedTable",
-      "Disclosure" : "StatementOfComprehensiveIncome",
-      "ReportElements" : 11,
-      "Tables" : 1,
-      "Axis" : 9,
-      "Members" : 1,
-      "LineItems" : 0,
-      "Concepts" : 0,
-      "Abstracts" : 0,
-      "FactTable" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facttable-for-component.jq&token="||$config:test-token||"&aid=0000021344-14-000008&format=&role=http%3A%2F%2Fwww.thecocacolacompany.com%2Frole%2FConsolidatedStatementsOfComprehensiveIncomeCalc2&profile-name=sec",
-      "SpreadSheet" : "http://rendering.secxbrl.info/#?url=http%3A%2F%2F"||request:server-name()||"%3A"||request:server-port()||"%2Fv1%2F_queries%2Fpublic%2Fapi%2Fspreadsheet-for-component.jq%3F_method%3DPOST%26token%3D"||$config:test-token||"%26aid%3D0000021344-14-000008%26format%3D%26role%3Dhttp%253A%252F%252Fwww.thecocacolacompany.com%252Frole%252FConsolidatedStatementsOfComprehensiveIncomeCalc2%26profile-name%3Dsec"
     }, {
       "NetworkLabel" : "1003000 - Statement - CONSOLIDATED BALANCE SHEETS",
       "NetworkIdentifier" : "http://www.thecocacolacompany.com/role/ConsolidatedBalanceSheets",
