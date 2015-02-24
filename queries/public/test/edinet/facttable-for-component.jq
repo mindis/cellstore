@@ -1,6 +1,6 @@
 import module namespace test = "http://apps.28.io/test";
 
-let $is-all := test:is-all()
+let $is-japan-big := test:is-japan-big()
 return
 test:check-all-success({|
     {
@@ -13,5 +13,5 @@ test:check-all-success({|
           function($res as item*) as item* { count($res.FactTable[]) },
           78
         )
-    }[$is-all]
+    }[$is-japan-big]
 |})

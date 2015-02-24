@@ -12,7 +12,7 @@ declare function test:is-dow30() as boolean{
   contains(credentials:credentials("MongoDB", "xbrl").db, "dow30")
 };
 
-declare function test:is-all() as boolean{
+declare function test:is-japan-big() as boolean{
   starts-with(credentials:credentials("MongoDB", "xbrl").db, "japanxbrl-big")
 };
 
