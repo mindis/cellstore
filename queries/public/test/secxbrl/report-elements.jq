@@ -28,12 +28,17 @@ declare %an:sequential function local:test-concepts($expected as integer, $param
            else test:assert-eq($expected, $actual, $status, test:url($endpoint, $params))
 };
 
-declare %an:nondeterministic function local:test-200($params as object) as item
+declare %an:nondeterministic function local:test-404($params as object) as item
 {
     let $endpoint := "report-elements"
     let $request := test:invoke($endpoint, $params)
     let $status as integer := $request[1]
-    return test:assert-eq(0, 0, $status, test:url($endpoint, $params))
+    return if($status eq 404)
+           then true
+           else {
+              url: test:url($endpoint, $params),
+              unexpectedResponse: $request[2]
+           }
 };
 
 declare %an:sequential function local:check($o as object) as object
@@ -53,7 +58,7 @@ local:check({
     fac: local:test-concepts(50, {ticker:"ko",fiscalYear:"2013",report:"FundamentalAccountingConcepts"}),
     disclosures: local:test-concepts(71, {ticker:"ko",fiscalYear:"2013",report:"Disclosures"}),
     disclosures-1: local:test-concepts(1, {ticker:"ko",report:"Disclosures",fiscalYear:"2013",name:"disc:ScheduleOfComponentsOfIncomeTaxExpenseBenefitTableTextBlock"}),
-    reportWithNoFilter: local:test-200({report:"Disclosures"}),
+    reportWithNoFilter: local:test-404({report:"Disclosures"}),
     disclosures2: local:test-concepts(
         67,
         {ticker:"ko",fiscalYear:"2012",fiscalPeriod:"FY",report:"Disclosures"},
