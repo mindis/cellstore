@@ -16,7 +16,7 @@ angular
                             edinetcode: $stateParams.edinetcode,
                             concept: $stateParams.concepts,
                             fiscalYear: 'ALL',
-                            fiscalPeriod: 'FY',
+                            fiscalPeriod: 'ALL',
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis': 'ALL',
                             'jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default': 'xbrl28:Absent',
                             'xbrl:Scenario': 'ALL',
