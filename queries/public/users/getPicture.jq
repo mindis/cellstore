@@ -1,7 +1,8 @@
 import module namespace user = "http://apps.28.io/user";
 import module namespace api = "http://apps.28.io/api";
 import module namespace session = "http://apps.28.io/session";
-import module namespace res = "http://www.28msec.com/modules/http-response";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare %rest:case-insensitive variable $token   as string   external;
@@ -24,9 +25,10 @@ variable $picture := user:get-picture($userid);
 if (exists($picture))
 then
 { 
-    res:content-type($picture.mime-type);
-    res:decode-binary(true);
-
+    {
+        "content-type": $picture.mime-type,
+        serialization: { method: "binary" }
+    },
     $picture.image-data
 }
 else ()

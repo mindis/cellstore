@@ -3,10 +3,11 @@ jsoniq version "1.0";
 import module namespace user = "http://apps.28.io/user";
 import module namespace session = "http://apps.28.io/session";
 import module namespace api = "http://apps.28.io/api";
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 import module namespace mongo = "http://www.28msec.com/modules/mongodb";
 import module namespace functx = "http://www.functx.com";
+
+declare option rest:response "first-item";
 
 declare function local:json-to-xml-elements($json as json-item()) as element()*
 {
@@ -57,21 +58,26 @@ let $info :=
 return
     switch ($format)
     case "xml" return {
-        response:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+        { 
+            serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
+        },
         local:to-xml($info)
     }
     case "text" case "csv" return {
-        response:content-type("text/csv");
-        response:header("Content-Disposition", "attachment; filename=billingInfo.csv");
+        {
+            "content-type": "text/csv",
+            headers: { "Content-Disposition": "attachment; filename=billingInfo.csv" }
+        },
         local:to-csv($info)
     }
     case "excel" return {
-        response:content-type("application/vnd.ms-excel");
-        response:header("Content-Disposition", "attachment; filename=billingInfo.csv");
+        {
+            "content-type": "application/vnd.ms-excel",
+            headers: { "Content-Disposition": "attachment; filename=billingInfo.csv" }
+        },
         local:to-csv($info)
     }
     default return {
-        response:content-type("application/json");
-        response:serialization-parameters({"indent" : true});
+        { serialization: { method: "json", indent : true } },
         $info
     }

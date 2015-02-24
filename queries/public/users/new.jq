@@ -2,7 +2,8 @@ import module namespace user = "http://apps.28.io/user";
 import module namespace api = "http://apps.28.io/api";
 import module namespace config = "http://apps.28.io/config";
 import module namespace session = "http://apps.28.io/session";
-import module namespace response = "http://www.28msec.com/modules/http-response";
+
+declare option rest:response "automatic";
 
 (: Query parameters :)
 declare %rest:case-insensitive variable $firstname  as string  external;
@@ -13,7 +14,7 @@ declare %rest:case-insensitive variable $password   as string  external;
 if(not $config:allow-registration)
 then
     {
-        response:status-code(403);
+        { status: 403 },
         session:error("Unauthorized: Registration disabled.", "json")
     }
 else
