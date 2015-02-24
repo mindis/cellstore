@@ -59,6 +59,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $report-id as string? := $report
 let $report as object? := reports:reports($report-id)
 
@@ -183,4 +186,6 @@ then
                     })
             |}
         }
-    return api:check-and-return-results($token, $results, $format)
+    return if($entities-not-found)
+           then api:not-found("entity")
+           else api:check-and-return-results($token, $results, $format)

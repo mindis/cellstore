@@ -322,3 +322,10 @@ as boolean
       boolean($value)
   }
 };
+
+declare %an:sequential function api:not-found($name as string)
+{
+  resp:status-code(404);
+  resp:content-type("application/json");
+  session:error("No such " || $name || " could be found.", "json")
+};

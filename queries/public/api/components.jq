@@ -93,6 +93,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -100,6 +103,9 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $filingKind,
   $aid)
+
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
 
 let $entities as object*  := entities:entities($archives.Entity)
 let $components as object* :=
@@ -244,4 +250,8 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "components")
-return api:check-and-return-results($token, $results, $format)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else if($archives-not-found)
+            then api:not-found("archive")
+            else api:check-and-return-results($token, $results, $format)

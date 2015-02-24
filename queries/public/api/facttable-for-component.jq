@@ -80,11 +80,17 @@ let $archives as object* := multiplexer:filings(
   $filingKind,
   $aid)
 
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
+
 let $entities as object* :=
     ($entities[entities:eid($$) = $archives.Entity],
     let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
+
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
 
 let $components as object* :=
     multiplexer:components(
@@ -97,6 +103,9 @@ let $components as object* :=
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"]
     )
+
+let $components-not-found as boolean :=
+  exists(($archives, $cid, $reportElement, $disclosure, $networkIdentifier, $label)) and empty($components)
 
 let $component as object? := if($merge) then components:merge($components) else $components[1]
 let $cid as string? := string-join($components ! components:cid($$), "--")
@@ -223,4 +232,10 @@ let $serializers := {
         string-join(conversion:facts-to-csv($res.FactTable[], { Caller: "Component"}))
     }
 }
-return api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else if($archives-not-found)
+            then api:not-found("archive")
+            else if($components-not-found)
+                 then api:not-found("component")
+                 else api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)
