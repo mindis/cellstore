@@ -323,7 +323,7 @@ as boolean
   }
 };
 
-declare %an:sequential function api:not-found($name as string)
+declare %an:sequential function api:not-found($name as string) as item
 {
   resp:status-code(404);
   resp:content-type("application/json");

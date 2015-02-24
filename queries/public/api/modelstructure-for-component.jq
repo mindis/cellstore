@@ -8,8 +8,6 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace session = "http://apps.28.io/session";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
