@@ -3,18 +3,15 @@ module namespace export = "http://apps.28.io/reports-export";
 
 import module namespace random = "http://zorba.io/modules/random";
 
-declare %an:nondeterministic function export:cleanup($report as item) as item*
+declare %an:sequential function export:cleanup($report as item) as item*
 {
     (: add Ids everywhere :)
-    copy $report := $report
-    modify
-    (
-      for $object in descendant-objects($report)
-      where exists($object.Name) and not(exists($object.Id))
-      return
-        insert json { "Id": random:uuid() } into $object
-    )
-    return export:cleanupImpl($report)
+    for $object in descendant-objects($report)
+    where exists($object.Name) and not(exists($object.Id))
+    return
+      insert json { "Id": random:uuid() } into $object;;
+
+    export:cleanupImpl($report)
 };
 
 declare %private function export:cleanupImpl($report as item) as item*
