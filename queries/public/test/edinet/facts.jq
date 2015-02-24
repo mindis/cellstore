@@ -36,5 +36,18 @@ test:check-all-success({
           },
           function($res as item*) as item* { count($res.FactTable[]) },
           22
+        ),
+    inter-generation: test:invoke-and-assert-deep-equal(
+          "facts",
+          {
+              "edinetcode" : "E04147",
+              "fiscalPeriod": "FY",
+              "fiscalYear": [ (2008 to 2013) ! string($$) ],
+              "concept": ["jppfs-cor:Assets", "jp-t-cte:Assets"],
+              "jppfs-cor:ConsolidatedOrNonConsolidatedAxis": "ALL",
+              "xbrl:Scenario": "ALL"
+          },
+          function($res as item*) as item* { count($res.FactTable[]) },
+          15
         )
 })
