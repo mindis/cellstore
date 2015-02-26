@@ -10,18 +10,18 @@ var parallelize = require('concurrent-transform');
 
 var Config = require('./config');
 
-var s3, key, secret, region, config, publisher, bucketName;
+var s3, key, secret, region, protocol, config, publisher, bucketName;
 
 var init = function() {
     key = Config.credentials.s3.key;
     secret = Config.credentials.s3.secret;
     region = Config.credentials.s3.region;
+    protocol = Config.credentials.s3.protocol;
     bucketName = Config.bucketName;
     $.util.log('Bucket Name: ' + bucketName);
     config = {
         accessKeyId: key,
         secretAccessKey: secret,
-        region: region,
         bucket: bucketName
     };
     publisher = $.awspublish.create({
@@ -29,6 +29,15 @@ var init = function() {
         secret: secret,
         bucket: bucketName
     });
+    if(_.isString(region) && (region === '' || region === 'us-east-1')){
+        publisher.region = 'us-standard';
+    } else if(_.isString(region)){
+        publisher.region = region;
+        config.region = region;
+    }
+    if(_.isString(protocol) && protocol === 'http'){
+        publisher.secure = false;
+    }
     s3 = new AWS.S3(config);
 };
 
