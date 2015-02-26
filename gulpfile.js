@@ -49,5 +49,7 @@ gulp.task('teardown', ['config:load'], function(done){
     $.runSequence(['28:login', 's3:teardown'], '28:remove-project', done);
 });
 
+gulp.task('gitbook', ['gitbook:generate']);
+
 gulp.task('encrypt', ['crypt:encrypt'], function(){});
 gulp.task('decrypt', ['crypt:decrypt'], function(){});
