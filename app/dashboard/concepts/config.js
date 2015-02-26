@@ -17,7 +17,9 @@ angular
                             kind: 'Concept',
                             labelRole: 'http://www.xbrl.org/2003/role/label',
                             language: 'en',
-                            eliminateReportElementDuplicates: true
+                            eliminateReportElementDuplicates: true,
+                            fiscalYear: 'ALL',
+                            fiscalPeriod: 'ALL'
                         }).then(function (response) {
                             var result = {};
                             response.Labels.forEach(function (label) {

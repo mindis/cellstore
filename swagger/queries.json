@@ -11,7 +11,7 @@
         "path": "/entities.jq",
         "description": "Entities",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve metadata about the entities that submit filings. These entities are also referred to by facts with the xbrl:Entity aspect, of which the values are called Entity IDs (EIDs). One entity might have several EIDs.",
             "nickname": "listEntities",
             "parameters": [{
@@ -133,7 +133,7 @@
         "path": "/filings.jq",
         "description": "Filings",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve metadata about the filings, also called archives. The filings are identified with Archive IDs (AIDs). Facts can be bound with filings with the xbrl28:Archive aspect, whose values are AIDs.",
             "nickname": "listFilings",
             "parameters": [{
@@ -295,7 +295,7 @@
         "path": "/periods.jq",
         "description": "Fiscal Periods",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the periods of the filings filed by a particular entity",
             "nickname": "listPeriods",
             "parameters": [{
@@ -472,7 +472,7 @@
         "path": "/components.jq",
         "description": "Components",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve a summary for all components of a given filing",
             "nickname": "listComponents",
             "parameters": [{
@@ -689,7 +689,7 @@
         "path": "/facttable-for-component.jq",
         "description": "Retrieve a Fact Table for a Component",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the fact table for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).",
             "nickname": "listFactTable",
             "parameters": [{
@@ -1083,7 +1083,7 @@
         "path": "/spreadsheet-for-component.jq",
         "description": "Retrieve a business-friendly Spreadsheet for a Component",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the business friendly Spreadsheet for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).",
             "nickname": "spreadsheetForComponent",
             "parameters": [{
@@ -1419,7 +1419,7 @@
         "path": "/modelstructure-for-component.jq",
         "description": "Retrieve a Model structure for a Component.",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the model structure for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).",
             "profile": ["sec"],
             "nickname": "listModelStructure",
@@ -1597,7 +1597,7 @@
         "path": "/facttable-for-report.jq",
         "description": "Retrieve a Fact Table for a Report",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the fact table for a given report. Filters can be overriden. Filters MUST be overriden if the report is not already filtering.",
             "nickname": "listFactTableForReport",
             "parameters": [{
@@ -1771,7 +1771,7 @@
         "path": "/spreadsheet-for-report.jq",
         "description": "Retrieve a business-friendly spreadsheet for a Report",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the business-friendly spreadsheet for a report. Filters can be overriden. Filters MUST be overriden if the report is not already filtering.",
             "nickname": "listSpreadsheetForReport",
             "parameters": [{
@@ -1934,7 +1934,7 @@
         "path": "/facts.jq",
         "description": "Retrieve Facts",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve one or more facts for a combination of filings.",
             "nickname": "listFacts",
             "parameters": [{
@@ -2324,7 +2324,7 @@
         "path": "/labels.jq",
         "description": "Labels",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve labels for the supplied components and report elements",
             "nickname": "listLabels",
             "parameters": [{
@@ -2573,7 +2573,7 @@
         "path": "/report-elements.jq",
         "description": "Report Elements",
         "operations": [{
-            "method": "POST",
+            "method": "GET",
             "summary": "Retrieve the report elements contained in a set of filings.",
             "nickname": "listReportElements",
             "parameters": [{

@@ -43,7 +43,7 @@ This is a "real-life" fact:
 Fetching facts is done by filtering the Aspects. Here is a first example. For simplicity, we added a parameter profile-name set to generic. This is for pedagogical reasons, as we want to deactivate all the shortcut bells and whistles that would otherwise kick in for Japanese filings.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
 ```
 
 In the above example, we restrict five aspects:

@@ -9,11 +9,11 @@ import module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace config = "http://apps.28.io/config";
 import module namespace session = "http://apps.28.io/session";
 import module namespace api = "http://apps.28.io/api";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token         as string? external;
@@ -34,8 +34,6 @@ declare  %rest:case-insensitive                 variable $labels        as boole
 declare  %rest:case-insensitive                 variable $report        as string? external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
 declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -66,7 +64,7 @@ return
 if(empty($report))
 then
 {
-      response:status-code(404);
+      { status: 404 },
       session:error("report with id '" || $report-id || "' does not exist.", $format)
 } else
 
@@ -85,7 +83,7 @@ then
         let $filtered-aspects := values($hypercube.Aspects)[exists(($$.Members, $$.DomainRestriction))]
         return if(count($filtered-aspects) lt $config:filtered-aspects and not exists(($filter-override)))
         then {
-              response:status-code(403);
+              { status: 403 },
               session:error("The report filters are too weak, which leads to too big an output.", $format)
         } else
             components:facts(
@@ -145,7 +143,9 @@ then
     let $results :=
         switch ($format)
         case "xml" return {
-            response:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+            { 
+                serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
+            },
             session:comment("xml",
             {
                 NumFacts : count($facts),
@@ -159,18 +159,21 @@ then
             }</FactTable>
         }
         case "text" case "csv" return {
-            response:content-type("text/csv");
-            response:header("Content-Disposition", "attachment; filename=facts.csv");
+            {
+                "content-type": "text/csv",
+                headers: { "Content-Disposition": "attachment; filename=facts.csv" }
+            },
             conversion:facts-to-csv($facts, { Caller: "Report"})
         }
         case "excel" return {
-            response:content-type("application/vnd.ms-excel");
-            response:header("Content-Disposition", "attachment; filename=fact.csv");
+            {
+                "content-type": "application/vnd.ms-excel",
+                headers: { "Content-Disposition": "attachment; filename=facts.csv" }
+            },
             conversion:facts-to-csv($facts, { Caller: "Report"})
         }
         default return {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
+            { serialization: { method: "json", indent : true } },
             {|
                 { NetworkIdentifier : "http://secxbrl.info/facts" },
                 { TableName : "xbrl:Facts" },
