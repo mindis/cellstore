@@ -93,60 +93,7 @@ gulp test:unit --build-id=mydemo --config=secxbrl
 ```
 
 ## Configuration Example
-```json
-{
-    "all": {
-        "s3-region": "us-east-1",
-        "s3-bucketPrefix": "csms.example.com",
-        "s3-key": "ADUREIGMKODJAEO43SAJ3",
-        "s3-secret": "lkhsohqDFhsasdhaAFjaFajajfdWEhDFHAjhud4e4",
-        "s3-reportsBucket": "e2eFailureTestReportBucket",
-
-        "28-projectPrefix": "example-project",
-        "28-email": "user@example.com",
-        "28-password": "<password>",
-        "28-portal-protocol": "http",
-        "28-portal-project": "portal",
-        "28-portal-domain": "28.io",
-        "28-portal-api-prefix": "/api",
-
-        "28-datasource-conn": "set-lskjdfaoieurlkajpoidgja/db.example.com:27017,db.example.com:27017",
-        "28-datasource-db": "db",
-        "28-datasource-user": "dbuser",
-        "28-datasource-pass": "<password>",
-
-        "cellstore-profile": "generic",
-        "cellstore-filteredAspects": "2",
-        "cellstore-allowRegistration": "true",
-        "cellstore-adminUser": "admin@example.com",
-        "cellstore-testUser": "testuser@example.com",
-
-        "netdna-companyAlias": "mycompanyalias",
-        "netdna-consumerKey": "klsjfoaoiqje8ahofdkgjoeqiutjae",
-        "netdna-consumerSecret": "lskajforeiwutjgheqoiajejkweasdf",
-
-        "sendmail-host": "smtp.example.com:995/tls/novalidate-cert",
-        "sendmail-user": "admin@example.com",
-        "sendmail-password": "<password>",
-        "sendmail-sender-email": "hello@example.com",
-        "sendmail-sender-name": "CellStore Example Setup"
-    },
-    "dev": {
-        "cellstore-adminPassword": "<password>",
-        "cellstore-testPassword": "<password>",
-        "cellstore-testToken": "secret",
-
-        "netdna-zone": "none"
-    },
-    "prod": {
-        "cellstore-adminPassword": "<password>",
-        "cellstore-testPassword": "<password>",
-        "cellstore-testToken": "cdjfalsk-slke-4dkd-73jd-kjsdhfakhjde",
-
-        "netdna-zone": "189474"
-    }
-}
-```
+See the [template for the configuration file](https://github.com/28msec/cellstore/blob/master/tasks/templates/config.json.mustache).
 
 ## Git Commit Messages
 * Use a single sentence
