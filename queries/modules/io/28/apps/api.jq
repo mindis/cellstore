@@ -3,7 +3,6 @@ jsoniq version "1.0";
 module namespace api = "http://apps.28.io/api";
 
 import module namespace session    = "http://apps.28.io/session";
-import module namespace resp       = "http://www.28msec.com/modules/http-response";
 import module namespace sec-fiscal = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 
 import module namespace csv = "http://zorba.io/modules/json-csv";
@@ -121,7 +120,7 @@ declare function api:success($data as object()) as object
   |}
 };
 
-declare %an:sequential function api:check-and-return-results(
+declare function api:check-and-return-results(
     $token as string?,
     $results as item*,
     $format as string?
@@ -131,11 +130,11 @@ declare %an:sequential function api:check-and-return-results(
     case $session:ACCESS-ALLOWED return
         $results
     case $session:ACCESS-DENIED return {
-          resp:status-code(403);
+          { status: 403 },
           session:error("access denied", $format)
        }
     case $session:ACCESS-AUTH-REQUIRED return {
-          resp:status-code(401);
+          { status: 401 },
           session:error("authentication required or session expired", $format)
        }
     default return error()
@@ -157,7 +156,7 @@ declare function api:normalize-facts(
     |}
 };
 
-declare %an:sequential function api:serialize(
+declare function api:serialize(
     $result as json-item,
     $comment as object,
     $serializers as object,
@@ -166,28 +165,36 @@ declare %an:sequential function api:serialize(
 {
     switch ($format)
     case "xml" return {
-        resp:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+        { 
+            serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
+        },
         session:comment("xml", $comment),
         $serializers.to-xml($result)
     }
     case "text" case "csv" return {
-        resp:content-type("text/csv");
-        resp:header("Content-Disposition", "attachment; filename=" || $file-name || ".csv");
+        {
+            "content-type": "text/csv",
+            headers: { "Content-Disposition": "attachment; filename=" || $file-name || ".csv" }
+        },
         $serializers.to-csv($result)
     }
     case "html" return {
-        resp:content-type("text/html");
         let $csv as string := $serializers.to-csv($result)
-        return api:csv-to-html($csv)
+        return 
+        {
+            { "content-type": "text/html" },
+            api:csv-to-html($csv)
+        }
     }
     case "excel" return {
-        resp:content-type("application/vnd.ms-excel");
-        resp:header("Content-Disposition", "attachment; filename=" || $file-name || ".csv");
+        {
+            "content-type": "application/vnd.ms-excel",
+            headers: { "Content-Disposition": "attachment; filename=" || $file-name || ".csv" }
+        },
         $serializers.to-csv($result)
     }
     default return {
-        resp:content-type("application/json");
-        resp:serialization-parameters({"indent" : true});
+        { serialization: { method: "json", indent : true } },
         {|
             session:comment("json", $comment),
             $result
@@ -195,7 +202,7 @@ declare %an:sequential function api:serialize(
     }
 };
 
-declare %an:sequential function api:csv-to-html(
+declare function api:csv-to-html(
     $csv as string) as item*
 {
     let $csv as string* := $csv

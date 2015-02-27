@@ -6,6 +6,8 @@ import module namespace backend = "http://apps.28.io/backend";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 
+declare option rest:response "first-item";
+
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token        as string? external;
 declare  %rest:env                              variable $request-uri  as string  external;
@@ -17,8 +19,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $tag          as string
 declare  %rest:case-insensitive %rest:distinct  variable $ticker       as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic          as string* external;
 declare  %rest:case-insensitive                 variable $profile-name as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: HTTP parameter post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)

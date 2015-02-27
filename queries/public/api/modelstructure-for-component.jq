@@ -8,10 +8,10 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace session = "http://apps.28.io/session";
 import module namespace csv = "http://zorba.io/modules/json-csv";
+
+declare option rest:response "first-item";
 
 declare function local:to-xml-rec($o as object*, $level as integer) as element()*
 {
@@ -98,7 +98,6 @@ declare function local:to-csv($model as object) as string
 };
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
 declare  %rest:case-insensitive                 variable $format             as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $cik                as string* external;
@@ -119,8 +118,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $concept            as 
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $label              as string* external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -202,7 +199,6 @@ let $serializers := {
 return if (exists($components))
     then api:serialize($result, $comment, $serializers, $format, "components")
     else {
-        response:status-code(404);
-        response:content-type("application/json");
+        { status: 404 },
         session:error("component not found", "json")
     }

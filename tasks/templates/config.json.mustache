@@ -5,6 +5,7 @@
         "region": "{{{credentials.s3-region}}}",
         "bucketPrefix": "{{{credentials.s3-bucketPrefix}}}",
         "reportsBucket": "{{{credentials.s3-reportsBucket}}}",
+        "protocol": "{{{credentials.s3-protocol}}}{{^credentials.s3-protocol}}https{{/credentials.s3-protocol}}",
         "website": {
             "ErrorDocument": {
                 "Key": "index.html"

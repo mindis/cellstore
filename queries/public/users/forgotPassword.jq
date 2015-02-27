@@ -3,7 +3,6 @@ jsoniq version "1.0";
 import module namespace user = "http://apps.28.io/user";
 import module namespace api = "http://apps.28.io/api";
 import module namespace sendmail = "http://apps.28.io/sendmail";
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace random = "http://zorba.io/modules/random";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 import module namespace config = "http://apps.28.io/config";
@@ -54,23 +53,23 @@ else
     }
 }
 
-response:status-code(200);
-
 variable $res := api:success();
 
 switch ($format)
     case "xml" return {
-        response:content-type("application/xml");
-        response:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+        { 
+            serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
+        },
         local:to-xml($res)
     }
     case "text" case "csv" case "excel" return {
-        response:content-type("text/csv");
-        response:header("Content-Disposition", "attachment; filename=forgotPassword.csv");
+        {
+            "content-type": "text/csv",
+            headers: { "Content-Disposition": "attachment; filename=forgotPassword.csv" }
+        },
         local:to-csv($res)
     }
     default return {
-        response:content-type("application/json");
-        response:serialization-parameters({"indent" : true});
+        { serialization: { method: "json", indent : true } },
         $res
     }

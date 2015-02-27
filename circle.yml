@@ -10,4 +10,6 @@ test:
   override:
     - case $CIRCLE_NODE_INDEX in 0) gulp setup --build-id="secxbrl-$CIRCLE_BUILD_NUM" --config=secxbrl ;; 1) gulp setup --build-id="edinet-$CIRCLE_BUILD_NUM" --config=edinet ;; esac:
         parallel: true
-
+  post:
+    - case $CIRCLE_NODE_INDEX in 0) gulp teardown --build-id="secxbrl-$CIRCLE_BUILD_NUM" --config=secxbrl ;; 1) gulp teardown --build-id="edinet-$CIRCLE_BUILD_NUM" --config=edinet ;; esac:
+        parallel: true

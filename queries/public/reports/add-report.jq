@@ -1,10 +1,11 @@
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace session = "http://apps.28.io/session";
 import module namespace user = "http://apps.28.io/user";
 import module namespace reports = "http://apps.28.io/reports";
 import module namespace archive = "http://zorba.io/modules/archive";
 
 import schema namespace mongos = "http://www.28msec.com/modules/mongodb/types";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare %rest:body-text        variable $body-text        as string external;
@@ -71,20 +72,20 @@ try {
         case (exists($id) and empty($existing-report) and 
               not(session:has-right($token, "reports_create")))
         return {
-            response:status-code(403);
+            { status: 403 },
             session:error("Forbidden: You are not authorized to access the requested resource", "json")
         }
         
         (: ### BAD REQUEST HANDLING :)
         case (empty($report))
         return {
-            response:status-code(400);
+            { status: 400 },
             session:error("mandatory request content missing", "json")
         }
         
         case ((empty($id) or $id eq "") and exists($report))
         return {
-            response:status-code(400);
+            { status: 400 },
             session:error("report: mandatory _id field missing or empty in report object", "json")
         }
         
@@ -92,9 +93,7 @@ try {
         (: report validation :)
         case ($validation-only)
         return {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
-            
+            { serialization: { method: "json", indent : true } },
             [
                 reports:validate($report)
             ]
@@ -103,9 +102,7 @@ try {
         (: update existing report :)
         case (exists($existing-report))
         return {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
-            
+            { serialization: { method: "json", indent : true } },
             let $report := reports:validate-and-update-report-properties($report, $existing-report, $authenticated-user.email)
             return
                 {
@@ -121,9 +118,7 @@ try {
         (: create new report :)
         default
         return {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
-            
+            { serialization: { method: "json", indent : true } },
             let $report := reports:validate-and-update-report-properties($report, $existing-report, $authenticated-user.email)
             return
                 {
@@ -140,17 +135,17 @@ try {
         }
 } catch reports:UNAUTHORIZED {
     {
-        response:status-code(403);
+        { status: 403 },
         session:error("Access denied: " || $err:description, "json")
     }
 } catch reports:CONFLICT {
     {
-        response:status-code(409);
+        { status: 409 },
         session:error("Conflict: " || $err:description, "json")
     }
 } catch session:expired {
     {
-        response:status-code(401);
+        { status: 401 },
         session:error("Unauthorized: Login required (session expired)", "json")
     }
 }

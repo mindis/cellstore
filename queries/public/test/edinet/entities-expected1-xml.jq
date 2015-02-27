@@ -5,7 +5,7 @@ import module namespace config = "http://apps.28.io/config";
   <Entity>
     <Archives>{
       "http://" || request:server-name() || ":" || request:server-port() ||
-       "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Fwww.tse.or.jp%2Fsicc%2054010&format=xml&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL"
+       "/v1/_queries/public/api/filings.jq?token=" || $config:test-token || "&eid=http%3A%2F%2Fdisclosure.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Finfo.edinet-fsa.go.jp%20E01225-000&eid=http%3A%2F%2Fwww.tse.or.jp%2Fsicc%2054010&format=xml&profile-name=japan&fiscalYear=ALL&fiscalPeriod=ALL"
     }</Archives>
     <EIDs>
       <EID>http://disclosure.edinet-fsa.go.jp E01225-000</EID>
