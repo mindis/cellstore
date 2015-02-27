@@ -1,4 +1,4 @@
-##Current Technologies
+##Current technologies
 
 ###Relational Databases
 Many XBRL services providers store XBRL data in a relational database. However, very soon, the limits of homogeneous, flat tables are reached and slow down requests. For example, ROLAP, which stores dimensional data in relational tables, quickly reaches its limits with XBRL. The SEC repository has tens of thousands of different dimensions. A single table may display more than ten at the same time. The dimensions vary a lot from filing to filing, from filer to filer. This makes classical relational databases very inadequate for storing XBRL. In the end, either filings are stored one at a time, with no simple way of querying across them, or schemas are hacked around on a case by case basis.
