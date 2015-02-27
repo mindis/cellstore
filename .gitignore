@@ -17,7 +17,6 @@ app/documentation/api/*.md
 *~
 *.swp
 *.swo
-grunt-aws.json
 .project
 queries/private/UpdateReportSchema.jq
 queries/modules/io/28/apps/config.jq
