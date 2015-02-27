@@ -18,6 +18,8 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace request = "http://www.28msec.com/modules/http-request";
 
+declare option rest:response "first-item";
+
 declare variable $local:additional-concepts as object* := (
   {
     Name: "sec:DefaultLegalEntity",
@@ -224,8 +226,6 @@ declare  %rest:case-insensitive                 variable $additional-rules  as s
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
 declare  %rest:case-insensitive                 variable $language          as string  external := "en-US";
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $tag as string* := api:preprocess-tags($tag)
@@ -347,7 +347,6 @@ let $serializers := {
         (conversion:facts-to-csv($res.FactTable[], { Caller: "Report" }), "")[1]
     }
 }
-
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
 return if($entities-not-found)
        then api:not-found("entity")

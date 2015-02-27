@@ -4,6 +4,8 @@ import module namespace session = "http://apps.28.io/session";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
+declare option rest:response "first-item";
+
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
 declare  %rest:env                              variable $request-uri        as string  external;
@@ -30,8 +32,6 @@ declare  %rest:case-insensitive                 variable $profile-name       as 
 declare  %rest:case-insensitive                 variable $onlyTextBlocks     as boolean? external := ();
 declare  %rest:case-insensitive                 variable $kind               as string*  external := ();
 declare  %rest:case-insensitive                 variable $eliminateReportElementDuplicates as boolean external := false;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)

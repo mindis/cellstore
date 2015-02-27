@@ -12,6 +12,8 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
+declare option rest:response "first-item";
+
 declare function local:concepts-for-archives-and-labels($aids as string*, $labels as string) as object*
 {
    mw:run-cmd-deterministic(
@@ -49,8 +51,6 @@ declare  %rest:case-insensitive                 variable $onlyNames      as bool
 declare  %rest:case-insensitive                 variable $onlyTextBlocks as boolean? external := ();
 declare  %rest:case-insensitive                 variable $abstract       as boolean? external := ();
 declare  %rest:case-insensitive                 variable $kind           as string*  external := ();
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)

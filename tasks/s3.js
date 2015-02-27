@@ -10,26 +10,36 @@ var parallelize = require('concurrent-transform');
 
 var Config = require('./config');
 
-var s3, key, secret, region, config, publisher, bucketName;
+var s3, key, secret, region, protocol, s3Config, publisherConfig, publisher, bucketName;
 
 var init = function() {
     key = Config.credentials.s3.key;
     secret = Config.credentials.s3.secret;
     region = Config.credentials.s3.region;
+    protocol = Config.credentials.s3.protocol;
     bucketName = Config.bucketName;
     $.util.log('Bucket Name: ' + bucketName);
-    config = {
+    s3Config = {
         accessKeyId: key,
         secretAccessKey: secret,
-        region: region,
         bucket: bucketName
     };
-    publisher = $.awspublish.create({
+    publisherConfig = {
         key: key,
         secret: secret,
         bucket: bucketName
-    });
-    s3 = new AWS.S3(config);
+    };
+    if(_.isString(region) && (region === '' || region === 'us-east-1')){
+        publisherConfig.region = 'us-standard';
+    } else if(_.isString(region)){
+        publisherConfig.region = region;
+        s3Config.region = region;
+    }
+    if(_.isString(protocol) && protocol === 'http'){
+        publisherConfig.secure = false;
+    }
+    publisher = $.awspublish.create(publisherConfig);
+    s3 = new AWS.S3(s3Config);
 };
 
 var checkWebsiteAvailable = function(){
@@ -56,23 +66,37 @@ var checkWebsiteAvailable = function(){
 };
 
 var makeBucketWebsite = function() {
-    var defered = Q.defer();
+    var deferred = Q.defer();
+    var callback = function(err){
+        if(err) {
+            $.util.log('putBucketWebsite(' + bucketName + '): ' + $.util.colors.red(err));
+            deferred.reject(err);
+        } else {
+            $.util.log('putBucketWebsite(' + bucketName + ')');
+            deferred.resolve();
+        }
+    };
     s3.putBucketWebsite(
         {
             Bucket : bucketName,
             WebsiteConfiguration : Config.credentials.s3.website
         }, function(err) {
-            if (err) {
-                $.util.log('putBucketWebsite(' + bucketName + '): ' + $.util.colors.red(err));
-                defered.reject();
-            }
-            else {
-                $.util.log('putBucketWebsite(' + bucketName + ')');
-                defered.resolve();
+            if (err && err.indexOf('NoSuchBucket:') === 0) {
+                $.util.log('trying again: putBucketWebsite(' + bucketName + ')');
+                setTimeout(function () {
+                    s3.putBucketWebsite(
+                        {
+                            Bucket : bucketName,
+                            WebsiteConfiguration : Config.credentials.s3.website
+                        }, callback
+                    );
+                }, 1000);
+            } else {
+                callback(err);
             }
         }
     );
-    return defered.promise;
+    return deferred.promise;
 };
 
 // Will list *all* the content of the bucket given in options

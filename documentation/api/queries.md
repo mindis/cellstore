@@ -3,7 +3,7 @@
 
 ##/entities.jq
 
-###POST
+###GET
 Retrieve metadata about the entities that submit filings. These entities are also referred to by facts with the xbrl:Entity aspect, of which the values are called Entity IDs (EIDs). One entity might have several EIDs.
 
 ####Parameters
@@ -20,7 +20,7 @@ Retrieve metadata about the entities that submit filings. These entities are als
 | _method  | Entities |
 ##/filings.jq
 
-###POST
+###GET
 Retrieve metadata about the filings, also called archives. The filings are identified with Archive IDs (AIDs). Facts can be bound with filings with the xbrl28:Archive aspect, whose values are AIDs.
 
 ####Parameters
@@ -41,7 +41,7 @@ Retrieve metadata about the filings, also called archives. The filings are ident
 | _method  | Filings |
 ##/periods.jq
 
-###POST
+###GET
 Retrieve the periods of the filings filed by a particular entity
 
 ####Parameters
@@ -62,7 +62,7 @@ Retrieve the periods of the filings filed by a particular entity
 | _method  | Fiscal Periods |
 ##/components.jq
 
-###POST
+###GET
 Retrieve a summary for all components of a given filing
 
 ####Parameters
@@ -90,7 +90,7 @@ Retrieve a summary for all components of a given filing
 | _method  | Components |
 ##/facttable-for-component.jq
 
-###POST
+###GET
 Retrieve the fact table for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).
 
 ####Parameters
@@ -123,7 +123,7 @@ Retrieve the fact table for a given component. A component can be selected in th
 | _method  | Retrieve a Fact Table for a Component |
 ##/spreadsheet-for-component.jq
 
-###POST
+###GET
 Retrieve the business friendly Spreadsheet for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).
 
 ####Parameters
@@ -155,7 +155,7 @@ Retrieve the business friendly Spreadsheet for a given component. A component ca
 | _method  | Retrieve a business-friendly Spreadsheet for a Component |
 ##/modelstructure-for-component.jq
 
-###POST
+###GET
 Retrieve the model structure for a given component. A component can be selected in three ways. (1) by component id (cid), (2) by accession number and disclosure (aid and disclosure), or (3) by CIK, fiscal year, fiscal period, and disclosure (cik, fiscalYear, fiscalPeriod, and disclosure).
 
 ####Parameters
@@ -181,7 +181,7 @@ Retrieve the model structure for a given component. A component can be selected 
 | _method  | Retrieve a Model structure for a Component. |
 ##/facttable-for-report.jq
 
-###POST
+###GET
 Retrieve the fact table for a given report. Filters can be overriden. Filters MUST be overriden if the report is not already filtering.
 
 ####Parameters
@@ -205,7 +205,7 @@ Retrieve the fact table for a given report. Filters can be overriden. Filters MU
 | token  | The token of the current session |
 ##/spreadsheet-for-report.jq
 
-###POST
+###GET
 Retrieve the business-friendly spreadsheet for a report. Filters can be overriden. Filters MUST be overriden if the report is not already filtering.
 
 ####Parameters
@@ -227,7 +227,7 @@ Retrieve the business-friendly spreadsheet for a report. Filters can be override
 | token  | The token of the current session |
 ##/facts.jq
 
-###POST
+###GET
 Retrieve one or more facts for a combination of filings.
 
 ####Parameters
@@ -257,7 +257,7 @@ Retrieve one or more facts for a combination of filings.
 | _method  | Retrieve Facts |
 ##/labels.jq
 
-###POST
+###GET
 Retrieve labels for the supplied components and report elements
 
 ####Parameters
@@ -288,7 +288,7 @@ Retrieve labels for the supplied components and report elements
 | _method  | Labels |
 ##/report-elements.jq
 
-###POST
+###GET
 Retrieve the report elements contained in a set of filings.
 
 ####Parameters

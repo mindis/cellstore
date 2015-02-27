@@ -13,6 +13,8 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
+declare option rest:response "first-item";
+
 declare function local:to-csv($res as object*) as string*
 {
     csv:serialize(
@@ -67,8 +69,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $concept            as 
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $label              as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
