@@ -2,7 +2,7 @@
 An abstract is a report element. It is like a concept, except that no fact may be reported against it. Abstract are used to organize concepts in a meaningful hierarchy.
 
 # archive
-An archive is a package of facts that often get submitted together, together with the associated metadata (taxonomy).
+An archive is a package of facts that get submitted together, with the associated metadata (taxonomy).
 
 # aspect
 An aspect is a dimension-value pair in a context. It is also used as a synonym for dimension.
