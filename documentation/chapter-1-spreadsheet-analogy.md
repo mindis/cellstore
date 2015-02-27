@@ -1,5 +1,5 @@
 
-##Analogy With Spreadsheets
+##Analogy With spreadsheets
 
 For users used to spreadsheet software such as Excel, the following table shows a rough correspondence between the two paradigms.
 

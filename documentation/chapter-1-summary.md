@@ -1,4 +1,4 @@
-##Cell Store Vocabulary
+##Cell store vocabulary
 
 In this section, we drop all the vocabulary of the cell store paradigm (most of it is borrowed from the XBRL world).
 
