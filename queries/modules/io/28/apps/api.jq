@@ -330,7 +330,7 @@ as boolean
   }
 };
 
-declare %an:sequential function api:not-found($name as string) as item*
+declare function api:not-found($name as string) as item*
 {
   { status: 404, content-type: "application/json" },
   session:error("No such " || $name || " could be found.", "json")
