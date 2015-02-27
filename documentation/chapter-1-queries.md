@@ -49,5 +49,7 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&format=
 http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&format=html&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
+In most endpoints, the fields used for each result object are identical, that is, JSON and XML, when possible, flat.
+
 ### Available repositories
 We provide various repositories containing data from reporting authorities (SEC for various subsets of fiscal reports filed by American companies, FSA in Japan, Chile, ...). This tutorial will be based on Japan data, however the ideas are the same for any other kind of data. If you are interesting in setting up a repository with any other kind of data, do not hesitate and contact us. We are here for you at [hello@28.io](mailto:hello@28.io) and would love to help.
