@@ -43,7 +43,7 @@ This is a "real-life" fact:
 Fetching facts is done by filtering the Aspects. Here is a first example. For simplicity, we added a parameter profile-name set to generic. This is for pedagogical reasons, as we want to deactivate all the shortcut bells and whistles that would otherwise kick in for Japanese filings.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 In the above example, we restrict five aspects:
@@ -103,7 +103,7 @@ Note how key aspects vary for each fact, as opposed to primary keys that apply t
 For the sake of experimenting, let us remove the jppfs-cor:ConsolidatedOrNonConsolidatedAxis dimension and see what happens.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 The fact quoted above has disappeared: it is dimensionally "too big" to fit in this new hypercube. And two more facts have appeared that do not have this dimension as a key aspect (or even at all), but that fulfill the other criteria. These two facts were dimensionally "too small" to fit in the former query, but they fit to this new one.
@@ -117,7 +117,7 @@ Well, besides xbrl:Concept, there are three more key aspects that appear frequen
 You can also explicitly add a non-filtering dimension by yourself: use the joker value ALL. The first query is equivalent to the following, where we explicitly added xbrl:Unit with no filters (even though this is redundant).
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&xbrl:Unit=ALL&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=jppfs-cor:NonConsolidatedMember&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&xbrl:Unit=ALL&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##Default Dimension Values
@@ -125,7 +125,7 @@ http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=htt
 Let's experiment some more. Why don't we try to make jppfs-cor:ConsolidatedOrNonConsolidatedAxis non-filtering?
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 There are three facts in the output. One of the of course we know, because it was already here with the filter. Since we relax that filter, it is expected to still be here. Oh, but wait, what are these two new facts? They look familiar... These are indeed those same two facts that appeared when we removed the dimension altogether. They were two small to fit... and yet here they are.
@@ -139,7 +139,7 @@ In this very precise case though, the semantics is slightly different: facts wit
 We can make this clear by changing the default value with an extra parameter consisting of the dimension with the suffix ::default, like so:
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default=jppfs-cor:NonConsolidated&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&jppfs-cor:ConsolidatedOrNonConsolidatedAxis::default=jppfs-cor:NonConsolidated&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##The Other Fields
@@ -157,18 +157,18 @@ Facts carry some further fields that we have said nothing about yet:
 If you add a labels parameters that you set to true, a new Labels field will appear. This is an object that associates every dimension, member and concept (and not only) with a label.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 If you add a labels parameters that you set to true, a new Labels field will appear. This is an object that associates every dimension, member and concept (and not only) with a label.
 
 You can change the language (if available) with the language parameter.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true&language=en
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true&language=en&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true&language=ja
+http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&labels=true&language=ja&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##Fact Tables

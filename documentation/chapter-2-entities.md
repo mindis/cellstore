@@ -11,7 +11,7 @@ There is an identifier, though, that is available across all profiles: the Entit
 Let us begin with a very simple query that just retrieves a company, say, Canon. Canon's ticker is 7751.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751
+http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 If you look at the output, you will see that it's JSON. It contains some meta information such as the time of the request, and some statistics. In this example, the database contains 10 entities, and one is being returned.
@@ -31,15 +31,15 @@ The entities that have been requested (in this case just one) are in the Entitie
 The data can also be obtained in other formats, such as XML, HTML and CSV.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=xml
+http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=xml&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=csv
+http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=csv&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=html
+http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=html&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##Other ways of identifying a company
@@ -47,7 +47,7 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?ticker=7751&format=html
 You can identify a company with its EDINET code like so:
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274
+http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 Also, companies all have some EIDs that are used by regulatory authorities. These EIDs are used to associate each chunk of data with the entity that it applies to. If a chunk of data, say, the non-consolidated assets for the fiscal year 2014, is stamped with an EID that belongs to Canon, then you know that these assets are those of Canon.
@@ -61,7 +61,7 @@ An EID is always made of an URI scheme followed by an identifier. For example, t
 Although it is less common and not very practical, you can use the eid parameter to retrieve an entity with its EID. You will need to URL-encode the space with %20, as well as any other special characters that might be in here.
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?eid=http://www.tse.or.jp/sicc%2077510
+http://edinet.28.io/v1/_queries/public/api/entities.jq?eid=http://www.tse.or.jp/sicc%2077510&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##Getting companies by stock index
@@ -69,7 +69,7 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?eid=http://www.tse.or.jp/
 You can retrieve all companies in an index with a single call. Here is an example with the NIKKEI:
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?tag=NIKKEI
+http://edinet.28.io/v1/_queries/public/api/entities.jq?tag=NIKKEI&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
 ##Mixing parameters
@@ -77,5 +77,5 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?tag=NIKKEI
 If you use multiple parameters, it will accumulate the companies as you add more parameters:
 
 ```REST
-http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&ticker=9432&tag=NIKKEI
+http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&ticker=9432&tag=NIKKEI&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
