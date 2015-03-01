@@ -6,6 +6,7 @@ var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var _ = require('lodash');
+var XQLint = require('xqlint').XQLint;
 
 var Config = require('./config');
 
@@ -52,7 +53,22 @@ gulp.task('templates:create', ['config:load'], function(done){
     //API documentation
     var queries = JSON.parse(fs.readFileSync('swagger/queries.json', 'utf-8'));
     queries.title = 'Cell Store Query API';
+
+    //Swagger Generation
+    var apis = [];
+    var xqlint = new XQLint(fs.readFileSync('queries/public/api/entities.jq', 'utf-8'));
+    var entities = xqlint.getXQDoc();
+    entities.path = '/entities.jq';
+    entities.nickname = 'listEntities';
+    apis.push(entities);
+    console.log(entities);
+
     var templates = [
+        {
+            src: 'tasks/templates/api.json.mustache',
+            data: { apis: apis },
+            dest: 'swagger/api.json'
+        },
         {
             src: 'tasks/templates/config.js.mustache',
             data: {
