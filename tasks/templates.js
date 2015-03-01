@@ -58,15 +58,28 @@ gulp.task('templates:create', ['config:load'], function(done){
     var apis = [];
     var xqlint = new XQLint(fs.readFileSync('queries/public/api/entities.jq', 'utf-8'));
     var entities = xqlint.getXQDoc();
-    entities.path = '/entities.jq';
-    entities.nickname = 'listEntities';
-    apis.push(entities);
-    console.log(entities);
+    var api = {
+        path: '/entities.jq',
+        nickname: 'listEntities',
+        description: entities.description,
+        parameters: []
+    };
+    entities.variables.forEach(function(variable){
+        console.log(variable);
+        api.parameters.push({
+            name: variable.name,
+            description: variable.description,
+            required: variable.occurrence === 1 || variable.occurrence === 2,
+            type: variable.type,
+            paramType: 'query'
+        });
+    });
+    apis.push(api);
 
     var templates = [
         {
             src: 'tasks/templates/api.json.mustache',
-            data: { apis: apis },
+            data: { apis: JSON.stringify(apis, null, 2) },
             dest: 'swagger/api.json'
         },
         {

@@ -55,7 +55,7 @@
     "request": "~2.33.0",
     "swagger-js-codegen": "0.5.0",
     "upath": "^0.1.5",
-    "xqlint": "^0.2.5"
+    "xqlint": "^0.2.6"
   },
   "engines": {
     "node": ">=0.8.0"

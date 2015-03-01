@@ -7,21 +7,5 @@
         "application/json"
     ],
     "description": "CellStore Query API",
-    "apis": [
-        {{#apis}}
-            {
-                "path": "{{{path}}}",
-                "method": "GET",
-                "summary": "{{{description}}}",
-                "nickname": "{{{nickname}}}",
-                "parameters": [
-                    {{#variables}}
-                        {
-                            "name": "{{{name}}}"
-                        },
-                    {{/variables}}
-                ]
-            }
-        {{/apis}}
-    ]
+    "apis": {{{apis}}}
 }
