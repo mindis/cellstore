@@ -6,15 +6,19 @@ var gitbook = require('gitbook');
 
 var Config = require('./config');
 
-gulp.task('gitbook:generate', function(done){
-    var config = {
-        input: 'documentation',
-        output: 'app/documentation'
-    };
+var options = {
+    input: 'documentation',
+    output: 'app/documentation',
+    plugins: ['28msec']
+};
+
+gulp.task('gitbook:install', function(){
+    return gitbook.generate.Plugin.install(options);
+});
+
+gulp.task('gitbook:generate', ['gitbook:install'], function(){
     ffs.rmdirRecursiveSync('app/documentation');
-    gitbook.generate.folder(config).then(function() {
-            done();
-    }, done);
+    return gitbook.generate.folder(options);
 });
 
 gulp.task('gitbook:copy', function(){
