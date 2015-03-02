@@ -1,4 +1,5 @@
-##Look up an entity
+Look Up An Entity
+=================
 
 Let us begin with a very simple query that just retrieves a company, say, Canon. Canon's ticker is 7751.
 

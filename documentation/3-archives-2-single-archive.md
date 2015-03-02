@@ -1,6 +1,8 @@
-##Looking Up A Single Archive
+Looking Up An Archive
+=====================
 
-###Archive IDs
+Archive ID
+----------
 
 Archives can be identified with an Archive ID specific to the regulation authority. For example, SEC Archive IDs are called Accession Numbers.
 

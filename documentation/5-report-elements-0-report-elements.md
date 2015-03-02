@@ -1,4 +1,5 @@
-#Report Elements
+Report Elements
+===============
 
 A component is used to group facts in a meaningful way within a filing, for example to build a BalanceSheet or an IncomeStatement.
 
@@ -8,6 +9,7 @@ But before, we go into these, we need to give a few more details about what the 
 
 A component is made of so-called *Report Elements*. Report Elements are metadata.
 
-##Spreadsheet analogy
+Spreadsheet analogy
+-------------------
 
 Report elements can be seen as header (row or column) cells in a spreadsheet. Line items, abstracts and concepts are most often used as row headers, while dimensions and members are used as column headers.

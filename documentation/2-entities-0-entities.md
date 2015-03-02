@@ -1,4 +1,5 @@
-#Entities
+Entities
+========
 
 In Japan, companies must submit fiscal filings (which are archives) to the Financial Services Agency (FSA).
 
@@ -10,6 +11,7 @@ Other codes are available depending on the regulation authority, such as the EDI
 
 There is an identifier, though, that is available across all profiles: the Entity ID, even though its format may still vary depending on the profile.
 
-##Spreadsheet analogy
+Spreadsheet analogy
+-------------------
 
 In the spreadsheet analogy, an entity is a Excel user.

@@ -1,4 +1,5 @@
-##Finding all available periods
+Available Periods
+=================
 
 If you are unsure which periods are available, you can use the periods endpoint. For example, here is how to retrieve the periods for which Canon submitted an archive:
 

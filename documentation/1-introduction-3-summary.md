@@ -1,8 +1,10 @@
-##Cell store vocabulary
+Cell Store Vocabulary
+=====================
 
 In this section, we drop all the vocabulary of the cell store paradigm (most of it is borrowed from the XBRL world).
 
-###Facts
+Facts
+-----
 
 A cell store contains a very big pool of *facts*, millions to hundreds of millions and potentially even more in the future. A fact is an atom of data. Each facts is  made of a *context* associated with a *value*.
 
@@ -14,13 +16,14 @@ The context of a fact, also called *dimensional coordinates* of this fact, is ma
 - Period: September 27, 2014
 - Unit: US Dollars
 
-###Entities and archives
-
+Entities and archives
+---------------------
 Facts are reported by *entities* (such as Apple). Usually, entities report facts about themselves, so that it's the same entity that appears in the contexts of the facts that it reports.
 
 Facts are not reported one by one, but are typically submitted to an authority like the SEC in *archives*. A bit like you don't buy pop corn one chunk at a time, but in a pop corn package. An example of archive is the fiscal report filed by Apple for the fiscal year (FY) 2014.
 
-###Components
+Components
+----------
 
 Within an archive, facts are grouped in *components*. Components are facts that make sense together. A fiscal report may contain, for example, a balance sheet, an income statement, etc.
 

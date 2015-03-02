@@ -1,4 +1,5 @@
-## Cell stores
+Cell Stores
+===========
 
 Cell stores are a new paradigm of databases. It is decoupled from XBRL and has a data model of its own, yet it natively support XBRL as a file format to exchange data between cell stores.
 

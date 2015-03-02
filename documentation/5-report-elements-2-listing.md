@@ -1,6 +1,8 @@
-#Look up report elements
+List Report Elements
+====================
 
-###Fetching The Report Elements In A Component
+Fetching the report elements in a component
+-------------------------------------------
 
 You can use the exact same parameters as the components endpoint to identify a component or several of them, and get the report elements it contains. You just need to switch to the report-elements endpoint.
 

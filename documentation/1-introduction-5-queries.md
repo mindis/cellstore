@@ -1,10 +1,13 @@
-##The REST API
+The REST API
+============
 
-###Running the queries
+Running the queries
+-------------------
 
 All queries shown in this tutorial can be run directly on our platform. We use as example a small database of Japanese filings, and provide you a token for free. Private usage of this token is free and we only bill for commercial use.
 
-###Endpoints
+Endpoints
+---------
 
 The cell store REST API has several endpoints:
 - entities.jq
@@ -22,7 +25,8 @@ The cell store REST API has several endpoints:
 
 Each endpoints is associated with a different set of parameters, but many of them are common to several endpoints and share the same semantics. As a rule of thumb, each chapter of this tutorial explains one endpoint.
 
-###Output formats
+Output formats
+--------------
 
 On each endpoint, the format parameter lets you fine-tune the way you would like to get the output. This parameter can have four values on most endpoints:
 - **json** (default): Outputs the result as a sequence of JSON objects. This sequence is wrapped in an array, the name of which depends on the endpoint (example: Archives for archives.jq).
@@ -51,5 +55,6 @@ http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&format=
 
 In most endpoints, the fields used for each result object are identical, that is, JSON and XML, when possible, flat.
 
-### Available repositories
+Available repositories
+----------------------
 We provide various repositories containing data from reporting authorities (SEC for various subsets of fiscal reports filed by American companies, FSA in Japan, Chile, ...). This tutorial will be based on Japan data, however the ideas are the same for any other kind of data. If you are interesting in setting up a repository with any other kind of data, do not hesitate and contact us. We are here for you at [hello@28.io](mailto:hello@28.io) and would love to help.

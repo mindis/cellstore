@@ -1,6 +1,8 @@
-##Look up components
+List Components
+===============
 
-###Which Components Are There In This Archive?
+Which components are there in this archive?
+-------------------------------------------
 
 Let us begin with a very simple query that just lists the components for an archive. To identify this archive, you can use the exact same parameters as in the archives endpoint, for example its AID.
 

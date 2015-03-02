@@ -1,11 +1,17 @@
+Identify entities
+=================
 
-##Other ways of identifying a company
+EDINET code
+-----------
 
 You can identify a company with its EDINET code like so:
 
 ```REST
 http://edinet.28.io/v1/_queries/public/api/entities.jq?edinetcode=E02274&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
+
+Entity ID
+---------
 
 Also, companies all have some EIDs that are used by regulatory authorities. These EIDs are used to associate each chunk of data with the entity that it applies to. If a chunk of data, say, the non-consolidated assets for the fiscal year 2014, is stamped with an EID that belongs to Canon, then you know that these assets are those of Canon.
 
@@ -21,9 +27,8 @@ Although it is less common and not very practical, you can use the eid parameter
 http://edinet.28.io/v1/_queries/public/api/entities.jq?eid=http://www.tse.or.jp/sicc%2077510&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
-
-
-##Mixing parameters
+Mixing parameters
+-----------------
 
 If you use multiple parameters, it will accumulate the companies as you add more parameters:
 

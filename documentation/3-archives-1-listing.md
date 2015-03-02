@@ -1,6 +1,8 @@
-##Listing Archives
+Listing Archives
+================
 
-###Archives Belonging To A Given Entity
+Archives belonging to a given entity
+------------------------------------
 
 Let us begin with a very simple query that just lists the archives submitted by an entity, like Canon. The way
  the entity or the entities are identified is identical to the [entities endpoint](gitbook/chap-BizQLTutorial-Companies.md).
@@ -27,7 +29,8 @@ http://edinet.28.io/v1/_queries/public/api/filings.jq?ticker=7751&format=html&to
 
 By default, only fiscal archives submitted for the latest fiscal year and the FY period are shown. However, you can change that as shown further down.
 
-###Several Entities At The Same Time
+Several entities at the same time
+---------------------------------
 
 Like in the entities endpoint, you can request the archives of as many entities as you wish in a single call and in the exact same way as in the entities endpoint.
 

@@ -1,8 +1,10 @@
-##Identifying a component
+Identify A Component
+====================
 
 Components are uniquely identified with an Archive ID and a role URI.
 
-###Look up a specific component.
+Look up a specific component
+----------------------------
 
 If you would like to look for a specific component, there are several ways.
 
