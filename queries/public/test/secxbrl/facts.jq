@@ -82,7 +82,9 @@ local:check({
     (: this test will fail and needs to be updated if a newer report has been filed.
        current latest filing: 2013 :)
     local:test-facttable(468, {
-        ticker:"ko"
+        ticker:"ko",
+        fiscalYear: "ALL",
+        fiscalPeriod: "FY"
     }),
     cocacola-all: local:test-facttable(468, {
         ticker:"ko",
@@ -118,7 +120,9 @@ local:check({
     ciscoLabelsByAid: local:test-labels-aids(),
     tickerconcept: local:test-facttable(1, {
         ticker:"ko",
-        concept:"us-gaap:Assets"
+        concept:"us-gaap:Assets",
+        fiscalYear: "ALL",
+        fiscalPeriod: "FY"
     }),
     tickerfyfprole: local:test-facttable(1, {
         ticker:"ko",
@@ -128,7 +132,9 @@ local:check({
     }),
     tagconcept: local:test-facttable(30, {
         tag:"DOW30",
-        concept:"us-gaap:Assets"
+        concept:"us-gaap:Assets",
+        fiscalYear: "ALL",
+        fiscalPeriod: "FY"
     }),
     tagfyfprole: local:test-facttable(30, {
         tag:"DOW30",
