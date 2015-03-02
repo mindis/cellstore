@@ -48,8 +48,8 @@ declare %an:sequential function local:check($o as object) as object
 
 local:check({
     all: local:test-concepts(3, {cik:"4962",name:"us-gaap:Assets", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
-    onlyNames: local:test-concepts(16154, {tag:"DOW30",fiscalYear:"2012", fiscalYear: "LATEST", fiscalPeriod:"FY",onlyNames:"true"}),
-    fac-assets: local:test-concepts(1, {ticker:"ko",fiscalYear:"2013",report:"FundamentalAccountingConcepts",name:"fac:Assets", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    onlyNames: local:test-concepts(16154, {tag:"DOW30", fiscalYear:"2012", fiscalPeriod:"FY",onlyNames:"true"}),
+    fac-assets: local:test-concepts(1, {ticker:"ko", fiscalYear:"2013",report:"FundamentalAccountingConcepts",name:"fac:Assets", fiscalPeriod: "FY"}),
     fac: local:test-concepts(50, {ticker:"ko",fiscalYear:"2013",report:"FundamentalAccountingConcepts", fiscalPeriod: "FY"}),
     disclosures: local:test-concepts(71, {ticker:"ko",fiscalYear:"2013",report:"Disclosures", fiscalPeriod: "FY"}),
     disclosures-1: local:test-concepts(1, {ticker:"ko",report:"Disclosures",fiscalYear:"2013",name:"disc:ScheduleOfComponentsOfIncomeTaxExpenseBenefitTableTextBlock", fiscalPeriod: "FY"}),
