@@ -1,4 +1,4 @@
-Analogy With spreadsheets
+Analogy With Spreadsheets
 =========================
 
 Throughout the tutorial, we present cell stores with analogies with the spreadsheet world. This section quickly summarizes this analogy. It is intended as a quick reference and can be skipped on a first read.
