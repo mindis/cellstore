@@ -37,7 +37,6 @@ local:check({
         ticker:"ko",
         fiscalYear:"2013",
         concept:"us-gaap:Assets",
-        fiscalYear: "LATEST",
         fiscalPeriod: "FY"
     }),
     tickerfyfprole: local:test-spreadsheet(70, {
