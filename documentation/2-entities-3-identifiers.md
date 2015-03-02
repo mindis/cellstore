@@ -1,4 +1,4 @@
-Identify entities
+Identify Entities
 =================
 
 EDINET code

@@ -1,7 +1,7 @@
 Archive Metadata
 ================
 
-Generic Metadata
+Generic metadata
 ----------------
 
 The metadata available depends on the profile. However, there are a few fields that are always here:
@@ -9,7 +9,7 @@ The metadata available depends on the profile. However, there are a few fields t
 - *_id*: The AID of the archive.
 - *Entity*: The entity which filed this archive (i.e., one of its Entity IDs).
 
-Japan-specific Metadata
+Japan-specific metadata
 -----------------------
 
 In the Japanese profile, there are a few more:

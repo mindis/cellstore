@@ -32,7 +32,7 @@ Several facts can be reported for the same concept, but in different contexts. D
 
 A member is a dimension value. For example, members of a dimension named Country can be USA, Japan, Germany, etc. Members can be organized in hierarchies as well: America, parent of North America, itself a parent of USA.
 
-XBRL Terminology
+XBRL terminology
 ----------------
 
 The reader familiar with the XBRL specifications will argue, and rightly so, that the term *concept* is used there in a broader sense, and that it includes all report elements. In this tutorial, we only use the word "concept" for concrete XBRL concepts, as explained above. This is consistent with Charles Hoffman's vision of XBRL's best practices.

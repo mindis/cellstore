@@ -1,4 +1,4 @@
-List labels
+List Labels
 ===========
 
 You can list the labels contained in an archive or a component by using the labels.jq endpoint together with the same parameters as the archives.jq and components.jq endpoints.

@@ -1,4 +1,4 @@
-List facts
+List Facts
 ==========
 
 Listing facts is done by means of a *hypercube query*. The easiest way to query facts is to ask for those that are in a component. Indeed, every component contains a hypercube that can be readily used as a query.

@@ -38,7 +38,7 @@ Like in the entities endpoint, you can request the archives of as many entities 
 http://edinet.28.io/v1/_queries/public/api/filings.jq?tag=NIKKEI&format=html&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
 ```
 
-###Filtering by Fiscal Year, Period, Filing Kind
+###Filtering by fiscal year, period, filing kind
 
 If you are looking for earlier archives, or for different periods, or for all archives, you can use additional parameters to adapt the filter.
 
