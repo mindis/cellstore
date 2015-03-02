@@ -4,7 +4,15 @@ The REST API
 Running the queries
 -------------------
 
-All queries shown in this tutorial can be run directly on our platform. We use as example a small database of Japanese filings, and provide you a token for free. Private usage of this token is free and we only bill for commercial use.
+For developers, the main way to interact with a cell store is by means of a REST API. Each cell store comes with a REST API.
+
+For convenience, we provide a couple of cell stores that are populated with real-world data. One of those contains the filings of the 9 biggest Japanese NIKKEI companies. All queries shown in this tutorial can be run on top of it.
+
+Each call to the REST API must be made with an authentication token. We provide you with the token for this small dataset for free:
+
+    c3049752-4d35-43da-82a2-f89f1b06f7a4
+
+Private usage of this token is free and we only bill for commercial use. Contact us if you would like to set up your own cell store with your own data.
 
 Endpoints
 ---------
