@@ -69,15 +69,21 @@ declare %an:sequential function local:check($o as object) as object
 
 local:check({
     cocacola: local:test-components(94, {
-        ticker:"ko"
+        ticker:"ko",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     cocacolaincome: local:test-components(1, {
         ticker:"ko",
-        networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome"
+        networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     byconcept: local:test-components-result($local:expected.byconcept, {
         tag:"DOW30",
-        concept:"us-gaap:NetIncomeLoss"
+        concept:"us-gaap:NetIncomeLoss",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     byfyfp: local:test-components(1, {
         ticker:"ko",
@@ -106,7 +112,11 @@ local:check({
     example1: local:test-example1(),
     example2: test:invoke-and-assert-deep-equal(
       "components",
-      {ticker:"ko"},
+      {
+        ticker:"ko",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
+      },
       function($b as item*) as item* { $b.Archives },
       test:get-expected-result("secxbrl/components-expected2.jq"),
       { NoArrayOrder: true }
