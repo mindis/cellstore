@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-  * [Current technologies](1-introduction-1-current-technologies.md)
+  * [XBRL](1-introduction-1-xbrl.md)
   * [The cell store paradigm](1-introduction-2-cell-stores.md)
   * [Cell store vocabulary](1-introduction-3-summary.md)
   * [Analogy with spreadsheets](1-introduction-4-spreadsheet-analogy.md)

@@ -34,6 +34,9 @@ A fact table is a very structured display of a bunch of facts. A fact table is t
 # hypercube
 A hypercube, in the cell store, is a query that returns facts from the main pool. It is also a report element that can be used in a component. A hypercube has dimensions, and each dimension is associated with a set of accepted values.
 
+# JSONiq
+JSONiq is a NoSQL query language that deals with heterogeneous, arborescent data. It comes with a number of connectors that make it convenient to access, simultaneously, many data sources (MongoDB databases, traditional relational databases, S3 storage on Amazon, Graph Databases, Cloudant and many more) and combine them seamlessly to extract information. JSONiq knowledge is not required for using cell stores.
+
 # line items
 The line items report element is the top level report element in the hierarchy of abstracts and concepts.
 
