@@ -17,8 +17,6 @@ gulp.task('gitbook:generate', function(done){
     }, done);
 });
 
-gulp.task('gitbook', ['gitbook:generate']);
-
 gulp.task('gitbook:copy', function(){
     return gulp.src('app/documentation/**/*', { dot: true }).pipe(gulp.dest(Config.paths.dist + '/documentation'));
 });
