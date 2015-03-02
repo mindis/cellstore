@@ -9,3 +9,7 @@ Entities can be identified in ways that differ from country to country. Hence, t
 Other codes are available depending on the regulation authority, such as the EDINET code in Japan. Often, entities are also tagged with  stock indices (DOW30, NIKKEI, ...).
 
 There is an identifier, though, that is available across all profiles: the Entity ID, even though its format may still vary depending on the profile.
+
+##Spreadsheet analogy
+
+In the spreadsheet analogy, an entity is a Excel user.
