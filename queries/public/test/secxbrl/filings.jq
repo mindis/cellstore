@@ -87,15 +87,15 @@ declare %an:sequential function local:check($o as object) as object
 
 let $dow30 := test:is-dow30()
 return local:check({
-    all: local:test-filings($local:expected.all, {ticker:"ko"}),
+    all: local:test-filings($local:expected.all, {ticker:"ko", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
     generic: local:test-filings-generic($local:expected.generic, {eid:"http://www.sec.gov/CIK 0000004962", profile-name:"generic"}),
-    eid-sec: local:test-filings($local:expected.eid-sec, {eid:"http://www.sec.gov/CIK 0000004962"}),
-    dow30: local:test-filings($local:expected.dow30, {tag:"DOW30"}),
-    cik: local:test-filings($local:expected.cik, {cik:"4962"}),
-    ticker: local:test-filings($local:expected.ticker, {ticker:"wmt",fiscalYear:"ALL"}),
-    fpall: local:test-filings($local:expected.fpall, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod:"ALL"}) ,
+    eid-sec: local:test-filings($local:expected.eid-sec, {eid:"http://www.sec.gov/CIK 0000004962", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    dow30: local:test-filings($local:expected.dow30, {tag:"DOW30", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    cik: local:test-filings($local:expected.cik, {cik:"4962", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    ticker: local:test-filings($local:expected.ticker, {ticker:"wmt",fiscalYear:"ALL", fiscalPeriod: "FY"}),
+    fpall: local:test-filings($local:expected.fpall, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod: "FY"}) ,
     fyfp: local:test-filings($local:expected.fyfp, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod:"Q1"}),
-    several: local:test-filings($local:expected.several, {cik:"0000021344",fiscalPeriod:"ALL",fiscalYear:"ALL"}),
-    sic: local:test-filings(if($dow30) then $local:expected.sic-dow30 else $local:expected.sic, {sic:"4813"}),
+    several: local:test-filings($local:expected.several, {cik:"0000021344"}),
+    sic: local:test-filings(if($dow30) then $local:expected.sic-dow30 else $local:expected.sic, {sic:"4813", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
     example: local:test-example1()
 })
