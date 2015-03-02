@@ -48,3 +48,8 @@ This is a "real-life" fact (only showing the dimensional coordinates and the val
       },
       "Value" : 6913416000000
     }
+
+Spreadsheet analogy
+-------------------
+
+Facts correspond to cells carrying values (as opposed to hear cells) in a spreadsheet.
