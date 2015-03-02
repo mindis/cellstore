@@ -27,8 +27,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as 
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
