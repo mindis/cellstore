@@ -68,7 +68,7 @@ declare %an:nondeterministic function local:test-example1() as item
         }
     ]
     let $endpoint := "filings"
-    let $params := {cik:"66740"}
+    let $params := {cik:"66740", fiscalYear: "2013", fiscalPeriod: "FY"}
     let $request := test:invoke($endpoint, $params)
     let $actual as array := $request[2].Archives
     let $status as integer := $request[1]
@@ -93,7 +93,7 @@ return local:check({
     dow30: local:test-filings($local:expected.dow30, {tag:"DOW30", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
     cik: local:test-filings($local:expected.cik, {cik:"4962", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
     ticker: local:test-filings($local:expected.ticker, {ticker:"wmt",fiscalYear:"ALL", fiscalPeriod: "FY"}),
-    fpall: local:test-filings($local:expected.fpall, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod: "FY"}) ,
+    fpall: local:test-filings($local:expected.fpall, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod: "ALL"}) ,
     fyfp: local:test-filings($local:expected.fyfp, {ticker:"wmt",fiscalYear:"2012",fiscalPeriod:"Q1"}),
     several: local:test-filings($local:expected.several, {cik:"0000021344"}),
     sic: local:test-filings(if($dow30) then $local:expected.sic-dow30 else $local:expected.sic, {sic:"4813", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
