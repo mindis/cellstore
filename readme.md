@@ -9,11 +9,11 @@ The CellStore is entirely written in [JSONiq](http://jsoniq.org) and is hosted o
 ## Demo
 A CellStore with all SEC filings since 2010 is available at http://secxbrl.info.
 
+## End-user Documentation
+The [end-user documentation](http://edinet.xbrl.io/documentation/index.html) can be found here where developers get a smooth introduction to the cell store REST API.
+
 ## Whitepaper
 http://arxiv.org/pdf/1410.0600.pdf
-
-## Documentation of the REST API (for developers)
-a [tutorial](documentation/rest/main.md) can be found here where developers get a smooth introduction to the cell store REST API.
 
 ## Installation
 
