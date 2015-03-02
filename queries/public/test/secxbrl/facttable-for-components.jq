@@ -25,7 +25,7 @@ local:check({
     cocacola: local:test-facttable(1, {
         ticker:"ko",
         fiscalYear: "LATEST",
-        fiscalPeriod: "FY",
+        fiscalPeriod: "FY"
     }),
     tickerrole: local:test-facttable(60, {
         ticker:"ko",
