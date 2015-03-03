@@ -153,7 +153,7 @@ gulp.task('config:load', ['templates:config'], function(done){
 
         var requestDefaults = undefined;
         if(_.isString(config.credentials['28'].proxy) && config.credentials['28'].proxy !== ''){
-            requestDefaults = { 'proxy': config.credentials['28'] };
+            requestDefaults = { 'proxy': config.credentials['28'].proxy };
         }
         config.$28 = new (require('28').$28)(config.portalAPIUrl, requestDefaults);
         done();
