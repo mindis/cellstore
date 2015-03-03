@@ -50,9 +50,11 @@ if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== configId){
 }
 
 // allow running single protractor specs using --specs arg
-var specs = [ 'tests/e2e/' + configId + '/*-scenario.js' ];
+var specs = [];
 if (_.isString(args.specs) ){
     specs = args.specs.split(',');
+} else if(fs.existsSync('tests/e2e/' + configId)){
+    specs.push('tests/e2e/' + configId + '/*-scenario.js');
 }
 
 var config =
