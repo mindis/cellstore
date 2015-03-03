@@ -1,7 +1,7 @@
 Default Dimension Values
 ========================
 
-Let's experiment some more. Why don't we try to make jppfs-cor:ConsolidatedOrNonConsolidatedAxis non-filtering?
+Let's experiment some more. Why don't we try to make *jppfs-cor:ConsolidatedOrNonConsolidatedAxis* non-filtering?
 
 ```REST
 http://edinet.28.io/v1/_queries/public/api/facts.jq?_method=POST&xbrl:Entity=http://disclosure.edinet-fsa.go.jp%20E04147-000&xbrl:Concept=jppfs-cor:Assets&jppfs-cor:ConsolidatedOrNonConsolidatedAxis=ALL&fsa:Submitted=2014-06-24&xbrl:Period=2014-03-31&profile-name=generic&token=c3049752-4d35-43da-82a2-f89f1b06f7a4
