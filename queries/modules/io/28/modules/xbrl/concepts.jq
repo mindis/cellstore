@@ -15,6 +15,8 @@ import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
+declare namespace xbrli = "http://www.xbrl.org/2003/instance";
+
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
 
@@ -206,4 +208,39 @@ declare function concepts:concepts-for-components(
                            $component.Role,
                            $labels,
                            $options)
+};
+
+(:~
+ : <p>Transforms concepts into XBRL definitions (XML Schema element definition).</p>
+ :
+ : @param $concepts the concepts to transform.
+ :
+ : @return the XML Schema element definitions.
+ :)
+declare function concepts:to-xml(
+    $concepts as object*) as element()*
+{
+  for $concept as object in $concepts
+  let $name as string := substring-after($concept.Name, ":")
+  let $id as string := replace($concept.Name, ":", "_")
+  let $substitutionGroup as string := $concept.SubstitutionGroup
+  let $nillable as boolean := (boolean($concept.IsNillable), false)[1]
+  let $abstract as boolean := (boolean($concept.IsAbstract), false)[1]
+  let $periodType as attribute()? := if($concept.PeriodType) then attribute { "xbrli:periodType" } {$concept.PeriodType } else ()
+  let $balance as attribute()? := if($concept.Balance) then attribute { "xbrli:balance" } {$concept.Balance } else ()
+  let $type as string := $concept.DataType
+  let $textBlock := $concept.IsTextBlock
+  return
+      <element xmlns="http://www.w3.org/2001/XMLSchema"
+          id="{$id}"
+          name="{$name}"
+          nillable="{$nillable}"
+          substitutionGroup="{$substitutionGroup}"
+          abstract="{$abstract}"
+          type="{$type}">{
+              (
+                  $periodType,
+                  $balance
+              )
+      }</element>
 };

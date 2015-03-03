@@ -13,6 +13,9 @@ module namespace labels = "http://28.io/modules/xbrl/labels";
 import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 
+declare namespace xbrli = "http://www.xbrl.org/2003/instance";
+declare namespace xlink = "http://www.w3.org/1999/xlink";
+
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
 
@@ -234,4 +237,44 @@ declare %private function labels:approximate-languages(
     then
       $all-languages[starts-with($$, substring-before($normalized-language, "-") || "-")]
     else ()
+};
+
+
+(:~
+ : <p>Transforms concept labels into XBRL labelLink.</p>
+ :
+ : @param $concepts the concepts to transform.
+ :
+ : @return the labelLink element to be put into a linkbase.
+ :)
+declare function labels:to-xml(
+    $concepts as object*,
+    $taxonomyName as string) as element()
+{
+  <link:labelLink xmlns:link="http://www.xbrl.org/2003/linkbase" xlink:type="extended" xlink:role="http://www.xbrl.org/2003/role/link">
+  {
+    for $concept as object in $concepts
+    let $name as string := substring-after($concept.Name, ":")
+    let $id as string := replace($concept.Name, ":", "_")
+    return
+      (
+        <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$id}" xlink:label="{$id}" />,
+        for $label at $pos in $concept.Labels[]
+        let $role as string := ($concept.Role, "http://www.xbrl.org/2003/role/label")[1]
+        let $lang as string := ($concept.Language, "de")[1]
+        let $value as string? := $concept.Value
+        let $labelID as string := $id || "_label" || $pos
+        return (
+            <link:label xlink:role="{$role}"
+                   xlink:label="{$labelID}"
+                   id="{$labelID}"
+                   xml:lang="{$lang}"
+                   xlink:type="resource">{$value}</link:label>,
+            <link:labelArc xlink:type="arc"
+                      xlink:arcrole="http://www.xbrl.org/2003/arcrole/concept-label"
+                      xlink:from="{$id}"
+                      xlink:to="{$labelID}" />
+        )
+      )
+  }</link:labelLink>
 };

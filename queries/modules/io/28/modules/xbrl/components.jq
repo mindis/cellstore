@@ -1014,6 +1014,20 @@ declare %private function components:has-presentation-network(
 };
 
 (:~
+ : <p>Checks whether the component has a calculation network.</p>
+ :
+ : @param $component a component.
+ :
+ : @return whether it has a calculation network.
+ :)
+declare %private function components:has-calculation-network(
+    $component as object
+) as boolean
+{
+  exists(networks:networks-for-components-and-short-names($component, $networks:CALCULATION_NETWORK))
+};
+
+(:~
  : <p>Checks whether the component has a non-implied table.</p>
  :
  : @param $component a component.
@@ -1117,4 +1131,86 @@ declare function components:model-structures($components as object*) as object*
       $component,
       $presentation-network.Trees[],
       1)
+};
+
+(:~
+ : <p>Transforms components into XBRL schema file annotation that can be
+ :    found in an XBRL xsd file.</p>
+ :
+ : @param $components the components to transform.
+ :
+ : @return the XML Schema annotation element.
+ :)
+declare function components:to-xml-annotation(
+    $components as object*,
+    $taxonomyName as string) as element()
+{
+  <annotation
+      xmlns="http://www.w3.org/2001/XMLSchema"
+      xmlns:link="http://www.xbrl.org/2003/linkbase"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+    <appinfo>
+    {
+      let $has-labels as boolean := exists($components.Concepts[])
+      let $has-presentation as boolean := some $comp in $components satisfies components:has-presentation-network($comp)
+      let $has-calculation as boolean := some $comp in $components satisfies components:has-calculation-network($comp)
+      let $has-table as boolean := some $comp in $components satisfies components:has-table($comp)
+      return (
+        <link:linkbaseRef
+            xlink:type="simple"
+            xlink:href="{$taxonomyName}_lab.xml"
+            xlink:role="http://www.xbrl.org/2003/role/labelLinkbaseRef"
+            xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />[$has-labels],
+        <link:linkbaseRef
+            xlink:type="simple"
+            xlink:href="{$taxonomyName}_pre.xml"
+            xlink:role="http://www.xbrl.org/2003/role/presentationLinkbaseRef"
+            xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />[$has-presentation],
+        <link:linkbaseRef
+            xlink:type="simple"
+            xlink:href="{$taxonomyName}_cal.xml"
+            xlink:role="http://www.xbrl.org/2003/role/calculationLinkbaseRef"
+            xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />[$has-calculation],
+        <link:linkbaseRef
+            xlink:type="simple"
+            xlink:href="{$taxonomyName}_def.xml"
+            xlink:role="http://www.xbrl.org/2003/role/definitionLinkbaseRef"
+            xlink:arcrole="http://www.w3.org/1999/xlink/properties/linkbase" />[$has-table]
+      ),
+
+      for $role in distinct-values($components.Role[$$ ne null])
+      let $comp as object := $components[$$.Role eq $role]
+      let $has-presentation := components:has-presentation-network($comp)
+      let $has-calculation := components:has-calculation-network($comp)
+      let $has-table := components:has-table($comp)
+      let $id as string := tokenize($role, "/")[last()]
+      return
+          <link:roleType roleURI="{$role}" id="{$id}">
+            <link:definition>{$comp.Label}</link:definition>
+            {
+              (
+                <link:usedOn>link:presentationLink</link:usedOn>[components:has-presentation-network($comp)],
+                <link:usedOn>link:calculationLink</link:usedOn>[components:has-calculation-network($comp)],
+                <link:usedOn>link:definitionLink</link:usedOn>[components:has-table($comp)]
+              )
+            }
+          </link:roleType>
+    }
+    </appinfo>
+  </annotation>
+};
+
+(:~
+ : <p>Transforms components into XBRL linkbase links that can be found in
+ :    XBRL linkbase files.</p>
+ :
+ : @param $components the components to transform.
+ :
+ : @return the XML Schema annotation element.
+ :)
+declare function components:to-xml-presentation(
+    $components as object*,
+    $taxonomyName as string) as element()
+{
+  ()
 };

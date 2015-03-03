@@ -35,6 +35,9 @@ import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace schema = "http://zorba.io/modules/schema";
 
+declare namespace xbrli = "http://www.xbrl.org/2003/instance";
+declare namespace xlink = "http://www.w3.org/1999/xlink";
+
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
 
@@ -588,3 +591,30 @@ declare function hypercubes:merge($hypercubes as object*) as object
         }
     |})
 };
+
+(:~
+ : <p>Transforms concepts into XBRL definitions (XML Schema element definition).</p>
+ :
+ : @param $concepts the concepts to transform.
+ :
+ : @return the XML Schema element definitions.
+ :)
+ (:
+declare function hypercubes:to-xml(
+    $components as object*
+) as element()*
+{
+  <link:definitionLink
+        xlink:type="extended"
+        xlink:role="{$role}">
+  {
+    for $comp in $components
+    let $role as string := $comp.Role
+    let $concepts as object* := $comp.Concepts[]
+    let $hypercubes as object* := hypercubes:hypercubes-for-components($comp)
+    for $hypercube in $hypercubes
+    let $conceptTrees as object* := $hypercube.Aspects."xbrl:Concept".Members[]
+    return ()
+  }
+  </link:definitionLink>
+};:)
