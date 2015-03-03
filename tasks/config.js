@@ -149,7 +149,11 @@ gulp.task('config:load', ['templates:config'], function(done){
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
 
-        config.$28 = new (require('28').$28)(config.portalAPIUrl);
+        var requestDefaults = undefined;
+        if(_.isString(config.credentials['28'].proxy) && config.credentials['28'].proxy !== ''){
+            requestDefaults = { 'proxy': config.credentials['28'] };
+        }
+        config.$28 = new (require('28').$28)(config.portalAPIUrl, requestDefaults);
         done();
     }
 });

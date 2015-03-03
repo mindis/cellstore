@@ -106,6 +106,7 @@ gulp test:unit --build-id=mydemo --config=secxbrl
         "28-email": "user@example.com",
         "28-password": "<password>",
         "28-portal-protocol": "http",
+        "28-proxy": "http://proxyserver.com:3737",
         "28-portal-project": "portal",
         "28-portal-domain": "28.io",
         "28-portal-api-prefix": "/api",
