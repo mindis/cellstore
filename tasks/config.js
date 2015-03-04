@@ -6,6 +6,7 @@ var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var _ = require('lodash');
 var install = require('gulp-install');
+var globalTunnel = require('global-tunnel');
 
 var knownOptions = {
     string: [ 'build-id', 'config', 'specs' ],
@@ -151,11 +152,16 @@ gulp.task('config:load', ['templates:config'], function(done){
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
 
-        var requestDefaults = undefined;
         if(_.isString(config.credentials['28'].proxy) && config.credentials['28'].proxy !== ''){
-            requestDefaults = { 'proxy': config.credentials['28'].proxy };
+            var proxy = config.credentials['28'].proxy;
+            var hostAndPort = proxy.substring(proxy.indexOf('//') + '//'.length).split(':');
+            globalTunnel.initialize({
+                'host': hostAndPort[0],
+                'port': parseInt(hostAndPort[1])
+            });
         }
-        config.$28 = new (require('28').$28)(config.portalAPIUrl, requestDefaults);
+
+        config.$28 = new (require('28').$28)(config.portalAPIUrl);
         done();
     }
 });
