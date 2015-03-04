@@ -155,6 +155,7 @@ gulp.task('config:load', ['templates:config'], function(done){
         if(_.isObject(config.credentials.http) && _.isString(config.credentials.http.proxy) && config.credentials.http.proxy !== ''){
             var proxy = config.credentials.http.proxy;
             var hostAndPort = proxy.substring(proxy.indexOf('//') + '//'.length).split(':');
+            $.util.log('Setting up global proxy tunnel.');
             globalTunnel.initialize({
                 'host': hostAndPort[0],
                 'port': parseInt(hostAndPort[1])
