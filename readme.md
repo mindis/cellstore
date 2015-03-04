@@ -96,6 +96,8 @@ gulp test:unit --build-id=mydemo --config=secxbrl
 ```json
 {
     "all": {
+        "http-proxy": "http://proxyserver.com:3737",
+
         "s3-region": "us-east-1",
         "s3-bucketPrefix": "csms.example.com",
         "s3-key": "ADUREIGMKODJAEO43SAJ3",
@@ -106,7 +108,6 @@ gulp test:unit --build-id=mydemo --config=secxbrl
         "28-email": "user@example.com",
         "28-password": "<password>",
         "28-portal-protocol": "http",
-        "28-proxy": "http://proxyserver.com:3737",
         "28-portal-project": "portal",
         "28-portal-domain": "28.io",
         "28-portal-api-prefix": "/api",

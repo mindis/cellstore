@@ -152,8 +152,8 @@ gulp.task('config:load', ['templates:config'], function(done){
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
 
-        if(_.isString(config.credentials['28'].proxy) && config.credentials['28'].proxy !== ''){
-            var proxy = config.credentials['28'].proxy;
+        if(_.isObject(config.credentials.http) && _.isString(config.credentials.http.proxy) && config.credentials.http.proxy !== ''){
+            var proxy = config.credentials.http.proxy;
             var hostAndPort = proxy.substring(proxy.indexOf('//') + '//'.length).split(':');
             globalTunnel.initialize({
                 'host': hostAndPort[0],
