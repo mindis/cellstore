@@ -34,9 +34,11 @@ import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace facts = "http://28.io/modules/xbrl/facts";
 import module namespace schema = "http://zorba.io/modules/schema";
+import module namespace concepts = "http://28.io/modules/xbrl/concepts";
 
 declare namespace xbrli = "http://www.xbrl.org/2003/instance";
 declare namespace xlink = "http://www.w3.org/1999/xlink";
+declare namespace link = "http://www.xbrl.org/2003/linkbase";
 
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
@@ -593,28 +595,71 @@ declare function hypercubes:merge($hypercubes as object*) as object
 };
 
 (:~
- : <p>Transforms concepts into XBRL definitions (XML Schema element definition).</p>
+ : <p>Transforms a hypercube network - all, hypercube-dimension, dimension-default,
+ :    dimension-domain, domain-member (except primary items).</p>
  :
- : @param $concepts the concepts to transform.
+ : @param $hypercube the hypercube to transform.
  :
- : @return the XML Schema element definitions.
+ : @return the XBRL locators and arcs to be put into an extended link.
  :)
- (:
 declare function hypercubes:to-xml(
-    $components as object*
+    $hypercube as object,
+    $component as object,
+    $taxonomyName as string
 ) as element()*
 {
-  <link:definitionLink
-        xlink:type="extended"
-        xlink:role="{$role}">
-  {
-    for $comp in $components
-    let $role as string := $comp.Role
-    let $concepts as object* := $comp.Concepts[]
-    let $hypercubes as object* := hypercubes:hypercubes-for-components($comp)
-    for $hypercube in $hypercubes
-    let $conceptTrees as object* := $hypercube.Aspects."xbrl:Concept".Members[]
-    return ()
-  }
-  </link:definitionLink>
-};:)
+  let $hypercubeID as string := replace($hypercube.Name, ":", "_")
+  let $hypercubeLocator as element() := <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$hypercubeID}" xlink:label="{$hypercubeID}" xlink:title="{normalize-space($hypercube.Label)}" />
+  return (
+    (: primary items -> hypercube :)
+    for $rootConcept at $pos in $hypercube.Aspects."xbrl:Concept".Members[]
+    let $order as decimal :=
+        if(empty($rootConcept.Order) or $rootConcept.Order eq null)
+        then 1
+        else $rootConcept.Order
+    let $fromID as string := replace($rootConcept.Name, ":", "_")
+    let $fromLabel as string := $fromID || "_" || $pos
+    return (
+      <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$fromID}" xlink:label="{$fromLabel}" xlink:title="{normalize-space($rootConcept.Label)}" />,
+      <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/all" xlink:from="{$fromLabel}" xlink:to="{$hypercubeID}" use="optional" order="{$order}" />
+    ),
+    $hypercubeLocator,
+
+    (: hypercube -> dimension :)
+    for $dimension at $pos in values($hypercube.Aspects)[not($$.Name = ("xbrl:Concept", "xbrl:Period", "xbrl:Unit", "xbrl:Entity"))]
+    let $dimensionID as string := replace($dimension.Name, ":", "_")
+    let $dimensionLabel as string := $dimensionID || "_" || $pos
+    let $default as string? := $dimension.Default
+    return (
+      <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/hypercube-dimension" xlink:from="{$hypercubeID}" xlink:to="{$dimensionLabel}" use="optional" order="{$pos}" />,
+      <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$dimensionID}" xlink:label="{$dimensionLabel}" xlink:title="{normalize-space($dimension.Label)}" />,
+
+      (: dimension -> default :)
+      if(exists($default))
+      then
+        let $defaultID as string := replace($default, ":", "_")
+        let $defaultLabel as string := $defaultID || "_" || $pos
+        return (
+          <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-default" xlink:from="{$dimensionLabel}" xlink:to="{$defaultLabel}" use="optional" order="1" />,
+          <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$defaultID}" xlink:label="{$defaultLabel}" xlink:title="{normalize-space(())}" />
+        )
+      else (),
+
+      (: dimension -> domain :)
+      for $domain at $pos in $dimension.Members[]
+      let $order as decimal :=
+        if(empty($domain.Order) or $domain.Order eq null)
+        then 1
+        else $domain.Order
+      let $domainID as string := replace($domain.Name, ":", "_")
+      let $domainLabel as string := $domainID || "_" || $pos
+      return (
+        <link:definitionArc xlink:type="arc" xlink:arcrole="http://xbrl.org/int/dim/arcrole/dimension-domain" xlink:from="{$dimensionLabel}" xlink:to="{$domainLabel}" use="optional" order="{$order}" />,
+        <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$domainID}" xlink:label="{$domainLabel}" xlink:title="{normalize-space($domain.Label)}" />,
+
+        (: domain -> member :)
+        concepts:tree-to-xml($domain, "http://xbrl.org/int/dim/arcrole/domain-member", $taxonomyName, 1, $pos)
+      )
+    )
+  )
+};

@@ -27,6 +27,9 @@ jsoniq version "1.0";
  :)
 module namespace networks = "http://28.io/modules/xbrl/networks";
 
+import module namespace hypercubes = "http://28.io/modules/xbrl/hypercubes";
+import module namespace concepts = "http://28.io/modules/xbrl/concepts";
+
 declare namespace xbrli = "http://www.xbrl.org/2003/instance";
 declare namespace xlink = "http://www.w3.org/1999/xlink";
 declare namespace link = "http://www.xbrl.org/2003/linkbase";
@@ -153,70 +156,6 @@ declare %private function networks:merge-trees($trees as object*) as object*
 
 
 (:~
- : <p>Transforms a concept tree into XBRL arcs and locators.
- :    Those can then be added to an extended link.</p>
- :
- : @param $trees the trees to transform.
- :
- : @return the locator and arcs elements
- :)
-declare function networks:tree-to-xml(
-    $tree as object,
-    $arcRole as string,
-    $taxonomyName as string
-) as element()*
-{
-  let $children as object* := ($tree.To[], $tree.Members[])
-  let $fromID as string := replace($tree.Name, ":", "_")
-  let $fromLocator as element() := <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$fromID}" xlink:label="{$fromID}" />
-
-  return
-  (
-    $fromLocator,
-
-    for $child in $children
-    order by $child.Order ascending
-    let $toID as string := replace($child.Name, ":", "_")
-    let $order as decimal :=
-      if(empty($child.Order) or $child.Order eq null)
-      then 1
-      else $child.Order
-    let $arc as element() :=
-      element {
-        switch ($arcRole)
-
-        case "http://www.xbrl.org/2003/arcrole/concept-label" return xs:QName("link:labelArc")
-
-        case "http://www.xbrl.org/2003/arcrole/parent-child" return xs:QName("link:presentationArc")
-
-        case "http://www.xbrl.org/2003/arcrole/summation-item" return xs:QName("link:calculationArc")
-
-        case "http://xbrl.org/int/dim/arcrole/all"
-        case "http://xbrl.org/int/dim/arcrole/hypercube-dimension"
-        case "http://xbrl.org/int/dim/arcrole/dimension-domain"
-        case "http://xbrl.org/int/dim/arcrole/dimension-default"
-        case "http://xbrl.org/int/dim/arcrole/domain-member"
-        return xs:QName("link:definitionArc")
-
-        default return error(xs:QName("err:UnknownArcRole"), "arcrole " || $arcRole || " unknown or not supported.")
-      }
-      {
-        attribute { "xlink:type" } { "arc" },
-        attribute { "xlink:arcrole" } { $arcRole },
-        attribute { "xlink:from" } { $fromID },
-        attribute { "xlink:to" } { $toID },
-        attribute { "use" } { "optional" },
-        attribute { "order" } { $order }
-      }
-    return
-      (
-        $arc,
-        networks:tree-to-xml($child, $arcRole, $taxonomyName)
-      )
-  )
-};
-
-(:~
  : <p>Transforms a network into an XBRL extended link
  :    which can be added to a linkbase.</p>
  :
@@ -226,10 +165,12 @@ declare function networks:tree-to-xml(
  :)
 declare function networks:to-xml(
     $network as object,
-    $role as string,
+    $component as object,
     $taxonomyName as string
 ) as element()*
 {
+  let $role as string := $component.Role
+  let $networkTitle as string := ($network.Label, $component.Label || " " || $network.ShortName)[1]
   let $extendedLink as xs:QName :=
     switch(true)
     case ($network.Kind eq "Hypercube") return xs:QName("link:definitionLink")
@@ -243,25 +184,26 @@ declare function networks:to-xml(
     case ($network.Kind eq "Hypercube") return
     (
       (: network of primary items (domain-member) :)
-      for $primaryItem in $network.Aspects."xbrl:Concept".Members[]
+      for $primaryItem at $pos in $network.Aspects."xbrl:Concept".Members[]
       where exists($primaryItem.Members[])
-      return networks:tree-to-xml($primaryItem,
+      return concepts:tree-to-xml($primaryItem,
                                   "http://xbrl.org/int/dim/arcrole/domain-member",
-                                  $taxonomyName)
+                                  $taxonomyName, 1, $pos),
+      hypercubes:to-xml($network, $component, $taxonomyName)
     )
 
     case ($network.ShortName eq "Presentation") return
     (
-      $network.Trees[] ! networks:tree-to-xml($$,
+      $network.Trees[] ! concepts:tree-to-xml($$,
                                               "http://www.xbrl.org/2003/arcrole/parent-child",
-                                              $taxonomyName)
+                                              $taxonomyName, 1, 1)
     )
 
     case ($network.ShortName eq "Calculation") return
     (
-      $network.Trees[] ! networks:tree-to-xml($$,
+      $network.Trees[] ! concepts:tree-to-xml($$,
                                               "http://www.xbrl.org/2003/arcrole/summation-item",
-                                              $taxonomyName)
+                                              $taxonomyName, 1, 1)
     )
 
     default return error(xs:QName("err:UnknownNetwork"), "Cannot determine the type of the Network " || $network.Name)
@@ -272,6 +214,7 @@ declare function networks:to-xml(
     {
       attribute { "xlink:type" } { "extended" },
       attribute { "xlink:role" } { $role },
+      attribute { "xlink:title" } { $networkTitle },
       $locatorsAndArcs
     }
 };

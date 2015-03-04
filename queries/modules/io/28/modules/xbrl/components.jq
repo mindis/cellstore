@@ -35,6 +35,9 @@ import module namespace labels = "http://28.io/modules/xbrl/labels";
 
 import module namespace accountant = "http://28.io/modules/xbrl/profiles/accountant/converter";
 
+declare namespace xlink = "http://www.w3.org/1999/xlink";
+declare namespace link = "http://www.xbrl.org/2003/linkbase";
+
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
 
@@ -1201,16 +1204,20 @@ declare function components:to-xml-annotation(
 };
 
 (:~
- : <p>Transforms components into XBRL linkbase links that can be found in
- :    XBRL linkbase files.</p>
+ : <p>Transforms components into XBRL roleRef that can be
+ :    added to a linkbase file.</p>
  :
  : @param $components the components to transform.
  :
- : @return the XML Schema annotation element.
+ : @return the link:roleRef elements.
  :)
-declare function components:to-xml-presentation(
+declare function components:to-xml-roleRefs(
     $components as object*,
-    $taxonomyName as string) as element()
+    $taxonomyName as string) as element()*
 {
-  ()
+  for $role in distinct-values($components.Role[$$ ne null])
+  let $comp as object := $components[$$.Role eq $role]
+  let $id as string := tokenize($role, "/")[last()]
+  return
+    <link:roleRef roleURI="{$role}" xlink:type="simple" xlink:href="{$taxonomyName}.xsd#{$id}" />
 };

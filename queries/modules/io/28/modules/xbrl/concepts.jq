@@ -16,6 +16,8 @@ import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace mw = "http://28.io/modules/xbrl/mongo-wrapper";
 
 declare namespace xbrli = "http://www.xbrl.org/2003/instance";
+declare namespace xlink = "http://www.w3.org/1999/xlink";
+declare namespace link = "http://www.xbrl.org/2003/linkbase";
 
 declare namespace ver = "http://zorba.io/options/versioning";
 declare option ver:module-version "1.0";
@@ -208,6 +210,70 @@ declare function concepts:concepts-for-components(
                            $component.Role,
                            $labels,
                            $options)
+};
+
+
+(:~
+ : <p>Transforms a concept tree into XBRL arcs and locators.
+ :    Those can then be added to an extended link.</p>
+ :
+ : @param $trees the trees to transform.
+ :
+ : @return the locator and arcs elements
+ :)
+declare function concepts:tree-to-xml(
+    $tree as object,
+    $arcRole as string,
+    $taxonomyName as string,
+    $level as integer,
+    $pos as integer
+) as element()*
+{
+  let $children as object* := ($tree.To[], $tree.Members[])
+  let $fromID as string := replace($tree.Name, ":", "_")
+  let $fromLabel as string := $fromID || "_" || $level || "_" || $pos
+  let $fromLocator as element() := <link:loc xlink:type="locator" xlink:href="{$taxonomyName}.xsd#{$fromID}" xlink:label="{$fromLabel}" xlink:title="{normalize-space($tree.Label)}" />
+
+  return
+  (
+    $fromLocator,
+
+    for $child at $pos in $children
+    order by $child.Order ascending
+    let $toID as string := replace($child.Name, ":", "_")
+    let $toLabel as string := $toID || "_" || ($level + 1) || "_" || $pos
+    let $order as decimal :=
+      if(empty($child.Order) or $child.Order eq null)
+      then 1
+      else $child.Order
+    let $arc as element() :=
+      element {
+        switch ($arcRole)
+        case "http://www.xbrl.org/2003/arcrole/concept-label" return xs:QName("link:labelArc")
+        case "http://www.xbrl.org/2003/arcrole/parent-child" return xs:QName("link:presentationArc")
+        case "http://www.xbrl.org/2003/arcrole/summation-item" return xs:QName("link:calculationArc")
+        case "http://xbrl.org/int/dim/arcrole/all"
+        case "http://xbrl.org/int/dim/arcrole/hypercube-dimension"
+        case "http://xbrl.org/int/dim/arcrole/dimension-domain"
+        case "http://xbrl.org/int/dim/arcrole/dimension-default"
+        case "http://xbrl.org/int/dim/arcrole/domain-member"
+        return xs:QName("link:definitionArc")
+        default return error(xs:QName("err:UnknownArcRole"), "arcrole " || $arcRole || " unknown or not supported.")
+      }
+      {
+        attribute { "xlink:type" } { "arc" },
+        attribute { "xlink:arcrole" } { $arcRole },
+        attribute { "xlink:from" } { $fromLabel },
+        attribute { "xlink:to" } { $toLabel },
+        attribute { "use" } { "optional" },
+        attribute { "order" } { $order }
+      }
+    return
+      (
+        $arc,
+        concepts:tree-to-xml($child, $arcRole, $taxonomyName, $level+1, $pos)
+      )
+  )
 };
 
 (:~
