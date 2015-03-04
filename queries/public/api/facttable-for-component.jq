@@ -231,10 +231,8 @@ let $serializers := {
         string-join(conversion:facts-to-csv($res.FactTable[], { Caller: "Component"}))
     }
 }
-return if($entities-not-found)
-       then api:not-found("entity")
-       else if($archives-not-found)
-            then api:not-found("archive")
-            else if($components-not-found)
-                 then api:not-found("component")
-                 else api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       case $components-not-found return api:not-found("components")
+       default return api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)
