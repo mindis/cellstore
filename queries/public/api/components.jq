@@ -253,4 +253,4 @@ let $results := api:serialize($result, $comment, $serializers, $format, "compone
 return switch(true)
        case $entities-not-found return api:not-found("entity")
        case $archives-not-found return api:not-found("archive")
-       case api:check-and-return-results($token, $results, $format)
+       default return api:check-and-return-results($token, $results, $format)
