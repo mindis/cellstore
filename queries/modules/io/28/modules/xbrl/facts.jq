@@ -1229,13 +1229,15 @@ declare %private function facts:facts-for-direct(
             where exists($hypercube.$facts:ASPECTS.$dimension.Default)
             return $hypercube.$facts:ASPECTS.$dimension
           let $hc-dimension-names := $keys
-          for $fact in $found[$open-hypercube or
-                              (every $key in flatten($$.KeyAspects)
-                               satisfies $key = ($keys,
-                                                $facts:ENTITY,
-                                                $facts:CONCEPT,
-                                                $facts:PERIOD,
-                                                $facts:UNIT))]
+          let $facts := $found[$open-hypercube or
+                               (every $key in flatten($$.KeyAspects)
+                                satisfies $key = ($keys,
+                                                 $facts:ENTITY,
+                                                 $facts:CONCEPT,
+                                                 $facts:PERIOD,
+                                                 $facts:UNIT))]
+          let $all-aspects := keys($facts.$facts:ASPECTS)
+          for $fact in $facts
           return
             (: add default dimension members if they are omitted
                remove dimensions that are not in the hypercube :)
@@ -1246,13 +1248,20 @@ declare %private function facts:facts-for-direct(
                 let $name as xs:string := $dimension.Name
                 let $dimension-value := $populated.$facts:ASPECTS.$name
                 where empty($dimension-value)
-                return { $name: $dimension.Default }
+                return { $name: $dimension.Default },
+                for $open-dimension in seq:value-except(
+                    $all-aspects,
+                    ($hc-dimension-names, keys($fact.$facts:ASPECTS))
+                )
+                return { $open-dimension : "xbrl28:Domain" }
               |}
               let $removals := seq:value-except(keys($fact.$facts:ASPECTS), $hc-dimension-names)
               (: where count(keys($replacements)) gt 0 :)
               return (
                 insert json $replacements into $populated.$facts:ASPECTS,
-                $removals ! (delete json $populated($facts:ASPECTS)($$)),
+                if($open-hypercube)
+                then ()
+                else $removals ! (delete json $populated($facts:ASPECTS)($$)),
                 let $audit-trails := keys($replacements) ! {
                   Type: "xbrl28:dimension-default",
                   Label: "Default dimension value",
