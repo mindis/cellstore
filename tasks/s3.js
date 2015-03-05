@@ -167,7 +167,7 @@ var createBucket = function() {
             $.util.log($.util.colors.red(bucketName + ' (' + region + '): ' + err));
             deferred.reject();
         } else {
-            $.util.log('createBucket(' + bucketName + ') in ' + data.Location );
+            $.util.log('createBucket(' + bucketName + ')');
             deferred.resolve();
         }
     });

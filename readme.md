@@ -96,6 +96,8 @@ gulp test:unit --build-id=mydemo --config=secxbrl
 ```json
 {
     "all": {
+        "http-proxy": "http://proxyserver.com:3737",
+
         "s3-region": "us-east-1",
         "s3-bucketPrefix": "csms.example.com",
         "s3-key": "ADUREIGMKODJAEO43SAJ3",
