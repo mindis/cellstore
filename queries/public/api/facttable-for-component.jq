@@ -169,7 +169,10 @@ let $facts :=
                 trim($fact, "Labels"),
                 { Labels : $labels }
             |}
-let $facts := api:normalize-facts($facts)
+let $facts :=
+  if($profile-name eq "sec")
+  then api:normalize-facts($facts)
+  else $facts
 
 let $result :=
   if($profile-name eq "sec")
