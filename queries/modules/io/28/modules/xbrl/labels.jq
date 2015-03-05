@@ -100,7 +100,7 @@ declare function labels:labels(
         ($perfect-matches.Value,
          $approximate-matches.Value,
          $concept-labels.Value,
-         $concept.Label)[1]
+         $concept.Label)[not $$ instance of null][1]
       where exists($label)
       return {
         $concept.Name : $label
