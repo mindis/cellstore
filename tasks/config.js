@@ -51,7 +51,8 @@ if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== configId){
     process.exit(0);
 }
 
-var specs = expand('tests/e2e/' + configId + '/*-scenario.js'); // will also work if no tests/e2e/configId dir exists
+var specs = expand('tests/e2e/' + configId + '/*-scenario.js');
+specs = _.union(specs, expand('tests/e2e/_all/*-scenario.js'));
 // allow running single protractor specs using --specs arg
 if (_.isString(args.specs) ){
     specs = args.specs.split(',');
