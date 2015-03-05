@@ -48,5 +48,17 @@ test:check-all-success({
           },
           function($res as item*) as item* { count($res.FactTable[]) },
           15
+        ),
+    open: test:invoke-and-assert-deep-equal(
+          "facts",
+          {
+              "ticker" : "7751",
+              "fiscalPeriod": "FY",
+              "fiscalYear": 2014,
+              "concept": "tse-ed-t:DividendPerShare",
+              "open" : "true"
+          },
+          function($res as item*) as item* { count($res.FactTable[]) },
+          69
         )
 })

@@ -2170,6 +2170,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "open",
+                "description": "Whether the query has open hypercube semantics. (default: false)",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -2362,6 +2368,18 @@
                     "tse-ed-t:PreviousCurrentAxis::default": "NONE",
                     "fsa:ArchiveFiscalPeriod": "Q1",
                     "fsa:ArchiveFiscalYear": 2014
+                }
+            },
+            {
+                "title": "Get all dividend data for 2014 reported by Canon. Open hypercube semantics.",
+                "description": "Get all dividend data for 2014 reported by canon",
+                "profile": ["japan"],
+                "parameters": {
+                    "ticker" : 7751,
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "open" : "true"
                 }
             },
             {
