@@ -7,6 +7,7 @@ var gulp = require('gulp');
 var _ = require('lodash');
 var install = require('gulp-install');
 var globalTunnel = require('global-tunnel');
+var expand = require('glob-expand');
 
 var knownOptions = {
     string: [ 'build-id', 'config', 'specs' ],
@@ -50,12 +51,10 @@ if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== configId){
     process.exit(0);
 }
 
+var specs = expand('tests/e2e/' + configId + '/*-scenario.js'); // will also work if no tests/e2e/configId dir exists
 // allow running single protractor specs using --specs arg
-var specs = [];
 if (_.isString(args.specs) ){
     specs = args.specs.split(',');
-} else if(fs.existsSync('tests/e2e/' + configId)){
-    specs.push('tests/e2e/' + configId + '/*-scenario.js');
 }
 
 var config =
