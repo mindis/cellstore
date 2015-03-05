@@ -33,6 +33,250 @@ declare variable $labels:STANDARD_LABEL_ROLE as xs:string :=
 declare variable $labels:VERBOSE_LABEL_ROLE as xs:string :=
     "http://www.xbrl.org/2003/role/verboseLabel";
 
+declare variable $labels:standard-concepts as object* :=
+(
+    {
+      Name: "xbrl:Concept",
+      Label: "Concept [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Concept [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Konzept [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Concept [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "項目(Concept)"
+        }
+      ]
+    },
+    {
+      Name: "xbrl:Period",
+      Label: "Period [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Période [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Period [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Periode [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "期間(Period)"
+        }
+      ]
+    },
+    {
+      Name: "xbrl:Entity",
+      Label: "Entity [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Entität [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Entité [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Reporting Entity [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "企業名(Entity)"
+        }
+      ]
+    },
+    {
+      Name: "xbrl28:Archive",
+      Label: "Archiv [Achse]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Archive [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Archiv [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Archive [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "ファイル(Archive)"
+        }
+      ]
+    },
+    {
+      Name: "fsa:FiscalYear",
+      Label: "Fiscal Year [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Année fiscale [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerjahr [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計年度(Fiscal Year)"
+        }
+      ]
+    },
+    {
+      Name: "fsa:FiscalPeriod",
+      Label: "Fiscal Period [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計期間(Fiscal Period)"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Fiscal Period [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Période fiscal [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerperiode [Achse]"
+        }
+      ]
+    },
+    {
+      Name: "fsa:FiscalPeriodType",
+      Label: "Fiscal Period Type [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計期間タイプ(Fiscal Period Type)"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Fiscal Period Type [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Type de période fiscale [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerperiodeart [Achse]"
+        }
+      ]
+    }
+);
+
 (:~
  : <p>Retrieves all the labels with the given label role and language in the
  : matching concepts, one label for each concept.</p>
@@ -77,7 +321,8 @@ declare function labels:labels(
     $options as object?
   ) as object
 {
-  {|
+  let $concepts := ($labels:standard-concepts, $concepts)
+  return {|
     let $normalized-languages as string* := $languages ! labels:normalize-language($$)
     return (
       for $concept as object in $concepts
@@ -92,13 +337,21 @@ declare function labels:labels(
         $normalized-languages,
         $options
       )
+      let $english-languages as string* := labels:approximate-languages(
+        $available-languages,
+        "en",
+        $options
+      )
       let $perfect-matches as object* :=
         $concept-labels[$$.Language = $normalized-languages]
       let $approximate-matches as object* :=
         $concept-labels[$$.Language = $approximate-languages]
+      let $english-matches as object* :=
+        $concept-labels[$$.Language = $english-languages]
       let $label as string? :=
         ($perfect-matches.Value,
          $approximate-matches.Value,
+         $english-matches.Value,
          $concept-labels.Value,
          $concept.Label)[not $$ instance of null][1]
       where exists($label)
