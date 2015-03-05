@@ -1232,12 +1232,12 @@ declare %private function facts:facts-for-direct(
           let $facts :=
             if($open-hypercube)
             then $found
-            else $found[(every $key in flatten($$.KeyAspects)
+            else $found[every $key in flatten($$.KeyAspects)
                         satisfies $key = ($keys,
                                           $facts:ENTITY,
                                           $facts:CONCEPT,
                                           $facts:PERIOD,
-                                          $facts:UNIT))]
+                                          $facts:UNIT)]
           let $all-aspects := keys($facts.$facts:ASPECTS)
           for $fact in $facts
           return
