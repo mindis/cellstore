@@ -174,6 +174,106 @@ declare variable $labels:standard-concepts as object* :=
           Value: "ファイル(Archive)"
         }
       ]
+    },
+    {
+      Name: "fsa:FiscalYear",
+      Label: "Fiscal Year [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Année fiscale [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerjahr [Achse]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計年度(Fiscal Year)"
+        }
+      ]
+    },
+    {
+      Name: "fsa:FiscalPeriod",
+      Label: "Fiscal Period [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計期間(Fiscal Period)"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Fiscal Period [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Période fiscal [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerperiode [Achse]"
+        }
+      ]
+    },
+    {
+      Name: "fsa:FiscalPeriodType",
+      Label: "Fiscal Period Type [Axis]",
+      Kind: "Dimension",
+      IsNillable: true,
+      IsAbstract: true,
+      PeriodType: "duration",
+      SubstitutionGroup: "xbrldt:dimensionItem",
+      DataType: "nonnum:domainItemType",
+      BaseType: "string",
+      ClosestSchemaBuiltinType: "xs:string",
+      IsTextBlock: false,
+      Labels: [
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "ja",
+          Value: "会計期間タイプ(Fiscal Period Type)"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "en-us",
+          Value: "Fiscal Period Type [Axis]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "fr",
+          Value: "Type de période fiscale [Axe]"
+        },
+        {
+          Role: "http://www.xbrl.org/2003/role/label",
+          Language: "de",
+          Value: "Steuerperiodeart [Achse]"
+        }
+      ]
     }
 );
 
@@ -221,7 +321,7 @@ declare function labels:labels(
     $options as object?
   ) as object
 {
-  let $concepts := ($concepts, $labels:standard-concepts)
+  let $concepts := ($labels:standard-concepts, $concepts)
   return {|
     let $normalized-languages as string* := $languages ! labels:normalize-language($$)
     return (
