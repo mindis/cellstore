@@ -69,7 +69,7 @@ declare function local:to-xml($o as object*) as node()*
 declare  %rest:env                              variable $request-uri   as string  external;
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "ALL";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $concept       as string  external := "us-gaap:Assets";
 declare  %rest:case-insensitive                 variable $map           as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;

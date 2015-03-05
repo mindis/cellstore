@@ -23,7 +23,9 @@ declare %an:sequential function local:check($o as object) as object
 
 local:check({
     cocacola: local:test-facttable(1, {
-        ticker:"ko"
+        ticker:"ko",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     tickerrole: local:test-facttable(60, {
         ticker:"ko",
@@ -33,7 +35,8 @@ local:check({
     tickerconcept: local:test-facttable(76, {
         ticker:"ko",
         concept:"us-gaap:Assets",
-        fiscalYear:"2013"
+        fiscalYear:"2013",
+        fiscalPeriod: "FY"
     }),
     tickerfyfprole: local:test-facttable(70, {
         ticker:"ko",

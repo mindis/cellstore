@@ -205,7 +205,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: LATEST)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -217,7 +217,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -370,7 +370,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the filings to retrieve (default: LATEST)",
+                "description": "The fiscal year focus of the filings to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -382,7 +382,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the filings to retrieve (default: FY)",
+                "description": "The fiscal period focus of the filings to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -551,7 +551,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -563,7 +563,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal period focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -802,14 +802,14 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1207,14 +1207,14 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1546,13 +1546,13 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1714,7 +1714,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1726,7 +1726,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY). Can select multiple.",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1740,7 +1740,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1895,7 +1895,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
@@ -1907,7 +1907,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY)",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1921,7 +1921,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple, but preferably not both YTD and QTD.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple, but preferably not both YTD and QTD.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2079,7 +2079,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2097,7 +2097,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY)",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2111,7 +2111,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2471,7 +2471,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2483,7 +2483,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal period focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2732,7 +2732,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the component to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the component to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2744,7 +2744,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the component to retrieve (default: FY)",
+                "description": "The fiscal period focus of the component to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
