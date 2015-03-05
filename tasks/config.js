@@ -6,6 +6,8 @@ var $ = require('gulp-load-plugins')();
 var gulp = require('gulp');
 var _ = require('lodash');
 var install = require('gulp-install');
+var globalTunnel = require('global-tunnel');
+var expand = require('glob-expand');
 
 var knownOptions = {
     string: [ 'build-id', 'config', 'specs' ],
@@ -49,8 +51,9 @@ if(isOnTravisAndProd && process.env.CIRCLE_BRANCH !== configId){
     process.exit(0);
 }
 
+var specs = expand('tests/e2e/' + configId + '/*-scenario.js');
+specs = _.union(specs, expand('tests/e2e/_all/*-scenario.js'));
 // allow running single protractor specs using --specs arg
-var specs = [ 'tests/e2e/' + configId + '/*-scenario.js' ];
 if (_.isString(args.specs) ){
     specs = args.specs.split(',');
 }
@@ -64,6 +67,7 @@ var config =
     bucketName: '',
     projectName: '',
     portalAPIUrl: '',
+    websiteUrl: '',
     paths: {
         //src and build folders
         app: 'app',
@@ -143,11 +147,23 @@ gulp.task('config:load', ['templates:config'], function(done){
         // where to deploy the cellstore?
         config.portalAPIUrl =
             _.template('<%= portalProtocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
+        config.websiteUrl =
+            _.template('http://<%= bucketName %>.s3-website-<%= credentials.s3.region %>.amazonaws.com')(config);
 
         $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));
         $.util.log('Project: ' + $.util.colors.green(config.projectName));
         $.util.log('Profile: ' + $.util.colors.green(config.credentials.cellstore.profile));
+
+        if(_.isObject(config.credentials.http) && _.isString(config.credentials.http.proxy) && config.credentials.http.proxy !== ''){
+            var proxy = config.credentials.http.proxy;
+            var hostAndPort = proxy.substring(proxy.indexOf('//') + '//'.length).split(':');
+            $.util.log('Setting up global proxy tunnel.');
+            globalTunnel.initialize({
+                'host': hostAndPort[0],
+                'port': parseInt(hostAndPort[1])
+            });
+        }
 
         config.$28 = new (require('28').$28)(config.portalAPIUrl);
         done();

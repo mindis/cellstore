@@ -19,8 +19,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode    as strin
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic           as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind    as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $aid           as string* external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
@@ -45,6 +45,9 @@ let $entities := multiplexer:entities(
   $tag,
   $ticker,
   $sic, ())
+
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -126,4 +129,6 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "filings")
-return api:check-and-return-results($token, $results, $format)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else api:check-and-return-results($token, $results, $format)

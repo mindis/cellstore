@@ -94,7 +94,7 @@ gulp.task('templates:create', ['config:load'], function(done){
             src: 'tasks/templates/constants.js.mustache',
             data: {
                 APPNAME: Config.projectName,
-                API_URL: 'http://' + Config.projectName + '.28.io/v1',
+                API_URL: 'http://' + Config.projectName + '.' + Config.credentials['28'].portalDomain + '/v1',
                 DEBUG: false,
                 ACCOUNT_URL: '/account/info',
                 REGISTRATION_URL: '/auth',

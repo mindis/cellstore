@@ -429,6 +429,7 @@ declare function hypercubes:user-defined-hypercube($dimensions as object?, $opti
   {
     "Name" : ($options.Name, "xbrl:UserDefinedHypercube")[1],
     "Label" : ($options.Label, "User-defined Hypercube")[1],
+    "IsOpen" : boolean($options.IsOpen),
     "Aspects" : {|
       for $dimension-name as string in distinct-values((
           "xbrl:Concept",

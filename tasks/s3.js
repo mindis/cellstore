@@ -10,7 +10,7 @@ var parallelize = require('concurrent-transform');
 
 var Config = require('./config');
 
-var s3, key, secret, region, protocol, s3Config, publisherConfig, publisher, bucketName;
+var s3, key, secret, region, protocol, s3Config, publisherConfig, publisher, bucketName, websiteUrl;
 
 var init = function() {
     key = Config.credentials.s3.key;
@@ -18,6 +18,7 @@ var init = function() {
     region = Config.credentials.s3.region;
     protocol = Config.credentials.s3.protocol;
     bucketName = Config.bucketName;
+    websiteUrl = Config.websiteUrl;
     $.util.log('Bucket Name: ' + bucketName);
     s3Config = {
         accessKeyId: key,
@@ -43,26 +44,25 @@ var init = function() {
 };
 
 var checkWebsiteAvailable = function(){
-    var defered = Q.defer();
-    var url = 'http://' + bucketName + '.s3-website-' + region + '.amazonaws.com';
+    var deferred = Q.defer();
     var request = require('request');
     request({
-        uri: url,
+        uri: websiteUrl,
         method: 'GET'
     }, function(error, response){
         if(!error && response.statusCode === 200){
-            $.util.log('Website available at: ' + $.util.colors.green(url));
-            defered.resolve();
+            $.util.log('Website available at: ' + $.util.colors.green(websiteUrl));
+            deferred.resolve();
         } else {
             if(error){
-                $.util.log('checkWebsiteAvailable(' + url + '): ' + $.util.colors.red(error));
+                $.util.log('checkWebsiteAvailable(' + websiteUrl + '): ' + $.util.colors.red(error));
             } else {
-                $.util.log('checkWebsiteAvailable(' + url + ') status: ' + $.util.colors.red(response.statusCode));
+                $.util.log('checkWebsiteAvailable(' + websiteUrl + ') status: ' + $.util.colors.red(response.statusCode));
             }
-            defered.reject();
+            deferred.reject();
         }
     });
-    return defered.promise;
+    return deferred.promise;
 };
 
 var makeBucketWebsite = function() {
@@ -81,7 +81,7 @@ var makeBucketWebsite = function() {
             Bucket : bucketName,
             WebsiteConfiguration : Config.credentials.s3.website
         }, function(err) {
-            if (err && err.indexOf('NoSuchBucket:') === 0) {
+            if (_.isObject(err) && _.isString(err.message) && err.message.indexOf('NoSuchBucket:') === 0) {
                 $.util.log('trying again: putBucketWebsite(' + bucketName + ')');
                 setTimeout(function () {
                     s3.putBucketWebsite(
@@ -167,7 +167,7 @@ var createBucket = function() {
             $.util.log($.util.colors.red(bucketName + ' (' + region + '): ' + err));
             deferred.reject();
         } else {
-            $.util.log('createBucket(' + bucketName + ') in ' + data.Location );
+            $.util.log('createBucket(' + bucketName + ')');
             deferred.resolve();
         }
     });

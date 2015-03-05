@@ -53,7 +53,7 @@ declare %private function layout:structural-node-to-header-rows(
             let $constrained-aspect as string := $structural-node.Aspect
             return switch($constrained-aspect)
             case "xbrl:Period" return
-                for $actual-value in $actual-aspect-space.($constrained-aspect)[]
+                for $actual-value allowing empty in $actual-aspect-space.($constrained-aspect)[]
                 let $tokens := tokenize($actual-value, "/")
                 let $label as string? := labels:labels(
                     $actual-value,
@@ -97,7 +97,7 @@ declare %private function layout:structural-node-to-header-rows(
                   if($constrained-aspect eq "xbrl:Entity")
                   then $actual-values!entities:entities($$)
                   else ()
-                for $actual-value in $actual-values
+                for $actual-value allowing empty in $actual-values
                 let $label as string? := labels:labels(
                     $actual-value[$$ instance of string],
                     (),

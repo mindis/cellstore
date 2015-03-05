@@ -199,7 +199,7 @@ declare function local:hypercube($entities as object*) as object
             |}
         }
     |}
-    return hypercubes:user-defined-hypercube($hypercube-spec)
+    return hypercubes:user-defined-hypercube($hypercube-spec, { IsOpen: $open })
 };
 
 (: Query parameters :)
@@ -212,15 +212,16 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode        as s
 declare  %rest:case-insensitive %rest:distinct  variable $tag               as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker            as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic               as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear        as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod      as string* external := "FY";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriodType  as string* external := ("instant", "YTD");
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear        as string* external := ();
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod      as string* external := ();
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriodType  as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid               as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid               as string* external;
 declare  %rest:case-insensitive                 variable $map               as string? external;
 declare  %rest:case-insensitive                 variable $rule              as string? external;
 declare  %rest:case-insensitive                 variable $report            as string? external;
 declare  %rest:case-insensitive                 variable $validate          as boolean external := false;
+declare  %rest:case-insensitive                 variable $open              as boolean external := false;
 declare  %rest:case-insensitive                 variable $labels            as boolean external := false;
 declare  %rest:case-insensitive                 variable $additional-rules  as string? external;
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
@@ -245,6 +246,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic,
   $aid)
+
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
 
 let $report as object? := reports:reports($report)
 let $map as item* :=
@@ -345,4 +349,6 @@ let $serializers := {
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else api:check-and-return-results($token, $results, $format)

@@ -250,6 +250,7 @@ Retrieve one or more facts for a combination of filings.
 | report  | The report to use as a context to retrieve the facts. In particular, concept maps and rules found in this report will be used. (default: none) |
 | additional-rules  | The name of a report from which to use rules in addition to a report's rules (e.g. FundamentalAccountingConcepts) |
 | labels  | Whether human readable labels should be included for concepts in each fact. (default: false) |
+| open  | Whether the query has open hypercube semantics. (default: false) |
 | profile-name  | Specifies which profile to use. The default depends on the underlying repository. |
 | prefix:dimension  | The name of a dimension used for filtering. Accepted format: prefix:dimension. As a value, the value of the dimension or ALL can be provided if all facts with this dimension should be retrieved |
 | prefix:dimension::default  | The default value of the dimension [prefix:dimension] that should be returned if the dimension was not provided explicitly for a fact. Accepted format: prefix:dimension::default |

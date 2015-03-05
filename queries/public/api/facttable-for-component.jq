@@ -27,8 +27,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as 
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
@@ -79,11 +79,17 @@ let $archives as object* := multiplexer:filings(
   $filingKind,
   $aid)
 
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
+
 let $entities as object* :=
     ($entities[entities:eid($$) = $archives.Entity],
     let $not-found := $archives.Entity[not entities:eid($entities) = $$]
     where exists($not-found)
     return entities:entities($not-found))
+
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
 
 let $components as object* :=
     multiplexer:components(
@@ -96,6 +102,9 @@ let $components as object* :=
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"]
     )
+
+let $components-not-found as boolean :=
+  exists(($archives, $cid, $reportElement, $disclosure, $networkIdentifier, $label)) and empty($components)
 
 let $component as object? := if($merge) then components:merge($components) else $components[1]
 let $cid as string? := string-join($components ! components:cid($$), "--")
@@ -160,7 +169,10 @@ let $facts :=
                 trim($fact, "Labels"),
                 { Labels : $labels }
             |}
-let $facts := api:normalize-facts($facts)
+let $facts :=
+  if($profile-name eq "sec")
+  then api:normalize-facts($facts)
+  else $facts
 
 let $result :=
   if($profile-name eq "sec")
@@ -222,4 +234,8 @@ let $serializers := {
         string-join(conversion:facts-to-csv($res.FactTable[], { Caller: "Component"}))
     }
 }
-return api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       case $components-not-found return api:not-found("components")
+       default return api:serialize($result, $comment, $serializers, $format, "facttable-" || $cid)

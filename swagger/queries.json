@@ -205,7 +205,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: LATEST)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal year focus. (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -217,7 +217,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY)",
+                "description": "Filters the results for the filings submitted for the supplied fiscal period focus. (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -261,6 +261,10 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -366,7 +370,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the filings to retrieve (default: LATEST)",
+                "description": "The fiscal year focus of the filings to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -378,7 +382,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the filings to retrieve (default: FY)",
+                "description": "The fiscal period focus of the filings to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -422,6 +426,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -539,7 +551,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -551,7 +563,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal period focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -650,6 +662,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -782,14 +802,14 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -889,6 +909,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -1175,14 +1207,14 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1276,6 +1308,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -1502,13 +1546,13 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the filing",
+                "description": "The fiscal year of the filing (default: no filtering)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the filing",
+                "description": "The fiscal period of the filing (default: no filtering)",
                 "required": false,
                 "type": "string",
                 "paramType": "query"
@@ -1563,6 +1607,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -1658,7 +1714,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1670,7 +1726,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY). Can select multiple.",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1684,7 +1740,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1744,6 +1800,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -1831,7 +1895,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec"],
                 "required": false,
                 "type": "string",
@@ -1843,7 +1907,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY)",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1857,7 +1921,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple, but preferably not both YTD and QTD.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple, but preferably not both YTD and QTD.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1909,6 +1973,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -2007,7 +2079,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year of the fact to retrieve (default: LATEST)",
+                "description": "The fiscal year of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2025,7 +2097,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period of the fact to retrieve (default: FY)",
+                "description": "The fiscal period of the fact to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2039,7 +2111,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2098,6 +2170,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "open",
+                "description": "Whether the query has open hypercube semantics. (default: false)",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
@@ -2141,6 +2219,14 @@
             }, {
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -2285,6 +2371,18 @@
                 }
             },
             {
+                "title": "Get all dividend data for 2014 reported by Canon. Open hypercube semantics.",
+                "description": "Get all dividend data for 2014 reported by canon",
+                "profile": ["japan"],
+                "parameters": {
+                    "ticker" : 7751,
+                    "fiscalYear": 2014,
+                    "fiscalPeriod": "FY",
+                    "concept": "tse-ed-t:DividendPerShare",
+                    "open" : "true"
+                }
+            },
+            {
                 "title": "Get all Profit forecasts for FY/2014 by company name/ID",
                 "description": "Get all Profit forecasts for FY/2014 by company name/ID",
                 "profile": ["japan"],
@@ -2391,7 +2489,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2403,7 +2501,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the components to retrieve (default: ALL)",
+                "description": "The fiscal period focus of the components to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2529,6 +2627,18 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -2640,7 +2750,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalYear",
-                "description": "The fiscal year focus of the component to retrieve (default: ALL)",
+                "description": "The fiscal year focus of the component to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2652,7 +2762,7 @@
                 ]
             }, {
                 "name": "fiscalPeriod",
-                "description": "The fiscal period focus of the component to retrieve (default: FY)",
+                "description": "The fiscal period focus of the component to retrieve (default: no filtering)",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -2789,6 +2899,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,

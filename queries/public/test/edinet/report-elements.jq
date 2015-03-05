@@ -17,7 +17,7 @@ test:check-all-success({
     ),
     company-label: test:invoke-and-assert-deep-equal(
       "report-elements",
-      {edinetcode:"E01225", label:"Loss of inactive facilities"},
+      {edinetcode:"E01225", label:"Loss of inactive facilities", fiscalYear:"LATEST", fiscalPeriod: "FY"},
       function($b as item*) as item* { $b.ReportElements },
       test:get-expected-result("edinet/report-elements-expected3.jq"),
       { NoArrayOrder: true }
