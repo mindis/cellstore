@@ -67,6 +67,7 @@ var config =
     bucketName: '',
     projectName: '',
     portalAPIUrl: '',
+    websiteUrl: '',
     paths: {
         //src and build folders
         app: 'app',
@@ -146,6 +147,8 @@ gulp.task('config:load', ['templates:config'], function(done){
         // where to deploy the cellstore?
         config.portalAPIUrl =
             _.template('<%= portalProtocol %>://<%= portalProject %>.<%= portalDomain %><%= portalApiPrefix %>')(config.credentials['28']);
+        config.websiteUrl =
+            _.template('http://<%= bucketName %>.s3-website-<%= config.credentials.s3.region %>.amazonaws.com')(config);
 
         $.util.log('Portal: ' + $.util.colors.green(config.portalAPIUrl));
         $.util.log('Bucket: ' + $.util.colors.green(config.bucketName));
