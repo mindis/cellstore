@@ -221,6 +221,7 @@ declare  %rest:case-insensitive                 variable $map               as s
 declare  %rest:case-insensitive                 variable $rule              as string? external;
 declare  %rest:case-insensitive                 variable $report            as string? external;
 declare  %rest:case-insensitive                 variable $validate          as boolean external := false;
+declare  %rest:case-insensitive                 variable $open              as boolean external := false;
 declare  %rest:case-insensitive                 variable $labels            as boolean external := false;
 declare  %rest:case-insensitive                 variable $additional-rules  as string? external;
 declare  %rest:case-insensitive                 variable $debug             as boolean external := false;
@@ -270,7 +271,8 @@ let $facts :=
     let $options := {|
       {
         Hypercube : $hypercube,
-        Validate: $validate
+        Validate: $validate,
+        OpenHypercube: $open
       },
       { "ConceptMaps" : $map }[exists($map)],
       { "Rules" : [ $rule ] }[exists($rule)],

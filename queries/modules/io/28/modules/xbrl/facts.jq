@@ -1204,6 +1204,7 @@ declare %private function facts:facts-for-direct(
     $options as object?
 ) as object*
 {
+  let $open-hypercube as boolean := boolean($options.OpenHypercube)
   let $query as object := facts:filter-to-mongo-query($filter)
   return
     if (some $array in descendant-arrays($filter)
@@ -1228,12 +1229,13 @@ declare %private function facts:facts-for-direct(
             where exists($hypercube.$facts:ASPECTS.$dimension.Default)
             return $hypercube.$facts:ASPECTS.$dimension
           let $hc-dimension-names := $keys
-          for $fact in $found[every $key in flatten($$.KeyAspects)
-                              satisfies $key = ($keys,
+          for $fact in $found[$open-hypercube or
+                              (every $key in flatten($$.KeyAspects)
+                               satisfies $key = ($keys,
                                                 $facts:ENTITY,
                                                 $facts:CONCEPT,
                                                 $facts:PERIOD,
-                                                $facts:UNIT)]
+                                                $facts:UNIT))]
           return
             (: add default dimension members if they are omitted
                remove dimensions that are not in the hypercube :)

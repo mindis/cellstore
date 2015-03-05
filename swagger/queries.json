@@ -2170,6 +2170,12 @@
                 "type": "boolean",
                 "paramType": "query"
             }, {
+                "name": "open",
+                "description": "Whether the query has open hypercube semantics. (default: false)",
+                "required": false,
+                "type": "boolean",
+                "paramType": "query"
+            }, {
                 "name": "profile-name",
                 "description": "Specifies which profile to use. The default depends on the underlying repository.",
                 "required": false,
