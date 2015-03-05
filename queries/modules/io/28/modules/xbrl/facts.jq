@@ -1249,11 +1249,14 @@ declare %private function facts:facts-for-direct(
                 let $dimension-value := $populated.$facts:ASPECTS.$name
                 where empty($dimension-value)
                 return { $name: $dimension.Default },
-                for $open-dimension in seq:value-except(
-                    $all-aspects,
-                    ($hc-dimension-names, keys($fact.$facts:ASPECTS))
-                )
-                return { $open-dimension : "xbrl28:Domain" }
+                if($open-hypercube)
+                then
+                  for $open-dimension in seq:value-except(
+                      $all-aspects,
+                      ($hc-dimension-names, keys($fact.$facts:ASPECTS))
+                  )
+                  return { $open-dimension : "xbrl28:Domain" }
+                else ()
               |}
               let $removals := seq:value-except(keys($fact.$facts:ASPECTS), $hc-dimension-names)
               (: where count(keys($replacements)) gt 0 :)
