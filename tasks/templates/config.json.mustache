@@ -5,7 +5,7 @@
     "s3": {
         "key": "{{{credentials.s3-key}}}",
         "secret": "{{{credentials.s3-secret}}}",
-        "region": "{{{credentials.s3-region}}}{{^credentials.s3-protocol}}us-east-1{{/credentials.s3-protocol}}",
+        "region": "{{{credentials.s3-region}}}{{^credentials.s3-region}}us-east-1{{/credentials.s3-region}}",
         "bucketPrefix": "{{{credentials.s3-bucketPrefix}}}",
         "reportsBucket": "{{{credentials.s3-reportsBucket}}}",
         "protocol": "{{{credentials.s3-protocol}}}{{^credentials.s3-protocol}}https{{/credentials.s3-protocol}}",
