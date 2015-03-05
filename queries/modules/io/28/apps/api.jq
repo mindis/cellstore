@@ -165,7 +165,7 @@ declare function api:serialize(
 {
     switch ($format)
     case "xml" return {
-        { 
+        {
             serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
         },
         session:comment("xml", $comment),
@@ -180,7 +180,7 @@ declare function api:serialize(
     }
     case "html" return {
         let $csv as string := $serializers.to-csv($result)
-        return 
+        return
         {
             { "content-type": "text/html" },
             api:csv-to-html($csv)
@@ -328,4 +328,10 @@ as boolean
       api:validate-enum($name, lower-case($value), ("true", "false"));
       boolean($value)
   }
+};
+
+declare function api:not-found($name as string) as item*
+{
+  { status: 404, content-type: "application/json" },
+  session:error("No such " || $name || " could be found.", "json")
 };

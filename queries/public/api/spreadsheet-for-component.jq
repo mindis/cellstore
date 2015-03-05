@@ -63,6 +63,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -70,6 +73,9 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $filingKind,
   $aid)
+
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
 
 let $components as object* :=
     multiplexer:components(
@@ -82,6 +88,9 @@ let $components as object* :=
       $label[$profile-name ne "sec"],
       $label[$profile-name eq "sec"]
     )
+
+let $components-not-found as boolean :=
+  exists(($archives, $cid, $reportElement, $disclosure, $networkIdentifier, $label)) and empty($components)
 
 let $component as object? := switch(true)
                               case empty($components) return ()
@@ -128,4 +137,8 @@ let $results :=
             { serialization: { method: "json", indent : true } },
             $spreadsheet
         }
-return api:check-and-return-results($token, $results, $format)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       case $components-not-found return api:not-found("component")
+       default return api:check-and-return-results($token, $results, $format)

@@ -1,7 +1,7 @@
 import module namespace test = "http://apps.28.io/test";
 
 test:check-all-success({
-    entityNotFound: test:invoke-and-assert-deep-equal(
+    entityNotFound: test:invoke-and-assert-status(
           "facts",
           {
               concept: [ "tse-ed-t:DividendPerShare" ],
@@ -9,8 +9,7 @@ test:check-all-success({
               format:"csv",
               fiscalYear: 2013
           },
-          function($res as item*) as item* { ($res.headers."Content-Length" eq "0" or empty($res.body.content)) },
-          true
+          404
         ),
     swaggerExample1: test:invoke-and-assert-deep-equal(
           "facts",
