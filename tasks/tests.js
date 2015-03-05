@@ -2,7 +2,6 @@
 
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
-var _ = require('lodash');
 
 var Config = require('./config');
 
@@ -23,9 +22,6 @@ gulp.task('tests:e2e', ['tests:update-webdriver'], function() {
   }
   var specs = Config.paths.e2eSpecs;
   $.util.log('specs: ' + specs);
-  if(!_.isArray(specs) || specs.length === 0){
-      return;
-  }
   return gulp.src(specs)
     .pipe($.protractor.protractor({
       configFile: configFile,
