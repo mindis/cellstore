@@ -2371,8 +2371,8 @@
                 }
             },
             {
-                "title": "Get all dividend forecasts for 2014 reported by Canon. Open hypercube semantics.",
-                "description": "Get all dividend forecasts for 2014 reported by canon",
+                "title": "Get all dividend data for 2014 reported by Canon. Open hypercube semantics.",
+                "description": "Get all dividend data for 2014 reported by canon",
                 "profile": ["japan"],
                 "parameters": {
                     "ticker" : 7751,
