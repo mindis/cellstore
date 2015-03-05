@@ -1204,7 +1204,7 @@ declare %private function facts:facts-for-direct(
     $options as object?
 ) as object*
 {
-  let $open-hypercube as boolean := boolean($options.OpenHypercube)
+  let $open-hypercube as boolean := boolean($hypercube.IsOpen)
   let $query as object := facts:filter-to-mongo-query($filter)
   return
     if (some $array in descendant-arrays($filter)

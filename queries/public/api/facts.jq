@@ -199,7 +199,7 @@ declare function local:hypercube($entities as object*) as object
             |}
         }
     |}
-    return hypercubes:user-defined-hypercube($hypercube-spec)
+    return hypercubes:user-defined-hypercube($hypercube-spec, { IsOpen: $open })
 };
 
 (: Query parameters :)
@@ -271,8 +271,7 @@ let $facts :=
     let $options := {|
       {
         Hypercube : $hypercube,
-        Validate: $validate,
-        OpenHypercube: $open
+        Validate: $validate
       },
       { "ConceptMaps" : $map }[exists($map)],
       { "Rules" : [ $rule ] }[exists($rule)],
