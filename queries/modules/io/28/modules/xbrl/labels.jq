@@ -237,13 +237,21 @@ declare function labels:labels(
         $normalized-languages,
         $options
       )
+      let $english-languages as string* := labels:approximate-languages(
+        $available-languages,
+        "en",
+        $options
+      )
       let $perfect-matches as object* :=
         $concept-labels[$$.Language = $normalized-languages]
       let $approximate-matches as object* :=
         $concept-labels[$$.Language = $approximate-languages]
+      let $english-matches as object* :=
+        $concept-labels[$$.Language = $english-languages]
       let $label as string? :=
         ($perfect-matches.Value,
          $approximate-matches.Value,
+         $english-matches.Value,
          $concept-labels.Value,
          $concept.Label)[not $$ instance of null][1]
       where exists($label)
