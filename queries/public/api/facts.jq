@@ -246,6 +246,9 @@ let $entities := multiplexer:entities(
   $sic,
   $aid)
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $report as object? := reports:reports($report)
 let $map as item* :=
     if(exists($report))
@@ -345,4 +348,6 @@ let $serializers := {
     }
 }
 let $results := api:serialize($result, $comment, $serializers, $format, "facts")
-return api:check-and-return-results($token, $results, $format)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else api:check-and-return-results($token, $results, $format)

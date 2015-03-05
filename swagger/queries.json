@@ -263,6 +263,10 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -422,6 +426,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -650,6 +662,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -889,6 +909,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -1278,6 +1310,18 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -1565,6 +1609,18 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -1746,6 +1802,14 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -1909,6 +1973,14 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -2141,6 +2213,14 @@
             }, {
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,
@@ -2529,6 +2609,18 @@
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
                 "responseModel": "Error"
             }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
+                "responseModel": "Error"
+            }, {
                 "code": 500,
                 "message": "An internal error occurred during the processing of the request.",
                 "responseModel": "Error"
@@ -2789,6 +2881,18 @@
             "responseMessages": [{
                 "code": 401,
                 "message": "Unauthorized: the specified project token is invalid, expired, or has insufficient privileges",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such entity could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such archive could be found.",
+                "responseModel": "Error"
+            }, {
+                "code": 404,
+                "message": "No such component could be found.",
                 "responseModel": "Error"
             }, {
                 "code": 500,

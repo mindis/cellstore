@@ -94,6 +94,22 @@ declare %an:nondeterministic function test:invoke-and-assert-deep-equal(
   test:invoke-and-assert-deep-equal($endpoint, $parameters, $transform, $expected, {})
 };
 
+declare %an:nondeterministic function test:invoke-and-assert-status(
+  $endpoint as string,
+  $parameters as object,
+  $expected-status as integer
+) as item
+{
+  let $actual-status := test:invoke($endpoint, $parameters)[1]
+  return if($actual-status eq $expected-status)
+         then true
+         else {
+           url: test:url($endpoint, $parameters),
+           expected: $expected-status,
+           actual: $actual-status
+         }
+};
+
 (:
   Note on NoArrayOrder option: it allows for false positives in case arrays have duplicate elements. The number
   of occurrences of duplicate elements is not checked.

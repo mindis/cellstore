@@ -441,7 +441,8 @@ as object*
         then copy $r := $result
              modify (
                  insert json { Definition: $definition-model } into $r,
-                 insert json { Structural: $structural-model } into $r
+                 insert json { Structural: $structural-model } into $r,
+                 insert json { Layout: $layout-model } into $r
              )
              return $r
         else $result

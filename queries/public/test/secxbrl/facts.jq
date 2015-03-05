@@ -11,14 +11,16 @@ declare %an:nondeterministic function local:test-facttable($expected as integer,
     return test:assert-eq($expected, $actual, $status, test:url($endpoint, $params))
 };
 
-declare %an:nondeterministic function local:test-empty($params as object) as item
+declare %an:nondeterministic function local:test-404($params as object) as item
 {
     let $endpoint := "facts"
     let $res as object := test:invoke-raw($endpoint, $params)
-    return if($res.status eq 200 and ($res.headers."Content-Length" eq "0" or empty($res.body.content))) then true else {
-        url: test:url($endpoint, $params),
-        unexpectedResponse: $res
-    }
+    return if($res.status eq 404)
+           then true
+           else {
+              url: test:url($endpoint, $params),
+              unexpectedResponse: $res
+           }
 };
 
 declare %an:sequential function local:check($o as object) as object
@@ -142,7 +144,7 @@ local:check({
         fiscalPeriod:"Q1",
         concept:"us-gaap:Assets"
     }),
-    testNoEntity4Sic: local:test-empty({
+    testNoEntity4Sic: local:test-404({
         concept:"fac:Assets",
         map:"FundamentalAccountingConcepts",
         format:"csv",
