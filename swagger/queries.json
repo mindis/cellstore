@@ -1740,7 +1740,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
@@ -1921,7 +1921,7 @@
                 "paramType": "query"
             }, {
                 "name": "fiscalPeriodType",
-                "description": "The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple, but preferably not both YTD and QTD.",
+                "description": "The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple, but preferably not both YTD and QTD.",
                 "profile": ["sec", "japan"],
                 "required": false,
                 "type": "string",
