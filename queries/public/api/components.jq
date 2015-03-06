@@ -157,8 +157,15 @@ let $res as object* :=
                             format: $format,
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
-                            })
-                        )
+                            }),
+                        ReportElements: backend:url("report-elements", {
+                            token: $token,
+                            aid: $r.Archive,
+                            format: $format,
+                            role: $r.Role,
+                            profile-name: $profile-name
+                            }),
+                        ValidationErrors: [ components:validation-errors($r) ]
                     } into $c
                     return $c
                ]
