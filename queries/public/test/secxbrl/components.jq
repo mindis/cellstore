@@ -118,7 +118,7 @@ local:check({
     url: test:invoke-and-assert-deep-equal(
       "components",
       {aid:"0000021344-13-000039"},
-      function($b as item*) as item* { project($b.Archives[].Components[][$$.Role = "http://www.thecoca-colacompany.com/role/DocumentAndEntityInformation"], ("FactTable", "Spreadsheet")) },
+      function($b as item*) as item* { project($b.Archives[].Components[][$$.Role = "http://www.thecoca-colacompany.com/role/DocumentAndEntityInformation"], ("FactTable", "SpreadSheet")) },
       {
         "FactTable" : "http://"||request:server-name()||":"||request:server-port()||"/v1/_queries/public/api/facttable-for-component.jq?token="||$config:test-token||"&aid=0000021344-13-000039&format=&role=http%3A%2F%2Fwww.thecoca-colacompany.com%2Frole%2FDocumentAndEntityInformation&profile-name=sec",
         "SpreadSheet" : "http://rendering.secxbrl.info/#?url=http%3A%2F%2F"||request:server-name()||"%3A"||request:server-port()||"%2Fv1%2F_queries%2Fpublic%2Fapi%2Fspreadsheet-for-component.jq%3Ftoken%3D"||$config:test-token||"%26aid%3D0000021344-13-000039%26format%3D%26role%3Dhttp%253A%252F%252Fwww.thecoca-colacompany.com%252Frole%252FDocumentAndEntityInformation%26profile-name%3Dsec"
