@@ -1061,11 +1061,84 @@ declare function components:validation-errors(
 {
   for $component in $components
   return (
-    "Presentation network is missing"[not components:has-presentation-network($component)],
-    "Hypercube is missing (implied table)"[not components:has-table($component)],
     let $missing := components:missing-metadata($component)
     where exists($missing)
-    return "Some metadata is missing (" || string-join($missing, ", ") || ")"
+    return "Some metadata is missing (" || string-join($missing, ", ") || ")",
+    components:consistent-presentation-definition($component)
+  )
+};
+
+declare function components:consistent-presentation-definition(
+    $component as object
+) as string*
+{
+  let $presentation-network as object? := networks:networks-for-components-and-short-names(
+      $component,
+      $networks:PRESENTATION_NETWORK)
+  let $roots := $presentation-network.Trees[]
+  let $hypercube := hypercubes:hypercubes-for-components($component)[not $$.Name eq "xbrl28:ImpliedTable"]
+  return (
+      "Error: Presentation network is missing."[empty($presentation-network)],
+      "Warning: Implied hypercube."[count($hypercube) gt 1],
+      "Error: More than one root in the presentation network."[count($roots) gt 1],
+      if(exists($hypercube))
+      then
+        for $presentation-report-element in descendant-objects($roots)
+        let $name := $presentation-report-element.Name
+        where exists($name)
+        let $hypercube-report-element := descendant-objects($hypercube)[$$.Name = $name]
+        return
+        (
+          if(empty($hypercube-report-element))
+          then "Error: " || $name || " not found in hypercube."
+          else (),
+          let $presentation-children := $presentation-report-element.To[].Name
+          let $hypercube-children := ($hypercube-report-element.Members[].Name, $hypercube-report-element.Aspects."xbrl:Concept".Members[].Name, keys($hypercube-report-element.Aspects))
+          return
+          (
+            for $presentation-child in $presentation-children
+            where not $hypercube-children = $presentation-child
+            return "Error:  " || $presentation-child || " missing under " || $name || " in hypercube."
+          )
+        )
+      else (),
+      if(exists($roots))
+      then
+        for $hypercube-report-element in descendant-objects($hypercube)
+        let $name := $hypercube-report-element.Name
+        where exists($name) and not $name = ("xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "xbrl28:Archive", "fsa:FiscalPeriod", "fsa:FiscalYear", "fsa:FiscalPeriodType", "sec:FiscalPeriod", "sec:FiscalYear", "sec:FiscalPeriodType", "fsa:Submitted")
+        let $presentation-report-element := descendant-objects($roots)[$$.Name = $name]
+        return
+        (
+          if(empty($presentation-report-element))
+          then "Error: " || $name || " not found in presentation."
+          else (),
+          let $presentation-children := $presentation-report-element.To[].Name
+          let $hypercube-children := ($hypercube-report-element.Members[].Name, $hypercube-report-element.Aspects."xbrl:Concept".Members[].Name, keys($hypercube-report-element.Aspects)[not $$ = ("xbrl:Concept", "xbrl:Entity", "xbrl:Period", "xbrl:Unit", "xbrl28:Archive", "fsa:FiscalPeriod", "fsa:FiscalYear", "fsa:FiscalPeriodType", "sec:FiscalPeriod", "sec:FiscalYear", "sec:FiscalPeriodType", "fsa:Submitted")])
+          return
+          (
+            for $hypercube-child in $hypercube-children
+            where not $presentation-children = $hypercube-child
+            return "Error:  " || $hypercube-child || " missing under " || $name || " in presentation."
+          )
+        )
+      else (),
+     if(exists($hypercube) and exists($roots))
+     then
+       let $presentation-children := $roots.To[]
+       return (
+         ("Error: The top-level abstract has more than two children (" || string-join($presentation-children.Name, ", ") || ")")
+           [count($presentation-children) gt 2],
+         "Error: The top-level abstract has no children."
+           [empty($presentation-children)],
+         if(count($presentation-children) eq 2)
+         then (
+           ("Error: Top-level abstract has inconsistent children ("|| string-join($presentation-children.Kind, ", ") || ")")[not $presentation-children.Kind = "Hypercube" or not $presentation-children.Kind = "LineItems"],
+           "Warning: Line items is a direct child of the hypercube report element."[$presentation-children.Kind = "LineItems"]
+         )
+         else ()
+      )
+    else ()
   )
 };
 
