@@ -22,8 +22,8 @@ declare %an:sequential function local:check($o as object) as object
 };
 
 local:check({
-    cocacola: local:test-components(95, {ticker:"ko", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
-    cocacolaincome: local:test-components(1, {ticker:"ko",networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
-    byconcept: local:test-components(117, {tag:"DOW30",concept:"us-gaap:NetIncomeLoss", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    cocacola: local:test-components(95, {ticker:"ko", fiscalYear: "2013", fiscalPeriod: "FY"}),
+    cocacolaincome: local:test-components(1, {ticker:"ko",networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome", fiscalYear: "2013", fiscalPeriod: "FY"}),
+    byconcept: local:test-components(117, {tag:"DOW30",concept:"us-gaap:NetIncomeLoss", fiscalYear: "2013", fiscalPeriod: "FY"}),
     byfyfp: local:test-components(1, {ticker:"ko",fiscalYear:"2012",fiscalPeriod:"Q1",networkIdentifier:"http://www.thecoca-colacompany.com/role/CondensedConsolidatedBalanceSheets"})
 })
