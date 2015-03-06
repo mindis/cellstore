@@ -160,9 +160,9 @@ let $res as object* :=
                             })),
                         ReportElements: backend:url("report-elements", {
                             token: $token,
-                            aid: $r.Archive,
+                            aid: archives:aid($archive),
                             format: $format,
-                            role: $r.Role,
+                            role: $component.NetworkIdentifier,
                             profile-name: $profile-name
                             }),
                         ValidationErrors: [ components:validation-errors($r) ]
