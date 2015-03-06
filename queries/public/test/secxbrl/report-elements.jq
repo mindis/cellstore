@@ -52,7 +52,7 @@ declare %an:sequential function local:check($o as object) as object
 };
 
 local:check({
-    all: local:test-concepts(3, {cik:"4962",name:"us-gaap:Assets", fiscalYear: "LATEST", fiscalPeriod: "FY"}),
+    all: local:test-concepts(3, {cik:"4962",name:"us-gaap:Assets", fiscalYear: "2013", fiscalPeriod: "FY"}),
     onlyNames: local:test-concepts(16154, {tag:"DOW30", fiscalYear:"2012", fiscalPeriod:"FY",onlyNames:"true"}),
     fac-assets: local:test-concepts(1, {ticker:"ko", fiscalYear:"2013",report:"FundamentalAccountingConcepts",name:"fac:Assets", fiscalPeriod: "FY"}),
     fac: local:test-concepts(50, {ticker:"ko",fiscalYear:"2013",report:"FundamentalAccountingConcepts", fiscalPeriod: "FY"}),

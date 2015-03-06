@@ -24,13 +24,13 @@ declare %an:sequential function local:check($o as object) as object
 local:check({
     cocacola: local:test-spreadsheet(1, {
         ticker:"ko",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
     }),
     tickerrole: local:test-spreadsheet(60, {
         ticker:"ko",
         networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
     }),
     tickerconcept: local:test-spreadsheet(76, {

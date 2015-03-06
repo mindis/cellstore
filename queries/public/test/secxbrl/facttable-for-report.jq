@@ -278,7 +278,7 @@ return local:check({
         fiscalPeriod:"FY",
         fiscalPeriodType:["instant", "QTD", "YTD"]
     }),
-    bfiXOMUnits: local:test-facttable(386, {
+    bfiXOMUnits: local:test-facttable(468, {
         report:"supportBasicFinancialInformation",
         ticker:["xom"],
         fiscalYear:"ALL",
