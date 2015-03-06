@@ -70,19 +70,19 @@ declare %an:sequential function local:check($o as object) as object
 local:check({
     cocacola: local:test-components(94, {
         ticker:"ko",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
     }),
     cocacolaincome: local:test-components(1, {
         ticker:"ko",
         networkIdentifier:"http://www.thecocacolacompany.com/role/ConsolidatedStatementsOfIncome",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
     }),
     byconcept: local:test-components-result($local:expected.byconcept, {
         tag:"DOW30",
         concept:"us-gaap:NetIncomeLoss",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
     }),
     byfyfp: local:test-components(1, {
@@ -114,7 +114,7 @@ local:check({
       "components",
       {
         ticker:"ko",
-        fiscalYear: "LATEST",
+        fiscalYear: "2013",
         fiscalPeriod: "FY"
       },
       function($b as item*) as item* { $b.Archives },
