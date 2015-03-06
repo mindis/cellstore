@@ -34,8 +34,8 @@ Retrieve metadata about the filings, also called archives. The filings are ident
 | ticker  | Filters the results for filings submitted by the entity identified by this ticker symbol, with the same semantics as the entities.jq endpoint. |
 | sic  | Filters the results for filings submitted by the entity identified by this industry group, with the same semantics as the entities.jq endpoint. |
 | aid  | Includes in the results the filings with the supplied Archive ID. This parameter is unaffected by the other filters. |
-| fiscalYear  | Filters the results for the filings submitted for the supplied fiscal year focus. (default: LATEST) |
-| fiscalPeriod  | Filters the results for the filings submitted for the supplied fiscal period focus. (default: FY) |
+| fiscalYear  | Filters the results for the filings submitted for the supplied fiscal year focus. (default: no filtering) |
+| fiscalPeriod  | Filters the results for the filings submitted for the supplied fiscal period focus. (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | token  | The token that allows you to use this API. |
 | _method  | Filings |
@@ -55,8 +55,8 @@ Retrieve the periods of the filings filed by a particular entity
 | ticker  | A ticker symbol |
 | sic  | The industry group |
 | aid  | An Archive ID (a value of the xbrl28:Archive aspect) |
-| fiscalYear  | The fiscal year focus of the filings to retrieve (default: LATEST) |
-| fiscalPeriod  | The fiscal period focus of the filings to retrieve (default: FY) |
+| fiscalYear  | The fiscal year focus of the filings to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period focus of the filings to retrieve (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | token  | The token of the current session. |
 | _method  | Fiscal Periods |
@@ -75,8 +75,8 @@ Retrieve a summary for all components of a given filing
 | sic  | The industry group |
 | cik  | A CIK number |
 | edinetcode  | An EDINET Code |
-| fiscalYear  | The fiscal year focus of the components to retrieve (default: ALL) |
-| fiscalPeriod  | The fiscal period focus of the components to retrieve (default: ALL) |
+| fiscalYear  | The fiscal year focus of the components to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period focus of the components to retrieve (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | aid  | The id of the filings for which to retrieve components |
 | cid  | [Deprecated] The id of a particular component |
@@ -107,8 +107,8 @@ Retrieve the fact table for a given component. A component can be selected in th
 | sic  | The industry group |
 | networkIdentifier  | The network identifier (=role) of a particular component |
 | role  | The role of a particular component |
-| fiscalYear  | The fiscal year of the filing |
-| fiscalPeriod  | The fiscal period of the filing |
+| fiscalYear  | The fiscal year of the filing (default: no filtering) |
+| fiscalPeriod  | The fiscal period of the filing (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | disclosure  | The disclosure of the component (e.g. BalanceSheet) |
 | reportElement  | Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill). |
@@ -140,8 +140,8 @@ Retrieve the business friendly Spreadsheet for a given component. A component ca
 | sic  | The industry group |
 | networkIdentifier  | The network identifier (=role) of a particular component |
 | role  | The role of a particular component |
-| fiscalYear  | The fiscal year of the filing |
-| fiscalPeriod  | The fiscal period of the filing |
+| fiscalYear  | The fiscal year of the filing (default: no filtering) |
+| fiscalPeriod  | The fiscal period of the filing (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | disclosure  | The disclosure of the component (e.g. BalanceSheet) |
 | reportElement  | Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill). |
@@ -171,8 +171,8 @@ Retrieve the model structure for a given component. A component can be selected 
 | tag  | The tag to filter entities |
 | sic  | The industry group |
 | networkIdentifier  | The network identifier of a particular component |
-| fiscalYear  | The fiscal year of the filing |
-| fiscalPeriod  | The fiscal period of the filing |
+| fiscalYear  | The fiscal year of the filing (default: no filtering) |
+| fiscalPeriod  | The fiscal period of the filing (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | disclosure  | The disclosure of the component (e.g. BalanceSheet) |
 | reportElement  | Filters only those components that contained the supplied report element (e.g. us-gaap:Goodwill). |
@@ -193,9 +193,9 @@ Retrieve the fact table for a given report. Filters can be overriden. Filters MU
 | ticker  | The ticker of the entity |
 | tag  | The tag to filter entities |
 | sic  | The industry group |
-| fiscalYear  | The fiscal year of the fact to retrieve (default: LATEST) |
-| fiscalPeriod  | The fiscal period of the fact to retrieve (default: FY). Can select multiple. |
-| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple. |
+| fiscalYear  | The fiscal year of the fact to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period of the fact to retrieve (default: no filtering). Can select multiple. |
+| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple. |
 | report  | The name of the report to be used (e.g. FundamentalAccountingConcepts) |
 | validate  | Validate and stamp facts accordingly |
 | labels  | Whether human readable labels should be included for concepts in each fact. (default: false) |
@@ -217,9 +217,9 @@ Retrieve the business-friendly spreadsheet for a report. Filters can be override
 | ticker  | The ticker of the entity |
 | tag  | The tag to filter entities |
 | sic  | The industry group |
-| fiscalYear  | The fiscal year of the fact to retrieve (default: LATEST) |
-| fiscalPeriod  | The fiscal period of the fact to retrieve (default: FY) |
-| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple, but preferably not both YTD and QTD. |
+| fiscalYear  | The fiscal year of the fact to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period of the fact to retrieve (default: no filtering) |
+| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple, but preferably not both YTD and QTD. |
 | report  | The name of the report to be used (e.g. FundamentalAccountingConcepts) |
 | eliminate  | Wwether to eliminate empty rows/colummns |
 | validate  | Validate and stamp facts accordingly |
@@ -241,10 +241,10 @@ Retrieve one or more facts for a combination of filings.
 | tag  | The tag to filter entities |
 | sic  | The industry group |
 | aid  | The id of the filing |
-| fiscalYear  | The fiscal year of the fact to retrieve (default: LATEST) |
+| fiscalYear  | The fiscal year of the fact to retrieve (default: no filtering) |
 | concept  | The name of the concept to retrieve the fact for (alternatively, a parameter with name xbrl:Concept can be used). |
-| fiscalPeriod  | The fiscal period of the fact to retrieve (default: FY) |
-| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: instant+YTD). Can select multiple. |
+| fiscalPeriod  | The fiscal period of the fact to retrieve (default: no filtering) |
+| fiscalPeriodType  | The fiscal period type of the fact to retrieve (default: no filtering). Can select multiple. |
 | map  | [Deprecated, use report] The concept map that should be used to resolve the concept (default: none) |
 | rules  | [Deprecated, use report] The rules that should be used to resolve the concept (default: none) |
 | report  | The report to use as a context to retrieve the facts. In particular, concept maps and rules found in this report will be used. (default: none) |
@@ -271,8 +271,8 @@ Retrieve labels for the supplied components and report elements
 | sic  | The industry group |
 | cik  | A CIK number |
 | edinetcode  | An EDINET Code |
-| fiscalYear  | The fiscal year focus of the components to retrieve (default: ALL) |
-| fiscalPeriod  | The fiscal period focus of the components to retrieve (default: ALL) |
+| fiscalYear  | The fiscal year focus of the components to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period focus of the components to retrieve (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | aid  | The id of the filings for which to retrieve components |
 | networkIdentifier  | The network identifier (=role) of a particular component |
@@ -302,8 +302,8 @@ Retrieve the report elements contained in a set of filings.
 | edinetcode  | An EDINET Code |
 | ticker  | A ticker symbols |
 | sic  | The industry group |
-| fiscalYear  | The fiscal year focus of the component to retrieve (default: ALL) |
-| fiscalPeriod  | The fiscal period focus of the component to retrieve (default: FY) |
+| fiscalYear  | The fiscal year focus of the component to retrieve (default: no filtering) |
+| fiscalPeriod  | The fiscal period focus of the component to retrieve (default: no filtering) |
 | filingKind  | Filters the results for the filings submitted for kind of filing. (default: no filtering) |
 | aid  | The id of the filing |
 | role  | The role of a particular component |
