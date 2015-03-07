@@ -13,7 +13,7 @@
     "glob-expand": "0.0.2",
     "global-tunnel": "^1.2.0",
     "gulp": "^3.8.10",
-    "gulp-awspublish": "git://github.com/wcandillon/gulp-awspublish.git#91df79564d43930f9a5cdc52c439ed6d13dbfc98",
+    "gulp-awspublish": "1.0.6",
     "gulp-cache": "^0.2.4",
     "gulp-clean": "^0.3.1",
     "gulp-csso": "^0.2.9",
