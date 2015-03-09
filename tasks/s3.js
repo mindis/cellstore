@@ -30,9 +30,7 @@ var init = function() {
         secret: secret,
         bucket: bucketName
     };
-    if(_.isString(region) && (region === '' || region === 'us-east-1')){
-        publisherConfig.region = 'us-standard';
-    } else if(_.isString(region)){
+    if(_.isString(region)){
         publisherConfig.region = region;
         s3Config.region = region;
     }
