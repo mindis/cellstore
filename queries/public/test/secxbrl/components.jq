@@ -100,7 +100,7 @@ local:check({
     example1: test:invoke-and-assert-deep-equal(
       "components",
       {aid:"0000021344-13-000039"},
-      function($b as item*) as item* { [ trim($b.Archives[].Components[], ("FactTable", "SpreadSheet", "ModelStructure", "ValidationErrors")) ] },
+      function($b as item*) as item* { [ trim($b.Archives[].Components[], ("FactTable", "SpreadSheet", "ReportElementsLink", "ModelStructure", "ValidationErrors")) ] },
       test:get-expected-result("secxbrl/components-expected1.jq"),
       { NoArrayOrder: true }
     ),
@@ -111,7 +111,7 @@ local:check({
         fiscalYear: "2013",
         fiscalPeriod: "FY"
       },
-      function($b as item*) as item* { [ trim($b.Archives[].Components[], ("FactTable", "SpreadSheet", "ModelStructure", "ValidationErrors")) ] },
+      function($b as item*) as item* { [ trim($b.Archives[].Components[], ("FactTable", "SpreadSheet", "ReportElementsLink", "ModelStructure", "ValidationErrors")) ] },
       test:get-expected-result("secxbrl/components-expected2.jq"),
       { NoArrayOrder: true }
     ),

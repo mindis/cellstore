@@ -158,7 +158,7 @@ let $res as object* :=
                             role: $component.NetworkIdentifier,
                             profile-name: $profile-name
                             })),
-                        ReportElements: backend:url("report-elements", {
+                        ReportElementsLink: backend:url("report-elements", {
                             token: $token,
                             aid: archives:aid($archive),
                             format: $format,
