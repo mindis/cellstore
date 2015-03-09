@@ -6,6 +6,8 @@ var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var _ = require('lodash');
+var mkdirp = require('mkdirp');
+var path = require('path');
 
 var Config = require('./config');
 
@@ -108,6 +110,7 @@ gulp.task('templates:create', ['config:load'], function(done){
     templates.forEach(function(tpl){
         var src = fs.readFileSync(tpl.src, 'utf-8');
         var result = Mustache.render(src, tpl.data);
+        mkdirp.sync(path.dirname(tpl.dest));
         fs.writeFileSync(tpl.dest, result, 'utf-8');
         $.util.log('created template: ' + tpl.dest);
     });
