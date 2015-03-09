@@ -4,9 +4,10 @@ import module namespace entities = "http://28.io/modules/xbrl/entities";
 import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace companies = "http://28.io/modules/xbrl/profiles/sec/companies";
 import module namespace sec-fiscal = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
-import module namespace response = "http://www.28msec.com/modules/http-response";
 import module namespace csv = "http://zorba.io/modules/json-csv";
 import module namespace session = "http://apps.28.io/session";
+
+declare option rest:response "first-item";
 
 declare function local:to-csv($o as object*) as string
 {
@@ -65,17 +66,14 @@ declare function local:to-xml($o as object*) as node()*
 
 
 (: Query parameters :)
-declare  %rest:case-insensitive                 variable $token         as string? external;
 declare  %rest:env                              variable $request-uri   as string  external;
 declare  %rest:case-insensitive                 variable $format        as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "ALL";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $concept       as string  external := "us-gaap:Assets";
 declare  %rest:case-insensitive                 variable $map           as string? external;
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive                 variable $debug         as boolean external := false;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -140,22 +138,27 @@ let $json-result :=
 return
     switch ($format)
     case "xml" return {
-        response:serialization-parameters({"omit-xml-declaration" : false, indent : true });
+        { 
+            serialization: { method: "xml", "omit-xml-declaration" : false, indent : true }
+        },
         local:to-xml($json-result)
     }
     case "text" case "csv" return {
-        response:content-type("text/csv");
-        response:header("Content-Disposition", "attachment; filename=Total-" || $concept || ".csv");
+        {
+            "content-type": "text/csv",
+            headers: { "Content-Disposition": "attachment; filename=Total-" || $concept || ".csv" }
+        },
         local:to-csv($json-result)
     }
     case "excel" return {
-        response:content-type("application/vnd.ms-excel");
-        response:header("Content-Disposition", "attachment; filename=Total-" || $concept || ".csv");
+        {
+            "content-type": "application/vnd.ms-excel",
+            headers: { "Content-Disposition": "attachment; filename=Total-" || $concept || ".csv" }
+        },
         local:to-csv($json-result)
     }
     default return {
-        response:content-type("application/json");
-        response:serialization-parameters({"indent" : true});
+        { serialization: { method: "json", indent : true } },
         {|
             { NetworkIdentifier : "http://xbrl.io/TotalForConceptGroupedByFiscalPeriodForAllEntities" },
             { TableName : "xbrl:TotalForConceptGroupedByFiscalPeriodForAllEntities" },

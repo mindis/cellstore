@@ -23,7 +23,7 @@ declare %an:nondeterministic function local:test-example1() as item
     "_id" : "http://www.sec.gov/CIK 0000021344",
     "EID" : "http://www.sec.gov/CIK 0000021344",
     "Archives" : "http://" || request:server-name() || ":" || request:server-port() ||
-      "/v1/_queries/public/api/filings.jq?_method=POST&token=" || $config:test-token || "&eid=http%3A%2F%2Fwww.sec.gov%2FCIK%200000021344&format=&profile-name=sec&fiscalYear=ALL&fiscalPeriod=ALL",
+      "/v1/_queries/public/api/filings.jq?token=" || $config:test-token || "&eid=http%3A%2F%2Fwww.sec.gov%2FCIK%200000021344&format=&profile-name=sec&fiscalYear=ALL&fiscalPeriod=ALL",
     "Profiles" : {
       "SEC" : {
         "Name" : "SEC",

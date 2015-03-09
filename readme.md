@@ -12,6 +12,9 @@ A CellStore with all SEC filings since 2010 is available at http://secxbrl.info.
 ## Whitepaper
 http://arxiv.org/pdf/1410.0600.pdf
 
+## Documentation of the REST API (for developers)
+a [tutorial](documentation/rest/main.md) can be found here where developers get a smooth introduction to the cell store REST API.
+
 ## Installation
 
 Prerequisites: [NPM](https://www.npmjs.com/), [Ruby](https://www.ruby-lang.org/) (needed for [SASS](http://sass-lang.com/)).
@@ -58,46 +61,43 @@ $ export CELLSTORE_CONFIG=<name> # default config if --config=xyz is not provide
 ```
 
 ## Deployment
-Create a CellStore deployment called test using the encrypted configuration in `config/sec.json.enc`.
+Create a CellStore deployment called test using the encrypted configuration in `config/secxbrl.json.enc`.
 ```bash
-$ gulp 28:setup --build-id=test --config=sec
-```
-
-To resync changes made on hq.28.io into your local branch:
-```bash
-$ gulp download --build-id=test --config=sec
+$ gulp setup --build-id=test --config=secxbrl
 ```
 
 To remove a deployment:
 Once you are done:
 ```bash
-$ gulp teardown --build-id=test --config=sec
+$ gulp teardown --build-id=test --config=secxbrl
 ```
 
 ## Development
 
-To test the development version using the `sec.json` configuration:
+To test the development version using the `secxbrl.json` configuration (*run gulp setup first*):
 
 ```bash
-$ gulp server --build-id=mydemo --config=sec
+$ gulp server --build-id=mydemo --config=secxbrl
 ```
 
 ## Testing
 
 Run UI tests only:
 ```bash
-gulp test --build-id=mydemo --config=sec
+gulp test --build-id=mydemo --config=secxbrl
 ```
 
 Run unit test:
 ```bash
-gulp test:unit --build-id=mydemo --config=sec
+gulp test:unit --build-id=mydemo --config=secxbrl
 ```
 
 ## Configuration Example
 ```json
 {
     "all": {
+        "http-proxy": "http://proxyserver.com:3737",
+
         "s3-region": "us-east-1",
         "s3-bucketPrefix": "csms.example.com",
         "s3-key": "ADUREIGMKODJAEO43SAJ3",

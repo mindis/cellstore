@@ -6,6 +6,8 @@ var fs = require('fs');
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var _ = require('lodash');
+var mkdirp = require('mkdirp');
+var path = require('path');
 
 var Config = require('./config');
 
@@ -49,6 +51,9 @@ gulp.task('templates:create', ['config:load'], function(done){
         reportSources.push(fs.readFileSync(report, 'utf-8'));
     });
 
+    //API documentation
+    var queries = JSON.parse(fs.readFileSync('swagger/queries.json', 'utf-8'));
+    queries.title = 'Cell Store Query API';
     var templates = [
         {
             src: 'tasks/templates/config.js.mustache',
@@ -81,10 +86,17 @@ gulp.task('templates:create', ['config:load'], function(done){
             dest: Config.paths.queries + '/private/UpdateReportSchema.jq'
         },
         {
+            src: 'tasks/templates/api.md.mustache',
+            data: {
+                api: queries
+            },
+            dest: 'documentation/api/queries.md'
+        },
+        {
             src: 'tasks/templates/constants.js.mustache',
             data: {
                 APPNAME: Config.projectName,
-                API_URL: 'http://' + Config.projectName + '.28.io/v1',
+                API_URL: 'http://' + Config.projectName + '.' + Config.credentials['28'].portalDomain + '/v1',
                 DEBUG: false,
                 ACCOUNT_URL: '/account/info',
                 REGISTRATION_URL: '/auth',
@@ -98,6 +110,7 @@ gulp.task('templates:create', ['config:load'], function(done){
     templates.forEach(function(tpl){
         var src = fs.readFileSync(tpl.src, 'utf-8');
         var result = Mustache.render(src, tpl.data);
+        mkdirp.sync(path.dirname(tpl.dest));
         fs.writeFileSync(tpl.dest, result, 'utf-8');
         $.util.log('created template: ' + tpl.dest);
     });

@@ -7,6 +7,8 @@ import module namespace archives = "http://28.io/modules/xbrl/archives";
 import module namespace filings = "http://28.io/modules/xbrl/profiles/sec/filings";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
+declare option rest:response "first-item";
+
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token         as string? external;
 declare  %rest:env                              variable $request-uri   as string  external;
@@ -17,13 +19,11 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode    as strin
 declare  %rest:case-insensitive %rest:distinct  variable $tag           as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker        as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic           as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear    as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind    as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $aid           as string* external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -45,6 +45,9 @@ let $entities := multiplexer:entities(
   $tag,
   $ticker,
   $sic, ())
+
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
 
 let $archives as object* := multiplexer:filings(
   $profile-name,
@@ -126,4 +129,6 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "filings")
-return api:check-and-return-results($token, $results, $format)
+return if($entities-not-found)
+       then api:not-found("entity")
+       else api:check-and-return-results($token, $results, $format)

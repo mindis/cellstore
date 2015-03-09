@@ -11,14 +11,16 @@ declare %an:nondeterministic function local:test-facttable($expected as integer,
     return test:assert-eq($expected, $actual, $status, test:url($endpoint, $params))
 };
 
-declare %an:nondeterministic function local:test-empty($params as object) as item
+declare %an:nondeterministic function local:test-404($params as object) as item
 {
     let $endpoint := "facts"
     let $res as object := test:invoke-raw($endpoint, $params)
-    return if($res.status eq 200 and ($res.headers."Content-Length" eq "0" or empty($res.body.content))) then true else {
-        url: test:url($endpoint, $params),
-        unexpectedResponse: $res
-    }
+    return if($res.status eq 404)
+           then true
+           else {
+              url: test:url($endpoint, $params),
+              unexpectedResponse: $res
+           }
 };
 
 declare %an:sequential function local:check($o as object) as object
@@ -80,9 +82,11 @@ declare %an:nondeterministic function local:test-labels-aids() as item
 local:check({
     cocacola-latest:
     (: this test will fail and needs to be updated if a newer report has been filed.
-       current latest filing: 2013 :)
-    local:test-facttable(468, {
-        ticker:"ko"
+       current latest filing: 2014 :)
+    local:test-facttable(462, {
+        ticker:"ko",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     cocacola-all: local:test-facttable(468, {
         ticker:"ko",
@@ -118,7 +122,9 @@ local:check({
     ciscoLabelsByAid: local:test-labels-aids(),
     tickerconcept: local:test-facttable(1, {
         ticker:"ko",
-        concept:"us-gaap:Assets"
+        concept:"us-gaap:Assets",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     tickerfyfprole: local:test-facttable(1, {
         ticker:"ko",
@@ -128,7 +134,9 @@ local:check({
     }),
     tagconcept: local:test-facttable(30, {
         tag:"DOW30",
-        concept:"us-gaap:Assets"
+        concept:"us-gaap:Assets",
+        fiscalYear: "LATEST",
+        fiscalPeriod: "FY"
     }),
     tagfyfprole: local:test-facttable(30, {
         tag:"DOW30",
@@ -136,7 +144,7 @@ local:check({
         fiscalPeriod:"Q1",
         concept:"us-gaap:Assets"
     }),
-    testNoEntity4Sic: local:test-empty({
+    testNoEntity4Sic: local:test-404({
         concept:"fac:Assets",
         map:"FundamentalAccountingConcepts",
         format:"csv",

@@ -4,11 +4,11 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 import module namespace sec-networks = "http://28.io/modules/xbrl/profiles/sec/networks";
 import module namespace rules = "http://28.io/modules/xbrl/rules";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace config = "http://apps.28.io/config";
 import module namespace session = "http://apps.28.io/session";
 import module namespace api = "http://apps.28.io/api";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token              as string? external;
@@ -19,8 +19,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode         as 
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
@@ -39,8 +39,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $role               as 
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
 declare  %rest:case-insensitive                 variable $language           as string  external := "en-US";
 declare  %rest:case-insensitive                 variable $debug         as boolean external := false;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -65,6 +63,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -72,6 +73,9 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $filingKind,
   $aid)
+
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
 
 let $components as object* :=
     multiplexer:components(
@@ -85,6 +89,9 @@ let $components as object* :=
       $label[$profile-name eq "sec"]
     )
 
+let $components-not-found as boolean :=
+  exists(($archives, $cid, $reportElement, $disclosure, $networkIdentifier, $label)) and empty($components)
+
 let $component as object? := switch(true)
                               case empty($components) return ()
                               case $merge return components:merge($components)
@@ -92,8 +99,7 @@ let $component as object? := switch(true)
 let $rules as object* := if(exists($additional-rules)) then rules:rules($additional-rules) else ()
 
 return if(empty($component)) then {
-    response:status-code(404);
-    response:content-type("application/json");
+    { status: 404 },
     session:error("component not found", "json")
 } else
 (: Fact resolution :)
@@ -128,8 +134,11 @@ let $spreadsheet as object? :=
 
 let $results :=
         {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
+            { serialization: { method: "json", indent : true } },
             $spreadsheet
         }
-return api:check-and-return-results($token, $results, $format)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       case $components-not-found return api:not-found("component")
+       default return api:check-and-return-results($token, $results, $format)

@@ -5,11 +5,11 @@ import module namespace components = "http://28.io/modules/xbrl/components";
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 import module namespace fiscal-core = "http://28.io/modules/xbrl/profiles/sec/fiscal/core";
 
-import module namespace response = "http://www.28msec.com/modules/http-response";
-
 import module namespace config = "http://apps.28.io/config";
 import module namespace session = "http://apps.28.io/session";
 import module namespace api = "http://apps.28.io/api";
+
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token         as string? external;
@@ -33,8 +33,6 @@ declare  %rest:case-insensitive                 variable $profile-name  as strin
 declare  %rest:case-insensitive                 variable $language      as string  external := "en-US";
 declare  %rest:case-insensitive                 variable $debug         as boolean external := false;
 
-session:audit-call($token);
-
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
 let $fiscalYear as integer* := api:preprocess-fiscal-years($fiscalYear)
@@ -57,6 +55,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $report-id as string? := $report
 let $report as object? := reports:reports($report)
 
@@ -64,7 +65,7 @@ return
 if(empty($report))
 then
 {
-      response:status-code(404);
+      { status: 404 },
       session:error("report with id '" || $report-id || "' does not exist.", $format)
 } else
 
@@ -85,7 +86,7 @@ then
     let $spreadsheet as object? :=
         if(count($filtered-aspects) lt $config:filtered-aspects and not exists(($filter-override)))
         then {
-              response:status-code(403);
+              { status: 403 },
               session:error("The report filters are too weak, which leads to too big an output.", $format)
         } else
             components:spreadsheet(
@@ -104,8 +105,9 @@ then
             )
     let $results :=
         {
-            response:content-type("application/json");
-            response:serialization-parameters({"indent" : true});
+            { serialization: { method: "json", indent : true } },
             $spreadsheet
         }
-    return api:check-and-return-results($token, $results, $format)
+    return if($entities-not-found)
+           then api:not-found("entity")
+           else api:check-and-return-results($token, $results, $format)

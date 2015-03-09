@@ -13,6 +13,8 @@ import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multip
 
 import module namespace csv = "http://zorba.io/modules/json-csv";
 
+declare option rest:response "first-item";
+
 declare function local:to-csv($res as object*) as string*
 {
     csv:serialize(
@@ -54,8 +56,8 @@ declare  %rest:case-insensitive %rest:distinct  variable $edinetcode   as string
 declare  %rest:case-insensitive %rest:distinct  variable $tag                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $ticker             as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $sic                as string* external;
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "LATEST";
-declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "FY";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalYear         as string* external := "ALL";
+declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod       as string* external := "ALL";
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind         as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $eid                as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $aid                as string* external;
@@ -67,8 +69,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $concept            as 
 declare  %rest:case-insensitive %rest:distinct  variable $disclosure         as string* external;
 declare  %rest:case-insensitive %rest:distinct  variable $label              as string* external;
 declare  %rest:case-insensitive                 variable $profile-name       as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -93,6 +93,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -100,6 +103,9 @@ let $archives as object* := multiplexer:filings(
   $fiscalYear,
   $filingKind,
   $aid)
+
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
 
 let $entities as object*  := entities:entities($archives.Entity)
 let $components as object* :=
@@ -244,4 +250,7 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "components")
-return api:check-and-return-results($token, $results, $format)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       default return api:check-and-return-results($token, $results, $format)

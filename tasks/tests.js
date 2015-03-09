@@ -18,7 +18,7 @@ gulp.task('tests:e2e', ['tests:update-webdriver'], function() {
   var args = [];
   if(Config.isOnTravis && !Config.isOnProduction) {
       args.push('--baseUrl');
-      args.push('http://' + Config.bucketName + '.s3-website-us-east-1.amazonaws.com');
+      args.push(Config.websiteUrl);
   }
   var specs = Config.paths.e2eSpecs;
   $.util.log('specs: ' + specs);

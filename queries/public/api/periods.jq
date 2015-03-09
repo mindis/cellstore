@@ -1,9 +1,9 @@
 import module namespace config = "http://apps.28.io/config";
 import module namespace api = "http://apps.28.io/api";
-import module namespace session = "http://apps.28.io/session";
 
 import module namespace multiplexer = "http://28.io/modules/xbrl/profiles/multiplexer";
 
+declare option rest:response "first-item";
 
 (: Query parameters :)
 declare  %rest:case-insensitive                 variable $token         as string? external;
@@ -20,8 +20,6 @@ declare  %rest:case-insensitive %rest:distinct  variable $fiscalPeriod  as strin
 declare  %rest:case-insensitive %rest:distinct  variable $filingKind    as string* external := ();
 declare  %rest:case-insensitive %rest:distinct  variable $aid           as string* external;
 declare  %rest:case-insensitive                 variable $profile-name  as string  external := $config:profile-name;
-
-session:audit-call($token);
 
 (: Post-processing :)
 let $format as string? := api:preprocess-format($format, $request-uri)
@@ -44,6 +42,9 @@ let $entities := multiplexer:entities(
   $ticker,
   $sic, ())
 
+let $entities-not-found as boolean :=
+  exists(($eid, $cik, $tag, $ticker, $sic)) and empty($entities)
+
 let $archives as object* := multiplexer:filings(
   $profile-name,
   $entities,
@@ -52,6 +53,8 @@ let $archives as object* := multiplexer:filings(
   $filingKind,
   $aid)
 
+let $archives-not-found as boolean :=
+  exists(($entities, $fiscalPeriod, $fiscalYear, $filingKind, $aid)) and empty($archives)
 
 let $periods :=
     switch($profile-name)
@@ -92,4 +95,7 @@ let $serializers := {
 }
 
 let $results := api:serialize($result, $comment, $serializers, $format, "filings")
-return api:check-and-return-results($token, $results, $format)
+return switch(true)
+       case $entities-not-found return api:not-found("entity")
+       case $archives-not-found return api:not-found("archive")
+       default return api:check-and-return-results($token, $results, $format)

@@ -13,7 +13,7 @@ import module namespace request = "http://www.28msec.com/modules/http-request";
 declare function backend:url($endpoint as string, $parameters as object) as string
 {
     "http://" || request:server-name() || ":" || request:server-port() ||
-    "/v1/_queries/public/api/"||$endpoint||".jq?_method=POST&"||
+    "/v1/_queries/public/api/"||$endpoint||".jq?"||
     string-join(
         for $key in keys($parameters)
         for $value as string in (flatten($parameters.$key) ! string($$))
